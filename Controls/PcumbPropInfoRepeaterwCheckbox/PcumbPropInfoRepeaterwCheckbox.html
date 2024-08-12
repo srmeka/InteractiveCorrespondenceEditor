@@ -1,0 +1,64 @@
+﻿<div class="panel panel-primary" ng-controller="PcumbPropInfoRepeaterwCheckboxController">
+    <div class="panel-heading">Property Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray" ng-repeat="slector  in TotalCount track by $index">
+                <div class="col-md-4">
+                    <!--Checkbox to enable control-->
+                    <input type="checkbox" ng-change="clearAllData($index)" ng-model="CtrlEnabledCheckbox[$index]" id="CtrlEnableCheckboxId{{$index}}" name="CtrlEnableCheckbox{{$index}}" value="" />
+                    <label>Include Risk Location Address</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <!--Risk location dropdown list and input-->
+                        <div class="col-md-6">
+                            <select ng-disabled="!CtrlEnabledCheckbox[$index]" ng-options="(item.Address.Line1Tx + ' ' + item.Address.Line2Tx + ' ' + item.Address.Line3Tx + ' ' + item.Address.city_value + ' ' + item.Address.CountrySubdivision.CountrySubdivisionNm + ' ' + item.Address.PostalCd )  for item in addressData track by item._id" name="addressSelection" ng-model="selectedValue[$index]" class="form-control" id="addressSelectionId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] || slector.selectedValue" ng-model="freeTextGroup[$index]" type="text" class="form-control" name="addressText{{$index}}" id="addressTextId{{$index}}" value="" />
+                        </div>
+                    </div>
+
+                    <!--Occupancy type checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] " ng-model="occupancyType[$index]" type="checkbox" name="occupancyType{{$index}}" id="occupancyTypeId{{$index}}" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Occupancy Type</label>
+                        </div>
+                    </div>
+
+                    <!--Usage checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] " ng-model="usage[$index]" type="checkbox" name="usage{{$index}}" id="useageId{{$index}}" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Usage</label>
+                        </div>
+                    </div>
+
+                    <!--Residence type checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] " ng-model="residenceType[$index]" type="checkbox" name="residenceType{{$index}}" id="residenceTypeId{{$index}}" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Residence Type</label>
+                        </div>
+                    </div>
+
+                    <!--Pool checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] " ng-model="pool[$index]" type="checkbox" name="pool{{$index}}" id="poolId{{$index}}" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Pool</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-12 text-center" style="margin-top:10px;">
+                <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+                <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+            </div>
+        </div>
+    </div>
+</div> 

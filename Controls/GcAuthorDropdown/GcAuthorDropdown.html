@@ -1,0 +1,18 @@
+﻿<div class="panel panel-primary" ng-controller="GcAuthorDropdownController">
+    <div class="panel-heading">Author</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Author dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>* Author:</label></div>
+                <div class="col-md-8">
+                    <select ng-change="selecAuthor()" ng-required="true" ng-options="(item.FirstName + ' ' + item.LastName) for item in Authors | orderBy:'FirstName + LastName'" name="AuthorSelection" ng-model="selectedAuthor" class="form-control" id="AuthorSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

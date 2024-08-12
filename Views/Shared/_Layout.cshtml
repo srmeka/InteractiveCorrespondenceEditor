@@ -1,0 +1,104 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - ICE</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular.js")"></script>
+
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular-route.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/Module.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/SoapService.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/MyScripts/CustomDatepicker.js")"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/xml2json.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jspath.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/bootstrap-datepicker.min.js")"></script>
+    <link rel="stylesheet" href="~/Content/bootstrap-datepicker3.css" />
+
+    <link rel='stylesheet' href='~/Content/loading-bar.min.css' type='text/css' media='all' />
+    <script type="text/javascript" src="@Url.Content("~/Scripts/loading-bar.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/angular-pretty-xml.js")"></script>
+
+    @*Common Controls*@
+    <script src="@Url.Content("~/Controls/LineOfBusiness/LineOfBusinessDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Controls/LineOfBusiness/LineOfBusinessController.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Controls/PrinterDropdown/PrinterDropdownDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Controls/PrinterDropdown/PrinterDropdownController.js")" type="text/javascript"></script>
+   
+    <script src="@Url.Content("~/Controls/DateTextBox/DateTextBoxDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Controls/DateTextBox/DateTextBoxController.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Controls/LetterDatePicker/LetterDatePickerDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Controls/LetterDatePicker/LetterDatePickerController.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Controls/TextBox/TextBoxDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Controls/TextBox/TextBoxController.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Controls/CheckBox/CheckBoxDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Controls/CheckBox/CheckBoxController.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Controls/UsMailCheckbox/UsMailCheckboxDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Controls/UsMailCheckbox/UsMailCheckboxController.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Controls/PrinterDropdownwCheckbox/PrinterDropdownwCheckboxDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Controls/PrinterDropdownwCheckbox/PrinterDropdownwCheckboxController.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Controls/FaxwCheckbox/FaxwCheckboxDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Controls/FaxwCheckbox/FaxwCheckboxController.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Controls/EmailwCheckbox/EmailwCheckboxDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Controls/EmailwCheckbox/EmailwCheckboxController.js")" type="text/javascript"></script>
+
+    <script src="@Url.Content("~/Controls/DropdownwTextbox/DropdownwTextboxDirective.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Controls/DropdownwTextbox/DropdownwTextboxController.js")" type="text/javascript"></script>
+</head>
+
+<body ng-app="ice">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        
+        <a class="navbar-brand"><span><img src="~/Content/ice.png" height="30" width="30" /></span> Interactive Correspondence Editor</a>
+        <div class="navbar-collapse collapse"  ng-controller="ModuleController">
+            <ul class="nav navbar-nav">
+                <li><a href="~/Startup" ng-show="ShowSimulatorTab">Simulator</a></li> 
+                <li><a href="~/Public/About.html">About</a></li>
+                @*<li><a href="~/Admin#/Category">Admin</a></li>*@
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" ng-show="ShowAdminTab">
+                        Admin
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="~/Admin/Category">Categories</a></li>
+                        <li><a href="~/Admin/Document">Documents</a></li>
+                        <li><a href="~/Admin/Control">Controls</a></li>
+                        <li><a href="~/Admin/Webservices">Webservices</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                @*<li><a id="UserDetail"></a></li>*@
+                <li><span> User: {{UserDetail}}</span></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container page-panel" id="scriptdiv">
+
+        @RenderBody()
+        @RenderSection("SPAViews", required: false)
+
+    </div>
+    @RenderSection("Scripts", required: false)
+   
+</body>
+
+</html>

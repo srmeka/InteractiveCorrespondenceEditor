@@ -1,0 +1,260 @@
+﻿
+@{
+    ViewBag.Title = "Category";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Admin/CategoryController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Home/HomeService.js")"></script>
+<form ng-controller="CategoryController">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-xs-6">
+                <label class="radio-inline">
+                    <input type="radio" class="insert" name="optradio" value="0" ng-click="InsertUpdate(insert)" id="OptradioInsertId" checked />Insert
+                </label>
+            </div>
+            <div class="col-xs-6">
+                <label class="radio-inline">
+                    <input type="radio" class="update" name="optradio" value="1" ng-click="InsertUpdate(update)" id="OptradioUpdateId" />Update
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse insert" style="display:block">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Insert Category- Dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="form-group">
+                            <label>
+                                LOB
+                            </label>
+                            <select class="form-control" name="LOB" ng-model="SelectedDevLOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown | orderBy : 'lobName'" id="LOBId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label>
+                                Category Friendly Name
+                            </label>
+                            <input type="text" ng-model="CategoryFrndlyName" class="form-control" id="CategoryFrndlyNameId" />
+                        </div>
+                        <div class="col-xs-4">
+                            <label>
+                                Category Name
+                            </label>
+                            <input type="text" ng-model="CategoryName" class="form-control" id="CategoryNmId" />
+                        </div>
+                        <div class="col-xs-4">
+                            <label>
+                                Category Active
+                            </label>
+                            <select ng-model="SelectedCategoryActive" class="form-control" id="CatgoryActiveId">
+                                <option value="True" selected>True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label>
+                                Category AD group
+                            </label>
+                            <input type="text" ng-model="CategoryGroups" class="form-control" id="CategoryGroupsId" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="InsertCategory()">Insert Category</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Migrate Category- Non dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>
+                                LOB
+                            </label>
+                            <select class="form-control" name="LOB" ng-model="SelectedNonDevLOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown | orderBy : 'lobName'" id="LOBId" ng-change="GetNonDevCategory()">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <label>
+                            Category
+                        </label>
+                        <select size="{{NumberOfDevCategory}}" multiple ng-multiple="true" ng-options="CategoryNonDev as CategoryNonDev.categoryFriendlyName for CategoryNonDev in CategoryNonDevDropdown | orderBy : 'categoryFriendlyName'"
+                                ng-model="NonDevCategory" class="form-control"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="GenerateNonDevInsertQuery()">Generate migration Query</button>
+                        </div>
+                    </div>
+                </div>
+                <table st-table="rowCollection" class="table" ng-show="NonDevCategory > '0'">
+                    <tr>
+                        <th>Category ID</th>
+                        <th>Category Name</th>
+                        <th>Category Friendly Name</th>
+                        <th>Category Active</th>
+                        <th>Category Groups</th>
+                    </tr>
+                    <tbody>
+                        <tr class="info" ng-repeat="SelectedCategory in NonDevCategory">
+                            <td>{{SelectedCategory.categoryId}}</td>
+                            <td>{{SelectedCategory.categoryName}}</td>
+                            <td>{{SelectedCategory.categoryFriendlyName}}</td>
+                            <td>{{SelectedCategory.categoryActive}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;white-space:normal;">{{SelectedCategory.categoryGroups}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="collapse update">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Update Category - Dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>
+                                LOB
+                            </label>
+                            <select class="form-control" name="LOB" ng-model="SelectedUpdateDevLOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown | orderBy : 'lobName'" id="LOBId" ng-change="GetUpdateDevCategory()">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <label>
+                            Category
+                        </label>
+                        <select size="{{NumberOfUpdateDevCategory}}" multiple ng-multiple="true" ng-options="UpdateDevCategory as UpdateDevCategory.categoryFriendlyName for UpdateDevCategory in CategoryUpdateDevDropdown | orderBy : 'categoryFriendlyName'"
+                                ng-model="SelectedUpdateDevCategory" class="form-control"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="UpdateInDev()">Update in DEV</button>
+                        </div>
+                    </div>
+                </div>
+                <table st-table="rowCollection" class="table" ng-show="SelectedUpdateDevCategory > '0'">
+                    <thead>
+                        <tr>
+                            <th>Category ID</th>
+                            <th>Category Name</th>
+                            <th>Category Friendly Name</th>
+                            <th>LOB Name</th>
+                            <th>Category Active</th>
+                            <th>Category Groups</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="info" ng-repeat="$index  in SelectedUpdateDevCategory">
+                            <td>{{SelectedUpdateDevCategory[$index].categoryId}}</td>
+                            <td><input type="text" ng-model="SelectedUpdateDevCategory[$index].categoryName" size="150" /></td>
+                            <td><input type="text" ng-model="SelectedUpdateDevCategory[$index].categoryFriendlyName" size="30" /></td>
+                            <td>
+                                <select ng-model="SelectedUpdateDevCategory[$index].lobId">
+                                    <option value="">--Select--</option>
+                                    <option ng-repeat="LOBDropdownInfo in LOBDropdown" value="{{LOBDropdownInfo.lobId}}" ng-selected="{{SelectedUpdateDevCategory[$index].lobId == LOBDropdownInfo.lobId}}">
+                                        {{LOBDropdownInfo.lobName}}
+                                    </option>
+                                </select>
+                            </td>
+                            <td><input type="text" ng-model="SelectedUpdateDevCategory[$index].categoryActive" size="10" /></td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;white-space:normal;"><input type="text" ng-model="SelectedUpdateDevCategory[$index].categoryGroups" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Migrate Category - Non dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>
+                                LOB
+                            </label>
+                            <select class="form-control" name="LOB" ng-model="SelectedUpdateNonDevLOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown | orderBy : 'lobName'" id="LOBId" ng-change="GetUpdateNonDevCategory()">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <label>
+                            Category
+                        </label>
+                        <select size="{{NumberOfUpdateNonDevCategory}}" multiple ng-multiple="true" ng-options="UpdateNonDevCategory as UpdateNonDevCategory.categoryFriendlyName for UpdateNonDevCategory in CategoryUpdateNonDevDropdown | orderBy : 'categoryFriendlyName'"
+                                ng-model="SelectedUpdateNonDevCategory" class="form-control"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="GenerateUpdateQuery()">Generate Migration Query</button>
+                        </div>
+                    </div>
+                </div>
+                <table st-table="rowCollection" class="table" ng-show="SelectedUpdateNonDevCategory > '0'">
+                    <tr>
+                        <th>Category ID</th>
+                        <th>Category Name</th>
+                        <th>Category Friendly Name</th>
+                        <th>Category Active</th>
+                        <th>Category Groups</th>
+                    </tr>
+                    <tbody>
+                        <tr class="info" ng-repeat="SelectedCategory in SelectedUpdateNonDevCategory">
+                            <td>{{SelectedCategory.categoryId}}</td>
+                            <td>{{SelectedCategory.categoryName}}</td>
+                            <td>{{SelectedCategory.categoryFriendlyName}}</td>
+                            <td>{{SelectedCategory.categoryActive}}</td>
+                            <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;white-space:normal;">{{SelectedCategory.categoryGroups}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="alert-danger" ng-hide="!errorDetail" id="DivAlert"> <h4> {{errorDetail}}</h4> </div>
+    </div>
+</form>

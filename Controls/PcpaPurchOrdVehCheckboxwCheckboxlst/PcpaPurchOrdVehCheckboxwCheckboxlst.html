@@ -1,0 +1,33 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaPurchOrdVehCheckboxwCheckboxlstController">
+    <div class="panel-heading">Purchase Order</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <input ng-change="clearAllSelectedData()" 
+                           ng-model="isPurchOrdVehSelected" 
+                           type="checkbox" 
+                           name="PurchOrdCheckbox" 
+                           value="" 
+                           id="PurchOrdCheckboxID" />
+                    <label>Include Purchase Order(s)</label>
+                </div>
+                <div class="col-md-8">
+                    
+                    <div ng-repeat="item in VehiclePO track by item.VehicleId" >
+                        <input ng-model="item.VehiclePOChecked" 
+                               ng-change="selectPurchOrdVeh(item)" 
+                               type="checkbox" 
+                               ng-disabled="!isPurchOrdVehSelected" 
+                               name="PurchOrdVehCheckboxLst" 
+                               id="PurchOrdVehLstId{{item.VehicleId}}" 
+                               value="" />
+                        <span  ng-class="(isPurchOrdVehSelected)?'':'disabled-class'" 
+                              ng-bind="item.ModelYearNr + ' ' + item.VehicleTradeNm + ' ' + item.ModelNm + ' '  + item.ManufacturerVehicleIdentificationNr"></span>
+                    </div>
+                    <span class="alert-danger" ng-if="VehiclePO.length === 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

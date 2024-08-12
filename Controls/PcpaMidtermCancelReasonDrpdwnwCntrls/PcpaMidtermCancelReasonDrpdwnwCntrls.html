@@ -1,0 +1,57 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaMidtermCancelReasonDrpdwnwCntrlsController">
+    <div class="panel-heading">Midterm Cancel Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    <input ng-click="clearAll()" ng-model="isDeletionSelected" type="checkbox" id="DeletionSelectId" name="DeletionCheckbox" value="" />
+                    <label>Midterm Cancel Reason</label>
+                </div>
+                <div class="col-md-9">
+                    <select ng-model="selectedReason" ng-disabled="!isDeletionSelected" class="form-control" name="reasonSelector" id="reasonSelectorId" ng-options="item.optionValue for item in ReasonData" ng-click="clearAllSelectedData()" ng-required="isDeletionSelected">
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row" ng-show="isDeletionSelected && (selectedReason.slectedType === 'IIIB' || selectedReason.slectedType === 'IIIE')" style="margin-top:15px">
+                <div class="col-md-3"></div>
+                <label class="col-md-3" style="margin-top:5px;">* Driver Name:</label>
+                <div class="col-md-3">
+                    <select ng-required="isDeletionSelected && (selectedReason.slectedType === 'IIIB' || selectedReason.slectedType === 'IIIE')&& !userEnteredName" ng-click="clearuserEnteredName()" ng-disabled="Addressee.length == 0" name="AddresseeName" ng-model="SelectedAddressee" ng-options="AddresseeInfo.Person.PersonName.FirstGivenNm + ' ' + AddresseeInfo.Person.SecondGivenNameInitial+ ' ' +  AddresseeInfo.Person.PersonName.FamilyNm + ' ' + AddresseeInfo.Person.PersonName.FamilyNameGenerationCd for AddresseeInfo in Addressee track by AddresseeInfo._id" class="form-control" id="AddresseeNameID" style="margin-top:5px;">
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+                <div class="col-md-3" style="margin-top:5px;">
+                    <input type="text" class="form-control" ng-disabled="SelectedAddressee" ng-model="userEnteredName" />
+                </div>
+            </div>
+            <div class="row" ng-show="isDeletionSelected && selectedReason.slectedType === 'IIIB'" style="margin-top:15px">
+                <div class="col-md-3"></div>
+
+                <label class="col-md-3">* License/MVR Suspended Date:</label>
+                <div class="col-md-3">
+                    <input type="text" class="form-control" ng-required="isDeletionSelected && selectedReason.slectedType === 'IIIB'" ng-model="sDate" name="suspendDate" id="suspendDateId" ng-disabled="!isDeletionSelected" datepicker />
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row" ng-show="isDeletionSelected && selectedReason.slectedType === 'IIIE'" style="margin-top:15px">
+                <div class="col-md-3"></div>
+                <label class="col-md-3">* Vehicle Operating Date:</label>
+                <div class="col-md-3">
+                    <input class="form-control" ng-required="isDeletionSelected && selectedReason.slectedType === 'IIIE'" type="text" ng-model="oDate" name="operateDate" id="operateDateId" datepicker />
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+            <div class="row" ng-show="isDeletionSelected && selectedReason.slectedType === 'IIIC'" style="margin-top:15px">
+                
+                <div class="col-md-3"></div>
+                <label class="col-md-3">* Violation Reason Indicator:</label>
+                <div class="col-md-3">
+                    <select ng-model="selectedViolationReason" ng-required="isDeletionSelected && selectedReason.slectedType === 'IIIC'" class="form-control" name="violationReason" ng-options="item.optionValue for item in ViolationReasonArray" id="violationReasonId">
+                        <option value="" disabled selected>--Select--</option>
+                    </select>
+                </div>
+            </div>           
+        </div>
+    </div>
+</div>

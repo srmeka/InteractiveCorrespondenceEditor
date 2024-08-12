@@ -1,0 +1,40 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaPolReinstCancelRepeaterwCheckboxController">
+    <div class="panel-heading">
+        Policy Reinstated and Canceled Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group" ng-repeat="item in TotalCount track by $index">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="checkbox" ng-model="ReinstCancelCheckboxes[$index]" ng-click="ClearReinstCancelData($index)" name="ReinstCancelCheckbox{{$index}}" id="ReinstCancelCheckbox{{$index}}Id" />
+                    <label>
+                        Include Policy Reinstated and Canceled Dates
+                    </label>
+                </div>
+                <div class="col-md-4" style="margin-top:3px" >
+                    <label ng-class="(ReinstCancelCheckboxes[$index])?'':'disabled-class'">
+                        Reinstate In Force Date:
+                    </label>
+                </div>
+                <div class="col-md-4" style="margin-top:3px" >
+                    <input class="form-control" type="text" ng-model="ReinstDates[$index]" ng-disabled="!ReinstCancelCheckboxes[$index]" name="ReinstDate{{$index}}" id="ReinstDate{{$index}}Id" datepicker />
+                </div>
+            </div>
+            <div class="row" style="padding-bottom: 10px; border-bottom: 2px solid lightgray">
+                <div class="col-md-4"></div>
+                <div class="col-md-4" style="margin-top:5px" >
+                    <label  ng-class="(ReinstCancelCheckboxes[$index])?'':'disabled-class'">
+                        Cancellation Date:
+                    </label>
+                </div>
+                <div class="col-md-4" style="margin-top:5px" >
+                    <input class="form-control" type="text" ng-model="CancelDates[$index]" ng-disabled="!ReinstCancelCheckboxes[$index]" ng-init="ApplyDatePicker($index)" name="CancelDate{{$index}}" id="CancelDate{{$index}}Id" datepicker />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <input type="button" class="btn-primary" value="Add" ng-click="AddNewReinstCancelSection()" ng-hide="TotalCount.length=={{MaxCtls}}" />
+            <input type="button" class="btn-primary" value="Remove" ng-click="RemoveReinstCancelSection()" ng-hide="TotalCount.length==1" />
+        </div>
+    </div>
+</div>

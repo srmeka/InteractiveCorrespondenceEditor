@@ -1,0 +1,33 @@
+﻿<div class="panel panel-primary" ng-controller="GcParagraphCheckboxListController">
+    <div class="panel-heading">Paragraphs</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <!--Checkbox list-->
+            <div class="row" ng-repeat="item in displayData track by $index"  style="margin-top:6px">
+                
+                <!--control with checkbox label-->
+                <div class="col-md-6" ng-if="item.controlType === '2' || item.controlType === '3'">
+                    <input style="width:15px;vertical-align:top;margin-top:7px" type="checkbox" name="{{item.checkboxName}}" id="{{item.checkboxName}}Id" ng-click="selectedItem(item)" ng-model="item.ctrlSelected" value="" />
+                    <label style="width:calc(100% - 20px);margin-top:5px" ng-bind="item.labelText"></label>
+                </div>
+                
+                <!--date picker control with checkbox label-->
+                <div class="col-md-6" ng-if="item.controlType === '1'">
+                    <input style="width:15px;vertical-align:top;margin-top:7px" ng-if="item.controlType === '1' " type="checkbox" name="{{item.checkboxName}}" id="{{item.checkboxName}}Id" ng-model="item.bindValue" value="" />
+                    <label style="width:calc(100% - 20px);margin-top:5px" ng-bind="item.labelText"></label>
+                </div>
+
+                <!--textbox with control-->
+                <div ng-class="!item.ctrlSelected? 'disabled-class':''" class="col-md-6" ng-if="item.controlType === '2'">
+                    <input ng-disabled="!item.ctrlSelected" type="text" class="form-control" ng-model="item.bindValue" name="{{item.controlName}}Value" id="{{item.controlName}}ValueId"/>
+                </div>
+                
+                <!--date picker-->
+                <div ng-class="!item.ctrlSelected? 'disabled-class':''" class="col-md-6" ng-if="item.controlType === '3'">
+                    <input ng-disabled="!item.ctrlSelected" type="text" datePicker date-format="mm/dd/yy" placeholder="MM/DD/YY" class="form-control" ng-model="item.bindValue" name="{{item.controlName}}Value" id="{{item.controlName}}ValueId" />
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

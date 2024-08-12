@@ -1,0 +1,154 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaVehicleCheckboxwCheckboxlistController">
+    <div class="panel-heading">* Insured's Vehicle(s)</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12">
+                    <div ng-repeat="item in Vehicle track by item.Vehicle.VehicleId" ng-required="true">
+
+                        <div class="row">
+                            <!--Vehicle data checkbox list-->
+                            <div class="col-md-12">
+                                <input ng-model="CtrlEnabledCheckbox[$index]" ng-click="UpdateInfo(item.Vehicle._id,$index);" type="checkbox" name="CtrlEnabledCheckbox{{$index}}" id="CtrlEnabledCheckbox{{$index}}Id" ng-required="SelectionCount == 0" value="" />
+                                <span ng-bind="item.Vehicle.ModelYearNr + ' ' + item.Vehicle.VehicleTradeNm + ' ' + item.Vehicle.ModelNm + ' ' + item.Vehicle.ManufacturerVehicleIdentificationNr"></span>
+                            </div>
+
+                            <!--radio buttons-->
+                            <div class="col-md-1" ng-show="CtrlEnabledCheckbox[$index]">
+                            </div>
+                            <div class="col-md-11" ng-show="CtrlEnabledCheckbox[$index]" ng-init="optShow[$index]=={{optShow[$index]}}">
+                                <label class="radio-inline">
+                                    <input type="radio" ng-model="optShow[$index]" name="optShow{{$index}}" id="optShow{{$index}}ID" value="Owned" ng-click="" />
+                                    Owned
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" ng-model="optShow[$index]" name="optShow{{$index}}" id="optShow{{$index}}ID" value="Finance" ng-click="" />
+                                    Financed
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" ng-model="optShow[$index]" name="optShow{{$index}}" id="optShow{{$index}}ID" value="Lease" ng-click="" />
+                                    Leased and No Additional Insured
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" ng-model="optShow[$index]" name="optShow{{$index}}" id="optShow{{$index}}ID" value="Additional" ng-click="" />
+                                    Lease and Additional Insured
+                                </label>
+                            </div>
+                        </div>
+
+                        <!--Finance Company section -->
+                        <div class="col-md-12" style="padding-bottom:5px">
+                            <div class="col-md-6" ng-show="CtrlEnabledCheckbox[$index] && optShow[$index]=='Finance'" style="padding-bottom: 10px; border: 1px solid lightgray; margin-bottom:5px">
+                                <div class="col-md-12" style="background-color:lightgray">Finance Company</div>
+                                <div class="row" style="margin-top:5px"></div>
+
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Name:</label>
+                                    <input type="text" ng-model="FinanceName[$index]" class="form-control" value="{{FinanceName[$index]}}" name="FinanceName{{$index}}" id="FinanceName{{$index}}Id" />
+                                </div>
+
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Address Line 1:</label>
+                                    <input type="text" ng-model="FinanceCompanyAddressLine1Tx[$index]" class="form-control" value="{{FinanceCompanyAddressLine1Tx[$index]}}" name="FinanceCompanyAddressLine1Tx{{$index}}" id="FinanceCompanyAddressLine1Tx{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Address Line 2:</label>
+                                    <input type="text" ng-model="FinanceCompanyAddressLine2Tx[$index]" class="form-control" value="{{FinanceCompanyAddressLine2Tx[$index]}}" name="FinanceCompanyAddressLine2Tx{{$index}}" id="FinanceCompanyAddressLine2Tx{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Address Line 3:</label>
+                                    <input type="text" ng-model="FinanceCompanyAddressLine3Tx[$index]" class="form-control" value="{{FinanceCompanyAddressLine3Tx[$index]}}" name="FinanceCompanyAddressLine3Tx{{$index}}" id="FinanceCompanyAddressLine3Tx{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">City:</label>
+                                    <input type="text" ng-model="FinanceCompanyAddressCity[$index]" class="form-control" value="{{FinanceCompanyAddressCity[$index]}}" name="FinanceCompanyAddressCity{{$index}}" id="FinanceCompanyAddressCity{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">State:</label>
+                                    <input type="text" ng-model="FinanceCompanyAddressState[$index]" class="form-control" value="{{FinanceCompanyAddressState[$index]}}" name="FinanceCompanyAddressState{{$index}}" id="FinanceCompanyAddressState{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Zip:</label>
+                                    <input type="text" ng-model="FinanceCompanyAddressZip[$index]" class="form-control" value="{{FinanceCompanyAddressZip[$index]}}" name="FinanceCompanyAddressZip{{$index}}" id="FinanceCompanyAddressZip{{$index}}Id" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Lease Company section-->
+                        <div class="col-md-12" style="padding-bottom:5px">
+                            <div class="col-md-6" ng-show="CtrlEnabledCheckbox[$index] && (optShow[$index]=='Lease' || optShow[$index]=='Additional')" style="padding-bottom: 10px; border: 1px solid lightgray; margin-bottom:5px">
+                                <div class="col-md-12" style="background-color:lightgray">Lease Company</div>
+                                <div class="row" style="margin-top:5px"></div>
+
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Name:</label>
+                                    <input type="text" ng-model="LeaseName[$index]" class="form-control" value="{{LeaseName[$index]}}" name="LeaseName{{$index}}" id="LeaseName{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Address Line 1:</label>
+                                    <input type="text" ng-model="LeaseCompanyAddressLine1Tx[$index]" class="form-control" value="{{LeaseCompanyAddressLine1Tx[$index]}}" name="LeaseCompanyAddressLine1Tx{{$index}}" id="LeaseCompanyAddressLine1Tx{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Address Line 2:</label>
+                                    <input type="text" ng-model="LeaseCompanyAddressLine2Tx[$index]" class="form-control" value="{{LeaseCompanyAddressLine2Tx[$index]}}" name="LeaseCompanyAddressLine2Tx{{$index}}" id="LeaseCompanyAddressLine2Tx{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Address Line 3:</label>
+                                    <input type="text" ng-model="LeaseCompanyAddressLine3Tx[$index]" class="form-control" value="{{LeaseCompanyAddressLine3Tx[$index]}}" name="LeaseCompanyAddressLine3Tx{{$index}}" id="LeaseCompanyAddressLine3Tx{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">City:</label>
+                                    <input type="text" ng-model="LeaseCompanyAddressCity[$index]" class="form-control" value="{{LeaseCompanyAddressCity[$index]}}" name="LeaseCompanyAddressCity{{$index}}" id="LeaseCompanyAddressCity{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">State:</label>
+                                    <input type="text" ng-model="LeaseCompanyAddressState[$index]" class="form-control" value="{{LeaseCompanyAddressState[$index]}}" name="LeaseCompanyAddressState{{$index}}" id="LeaseCompanyAddressState{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Zip:</label>
+                                    <input type="text" ng-model="LeaseCompanyAddressZip[$index]" class="form-control" value="{{LeaseCompanyAddressZip[$index]}}" name="LeaseCompanyAddressZip{{$index}}" id="LeaseCompanyAddressZip{{$index}}Id" />
+                                </div>
+                            </div>
+
+                            <!--Additional Insured Company section-->
+                            <div class="col-md-6" ng-show="CtrlEnabledCheckbox[$index] && optShow[$index]=='Additional'" style="padding-bottom: 10px; border: 1px solid lightgray; margin-bottom:5px">
+                                <div class="col-md-12" style="background-color:lightgray">Additional Insured Company</div>
+                                <div class="row" style="margin-top:5px"></div>
+
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Name:</label>
+                                    <input type="text" ng-model="AdditionalInsuredName[$index]" class="form-control" value="{{AdditionalInsuredName[$index]}}" name="AdditionalInsuredName{{$index}}" id="AdditionalInsuredName{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Address Line 1:</label>
+                                    <input type="text" ng-model="AdditionalInsuredCompanyAddressLine1Tx[$index]" class="form-control" value="{{AdditionalInsuredCompanyAddressLine1Tx[$index]}}" name="AdditionalInsuredCompanyAddressLine1Tx{{$index}}" id="AdditionalInsuredCompanyAddressLine1Tx{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Address Line 2:</label>
+                                    <input type="text" ng-model="AdditionalInsuredCompanyAddressLine2Tx[$index]" class="form-control" value="{{AdditionalInsuredCompanyAddressLine2Tx[$index]}}" name="AdditionalInsuredCompanyAddressLine2Tx{{$index}}" id="AdditionalInsuredCompanyAddressLine2Tx{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Address Line 3:</label>
+                                    <input type="text" ng-model="AdditionalInsuredCompanyAddressLine3Tx[$index]" class="form-control" value="{{AdditionalInsuredCompanyAddressLine3Tx[$index]}}" name="AdditionalInsuredCompanyAddressLine3Tx{{$index}}" id="AdditionalInsuredCompanyAddressLine3Tx{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">City:</label>
+                                    <input type="text" ng-model="AdditionalInsuredCompanyAddressCity[$index]" class="form-control" value="{{AdditionalInsuredCompanyAddressCity[$index]}}" name="AdditionalInsuredCompanyAddressCity{{$index}}" id="AdditionalInsuredCompanyAddressCity{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">State:</label>
+                                    <input type="text" ng-model="AdditionalInsuredCompanyAddressState[$index]" class="form-control" value="{{AdditionalInsuredCompanyAddressState[$index]}}" name="AdditionalInsuredCompanyAddressState{{$index}}" id="AdditionalInsuredCompanyAddressState{{$index}}Id" />
+                                </div>
+                                <div class="row" style="margin-top:5px">
+                                    <label class="col-md-4">Zip:</label>
+                                    <input type="text" ng-model="AdditionalInsuredCompanyAddressZip[$index]" class="form-control" value="{{AdditionalInsuredCompanyAddressZip[$index]}}" name="AdditionalInsuredCompanyAddressZip{{$index}}" id="AdditionalInsuredCompanyAddressZip{{$index}}Id" />
+                                </div>
+                            </div>
+                            <span class="alert-danger" ng-if="Vehicle.length === 0">Information not provided by source</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,135 @@
+﻿<div class="panel panel-primary" ng-controller="PcumbDriverInfoRepeaterwCheckboxController">
+    <div class="panel-heading">Driver Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray" ng-repeat="slector in populateData track by $index">
+
+                <!--Checkbox to enable control-->
+                <div class="col-md-4">
+                    <input ng-click="clearAllData($index)" 
+                           ng-model="CtrlEnabledCheckbox[$index]" 
+                           type="checkbox" 
+                           id="ResidentCheckboxId{{$index}}" 
+                           name="ResidentCheckbox{{$index}}" 
+                           value="" />
+                    <label>Include Driver</label>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="row">
+
+                        <!--Vehicle dropdown list-->
+                        <div class="col-md-6">
+                            <select ng-disabled="!CtrlEnabledCheckbox[$index]" ng-options="(item.Person.PersonName.FirstGivenNm + ' ' + item.Person.PersonName.SecondGivenNm + ' ' + item.Person.PersonName.FamilyNm)  for item in residentInfo track by item._id" name="ResidentSelection[$index]" ng-model="slector.selectedValue" class="form-control" id="ResidentInfo[$index]Id">
+                                <option value="">--Select--</option>
+                            </select>
+                            <span class="alert-danger" ng-show="Vehicle.length == 0">Information not provided by source</span>
+                        </div>
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[slector.selectorId] || slector.selectedValue" ng-model="freeTextGroup[slector.selectorId]" type="text" class="form-control" name="userText[$index]" id="userText[$index]Id" value="" />
+                        </div>
+                    </div>
+
+                    <!--Relationship to Applicant-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" 
+                                   ng-disabled="!CtrlEnabledCheckbox[slector.selectorId]" 
+                                   ng-model="RelationToApplicant[$index]" 
+                                   name="RelationToApplicant[$index]" 
+                                   id="RelationToApplicant[$index]Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Relationship to Applicant</label>
+                        </div>
+                    </div>
+
+                    <!--License Status-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" 
+                                   ng-disabled="!CtrlEnabledCheckbox[slector.selectorId]" 
+                                   ng-model="LStatus[$index]" 
+                                   name="LStatus[$index]" id="LStatus[$index]Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">License Status</label>
+                        </div>
+                    </div>
+
+                    <!--Own Insurance-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" 
+                                   ng-disabled="!CtrlEnabledCheckbox[slector.selectorId]" 
+                                   ng-model="OIns[$index]" 
+                                   name="OIns[$index]" 
+                                   id="OIns[$index]Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Own Insurance</label>
+                        </div>
+                    </div>
+
+                    <!--Date of Birth-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" 
+                                   ng-disabled="!CtrlEnabledCheckbox[slector.selectorId]" 
+                                   ng-model="dateOfBirth[$index]" 
+                                   name="dateOfBirth[$index]" 
+                                   id="dateOfBirth[$index]Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Date of Birth</label>
+                        </div>
+                    </div>
+
+                    <!--DL Number and State-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" 
+                                   ng-disabled="!CtrlEnabledCheckbox[slector.selectorId]" 
+                                   ng-model="DLNumAndState[$index]" 
+                                   name="DLNumAndState[$index]" 
+                                   id="DLNumAndState[$index]Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">DL Number and State</label>
+                        </div>
+                    </div>
+
+                    <!--Year First Licensed-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" 
+                                   ng-disabled="!CtrlEnabledCheckbox[slector.selectorId]" 
+                                   ng-model="YearFirstLicensed[$index]" 
+                                   name="YearFirstLicensed[$index]" 
+                                   id="YearFirstLicensed[$index]Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Year First Licensed</label>
+                        </div>
+                    </div>
+
+                    <!--Prior DL-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" 
+                                   ng-disabled="!CtrlEnabledCheckbox[slector.selectorId]" 
+                                   ng-model="PriorDL[$index]" 
+                                   name="PriorDL[$index]" 
+                                   id="PriorDL[$index]Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Prior DL</label>
+                        </div>
+                    </div>
+
+                    <!--Valid DL-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" 
+                                   ng-disabled="!CtrlEnabledCheckbox[slector.selectorId]" 
+                                   ng-model="ValidDL[$index]" 
+                                   name="ValidDL[$index]" 
+                                   id="ValidDL[$index]Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Valid DL</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center" style="margin-top:10px;">
+                <input type="button" class="btn-primary" ng-disabled="!CtrlEnabledCheckbox" value="Add" ng-if="showAddBtn" ng-click="addSelector()">
+                <input type="button" class="btn-primary" value="Remove" ng-if="showRemoveBtn" ng-click="removeSelector()">
+            </div>
+        </div>
+    </div>
+</div>

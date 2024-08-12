@@ -1,0 +1,29 @@
+﻿<div class="panel panel-primary" ng-controller="GcOutOfPocketRentalCheckboxController">
+    <div class="panel-heading">Out of Pocket Rental</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <!--Checkbox to show vehicle data-->
+                <div class="col-md-4">
+                    <input type="checkbox" ng-click="enableVehicle()" ng-model="includeVeh" />
+                    <label>Include Vehicle:</label>
+                </div>
+                <div class="col-md-4">
+                    <!--Vehicle dropdown list-->
+                    <select ng-disabled="!includeVeh" 
+                            ng-options="(item.Year + ' ' + item.Make + ' ' + item.Model) for item in VehicleData" 
+                            ng-required="includeVeh"
+                            name="VehicleSelection" 
+                            ng-model="selectedVehicle" 
+                            class="form-control" 
+                            id="VehicleSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="VehicleData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

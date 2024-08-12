@@ -1,0 +1,58 @@
+﻿<div class="panel panel-primary" ng-controller="GcScanSheetAssignToDropdownController">
+    <div class="panel-heading">Assign To</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Assign To dropdown list-->
+            <div class="row">
+                <div class="col-md-3">
+                    <label>*Assign To:</label>
+                </div>
+                <div class="col-md-9">
+                    <select ng-change="selecAuthor()"
+                            ng-required="true"
+                            ng-options="(item.FirstName + ' ' + item.LastName) for item in Authors | orderBy:'FirstName + LastName'"
+                            name="AuthorSelection"
+                            ng-model="selectedAuthor"
+                            class="form-control"
+                            id="AuthorSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row" ng-hide="!LabelName2" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label>{{LabelName2}}</label>
+                </div>
+                <div class="col-md-9">
+                    <select ng-change="selecAuthor2()"
+                            ng-options="(item.FirstName + ' ' + item.LastName) for item in Authors2 | orderBy:'FirstName + LastName'"
+                            name="AuthorSelection2"
+                            ng-model="selectedAuthor2"
+                            class="form-control"
+                            id="AuthorSelection2Id">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row" ng-hide="!LabelName3" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label>{{LabelName3}}</label>
+                </div>
+                <div class="col-md-9">
+                    <select ng-change="selecAuthor3()"
+                            ng-options="(item.FirstName + ' ' + item.LastName) for item in Authors3 | orderBy:'FirstName + LastName'"
+                            name="AuthorSelection3"
+                            ng-model="selectedAuthor3"
+                            class="form-control"
+                            id="AuthorSelection3Id">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

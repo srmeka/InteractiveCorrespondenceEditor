@@ -1,0 +1,33 @@
+﻿<div class="panel panel-primary" ng-controller="WccInterrogRecRoleAndReceiverController">
+    <div class="panel-heading">Interrogatories Receiver(s)</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div ng-repeat="item in repeatCount track by $index">
+
+                    <!--Interrogatories receiver role dropdown list-->
+                    <div class="row">
+                        <div class="col-md-4"><label ng-bind="($index == 0)?'Interrogatories Receiver Role':'Interrogatories Receiver Role #' + ($index + 1)"></label>:</div>
+                        <div class="col-md-8">
+                            <select class="form-control" ng-change="selectedRole(selectedRoleData[$index], $index)" ng-options="item for item in RoleData" ng-model="selectedRoleData[$index]" name="ClaimantNumSelection{{$index}}" id="ClaimantNumSelection{{$index}}Id">
+                                <option value="">-Select One-</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!--Interrogatories receiver dropdown list-->
+                    <div class="row" style="margin-top:5px;">
+                        <div class="col-md-4"><label ng-bind="($index == 0)?'Interrogatories Receiver':'Interrogatories Receiver #' + ($index + 1)"></label>:</div>
+                        <div class="col-md-8">
+                            <select class="form-control" ng-model="receiverData[$index]" ng-options="item.displayName for item in numberData[$index]" name="ClaimantNumSelection{{$index}}" id="ClaimantNumSelection{{$index}}Id">
+                                <option value="">-Select One-</option>
+                            </select>
+                        </div>
+                    </div>
+
+                <!--seperator bar-->
+                <div ng-show="$index < repeatCount.length-1" style="margin-top:5px;margin-bottom:5px;border-bottom: 2px solid lightgray"></div>
+
+            </div>
+        </div>
+    </div>
+</div> 

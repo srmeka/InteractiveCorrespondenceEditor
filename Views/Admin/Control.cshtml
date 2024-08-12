@@ -1,0 +1,340 @@
+﻿
+@{
+    ViewBag.Title = "Control";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Admin/ControlController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Home/HomeService.js")"></script>
+<form ng-controller="ControlController">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-xs-6">
+                <label class="radio-inline">
+                    <input type="radio" class="insert" name="optradio" value="0" ng-click="InsertUpdate(insert)" id="OptradioInsertId" checked />Insert
+                </label>
+            </div>
+            <div class="col-xs-6">
+                <label class="radio-inline">
+                    <input type="radio" class="update" name="optradio" value="1" ng-click="InsertUpdate(update)" id="OptradioUpdateId" />Update
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse insert" style="display:block">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Insert Control- Dev</label>
+            </div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label>
+                                Control Description
+                            </label>
+                            <input type="text" ng-model="ControlDescription" class="form-control" id="ControlDescriptionId" />
+                        </div>
+                        <div class="col-xs-6">
+                            <label>
+                                Control Name
+                            </label>
+                            <input type="text" ng-model="ControlName" class="form-control" id=" ControlNameId" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="InsertControl()">Insert Control</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Insert Document Control- Dev</label>
+            </div>
+            <div class="panel-body">
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <label>
+                                    LOB
+                                </label>
+                                <select class="form-control" name="LOB" ng-model="SelectedDevLOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown | orderBy : 'lobName'" id="LOBDevId" ng-change="GetDevCategory()">
+                                    <option value="">--Select--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <label>
+                                Category
+                            </label>
+                            <select class="form-control" name="Category" ng-model="SelectedDevCategory" ng-options="CategoryNonDevInfo.categoryFriendlyName for CategoryNonDevInfo in CategoryDevDropdown | orderBy : 'categoryFriendlyName'" id="CategoryDevId" ng-change="GetDevDocument()">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-4">
+                            <label>
+                                Document
+                            </label>
+                            <select class="form-control" id="DocumentDevId" ng-options="Document as Document.documentFriendlyName for Document in DocumentList | orderBy : 'documentFriendlyName'" ng-model="SelectedDocument" ng-change="GetControlsForDocument()">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label>
+                                Control
+                            </label>
+                            <select size="20" multiple ng-multiple="true" ng-options="ControlDev as ControlDev.controlName for ControlDev in ControlNonDevDropdown | orderBy : 'controlName'"
+                                    ng-model="SelectedControls" class="form-control" ></select>
+                        </div>
+                    </div>
+                </div>
+                <table st-table="rowCollection" class="table" ng-show="ControlsForDocument > '0'">
+                    <thead>
+                        <tr>
+                            <th>Document Name</th>
+                            <th>Control description</th>
+                            <th>Control Name</th>
+                            <th>Control Order</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="info" ng-repeat="$index  in ControlsForDocument">
+                            <td>{{SelectedDocument.documentName}}</td>
+                            <td>{{ControlsForDocument[$index].controlDescription}}</td>
+                            <td>{{ControlsForDocument[$index].controlName}}</td>
+                            <td>{{ControlsForDocument[$index].controlOrder}}</td>
+                            <td><a ng-click="DeleteControl(ControlsForDocument[$index].documentControlId)" class="btn btn-link" >Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table st-table="rowCollection" class="table" ng-show="SelectedControls > '0'">
+                    <thead>
+                        <tr>
+                            <th>Document Name</th>
+                            <th>Control description</th>
+                            <th>Control Name</th>
+                            <th>Control Order</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="info" ng-repeat="$index  in SelectedControls">
+                            <td>{{SelectedDocument.documentName}}</td>
+                            <td>{{SelectedControls[$index].controlDescription}}</td>
+                            <td>{{SelectedControls[$index].controlName}}</td>
+                            <td><input type="text" ng-model="SelectedControls[$index].controlOrder" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="InsertDocumentControl()">Insert Document Control</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Migrate Control- Non dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label>
+                                Control
+                            </label>
+                            <select size="20" multiple ng-multiple="true" ng-options="ControlNonDev as ControlNonDev.controlName for ControlNonDev in ControlNonDevDropdown | orderBy : 'controlName'"
+                                    ng-model="NonDevControl" class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="btn btn-primary" ng-click="GenerateNonDevControlInsertQuery()">Generate Migration Query</button>
+                            </div>
+                        </div>
+                    </div>
+                    <table st-table="rowCollection" class="table" ng-show="NonDevControl > '0'">
+                        <tr>
+                            <th>Control Name</th>
+                            <th>Control Description</th>
+                        </tr>
+                        <tbody>
+                            <tr class="info" ng-repeat="SelectedControl in NonDevControl">
+                                <td>{{SelectedControl.controlName}}</td>
+                                <td>{{SelectedControl.controlDescription}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Migrate Document Control- Non dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="form-group">
+                                <label>
+                                    LOB
+                                </label>
+                                <select class="form-control" name="LOB" ng-model="SelectedNonDevLOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown | orderBy : 'lobName'" id="LOBDevId" ng-change="GetNonDevCategory()">
+                                    <option value="">--Select--</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-4">
+                            <label>
+                                Category
+                            </label>
+                            <select class="form-control" name="Category" ng-model="SelectedNonDevCategory" ng-options="CategoryNonDevInfo.categoryFriendlyName for CategoryNonDevInfo in CategoryNonDevDropdown | orderBy : 'categoryFriendlyName'" id="CategoryDevId" ng-change="GetNonDevDocument()">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-4">
+                            <label>
+                                Document
+                            </label>
+                            <select class="form-control" id="DocumentDevId" ng-options="Document as Document.documentFriendlyName for Document in NonDevDocumentList | orderBy : 'documentFriendlyName'" ng-model="SelectedNonDevDocument" ng-change="GetNonDevControlsForDocument()">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="GenerateNonDevDocumentControlInsertQuery()">Generate Migration Query</button>
+                        </div>
+                    </div>
+                </div>
+                <table st-table="rowCollection" class="table" ng-show="ControlsForNonDevDocument > '0'">
+                    <thead>
+                        <tr>
+                            <th>Document Name</th>
+                            <th>Control description</th>
+                            <th>Control Name</th>
+                            <th>Control Order</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="info" ng-repeat="NonDevDocumentControl  in ControlsForNonDevDocument">
+                            <td>{{SelectedNonDevDocument.documentName}}</td>
+                            <td>{{NonDevDocumentControl.controlDescription}}</td>
+                            <td>{{NonDevDocumentControl.controlName}}</td>
+                            <td>{{NonDevDocumentControl.controlOrder}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse update">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Update Control - Dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label>
+                                Control
+                            </label>
+                            <select size="20" multiple ng-multiple="true" ng-options="UpdateDevControl as UpdateDevControl.controlName for UpdateDevControl in ControlNonDevDropdown | orderBy : 'controlName'"
+                                    ng-model="SelectedUpdateDevControl" class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="btn btn-primary" ng-click="UpdateConrolInDev()">Update in DEV</button>
+                            </div>
+                        </div>
+                    </div>
+                    <table st-table="rowCollection" class="table" ng-show="SelectedUpdateDevControl > '0'">
+                        <thead>
+                            <tr>
+                                <th>Control Name</th>
+                                <th>Control Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="info" ng-repeat="$index  in SelectedUpdateDevControl">
+                                <td><input type="text" ng-model="SelectedUpdateDevControl[$index].controlName" size="200" /></td>
+                                <td><input type="text" ng-model="SelectedUpdateDevControl[$index].controlDescription" size="200" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Migrate Control- Non dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label>
+                                Control
+                            </label>
+                            <select size="20" multiple ng-multiple="true" ng-options="ControlNonDev as ControlNonDev.controlName for ControlNonDev in ControlNonDevDropdown | orderBy : 'controlName'"
+                                    ng-model="UpdateNonDevControl" class="form-control"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="GenerateUpdateNonDevControlInsertQuery()">Generate Migration Query</button>
+                        </div>
+                    </div>
+                </div>
+                <table st-table="rowCollection" class="table" ng-show="UpdateNonDevControl > '0'">
+                    <tr>
+                        <th>Control Name</th>
+                        <th>Control Description</th>
+                    </tr>
+                    <tbody>
+                        <tr class="info" ng-repeat="SelectedControl in UpdateNonDevControl">
+                            <td>{{SelectedControl.controlName}}</td>
+                            <td>{{SelectedControl.controlDescription}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="alert-danger" ng-hide="!errorDetail" id="DivAlert"> <h4> {{errorDetail}}</h4> </div>
+    </div>
+    </form>
+

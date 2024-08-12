@@ -1,0 +1,22 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaAdditionalPolicyNumCheckboxController">
+    <div class="panel-heading">Additional Policy Number(s)</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12">
+                    <!--Additional policy number checkbox list-->
+                    <div ng-repeat="item in additionalPolicyNum track by $index">
+                        <input type="checkbox" 
+                               name="additionalPolicyNum{{$index}}" 
+                               ng-model="item.checked" 
+                               ng-change="selectItem(item)" 
+                               id="additionalPolicyNum{{$index}}"
+                               value="" />
+                        <span ng-bind="item.PolicyId"></span>
+                    </div>
+                    <span class="alert-danger" ng-if="additionalPolicyNum.length === 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

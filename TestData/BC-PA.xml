@@ -1,0 +1,1272 @@
+<CorrespondenceDataResponse
+ xmlns:esb="http://njm.com/esb/wcu/bc/1.0/WCUBillingDataService"
+ xmlns:tns="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types"
+ xmlns:typ1="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types"
+ xmlns:typesProdStmt="http://njm.com/esb/wcu/bc/bds/producerstatments/1.0/types">
+  <IsPolicyEscrow
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    false
+  </IsPolicyEscrow>
+  <IsPolicyPrecisionPay
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    false
+  </IsPolicyPrecisionPay>
+  <PolicyPastDueAmt
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    1637.00
+  </PolicyPastDueAmt>
+  <PolicyInstAmtDue
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    490.00
+  </PolicyInstAmtDue>
+  <PolicyTotBalDue
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    4089.00
+  </PolicyTotBalDue>
+  <AccountInvoices LatestPolicyPeriod="true" id="100">
+    <PolicyPeriodForThisInvoice>
+      <Account>
+        <AccountNumber>AA625181221</AccountNumber>
+      </Account>
+      <ActualPremiumAmount>0</ActualPremiumAmount>
+      <BillingMethod>
+        <Code>DirectBill</Code>
+      </BillingMethod>
+      <CancelStatus>
+        <Code>open</Code>
+      </CancelStatus>
+      <Contacts>
+        <Entry id="1">
+          <Contact id="1">
+            <entityPerson>
+              <FirstName>LINDA</FirstName>
+              <LastName>BROOKES</LastName>
+            </entityPerson>
+            <AllValidAddresses>
+              <Entry id="1">
+                <AddressLine1>1107 1ST AVE</AddressLine1>
+                <AddressType>
+                  <Code>home</Code>
+                </AddressType>
+                <City>BERWICK</City>
+                <PostalCode>18603</PostalCode>
+                <State>
+                  <Code>PA</Code>
+                </State>
+              </Entry>
+            </AllValidAddresses>
+            <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+            <PrimaryAddress id="1">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </PrimaryAddress>
+            <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+            <Subtype>
+              <Code>Person</Code>
+            </Subtype>
+          </Contact>
+          <DisplayName>LINDA BROOKES</DisplayName>
+          <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+          <Roles>
+            <Entry id="1">
+              <Role>
+                <Code>primaryinsured</Code>
+              </Role>
+            </Entry>
+          </Roles>
+        </Entry>
+      </Contacts>
+      <CurrentOpenBalanceDue>2127.00</CurrentOpenBalanceDue>
+      <DelinquentAmount>1637.00</DelinquentAmount>
+      <DueAmount>1637.00</DueAmount>
+      <EPAgreementPaymentAmount>511.13</EPAgreementPaymentAmount>
+      <EstimatedPremiumAmount>0</EstimatedPremiumAmount>
+      <HOPolicyType_Ext>
+        <Code>Homeowners</Code>
+      </HOPolicyType_Ext>
+      <InvoiceDeliveryType_Ext>mail</InvoiceDeliveryType_Ext>
+      <IsDirectDebit>false</IsDirectDebit>
+      <IsLCF_Ext>false</IsLCF_Ext>
+      <LastPaymentAmountPosted>813.00</LastPaymentAmountPosted>
+      <LastPaymentAmountPostedDate>2019-09-03T00:00:00-04:00</LastPaymentAmountPostedDate>
+      <NextInstallmentAmountDue>490.00</NextInstallmentAmountDue>
+      <NextInstallmentAmountDueDate>2020-02-27T00:00:00-05:00</NextInstallmentAmountDueDate>
+      <NotHonoredPaymentAmount_Ext>0.00</NotHonoredPaymentAmount_Ext>
+      <OriginalDelinequentAmount>490.00</OriginalDelinequentAmount>
+      <PaidInFullDiscount_Ext>
+        <Code>No</Code>
+      </PaidInFullDiscount_Ext>
+      <PaymentPlan>
+        <Name>Ten Equal Payments - HD</Name>
+      </PaymentPlan>
+      <PlannedInvoices>
+        <Entry id="2">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-03-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="3">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-04-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="4">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-05-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="5">
+          <AmountDue>492.00</AmountDue>
+          <PaymentDueDate>2020-06-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+      </PlannedInvoices>
+      <Policy>
+        <LOBCode>
+          <DisplayName>HO</DisplayName>
+        </LOBCode>
+        <ProducerCodeOfService_Ext>
+          <typespp:Code
+           xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            00000
+          </typespp:Code>
+          <typespp:Producer
+           xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            <typespp:Name>NONE-00000</typespp:Name>
+            <typespp:ParentProducerName_Ext>NONE</typespp:ParentProducerName_Ext>
+          </typespp:Producer>
+        </ProducerCodeOfService_Ext>
+      </Policy>
+      <PolicyNumber>H501006688</PolicyNumber>
+      <PolicyPerEffDate>2019-09-03T00:00:00-04:00</PolicyPerEffDate>
+      <PolicyPerExpirDate>2020-09-03T00:00:00-04:00</PolicyPerExpirDate>
+      <PrimaryInsured id="1">
+        <Contact id="2">
+          <entityPerson>
+            <FirstName>LINDA</FirstName>
+            <LastName>BROOKES</LastName>
+          </entityPerson>
+          <AllValidAddresses>
+            <Entry id="2">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </Entry>
+          </AllValidAddresses>
+          <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+          <PrimaryAddress id="2">
+            <AddressLine1>1107 1ST AVE</AddressLine1>
+            <AddressType>
+              <Code>home</Code>
+            </AddressType>
+            <City>BERWICK</City>
+            <PostalCode>18603</PostalCode>
+            <State>
+              <Code>PA</Code>
+            </State>
+          </PrimaryAddress>
+          <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+          <Subtype>
+            <Code>Person</Code>
+          </Subtype>
+        </Contact>
+        <DisplayName>LINDA BROOKES</DisplayName>
+        <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+        <Roles>
+          <Entry id="2">
+            <Role>
+              <Code>primaryinsured</Code>
+            </Role>
+          </Entry>
+        </Roles>
+      </PrimaryInsured>
+      <RecentPaymentOnDlnqPolicy_Ext>813.00</RecentPaymentOnDlnqPolicy_Ext>
+      <RiskState>PA</RiskState>
+      <Status>
+        <Code>inforce</Code>
+      </Status>
+      <TotalAdjustedOutstandingAmount>4089.00</TotalAdjustedOutstandingAmount>
+      <TotalDueForPolicyPeriod>0</TotalDueForPolicyPeriod>
+      <UWCompany>
+        <Code>njm_ext</Code>
+      </UWCompany>
+    </PolicyPeriodForThisInvoice>
+  </AccountInvoices>
+  <AccountInvoices id="1"
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <AmountDue>167.00</AmountDue>
+    <CurrentInstallmentAmount>167.00</CurrentInstallmentAmount>
+    <EarnedPremiumIndicatorOne>N</EarnedPremiumIndicatorOne>
+    <EarnedPremiumIndicatorTwo>N</EarnedPremiumIndicatorTwo>
+    <EventDate>2019-10-03T00:00:00-04:00</EventDate>
+    <FirstInstallmentIndicator>N</FirstInstallmentIndicator>
+    <InvoiceNumber>1000016593</InvoiceNumber>
+    <InvoiceLineItemsFrom360>
+      <Entry>
+        <Description>Payment Reversal</Description>
+        <DueAmount>-492.00</DueAmount>
+        <InvoiceItemAmtDue>167.00</InvoiceItemAmtDue>
+        <PaidAmount>-490.00</PaidAmount>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2019</PolicyYear>
+        <TransactionDate>2019-10-03T00:00:00-04:00</TransactionDate>
+        <TransactionEffectiveDate>2019-09-03T00:00:00-04:00</TransactionEffectiveDate>
+      </Entry>
+      <Entry>
+        <BalanceDue>0</BalanceDue>
+        <Description>Payment Thank You</Description>
+        <PaidAmount>-813.00</PaidAmount>
+        <PastDueIndicator>N</PastDueIndicator>
+        <TransactionDate>2019-10-25T09:36:18.163-04:00</TransactionDate>
+        <TransactionEffectiveDate>2019-10-25T09:36:18.163-04:00</TransactionEffectiveDate>
+      </Entry>
+    </InvoiceLineItemsFrom360>
+    <LegalDunningLetterIndicator>N</LegalDunningLetterIndicator>
+    <PaymentDueDate>2019-10-27T00:00:00-04:00</PaymentDueDate>
+    <PolicyPeriodForThisInvoice>
+      <Account>
+        <AccountNumber>AA625181221</AccountNumber>
+      </Account>
+      <ActualPremiumAmount>0</ActualPremiumAmount>
+      <BillingMethod>
+        <Code>DirectBill</Code>
+      </BillingMethod>
+      <CancelStatus>
+        <Code>open</Code>
+      </CancelStatus>
+      <Contacts>
+        <Entry id="6">
+          <Contact id="3">
+            <entityPerson>
+              <FirstName>LINDA</FirstName>
+              <LastName>BROOKES</LastName>
+            </entityPerson>
+            <AllValidAddresses>
+              <Entry id="3">
+                <AddressLine1>1107 1ST AVE</AddressLine1>
+                <AddressType>
+                  <Code>home</Code>
+                </AddressType>
+                <City>BERWICK</City>
+                <PostalCode>18603</PostalCode>
+                <State>
+                  <Code>PA</Code>
+                </State>
+              </Entry>
+            </AllValidAddresses>
+            <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+            <PrimaryAddress id="3">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </PrimaryAddress>
+            <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+            <Subtype>
+              <Code>Person</Code>
+            </Subtype>
+          </Contact>
+          <DisplayName>LINDA BROOKES</DisplayName>
+          <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+          <Roles>
+            <Entry id="3">
+              <Role>
+                <Code>primaryinsured</Code>
+              </Role>
+            </Entry>
+          </Roles>
+        </Entry>
+      </Contacts>
+      <CurrentOpenBalanceDue>2127.00</CurrentOpenBalanceDue>
+      <DelinquentAmount>1637.00</DelinquentAmount>
+      <DueAmount>1637.00</DueAmount>
+      <EPAgreementPaymentAmount>511.13</EPAgreementPaymentAmount>
+      <EstimatedPremiumAmount>0</EstimatedPremiumAmount>
+      <HOPolicyType_Ext>
+        <Code>Homeowners</Code>
+      </HOPolicyType_Ext>
+      <InvoiceDeliveryType_Ext>mail</InvoiceDeliveryType_Ext>
+      <IsDirectDebit>false</IsDirectDebit>
+      <IsLCF_Ext>false</IsLCF_Ext>
+      <LastPaymentAmountPosted>813.00</LastPaymentAmountPosted>
+      <LastPaymentAmountPostedDate>2019-09-03T00:00:00-04:00</LastPaymentAmountPostedDate>
+      <NextInstallmentAmountDue>490.00</NextInstallmentAmountDue>
+      <NextInstallmentAmountDueDate>2020-02-27T00:00:00-05:00</NextInstallmentAmountDueDate>
+      <NotHonoredPaymentAmount_Ext>0.00</NotHonoredPaymentAmount_Ext>
+      <OriginalDelinequentAmount>490.00</OriginalDelinequentAmount>
+      <PaidInFullDiscount_Ext>
+        <Code>No</Code>
+      </PaidInFullDiscount_Ext>
+      <PaymentPlan>
+        <Name>Ten Equal Payments - HD</Name>
+      </PaymentPlan>
+      <PlannedInvoices>
+        <Entry id="7">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-03-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="8">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-04-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="9">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-05-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="10">
+          <AmountDue>492.00</AmountDue>
+          <PaymentDueDate>2020-06-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+      </PlannedInvoices>
+      <Policy>
+        <LOBCode>
+          <DisplayName>HO</DisplayName>
+        </LOBCode>
+        <ProducerCodeOfService_Ext>
+          <typespp:Code
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            00000
+          </typespp:Code>
+          <typespp:Producer
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            <typespp:Name>NONE-00000</typespp:Name>
+            <typespp:ParentProducerName_Ext>NONE</typespp:ParentProducerName_Ext>
+          </typespp:Producer>
+        </ProducerCodeOfService_Ext>
+      </Policy>
+      <PolicyNumber>H501006688</PolicyNumber>
+      <PolicyPerEffDate>2019-09-03T00:00:00-04:00</PolicyPerEffDate>
+      <PolicyPerExpirDate>2020-09-03T00:00:00-04:00</PolicyPerExpirDate>
+      <PrimaryInsured id="2">
+        <Contact id="4">
+          <entityPerson>
+            <FirstName>LINDA</FirstName>
+            <LastName>BROOKES</LastName>
+          </entityPerson>
+          <AllValidAddresses>
+            <Entry id="4">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </Entry>
+          </AllValidAddresses>
+          <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+          <PrimaryAddress id="4">
+            <AddressLine1>1107 1ST AVE</AddressLine1>
+            <AddressType>
+              <Code>home</Code>
+            </AddressType>
+            <City>BERWICK</City>
+            <PostalCode>18603</PostalCode>
+            <State>
+              <Code>PA</Code>
+            </State>
+          </PrimaryAddress>
+          <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+          <Subtype>
+            <Code>Person</Code>
+          </Subtype>
+        </Contact>
+        <DisplayName>LINDA BROOKES</DisplayName>
+        <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+        <Roles>
+          <Entry id="4">
+            <Role>
+              <Code>primaryinsured</Code>
+            </Role>
+          </Entry>
+        </Roles>
+      </PrimaryInsured>
+      <RecentPaymentOnDlnqPolicy_Ext>813.00</RecentPaymentOnDlnqPolicy_Ext>
+      <RiskState>PA</RiskState>
+      <Status>
+        <Code>inforce</Code>
+      </Status>
+      <TotalAdjustedOutstandingAmount>4089.00</TotalAdjustedOutstandingAmount>
+      <TotalDueForPolicyPeriod>4089.00</TotalDueForPolicyPeriod>
+      <UWCompany>
+        <Code>njm_ext</Code>
+      </UWCompany>
+    </PolicyPeriodForThisInvoice>
+    <ReminderNoticeLetterIndicator>Y</ReminderNoticeLetterIndicator>
+  </AccountInvoices>
+  <AccountInvoices id="2"
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <AmountDue>490.00</AmountDue>
+    <CurrentInstallmentAmount>490.00</CurrentInstallmentAmount>
+    <EarnedPremiumIndicatorOne>N</EarnedPremiumIndicatorOne>
+    <EarnedPremiumIndicatorTwo>N</EarnedPremiumIndicatorTwo>
+    <EventDate>2019-12-03T00:00:00-05:00</EventDate>
+    <FirstInstallmentIndicator>N</FirstInstallmentIndicator>
+    <InvoiceNumber>1000016595</InvoiceNumber>
+    <InvoiceLineItemsFrom360>
+      <Entry>
+        <Description>Installment</Description>
+        <DueAmount>490.00</DueAmount>
+        <InvoiceItemAmtDue>490.00</InvoiceItemAmtDue>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2019</PolicyYear>
+        <TransactionDate>2019-12-03T00:00:00-05:00</TransactionDate>
+        <TransactionEffectiveDate>2019-09-03T00:00:00-04:00</TransactionEffectiveDate>
+      </Entry>
+    </InvoiceLineItemsFrom360>
+    <LegalDunningLetterIndicator>N</LegalDunningLetterIndicator>
+    <PaymentDueDate>2019-12-27T00:00:00-05:00</PaymentDueDate>
+    <PolicyPeriodForThisInvoice>
+      <Account>
+        <AccountNumber>AA625181221</AccountNumber>
+      </Account>
+      <ActualPremiumAmount>0</ActualPremiumAmount>
+      <BillingMethod>
+        <Code>DirectBill</Code>
+      </BillingMethod>
+      <CancelStatus>
+        <Code>open</Code>
+      </CancelStatus>
+      <Contacts>
+        <Entry id="11">
+          <Contact id="5">
+            <entityPerson>
+              <FirstName>LINDA</FirstName>
+              <LastName>BROOKES</LastName>
+            </entityPerson>
+            <AllValidAddresses>
+              <Entry id="5">
+                <AddressLine1>1107 1ST AVE</AddressLine1>
+                <AddressType>
+                  <Code>home</Code>
+                </AddressType>
+                <City>BERWICK</City>
+                <PostalCode>18603</PostalCode>
+                <State>
+                  <Code>PA</Code>
+                </State>
+              </Entry>
+            </AllValidAddresses>
+            <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+            <PrimaryAddress id="5">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </PrimaryAddress>
+            <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+            <Subtype>
+              <Code>Person</Code>
+            </Subtype>
+          </Contact>
+          <DisplayName>LINDA BROOKES</DisplayName>
+          <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+          <Roles>
+            <Entry id="5">
+              <Role>
+                <Code>primaryinsured</Code>
+              </Role>
+            </Entry>
+          </Roles>
+        </Entry>
+      </Contacts>
+      <CurrentOpenBalanceDue>2127.00</CurrentOpenBalanceDue>
+      <DelinquentAmount>1637.00</DelinquentAmount>
+      <DueAmount>1637.00</DueAmount>
+      <EPAgreementPaymentAmount>511.13</EPAgreementPaymentAmount>
+      <EstimatedPremiumAmount>0</EstimatedPremiumAmount>
+      <HOPolicyType_Ext>
+        <Code>Homeowners</Code>
+      </HOPolicyType_Ext>
+      <InvoiceDeliveryType_Ext>mail</InvoiceDeliveryType_Ext>
+      <IsDirectDebit>false</IsDirectDebit>
+      <IsLCF_Ext>false</IsLCF_Ext>
+      <LastPaymentAmountPosted>813.00</LastPaymentAmountPosted>
+      <LastPaymentAmountPostedDate>2019-09-03T00:00:00-04:00</LastPaymentAmountPostedDate>
+      <NextInstallmentAmountDue>490.00</NextInstallmentAmountDue>
+      <NextInstallmentAmountDueDate>2020-02-27T00:00:00-05:00</NextInstallmentAmountDueDate>
+      <NotHonoredPaymentAmount_Ext>0.00</NotHonoredPaymentAmount_Ext>
+      <OriginalDelinequentAmount>490.00</OriginalDelinequentAmount>
+      <PaidInFullDiscount_Ext>
+        <Code>No</Code>
+      </PaidInFullDiscount_Ext>
+      <PaymentPlan>
+        <Name>Ten Equal Payments - HD</Name>
+      </PaymentPlan>
+      <PlannedInvoices>
+        <Entry id="12">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-03-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="13">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-04-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="14">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-05-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="15">
+          <AmountDue>492.00</AmountDue>
+          <PaymentDueDate>2020-06-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+      </PlannedInvoices>
+      <Policy>
+        <LOBCode>
+          <DisplayName>HO</DisplayName>
+        </LOBCode>
+        <ProducerCodeOfService_Ext>
+          <typespp:Code
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            00000
+          </typespp:Code>
+          <typespp:Producer
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            <typespp:Name>NONE-00000</typespp:Name>
+            <typespp:ParentProducerName_Ext>NONE</typespp:ParentProducerName_Ext>
+          </typespp:Producer>
+        </ProducerCodeOfService_Ext>
+      </Policy>
+      <PolicyNumber>H501006688</PolicyNumber>
+      <PolicyPerEffDate>2019-09-03T00:00:00-04:00</PolicyPerEffDate>
+      <PolicyPerExpirDate>2020-09-03T00:00:00-04:00</PolicyPerExpirDate>
+      <PrimaryInsured id="3">
+        <Contact id="6">
+          <entityPerson>
+            <FirstName>LINDA</FirstName>
+            <LastName>BROOKES</LastName>
+          </entityPerson>
+          <AllValidAddresses>
+            <Entry id="6">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </Entry>
+          </AllValidAddresses>
+          <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+          <PrimaryAddress id="6">
+            <AddressLine1>1107 1ST AVE</AddressLine1>
+            <AddressType>
+              <Code>home</Code>
+            </AddressType>
+            <City>BERWICK</City>
+            <PostalCode>18603</PostalCode>
+            <State>
+              <Code>PA</Code>
+            </State>
+          </PrimaryAddress>
+          <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+          <Subtype>
+            <Code>Person</Code>
+          </Subtype>
+        </Contact>
+        <DisplayName>LINDA BROOKES</DisplayName>
+        <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+        <Roles>
+          <Entry id="6">
+            <Role>
+              <Code>primaryinsured</Code>
+            </Role>
+          </Entry>
+        </Roles>
+      </PrimaryInsured>
+      <RecentPaymentOnDlnqPolicy_Ext>813.00</RecentPaymentOnDlnqPolicy_Ext>
+      <RiskState>PA</RiskState>
+      <Status>
+        <Code>inforce</Code>
+      </Status>
+      <TotalAdjustedOutstandingAmount>4089.00</TotalAdjustedOutstandingAmount>
+      <TotalDueForPolicyPeriod>4089.00</TotalDueForPolicyPeriod>
+      <UWCompany>
+        <Code>njm_ext</Code>
+      </UWCompany>
+    </PolicyPeriodForThisInvoice>
+    <ReminderNoticeLetterIndicator>Y</ReminderNoticeLetterIndicator>
+  </AccountInvoices>
+  <AccountInvoices id="3"
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <AmountDue>490.00</AmountDue>
+    <CurrentInstallmentAmount>490.00</CurrentInstallmentAmount>
+    <EarnedPremiumIndicatorOne>N</EarnedPremiumIndicatorOne>
+    <EarnedPremiumIndicatorTwo>N</EarnedPremiumIndicatorTwo>
+    <EventDate>2019-11-03T00:00:00-04:00</EventDate>
+    <FirstInstallmentIndicator>N</FirstInstallmentIndicator>
+    <InvoiceNumber>1000016594</InvoiceNumber>
+    <InvoiceLineItemsFrom360>
+      <Entry>
+        <BalanceDue>0</BalanceDue>
+        <Description>Payment Thank You</Description>
+        <PaidAmount>-813.00</PaidAmount>
+        <PastDueIndicator>N</PastDueIndicator>
+        <TransactionDate>2019-10-25T09:36:18.163-04:00</TransactionDate>
+        <TransactionEffectiveDate>2019-10-25T09:36:18.163-04:00</TransactionEffectiveDate>
+      </Entry>
+      <Entry>
+        <Description>Installment</Description>
+        <DueAmount>490.00</DueAmount>
+        <InvoiceItemAmtDue>490.00</InvoiceItemAmtDue>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2019</PolicyYear>
+        <TransactionDate>2019-11-03T00:00:00-04:00</TransactionDate>
+        <TransactionEffectiveDate>2019-09-03T00:00:00-04:00</TransactionEffectiveDate>
+      </Entry>
+    </InvoiceLineItemsFrom360>
+    <LegalDunningLetterIndicator>N</LegalDunningLetterIndicator>
+    <PaymentDueDate>2019-11-27T00:00:00-05:00</PaymentDueDate>
+    <PolicyPeriodForThisInvoice>
+      <Account>
+        <AccountNumber>AA625181221</AccountNumber>
+      </Account>
+      <ActualPremiumAmount>0</ActualPremiumAmount>
+      <BillingMethod>
+        <Code>DirectBill</Code>
+      </BillingMethod>
+      <CancelStatus>
+        <Code>open</Code>
+      </CancelStatus>
+      <Contacts>
+        <Entry id="16">
+          <Contact id="7">
+            <entityPerson>
+              <FirstName>LINDA</FirstName>
+              <LastName>BROOKES</LastName>
+            </entityPerson>
+            <AllValidAddresses>
+              <Entry id="7">
+                <AddressLine1>1107 1ST AVE</AddressLine1>
+                <AddressType>
+                  <Code>home</Code>
+                </AddressType>
+                <City>BERWICK</City>
+                <PostalCode>18603</PostalCode>
+                <State>
+                  <Code>PA</Code>
+                </State>
+              </Entry>
+            </AllValidAddresses>
+            <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+            <PrimaryAddress id="7">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </PrimaryAddress>
+            <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+            <Subtype>
+              <Code>Person</Code>
+            </Subtype>
+          </Contact>
+          <DisplayName>LINDA BROOKES</DisplayName>
+          <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+          <Roles>
+            <Entry id="7">
+              <Role>
+                <Code>primaryinsured</Code>
+              </Role>
+            </Entry>
+          </Roles>
+        </Entry>
+      </Contacts>
+      <CurrentOpenBalanceDue>2127.00</CurrentOpenBalanceDue>
+      <DelinquentAmount>1637.00</DelinquentAmount>
+      <DueAmount>1637.00</DueAmount>
+      <EPAgreementPaymentAmount>511.13</EPAgreementPaymentAmount>
+      <EstimatedPremiumAmount>0</EstimatedPremiumAmount>
+      <HOPolicyType_Ext>
+        <Code>Homeowners</Code>
+      </HOPolicyType_Ext>
+      <InvoiceDeliveryType_Ext>mail</InvoiceDeliveryType_Ext>
+      <IsDirectDebit>false</IsDirectDebit>
+      <IsLCF_Ext>false</IsLCF_Ext>
+      <LastPaymentAmountPosted>813.00</LastPaymentAmountPosted>
+      <LastPaymentAmountPostedDate>2019-09-03T00:00:00-04:00</LastPaymentAmountPostedDate>
+      <NextInstallmentAmountDue>490.00</NextInstallmentAmountDue>
+      <NextInstallmentAmountDueDate>2020-02-27T00:00:00-05:00</NextInstallmentAmountDueDate>
+      <NotHonoredPaymentAmount_Ext>0.00</NotHonoredPaymentAmount_Ext>
+      <OriginalDelinequentAmount>490.00</OriginalDelinequentAmount>
+      <PaidInFullDiscount_Ext>
+        <Code>No</Code>
+      </PaidInFullDiscount_Ext>
+      <PaymentPlan>
+        <Name>Ten Equal Payments - HD</Name>
+      </PaymentPlan>
+      <PlannedInvoices>
+        <Entry id="17">
+          <AmountDue>49078.00</AmountDue>
+          <PaymentDueDate>2020-03-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="18">
+          <AmountDue>-49078.00</AmountDue>
+          <PaymentDueDate>2020-04-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="19">
+          <AmountDue>-49078.00</AmountDue>
+          <PaymentDueDate>2020-05-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="20">
+          <AmountDue>4926564.00</AmountDue>
+          <PaymentDueDate>2020-06-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+      </PlannedInvoices>
+      <Policy>
+        <LOBCode>
+          <DisplayName>HO</DisplayName>
+        </LOBCode>
+        <ProducerCodeOfService_Ext>
+          <typespp:Code
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            00000
+          </typespp:Code>
+          <typespp:Producer
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            <typespp:Name>NONE-00000</typespp:Name>
+            <typespp:ParentProducerName_Ext>NONE</typespp:ParentProducerName_Ext>
+          </typespp:Producer>
+        </ProducerCodeOfService_Ext>
+      </Policy>
+      <PolicyNumber>H501006688</PolicyNumber>
+      <PolicyPerEffDate>2019-09-03T00:00:00-04:00</PolicyPerEffDate>
+      <PolicyPerExpirDate>2020-09-03T00:00:00-04:00</PolicyPerExpirDate>
+      <PrimaryInsured id="4">
+        <Contact id="8">
+          <entityPerson>
+            <FirstName>LINDA</FirstName>
+            <LastName>BROOKES</LastName>
+          </entityPerson>
+          <AllValidAddresses>
+            <Entry id="8">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </Entry>
+          </AllValidAddresses>
+          <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+          <PrimaryAddress id="8">
+            <AddressLine1>1107 1ST AVE</AddressLine1>
+            <AddressType>
+              <Code>home</Code>
+            </AddressType>
+            <City>BERWICK</City>
+            <PostalCode>18603</PostalCode>
+            <State>
+              <Code>PA</Code>
+            </State>
+          </PrimaryAddress>
+          <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+          <Subtype>
+            <Code>Person</Code>
+          </Subtype>
+        </Contact>
+        <DisplayName>LINDA BROOKES</DisplayName>
+        <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+        <Roles>
+          <Entry id="8">
+            <Role>
+              <Code>primaryinsured</Code>
+            </Role>
+          </Entry>
+        </Roles>
+      </PrimaryInsured>
+      <RecentPaymentOnDlnqPolicy_Ext>813.00</RecentPaymentOnDlnqPolicy_Ext>
+      <RiskState>PA</RiskState>
+      <Status>
+        <Code>inforce</Code>
+      </Status>
+      <TotalAdjustedOutstandingAmount>4089.00</TotalAdjustedOutstandingAmount>
+      <TotalDueForPolicyPeriod>4089.00</TotalDueForPolicyPeriod>
+      <UWCompany>
+        <Code>njm_ext</Code>
+      </UWCompany>
+    </PolicyPeriodForThisInvoice>
+    <ReminderNoticeLetterIndicator>Y</ReminderNoticeLetterIndicator>
+  </AccountInvoices>
+  <AccountInvoices id="4"
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <AmountDue>490.00</AmountDue>
+    <CurrentInstallmentAmount>490.00</CurrentInstallmentAmount>
+    <EarnedPremiumIndicatorOne>N</EarnedPremiumIndicatorOne>
+    <EarnedPremiumIndicatorTwo>N</EarnedPremiumIndicatorTwo>
+    <EventDate>2020-02-03T00:00:00-05:00</EventDate>
+    <FirstInstallmentIndicator>N</FirstInstallmentIndicator>
+    <InvoiceNumber>1000016597</InvoiceNumber>
+    <InvoiceLineItemsFrom360>
+      <Entry>
+        <Description>Installment</Description>
+        <DueAmount>490.00</DueAmount>
+        <InvoiceItemAmtDue>490.00</InvoiceItemAmtDue>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2019</PolicyYear>
+        <TransactionDate>2020-02-03T00:00:00-05:00</TransactionDate>
+        <TransactionEffectiveDate>2019-09-03T00:00:00-04:00</TransactionEffectiveDate>
+      </Entry>
+    </InvoiceLineItemsFrom360>
+    <LegalDunningLetterIndicator>N</LegalDunningLetterIndicator>
+    <PaymentDueDate>2020-02-27T00:00:00-05:00</PaymentDueDate>
+    <PolicyPeriodForThisInvoice>
+      <Account>
+        <AccountNumber>AA625181221</AccountNumber>
+      </Account>
+      <ActualPremiumAmount>0</ActualPremiumAmount>
+      <BillingMethod>
+        <Code>DirectBill</Code>
+      </BillingMethod>
+      <CancelStatus>
+        <Code>open</Code>
+      </CancelStatus>
+      <Contacts>
+        <Entry id="21">
+          <Contact id="9">
+            <entityPerson>
+              <FirstName>LINDA</FirstName>
+              <LastName>BROOKES</LastName>
+            </entityPerson>
+            <AllValidAddresses>
+              <Entry id="9">
+                <AddressLine1>1107 1ST AVE</AddressLine1>
+                <AddressType>
+                  <Code>home</Code>
+                </AddressType>
+                <City>BERWICK</City>
+                <PostalCode>18603</PostalCode>
+                <State>
+                  <Code>PA</Code>
+                </State>
+              </Entry>
+            </AllValidAddresses>
+            <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+            <PrimaryAddress id="9">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </PrimaryAddress>
+            <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+            <Subtype>
+              <Code>Person</Code>
+            </Subtype>
+          </Contact>
+          <DisplayName>LINDA BROOKES</DisplayName>
+          <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+          <Roles>
+            <Entry id="9">
+              <Role>
+                <Code>primaryinsured</Code>
+              </Role>
+            </Entry>
+          </Roles>
+        </Entry>
+      </Contacts>
+      <CurrentOpenBalanceDue>2127.00</CurrentOpenBalanceDue>
+      <DelinquentAmount>1637.00</DelinquentAmount>
+      <DueAmount>1637.00</DueAmount>
+      <EPAgreementPaymentAmount>511.13</EPAgreementPaymentAmount>
+      <EstimatedPremiumAmount>0</EstimatedPremiumAmount>
+      <HOPolicyType_Ext>
+        <Code>Homeowners</Code>
+      </HOPolicyType_Ext>
+      <InvoiceDeliveryType_Ext>mail</InvoiceDeliveryType_Ext>
+      <IsDirectDebit>false</IsDirectDebit>
+      <IsLCF_Ext>false</IsLCF_Ext>
+      <LastPaymentAmountPosted>813.00</LastPaymentAmountPosted>
+      <LastPaymentAmountPostedDate>2019-09-03T00:00:00-04:00</LastPaymentAmountPostedDate>
+      <NextInstallmentAmountDue>490.00</NextInstallmentAmountDue>
+      <NextInstallmentAmountDueDate>2020-02-27T00:00:00-05:00</NextInstallmentAmountDueDate>
+      <NotHonoredPaymentAmount_Ext>0.00</NotHonoredPaymentAmount_Ext>
+      <OriginalDelinequentAmount>490.00</OriginalDelinequentAmount>
+      <PaidInFullDiscount_Ext>
+        <Code>No</Code>
+      </PaidInFullDiscount_Ext>
+      <PaymentPlan>
+        <Name>Ten Equal Payments - HD</Name>
+      </PaymentPlan>
+      <PlannedInvoices>
+        <Entry id="22">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-03-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="23">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-04-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="24">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-05-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="25">
+          <AmountDue>492.00</AmountDue>
+          <PaymentDueDate>2020-06-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+      </PlannedInvoices>
+      <Policy>
+        <LOBCode>
+          <DisplayName>HO</DisplayName>
+        </LOBCode>
+        <ProducerCodeOfService_Ext>
+          <typespp:Code
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            00000
+          </typespp:Code>
+          <typespp:Producer
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            <typespp:Name>NONE-00000</typespp:Name>
+            <typespp:ParentProducerName_Ext>NONE</typespp:ParentProducerName_Ext>
+          </typespp:Producer>
+        </ProducerCodeOfService_Ext>
+      </Policy>
+      <PolicyNumber>H501006688</PolicyNumber>
+      <PolicyPerEffDate>2019-09-03T00:00:00-04:00</PolicyPerEffDate>
+      <PolicyPerExpirDate>2020-09-03T00:00:00-04:00</PolicyPerExpirDate>
+      <PrimaryInsured id="5">
+        <Contact id="10">
+          <entityPerson>
+            <FirstName>LINDA</FirstName>
+            <LastName>BROOKES</LastName>
+          </entityPerson>
+          <AllValidAddresses>
+            <Entry id="10">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </Entry>
+          </AllValidAddresses>
+          <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+          <PrimaryAddress id="10">
+            <AddressLine1>1107 1ST AVE</AddressLine1>
+            <AddressType>
+              <Code>home</Code>
+            </AddressType>
+            <City>BERWICK</City>
+            <PostalCode>18603</PostalCode>
+            <State>
+              <Code>PA</Code>
+            </State>
+          </PrimaryAddress>
+          <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+          <Subtype>
+            <Code>Person</Code>
+          </Subtype>
+        </Contact>
+        <DisplayName>LINDA BROOKES</DisplayName>
+        <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+        <Roles>
+          <Entry id="10">
+            <Role>
+              <Code>primaryinsured</Code>
+            </Role>
+          </Entry>
+        </Roles>
+      </PrimaryInsured>
+      <RecentPaymentOnDlnqPolicy_Ext>813.00</RecentPaymentOnDlnqPolicy_Ext>
+      <RiskState>PA</RiskState>
+      <Status>
+        <Code>inforce</Code>
+      </Status>
+      <TotalAdjustedOutstandingAmount>4089.00</TotalAdjustedOutstandingAmount>
+      <TotalDueForPolicyPeriod>4089.00</TotalDueForPolicyPeriod>
+      <UWCompany>
+        <Code>njm_ext</Code>
+      </UWCompany>
+    </PolicyPeriodForThisInvoice>
+    <ReminderNoticeLetterIndicator>Y</ReminderNoticeLetterIndicator>
+  </AccountInvoices>
+  <AccountInvoices id="5"
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <AmountDue>490.00</AmountDue>
+    <CurrentInstallmentAmount>490.00</CurrentInstallmentAmount>
+    <EarnedPremiumIndicatorOne>N</EarnedPremiumIndicatorOne>
+    <EarnedPremiumIndicatorTwo>N</EarnedPremiumIndicatorTwo>
+    <EventDate>2020-01-03T00:00:00-05:00</EventDate>
+    <FirstInstallmentIndicator>N</FirstInstallmentIndicator>
+    <InvoiceNumber>1000016596</InvoiceNumber>
+    <InvoiceLineItemsFrom360>
+      <Entry>
+        <Description>Installment</Description>
+        <DueAmount>490.00</DueAmount>
+        <InvoiceItemAmtDue>490.00</InvoiceItemAmtDue>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2019</PolicyYear>
+        <TransactionDate>2020-01-03T00:00:00-05:00</TransactionDate>
+        <TransactionEffectiveDate>2019-09-03T00:00:00-04:00</TransactionEffectiveDate>
+      </Entry>
+    </InvoiceLineItemsFrom360>
+    <LegalDunningLetterIndicator>N</LegalDunningLetterIndicator>
+    <PaymentDueDate>2020-01-27T00:00:00-05:00</PaymentDueDate>
+    <PolicyPeriodForThisInvoice>
+      <Account>
+        <AccountNumber>AA625181221</AccountNumber>
+      </Account>
+      <ActualPremiumAmount>0</ActualPremiumAmount>
+      <BillingMethod>
+        <Code>DirectBill</Code>
+      </BillingMethod>
+      <CancelStatus>
+        <Code>open</Code>
+      </CancelStatus>
+      <Contacts>
+        <Entry id="26">
+          <Contact id="11">
+            <entityPerson>
+              <FirstName>LINDA</FirstName>
+              <LastName>BROOKES</LastName>
+            </entityPerson>
+            <AllValidAddresses>
+              <Entry id="11">
+                <AddressLine1>1107 1ST AVE</AddressLine1>
+                <AddressType>
+                  <Code>home</Code>
+                </AddressType>
+                <City>BERWICK</City>
+                <PostalCode>18603</PostalCode>
+                <State>
+                  <Code>PA</Code>
+                </State>
+              </Entry>
+            </AllValidAddresses>
+            <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+            <PrimaryAddress id="11">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </PrimaryAddress>
+            <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+            <Subtype>
+              <Code>Person</Code>
+            </Subtype>
+          </Contact>
+          <DisplayName>LINDA BROOKES</DisplayName>
+          <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+          <Roles>
+            <Entry id="11">
+              <Role>
+                <Code>primaryinsured</Code>
+              </Role>
+            </Entry>
+          </Roles>
+        </Entry>
+      </Contacts>
+      <CurrentOpenBalanceDue>2127.00</CurrentOpenBalanceDue>
+      <DelinquentAmount>1637.00</DelinquentAmount>
+      <DueAmount>1637.00</DueAmount>
+      <EPAgreementPaymentAmount>511.13</EPAgreementPaymentAmount>
+      <EstimatedPremiumAmount>0</EstimatedPremiumAmount>
+      <HOPolicyType_Ext>
+        <Code>Homeowners</Code>
+      </HOPolicyType_Ext>
+      <InvoiceDeliveryType_Ext>mail</InvoiceDeliveryType_Ext>
+      <IsDirectDebit>false</IsDirectDebit>
+      <IsLCF_Ext>false</IsLCF_Ext>
+      <LastPaymentAmountPosted>813.00</LastPaymentAmountPosted>
+      <LastPaymentAmountPostedDate>2019-09-03T00:00:00-04:00</LastPaymentAmountPostedDate>
+      <NextInstallmentAmountDue>490.00</NextInstallmentAmountDue>
+      <NextInstallmentAmountDueDate>2020-02-27T00:00:00-05:00</NextInstallmentAmountDueDate>
+      <NotHonoredPaymentAmount_Ext>0.00</NotHonoredPaymentAmount_Ext>
+      <OriginalDelinequentAmount>490.00</OriginalDelinequentAmount>
+      <PaidInFullDiscount_Ext>
+        <Code>No</Code>
+      </PaidInFullDiscount_Ext>
+      <PaymentPlan>
+        <Name>Ten Equal Payments - HD</Name>
+      </PaymentPlan>
+      <PlannedInvoices>
+        <Entry id="27">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-03-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="28">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-04-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="29">
+          <AmountDue>490.00</AmountDue>
+          <PaymentDueDate>2020-05-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+        <Entry id="30">
+          <AmountDue>492.00</AmountDue>
+          <PaymentDueDate>2020-06-27T00:00:00-04:00</PaymentDueDate>
+        </Entry>
+      </PlannedInvoices>
+      <Policy>
+        <LOBCode>
+          <DisplayName>HO</DisplayName>
+        </LOBCode>
+        <ProducerCodeOfService_Ext>
+          <typespp:Code
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            00000
+          </typespp:Code>
+          <typespp:Producer
+           xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+            <typespp:Name>NONE-00000</typespp:Name>
+            <typespp:ParentProducerName_Ext>NONE</typespp:ParentProducerName_Ext>
+          </typespp:Producer>
+        </ProducerCodeOfService_Ext>
+      </Policy>
+      <PolicyNumber>H501006688</PolicyNumber>
+      <PolicyPerEffDate>2019-09-03T00:00:00-04:00</PolicyPerEffDate>
+      <PolicyPerExpirDate>2020-09-03T00:00:00-04:00</PolicyPerExpirDate>
+      <PrimaryInsured id="6">
+        <Contact id="12">
+          <entityPerson>
+            <FirstName>LINDA</FirstName>
+            <LastName>BROOKES</LastName>
+          </entityPerson>
+          <AllValidAddresses>
+            <Entry id="12">
+              <AddressLine1>1107 1ST AVE</AddressLine1>
+              <AddressType>
+                <Code>home</Code>
+              </AddressType>
+              <City>BERWICK</City>
+              <PostalCode>18603</PostalCode>
+              <State>
+                <Code>PA</Code>
+              </State>
+            </Entry>
+          </AllValidAddresses>
+          <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+          <PrimaryAddress id="12">
+            <AddressLine1>1107 1ST AVE</AddressLine1>
+            <AddressType>
+              <Code>home</Code>
+            </AddressType>
+            <City>BERWICK</City>
+            <PostalCode>18603</PostalCode>
+            <State>
+              <Code>PA</Code>
+            </State>
+          </PrimaryAddress>
+          <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+          <Subtype>
+            <Code>Person</Code>
+          </Subtype>
+        </Contact>
+        <DisplayName>LINDA BROOKES</DisplayName>
+        <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+        <Roles>
+          <Entry id="12">
+            <Role>
+              <Code>primaryinsured</Code>
+            </Role>
+          </Entry>
+        </Roles>
+      </PrimaryInsured>
+      <RecentPaymentOnDlnqPolicy_Ext>813.00</RecentPaymentOnDlnqPolicy_Ext>
+      <RiskState>PA</RiskState>
+      <Status>
+        <Code>inforce</Code>
+      </Status>
+      <TotalAdjustedOutstandingAmount>4089.00</TotalAdjustedOutstandingAmount>
+      <TotalDueForPolicyPeriod>4089.00</TotalDueForPolicyPeriod>
+      <UWCompany>
+        <Code>njm_ext</Code>
+      </UWCompany>
+    </PolicyPeriodForThisInvoice>
+    <ReminderNoticeLetterIndicator>Y</ReminderNoticeLetterIndicator>
+  </AccountInvoices>
+  <UniqueContacts>
+    <Entry id="1">
+      <Contact id="1">
+        <entityPerson>
+          <FirstName>LINDA</FirstName>
+          <LastName>BROOKES</LastName>
+        </entityPerson>
+        <AllValidAddresses>
+          <Entry id="1">
+            <AddressLine1>1107 1ST AVE</AddressLine1>
+            <AddressType>
+              <Code>home</Code>
+            </AddressType>
+            <City>BERWICK</City>
+            <PostalCode>18603</PostalCode>
+            <State>
+              <Code>PA</Code>
+            </State>
+          </Entry>
+        </AllValidAddresses>
+        <EmailAddress1>MBasenko@NJM.com</EmailAddress1>
+        <PrimaryAddress id="1">
+          <AddressLine1>1107 1ST AVE</AddressLine1>
+          <AddressType>
+            <Code>home</Code>
+          </AddressType>
+          <City>BERWICK</City>
+          <PostalCode>18603</PostalCode>
+          <State>
+            <Code>PA</Code>
+          </State>
+        </PrimaryAddress>
+        <PrimaryPhoneValue>609-883-1300</PrimaryPhoneValue>
+        <Subtype>
+          <Code>Person</Code>
+        </Subtype>
+      </Contact>
+      <DisplayName>LINDA BROOKES</DisplayName>
+      <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+      <Roles>
+        <Entry id="1">
+          <Role>
+            <Code>primaryinsured</Code>
+          </Role>
+        </Entry>
+      </Roles>
+    </Entry>
+  </UniqueContacts>
+</CorrespondenceDataResponse>

@@ -1,0 +1,24 @@
+﻿<div class="panel panel-primary" ng-controller="GcClaimantNmContactsOneDropdownController">
+    <div class="panel-heading">Claimant Name (Contacts One)</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Claimant Name (Contacts) dropdown list-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label ng-show="{{required}}">* </label>
+                    <label>Claimant Name (Contacts):</label>
+                </div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ClaimantNameOneData" name="ClaimantNameSelection" ng-model="selectedName" class="form-control" id="ClaimantNameSelectionId" ng-required="{{required}}">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantNameOneData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

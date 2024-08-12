@@ -1,0 +1,77 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaVehicleCoverageDropdownwControlsController">
+    <div class="panel-heading">Verification of Coverage Information</div>
+    <div class="panel-body">
+       <div class="form-group">
+           <div class="row">
+               <div class="col-md-4">
+                   <!--Checkbox to enable control-->
+                       <input ng-click="clearAllSelectedData()" ng-model="SelectedVehicleCoverage" type="checkbox" id="CtrlEnableCheckboxId" name="CtrlEnableCheckbox" value="" /> <label>Include Verification of Coverage</label>
+               </div>
+               <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6"></div>
+                       <div class="col-md-6">
+                           <!--Verification of Coverage data dropdown list-->
+                           <select ng-model="selectedVehicleCoverage" ng-disabled="!SelectedVehicleCoverage" class="form-control" name="separationSelector" id="separationSelectorId" ng-options="item.optionValue for item in CoverageData">
+                               <option value="">--Select--</option>
+                           </select>
+                       </div>
+                   </div>
+                   <!--Driver name dropdown list and input group-->
+                   <div class="row" ng-show="selectedVehicleCoverage.selectControl % 2 === 1" style="margin-top:20px">
+                       <label class="col-md-12">Driver: (Select and/or enter up to 3 drivers)</label>
+                       <div class="col-md-12" style="padding:0">
+                           <div class="col-md-6">
+                               <div ng-repeat="item in DriverInfo" style="margin-top:5px">
+                                   <input type="checkbox" ng-click="selectDriver(item)" name="DriverSelection" ng-model="item.checked" id="selectedEmail1Id" /> <span ng-bind="item.Person.PersonName.FirstGivenNm + ' ' + item.Person.SecondGivenNameInitial + ' ' + item.Person.PersonName.FamilyNm +' '+ item.Person.PersonName.FamilyNameGenerationCd"></span><span class="alert-danger" ng-if="DriverInfo.length === 0">Information not provided by source</span>
+                                   <span class="alert-danger" ng-if="!DriverInfo">Information not provided by source</span>
+                               </div>
+                           </div>
+                           <div class="col-md-6">
+                               <div style="margin-top:5px">
+                                   <input ng-disabled="selectData.length >= 3" ng-model="freeText1" type="text" class="form-control" name="driver1" value="" />
+                               </div>
+                               <div style="margin-top:5px">
+                                   <input ng-disabled="selectData.length >= 2" ng-model="freeText2" type="text" class="form-control" name="driver2" value="" />
+                               </div>
+                               <div style="margin-top:5px">
+                                   <input ng-disabled="selectData.length >= 1" ng-model="freeText3" type="text" class="form-control" name="driver3" value="" />
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <!--Vehicle data dropdown list-->
+                   <div ng-show="selectedVehicleCoverage.selectControl % 2 === 0" class="row" style="margin-top:20px">
+                       <div class="col-md-6">
+                           <label>* Vehicle:</label>
+                       </div>
+                       <div class="col-md-6">
+                           <select ng-required="selectedVehicleCoverage.selectControl % 2 === 0" class="form-control" ng-model="SelectedVehicleData" name="VehicleCoverageCheckboxLst" id="VehicleCoverageCheckboxLstId" ng-options="item.Vehicle.ModelYearNr + ' ' + item.Vehicle.VehicleTradeNm + ' ' + item.Vehicle.ModelNm + ' ' + item.Vehicle.ManufacturerVehicleIdentificationNr for item in Vehicle track by item.Vehicle.VehicleId">
+                               <option value="">--Select--</option>
+                           </select>
+                           <span class="alert-danger" ng-if="!Vehicle">Information not provided by source</span>
+                       </div>
+                   </div>
+                   <!--Years insured number-->
+                   <div ng-show="(selectedVehicleCoverage.selectControl === 3) || (selectedVehicleCoverage.selectControl === 4)" class="row" style="margin-top:20px">
+                       <div class="col-md-6">
+                           <label>* Number of Years Insured:</label>
+                       </div>
+                       <div class="col-md-6">
+                           <input ng-model="InsuredYears" type="text" ng-required="(selectedVehicleCoverage.selectControl === 3) || (selectedVehicleCoverage.selectControl === 4)" class="form-control" name="InsuredYearsInput" id="InsuredYearsId" value="" />
+                       </div>
+                   </div>
+                   <!--Cancellation date-->
+                   <div ng-show="(selectedVehicleCoverage.selectControl === 5) || (selectedVehicleCoverage.selectControl === 6)" class="row" style="margin-top:20px">
+                       <div class="col-md-6">
+                           <label>* Cancellation Date:</label>
+                       </div>
+                       <div class="col-md-6">
+                           <input class="form-control" name="VehicleCoverageSelectedDate"  type="text" id="VehicleCoverageDatepicker" datepicker placeholder="YYYY-MM-DD" ng-model="VehicleCoverageCancelDate" ng-required="(selectedVehicleCoverage.selectControl === 5) || (selectedVehicleCoverage.selectControl === 6)"/>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+    </div>
+</div> 

@@ -1,0 +1,121 @@
+﻿<div class="panel panel-primary" ng-controller="WcuYearModRepeaterController">
+    <div class="panel-heading">
+        Year/MOD Section
+    </div>
+    <div class="panel-body">
+
+        <div class="form-group"
+             ng-repeat="YearModSection in TotalCount track by $index"
+             style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray">
+
+             <div class="row">
+                <div class="col-md-4 text-right">Must enter at least one pair of value </div>
+
+                <div class="col-md-4">
+                    <label ng-class="(YearModCheckbox[0])?'':'disabled-class'">* Year</label>
+                </div>
+
+                <div class="col-md-4">
+                    <label ng-class="(YearModCheckbox[0])?'':'disabled-class'">* Mod</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="checkbox"
+                           name="YearModCheckbox{{$index}}"
+                           ng-click="selectedYM($index)"
+                           ng-model="YearModCheckbox[$index]"
+                           ng-change="YModYear[$index] = YearModCheckbox[$index] ? YMYear[$index] : ''"
+                           ng-true-value="true"
+                           ng-init="YearModCheckbox[$index]=false"
+                           ng-false-value="false"
+                           id="YearModCheckBox{{$index}}Id" />
+                    <label>
+                        Year/MOD
+                    </label>
+                </div>
+
+                <div class="col-md-4">
+                    <input type="text"
+                           class="form-control"
+                           ng-model="YMYear[$index]"
+                           ng-change="YMYear[$index]=validateNumber(YMYear[$index])"
+                           ng-disabled="!YearModCheckbox[$index]"
+                           ng-init="YMYear[$index]=undefined"
+                           maxlength="4"
+                           name="YMYear{{$index}}"
+                           placeholder="YYYY"
+                           id="YMYear{{$index}}Id"
+                           ng-required="YearModCheckbox[$index]" />
+                </div>
+                <div class="col-md-4">
+                    <input type="text"
+                           class="form-control"
+                           ng-model="YMMod[$index]"
+                           ng-disabled="!YearModCheckbox[$index]"
+                           ng-init="YMMod[$index]=undefined"
+                           maxlength="40"
+                           name="YMMod{{$index}}"
+                           id="YMMod{{$index}}Id"
+                           ng-required="YearModCheckbox[$index]" />
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 10px; padding-bottom: 10px" ng-hide="!EffExpDate">
+                <div class="col-md-4" align="right">
+                    <label ng-class="(YearModCheckbox[$index])?'':'disabled-class'">* Mod Eff Date: </label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control"
+                           id="EffDate{{$index}}Id"
+                           name="EffDate{{$index}}"
+                           type="text"
+                           ng-disabled="!YearModCheckbox[$index]"
+                           ng-model="EffDate[$index]"
+                           date-format="{{DateOutputFormat}}"
+                           ng-required="EffExpDate && YearModCheckbox[$index]"
+                           placeholder="YYYY-MM-DD"
+                           datepicker />
+                </div>
+                <div class="col-md-4 text-center"></div>
+            </div>
+
+            <div class="row" style="padding-bottom: 10px" ng-hide="!EffExpDate">
+                <div class="col-md-4" align="right">
+                    <label ng-class="(YearModCheckbox[$index])?'':'disabled-class'">* Mod Exp Date:  </label>
+                </div>
+                <div class="col-md-4">
+                    <input class="form-control"
+                           id="ExpDate{{$index}}Id"
+                           name="ExpDate{{$index}}"
+                           type="text"
+                           ng-disabled="!YearModCheckbox[$index]"
+                           ng-model="ExpDate[$index]"
+                           date-format="{{DateOutputFormat}}"
+                           ng-required="EffExpDate && YearModCheckbox[$index]"
+                           placeholder="YYYY-MM-DD"
+                           datepicker />
+                </div>
+                <div class="col-md-4 text-center"></div>
+            </div>
+
+            <div class="row"
+                 tyle="border-bottom: 2px solid lightgray" ng-show="{{showAddBtn}}==true">
+            </div>
+        </div>
+
+        <div class="col-md-12 text-center" ng-show="{{showAddBtn}}==true">
+            <input type="button"
+                   class="btn-primary"
+                   value="Add New"
+                   ng-click="AddNewYearModSection()"
+                   ng-hide="TotalCount.length=={{MaxCtls}}" />
+            <input type="button"
+                   class="btn-primary"
+                   value="Remove"
+                   ng-click="RemoveYearModSection()"
+                   ng-hide="TotalCount.length==1" />
+        </div>
+    </div>
+</div>

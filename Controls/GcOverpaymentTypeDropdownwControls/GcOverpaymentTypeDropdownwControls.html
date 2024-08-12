@@ -1,0 +1,76 @@
+﻿<div class="panel panel-primary" ng-controller="GcOverpaymentTypeDropdownwControlsController">
+    <div class="panel-heading">Overpayment Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            
+            <!--Overpayment Type dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>* Overpayment Type:</label></div>
+                <div class="col-md-8">
+                    <select class="form-control" ng-model="typeSelector" ng-options="item.typeValue for item in TypeData" ng-required="true">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+            <div ng-show="typeSelector" style="margin-top:10px" />
+            <div ng-style="{'border-top':typeSelector.typeValue === 'Multiple Overpayments'? '2px solid lightgray': 'none'}" ng-show="typeSelector" />
+
+            <div class="row" ng-style="{'border-bottom':typeSelector.typeValue === 'Multiple Overpayments'? '2px solid lightgray': 'none'}" style="margin-top:5px; padding-bottom: 10px;" ng-show="typeSelector" ng-repeat="slector in TotalCount track by $index">
+                <div class="col-md-12">
+                    <!--Check number-->
+                    <div class="row" style="margin-top:10px">
+                        <div class="col-md-4"><label>Check Number:</label></div>
+                        <div class="col-md-4">
+                            <input ng-model="checkNum[$index]" type="text" class="form-control" name="checkNum{{$index}}" id="checkNum{{$index}}Id" />
+                        </div>
+                    </div>
+                    <!--Check Date-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-4"><label>Check Date:</label></div>
+                        <div class="col-md-4">
+                            <input ng-model="checkDate[$index]" datepicker type="text" class="form-control" date-format="mm/dd/yyyy" name="checkDate{{$index}}" id="checkDate{{$index}}Id" placeholder="MM/DD/YYYY" />
+                        </div>
+                        <div class="col-md-4">
+                            <!--<span>(MM/DD/YYYY)</span>-->
+                        </div>
+                    </div>
+                    <!--Check amount-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-4"><label>Check Amount:</label></div>
+                        <div class="col-md-4">
+                            <input ng-model="checkAmount[$index]" type="number" class="form-control" name="checkAmount{{$index}}" id="checkAmount{{$index}}Id" placeholder="####.##" ng-change="checkAmount[$index]=validateNumber(checkAmount[$index])" />
+                        </div>
+                        <div class="col-md-4">
+                            <!--<span>(xxx.xx)</span>-->
+                        </div>
+                    </div>
+                    <!--Date of service-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-4"><label>Date of Service:</label></div>
+                        <div class="col-md-4">
+                            <input ng-model="serviceDate[$index]" datepicker type="text" date-format="mm/dd/yyyy" class="form-control" name="serviceDate{{$index}}" id="serviceDate{{$index}}Id" placeholder="MM/DD/YYYY" />
+                        </div>
+                        <div class="col-md-4">
+                            <!--<span>(MM/DD/YYYY)</span>-->
+                        </div>
+                    </div>
+                    <!--Check overpayment-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-4"><label>Check Overpayment:</label></div>
+                        <div class="col-md-4">
+                            <input ng-model="overpayment[$index]" type="number" class="form-control" name="overpayment{{$index}}" id="overpayment{{$index}}Id" placeholder="####.##" ng-change="overpayment[$index]=validateNumber(overpayment[$index])" />
+                        </div>
+                        <div class="col-md-4">
+                            <!--<span>(xxx.xx)</span>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top:15px" class="text-center" ng-show="typeSelector.typeValue === 'Multiple Overpayments'">
+                <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+                <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+            </div>
+        </div>
+    </div>
+</div>

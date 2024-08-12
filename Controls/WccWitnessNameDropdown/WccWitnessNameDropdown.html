@@ -1,0 +1,21 @@
+﻿<div class="panel panel-primary" ng-controller="WccWitnessNameDropdownController">
+    <div class="panel-heading">Witness</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Witness Name dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>Witness Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ClaimantNameData" name="WitnessNameSelection" ng-model="selectedWitnessName" class="form-control" id="WitnessNameSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantNameData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

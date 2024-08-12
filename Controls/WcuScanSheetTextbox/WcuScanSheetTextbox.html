@@ -1,0 +1,87 @@
+﻿<div class="panel panel-primary" ng-controller="WcuScanSheetTextboxController">
+    <div class="panel-body">
+        <div class="form-group">
+
+            <div class="row" ng-hide="!LabelName1" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label>
+                        {{LabelName1}}
+                    </label>
+                </div>
+                <div class="col-md-9">
+                    <input class="form-control"
+                           name="ScanSheetTextBox1"
+                           type="text"
+                           ng-model="ScanSheetTextBoxValue1"
+                           ng-pattern="{{TextType1}}"
+                           ng-change=""
+                           maxlength="{{MaxLen1}}"
+                           ng-required="{{Required1}}"
+                           ng-readonly="ReadOnly1"
+                           id="ScanSheetTextBoxId1"/>
+                </div>
+            </div>
+
+            <div class="row" ng-hide="!LabelName2" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label>
+                        {{LabelName2}}
+                    </label>
+                </div>
+                <div class="col-md-9">
+                    <input class="form-control"
+                           name="ScanSheetTextBox2"
+                           type="text"
+                           ng-model="ScanSheetTextBoxValue2"
+                           ng-pattern="{{TextType2}}"
+                           ng-change=""
+                           maxlength="{{MaxLen2}}"
+                           ng-required="{{Required2}}"
+                           ng-readonly="ReadOnly2"
+                           id="ScanSheetTextBoxId2"/>
+                </div>
+            </div>
+
+            <div class="row" ng-hide="!LabelName3" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label>
+                        {{LabelName3}}
+                    </label>
+                </div>
+                <div class="col-md-9">
+                    <input class="form-control"
+                           name="ScanSheetTextBox3"
+                           type="text"
+                           ng-model="ScanSheetTextBoxValue3"
+                           ng-pattern="{{TextType3}}"
+                           ng-change=""
+                           maxlength="{{MaxLen3}}"
+                           ng-required="{{Required3}}"
+                           ng-readonly="ReadOnly3"
+                           id="ScanSheetTextBoxId3"/>
+                </div>
+            </div>
+
+            <div class="row" ng-hide="!LabelName4" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label>
+                        {{LabelName4}}
+                    </label>
+                </div>
+                <div class="col-md-9">
+                    <input class="form-control"
+                           name="ScanSheetTextBox4"
+                           type="text"
+                           ng-model="ScanSheetTextBoxValue4"
+                           ng-pattern="{{TextType4}}"
+                           ng-change=""
+                           maxlength="{{MaxLen4}}"
+                           ng-required="{{Required4}}"
+                           ng-readonly="ReadOnly4"
+                           id="ScanSheetTextBoxId4"/>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

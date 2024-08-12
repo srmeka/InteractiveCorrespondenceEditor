@@ -1,0 +1,30 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaDriverDropdownRepeaterController">
+    <div class="panel-heading">Driver Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray" ng-repeat="slector  in TotalCount track by $index">
+                <div class="col-md-4">
+                    <label>* Driver Name:</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <!--Driver name dropdown list-->
+                        <div class="col-md-6" style="margin-top:5px">
+                            <select ng-required="!freeTextGroup[$index]" ng-options="(item.Person.PersonName.FirstGivenNm + ' ' + item.Person.PersonName.SecendGivenNmInitial + ' ' + item.Person.PersonName.FamilyNm + ' ' + item.Person.PersonName.FamilyNameGenerationCd)  for item in driverInfo track by item._id" name="DriverSelection" ng-model="selectedValue[$index]" class="form-control" id="DriverInfoId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <!--Driver name input-->
+                        <div class="col-md-6" style="margin-top:5px">
+                            <input ng-disabled="selectedValue[$index]" ng-required="!selectedValue[$index]" ng-model="freeTextGroup[$index]" type="text" class="form-control" name="DriverNameText{{$index}}" id="DriverNameText{{$index}}Id" value="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center" style="margin-top:10px;">
+                <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+                <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+            </div>
+        </div>
+    </div>
+</div> 

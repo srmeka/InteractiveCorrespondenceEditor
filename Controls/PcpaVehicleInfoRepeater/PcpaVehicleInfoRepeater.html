@@ -1,0 +1,55 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaVehicleInfoRepeaterController">
+    <div class="panel-heading">
+        Additional Vehicle Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group" ng-repeat="VehInfoSection in TotalCount track by $index">
+            <div class="row">
+                <!-- enabler/disabler checkbox -->
+                <div class="col-md-4">
+                    <input type="checkbox" ng-model="VehInfoCheckbox[$index]" ng-change="ClearData($index)" name="VehInfoCheckbox{{$index}}" id="VehInfoCheckBox{{$index}}Id" />
+                    <label>Include Vehicle:</label>
+                </div>
+                <!-- vehicle selection dropdown list -->
+                <div class="col-md-8">
+                    <select class="form-control" ng-model="SelectedVeh[$index]" ng-options="VehInfo.ModelYearNr + ' ' + VehInfo.VehicleTradeNm + ' ' + VehInfo.ModelNm + ' ' + VehInfo.ManufacturerVehicleIdentificationNr for VehInfo in Vehicle track by VehInfo._id" ng-disabled="Vehicle.length==0 || !VehInfoCheckbox[$index]" name="SelectVehicle{{$index}}" id="SelectVehicle{{$index}}Id">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="Vehicle.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!-- VIN checkbox -->
+            <div class="row" style="margin-top: 5px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <input type="checkbox" ng-model="VINCheck[$index]" ng-disabled="!VehInfoCheckbox[$index]" name="VIN{{$index}}" id="VIN{{$index}}Id" />
+                    VIN
+                </div>
+            </div>
+
+            <!-- Finance Co checkbox -->
+            <div class="row" style="margin-top: 5px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <input type="checkbox" ng-model="FinCompCheck[$index]" ng-disabled="!VehInfoCheckbox[$index]" name="FinComp{{$index}}" id="FinComp{{$index}}Id" />
+                    Finance Company
+                </div>
+            </div>
+
+            <!-- Lease Co checkbox -->
+            <div class="row" style="margin-top: 5px; padding-bottom: 10px; border-bottom: 2px solid lightgray">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <input type="checkbox" ng-model="LeaseCompCheck[$index]" ng-disabled="!VehInfoCheckbox[$index]" name="LeaseComp{{$index}}" id="LeaseComp{{$index}}Id" />
+                    Lease Company
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 text-center">
+            <input type="button" class="btn-primary" value="Add" ng-click="AddNewVehInfoSection()" ng-hide="TotalCount.length==3" />
+            <input type="button" class="btn-primary" value="Remove" ng-click="RemoveVehInfoSection()" ng-hide="TotalCount.length==1" />
+        </div>
+    </div>
+</div>

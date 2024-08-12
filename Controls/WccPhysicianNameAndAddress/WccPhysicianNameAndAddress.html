@@ -1,0 +1,33 @@
+﻿<div class="panel panel-primary" ng-controller="WccPhysicianNameAndAddressController">
+    <div class="panel-heading">Physician Name Address</div>
+    <div class="panel-body">
+        <div class="form-group">             
+           <div class="row">         
+                <div class="col-md-12">
+                    <!--Physician dropdown list-->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label>Claimant's Physician</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-control" ng-change="selectedName()" ng-model="nameSelector" ng-options="item.displayName for item in ClaimantData">
+                                <option value="">--Select One--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--Physician address dropdown list-->
+                    <div class="row" style="margin-top:15px">
+                        <div class="col-md-4">
+                            <label>Physician's Address</label>
+                        </div>
+                        <div class="col-md-8">
+                            <select ng-model="addressSelector" class="form-control" ng-options="('(' + address.Category + ')' + address.StreetAddress1 + ' ' + address.StreetAddress2 + ' ' + address.StreetAddress3 + ' ' + address.City + ', '  + address.State + ' ' + address.ZipCode )  for address in addressData">
+                                <option value="">--Select One--</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+       </div>
+    </div>
+</div>

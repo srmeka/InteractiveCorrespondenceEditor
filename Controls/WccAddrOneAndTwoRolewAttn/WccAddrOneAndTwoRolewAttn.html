@@ -1,0 +1,146 @@
+﻿<div class="panel panel-primary" ng-controller="WccAddrOneAndTwoRolewAttnController" ng-init="refresh()">
+    <div class="panel-heading">Addressee(s)</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Addressee Role dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>* Primary Addressee Role:</label></div>
+                <div class="col-md-4">
+                    <select ng-change="changedPrimaryRole(selectedPrimaryRole)" 
+                            ng-options="item for item in PrimaryRoleList"
+                            ng-required="true"
+                            class="form-control" 
+                            ng-model="selectedPrimaryRole" 
+                            name="selectedPrimaryRole" 
+                            id="selectedPrimaryRoleId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+      
+            <!--Primary addressee dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>* Primary Addressee:</label></div>
+                <div class="col-md-6">
+                    <select ng-change="changedPrimaryAddressee(selectedPrimaryAddresseeName)" 
+                            ng-options="item.displayName for item in PrimaryAddresseeList | orderBy:'displayName'" 
+                            ng-required="true"
+                            class="form-control" 
+                            ng-model="selectedPrimaryAddresseeName" 
+                            name="selectedPrimaryAddresseeName" 
+                            id="selectedPrimaryAddresseeNameId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+            <!--Primary addressee address dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>* Primary Addressee Address:</label></div>
+                <div class="col-md-8">
+                    <select ng-change="changedPrimaryAddress(selectedPrimaryAddresseeAddress)" 
+                            ng-required="true"
+                            ng-options="item.StreetAddress1 + ' ' + item.StreetAddress2 + ' ' + item.StreetAddress3 + ' ' + item.City + ', ' + item.State + ' ' + item.ZipCode + ' (' + item.Category + ')' for item in PrimaryAddresseeAddressList | orderBy: ['StreetAddress1', 'StreetAddress2', 'StreetAddress3', 'City', 'State', 'ZipCode', 'Category']" 
+                            class="form-control" 
+                            ng-model="selectedPrimaryAddresseeAddress" 
+                            name="selectedPrimaryAddresseeAddressName" 
+                            id="selectedPrimaryAddresseeAddressId">
+                        <option value="">--Select One--</option>
+                    </select>
+                    <span style="display:inline-block;margin-top:5px;margin-bottom:5px" 
+                          class="alert-danger" 
+                          ng-show="selectedAddressee && addressData.length == 0">Information not provided from ClaimCenter></span>
+                </div>
+            </div>
+
+            <!--Attention dropdown list 1-->
+           <div class="row" style="margin-top:5px">
+                <div class="col-md-4">
+                    <input ng-click="changedAttention1()" 
+                           type="checkbox" 
+                           ng-disabled="selectedAttention2 || selectedAttentionLabel1 == 'Information not provided from ClaimCenter'" 
+                           ng-model="selectedAttention1" 
+                           name="selectedAttention1" 
+                           id="selectedAttention1Id" />
+                    <label ng-class="(!(selectedAttention2 || selectedAttentionLabel1 == 'Information not provided from ClaimCenter'))?'':'disabled-class'">Attention Line:</label>
+                </div>
+               <div class="col-md-8">
+                   <div class="col-md-3 row">
+                       <select ng-disabled="!selectedAttention1" ng-options="item.lookupItemCode for item in AttentionTypeData" name="selectedAttentionType1" ng-model="selectedAttentionType1" class="form-control" id="selectedAttentionName1Id"></select>
+                   </div>
+                   <div class="col-md-9" style="margin-top:5px">
+                       <span style='margin-left:5px;margin-right:10px;display:inline-block' ng-class="(selectedAttentionLabel1 == 'Information not provided from ClaimCenter')?'alert-danger':''" ng-bind="selectedAttentionLabel1"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!--Attention dropdown list 2-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4">
+                    <input ng-click="changedAttention2()" 
+                           type="checkbox" 
+                           ng-disabled="selectedAttention1" 
+                           ng-model="selectedAttention2" 
+                           name="selectedAttention2" 
+                           id="selectedAttention2Id" />
+                    <label ng-class="(!changedAttention2)?'':'disabled-class'">Attention Line:</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-3 row">
+                        <select ng-disabled="!selectedAttention2" 
+                                ng-options="item.lookupItemCode for item in AttentionTypeData" 
+                                class="form-control" 
+                                ng-model="selectedAttentionType2" 
+                                name="selectedAttentionType2" 
+                                id="selectedAttentionName2Id"></select>
+                    </div>
+                    <div class="col-md-9">
+                        <input class="form-control" 
+                               ng-class="(selectedAttention2)?'':'disabled-class'" 
+                               ng-disabled="!selectedAttention2" 
+                               type="text" 
+                               ng-model="selectedAttentionLabel2"
+                               name="selectedAttentionLabel2"
+                               id="selectedAttentionLabel2Id"
+                               >
+                    </div>
+                </div>
+            </div>
+
+            <!--Secondary Addressee Role dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>Secondary Addressee Role:</label></div>
+                <div class="col-md-4">
+                    <select ng-change="changedSecondaryRole(selectedSecondaryRole)" 
+                            ng-options="item for item in SecondaryRoleList" 
+                            class="form-control" 
+                            ng-model="selectedSecondaryRole" 
+                            name="selectedSecondaryRole" 
+                            id="selectedSecondaryRoleId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+            <!--Secondary addressee dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>Secondary Addressee:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in SecondaryAddresseeList | orderBy:'displayName'" 
+                            class="form-control" 
+                            ng-model="selectedSecondaryAddresseeName" 
+                            name="selectedSecondaryAddresseeName" 
+                            id="selectedSecondaryAddresseeNameId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+        </div>
+    </div>
+</div> 

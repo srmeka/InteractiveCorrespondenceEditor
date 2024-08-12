@@ -1,0 +1,86 @@
+﻿<div class="panel panel-primary" ng-controller="PcumbMidtermCancelReasonDropdownController">
+    <div class="panel-heading">Midterm Cancel Reason</div>
+    <div class="panel-body">
+       <div class="form-group">
+           <div class="row">
+               <div class="col-md-3">
+                   <label>Midterm Cancel Reason</label>
+               </div>
+
+               <div class="col-md-9">
+                   <!--Midterm cancel reason dropdown list-->
+                   <div class="row">
+                       <div class="col-md-4">
+                           <select ng-model="selectedReason" class="form-control" name="reasonSelector" id="reasonSelectorId" ng-options="item.optionValue for item in ReasonData">
+                               <option value="">--Select--</option>
+                           </select>
+                       </div>
+                   </div>
+
+                   <!--Underlying Policy dropdown list-->
+                   <div class="row" style="margin-top:10px" ng-show="selectedReason.slectedType === '2' || selectedReason.slectedType === '6'">
+                       <div class="col-md-4"><label>* Underlying Policy:</label></div>
+                       <div class="col-md-8">
+                           <select ng-model="slectedPolicy" class="form-control" name="reasonSelector" id="reasonSelectorId" ng-options="item.optionValue for item in PolicyData" ng-required="selectedReason.slectedType === '2' || selectedReason.slectedType === '6'">
+                               <option value="">--Select--</option>
+                           </select>
+                       </div>
+                   </div>
+
+                   <!--Risk location dropdown list and input-->
+                   <div class="row" style="margin-top:10px" ng-show="selectedReason.slectedType === '3'">
+                       <div class="col-md-4">
+                           <input type="checkbox" ng-click="clearLocationData()" ng-model="locationChecked" /> <label>Risk Location:</label>
+                       </div>
+                       <div class="col-md-4">
+                           <select ng-disabled="!locationChecked" ng-change="locationFreeText=''" ng-model="slectedLocation" class="form-control" name="reasonSelector" id="reasonSelectorId" ng-options="(item.Address.Line1Tx + ' ' +item.Address.Line2Tx + ' '+ item.Address.Line3Tx + ' '+ item.Address.city_value + ' ' + item.Address.CountrySubdivision.CountrySubdivisionNm + ' ' + item.Address.PostalCd) for item in LocationData track by item._id">
+                               <option value="">--Select--</option>
+                           </select>
+                       </div>
+                       <div class="col-md-4">
+                           <input type="text" ng-model="locationFreeText" class="form-control" ng-disabled="!locationChecked || slectedLocation" />
+                       </div>
+                   </div>
+
+                   <!--Lot and block dropdown list and input-->
+                   <div class="row" style="margin-top:10px" ng-show="selectedReason.slectedType === '4'">
+                       <label class="col-md-4">* Lot and Block:</label>
+                       <div class="col-md-4">
+                           <select ng-model="slectedBlock" ng-change="blockFreeText = ''" class="form-control" name="reasonSelector" id="reasonSelectorId" ng-options="(item.Address.Line1Tx + ' ' +item.Address.Line2Tx + ' '+ item.Address.Line3Tx + ' '+ item.Address.Municipality.MunicipalityNm + ' ' + item.Address.CountrySubdivision.CountrySubdivisionNm + ' ' + item.Address.PostalCd) for item in BlockData track by item._id" ng-required="selectedReason.slectedType === '4' && !blockFreeText">
+                               <option value="">--Select--</option>
+                           </select>
+                       </div>
+                       <div class="col-md-4">
+                           <input type="text" ng-model="blockFreeText" class="form-control" ng-disabled="slectedBlock" />
+                       </div>
+                   </div>
+
+                   <!--Licensed Family Member repeater -->
+                   <div ng-repeat="section in TotalCount track by $index">
+                       <div class="row" style="padding-top:10px" ng-show="selectedReason.slectedType === '1'">
+                           <label class="col-md-4">* Licensed Family Member:</label>
+                           <div class="col-md-4">
+                               <select class="form-control" ng-model="SelectedLicFamilyMember[$index]" ng-options="item.Person.PersonName.FirstGivenNm + ' ' + item.Person.PersonName.SecondGivenNm + ' ' + item.Person.PersonName.FamilyNm for item in FamilyData track by item._id" ng-disabled="LicFamilyMember.length == 0" name="SelectedLicFamilyMember{{index}}" id="SelectedLicFamilyMember{{index}}Id" ng-required="selectedReason.slectedType === '1' && ManualLicFamilyMember[$index]===''">
+                                   <option value="" selected>--Select--</option>
+                               </select>
+                               <span class="alert-danger" ng-show="FamilyData.length == 0">Information not provided by source</span>
+                           </div>
+                           <div class="col-md-4">
+                               <input type="text" class="form-control" ng-model="ManualLicFamilyMember[$index]" ng-disabled="SelectedLicFamilyMember[$index]" name="ManualLicFamilyMember{{index}}" id="ManualLicFamilyMember{{index}}Id" ng-required="selectedReason.slectedType === '1' && !SelectedLicFamilyMember[$index]" />
+                           </div>
+                       </div>
+                       <div style="padding-top:10px; border-bottom: 2px solid lightgray" ng-show="selectedReason.slectedType === '1'"></div>
+                   </div>
+                   <div class="row">
+                       <div class="col-md-12 text-center" ng-show="selectedReason.slectedType === '1'" style="margin-top:10px; padding-top:10px;">
+                           <input type="button" class="btn-primary" value="Add" ng-click="addCtlRow()" ng-hide="TotalCount.length=={{MaxCtls}}" />
+                           <input type="button" class="btn-primary" value="Remove" ng-click="removeCtlRow()" ng-hide="TotalCount.length==1" />
+                       </div>
+                   </div>
+
+               </div>
+           </div>
+
+       </div>
+    </div>
+</div> 

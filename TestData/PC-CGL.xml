@@ -1,0 +1,210 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cglpir="http://njm.com/esb/pds/cgl/1.0/interfaces/CGLPolicyInfomationRetriever" xmlns:typ="http://njm.com/esb/pds/cgl/1.0/types" xmlns:esbcommon="http://njm.com/esb/common/types">
+  <soapenv:Body>
+    <cglpir:retrievePolicyByPolicyNumberResponse>
+      <typ:RetrievePolicyByPolicyNumberResponseMessage>
+        <esbcommon:Header>
+          <esbcommon:Version>1.0</esbcommon:Version>
+          <esbcommon:CorrelationContext>
+            <esbcommon:CorrelationId>342342343</esbcommon:CorrelationId>
+          </esbcommon:CorrelationContext>
+          <esbcommon:ErrorIn>false</esbcommon:ErrorIn>
+        </esbcommon:Header>
+        <Policy id="1">
+          <PolicyNumber>1500955653</PolicyNumber>
+          <UnderwritingCompany id="3">
+            <OrganizationNm>New Jersey Manufacturers Insurance</OrganizationNm>
+            <OrganizationNameCd>NJM</OrganizationNameCd>
+          </UnderwritingCompany>
+          <LineOfBusinessCd>Commercial General Liability</LineOfBusinessCd>
+          <BaseStateCd>NJ</BaseStateCd>
+          <Account id="7">
+            <AccountNo>AA524794628</AccountNo>
+          </Account>
+          <PolicyProductCd>GLCT</PolicyProductCd>
+          <IndustryOfferingCd>CT</IndustryOfferingCd>
+          <PolicyPeriod id="11">
+            <QuoteNumber>QQ5340402606</QuoteNumber>
+            <StartDt>2019-01-01T00:01:00-05:00</StartDt>
+            <EndDt>2020-01-01T00:01:00-05:00</EndDt>
+            <StatusCd>In Force</StatusCd>
+            <ListedParties id="16">
+              <Party id="17">
+                <Organization id="18">
+                  <OrganizationNm>TestCo|Guidewire</OrganizationNm>
+                  <Addresses id="20">
+                    <Address id="21">
+                      <Line1Tx>1000 Charles Ewing Blvd</Line1Tx>
+                      <Municipality id="23">
+                        <MunicipalityNm>Ewing</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="26">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="28">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>08628</PostalCd>
+                      <PostalExtensionCd>3437</PostalExtensionCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                </Organization>
+                <PartyRoles>Additional Named Insured</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="36">
+              <Party id="37">
+                <Person id="38">
+                  <PersonName id="39">
+                    <UnparsedNameTx>Ranjith  Last Name</UnparsedNameTx>
+                    <FirstGivenNm>Ranjith</FirstGivenNm>
+                    <FamilyNm>Last Name</FamilyNm>
+                  </PersonName>
+                  <BirthDt>1989-01-01</BirthDt>
+                  <Addresses id="44">
+                    <Address id="45">
+                      <Line1Tx>1000 Charles Ewing Blvd</Line1Tx>
+                      <Municipality id="47">
+                        <MunicipalityNm>Ewing</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="50">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="52">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>08628</PostalCd>
+                      <PostalExtensionCd>3437</PostalExtensionCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <EmailAddresses id="59">
+                    <UnparsedEmailAddress>DBADataMasking@NJM.COM</UnparsedEmailAddress>
+                  </EmailAddresses>
+                  <Telephones id="61">
+                    <PartyUseCd>Personal</PartyUseCd>
+                    <TransmissionContentCd>Cellular</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Cellular</TransmissionTechnologyCd>
+                    <PhoneNumber id="65">
+                      <UnparsedPhoneNr>632-632-6321</UnparsedPhoneNr>
+                      <AreaCd>632</AreaCd>
+                      <ExchangeId>632</ExchangeId>
+                      <SubscriberLineId>6321</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                  <Telephones id="71">
+                    <PartyUseCd>Business</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="75">
+                      <UnparsedPhoneNr>732-732-7321</UnparsedPhoneNr>
+                      <AreaCd>732</AreaCd>
+                      <ExchangeId>732</ExchangeId>
+                      <SubscriberLineId>7321</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                  <Telephones id="81">
+                    <PartyUseCd>Personal</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="85">
+                      <UnparsedPhoneNr>456-456-4564</UnparsedPhoneNr>
+                      <AreaCd>456</AreaCd>
+                      <ExchangeId>456</ExchangeId>
+                      <SubscriberLineId>4564</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                </Person>
+                <PartyRoles>DBA</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="92">
+              <Party id="93">
+                <Person id="94">
+                  <PersonName id="95">
+                    <UnparsedNameTx>Ranjith  Last Name</UnparsedNameTx>
+                    <FirstGivenNm>Ranjith</FirstGivenNm>
+                    <FamilyNm>Last Name</FamilyNm>
+                  </PersonName>
+                  <BirthDt>1989-01-01</BirthDt>
+                  <Addresses id="100">
+                    <Address id="101">
+                      <Line1Tx>1000 Charles Ewing Blvd</Line1Tx>
+                      <Municipality id="103">
+                        <MunicipalityNm>Ewing</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="106">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="108">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>08628</PostalCd>
+                      <PostalExtensionCd>3437</PostalExtensionCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <EmailAddresses id="115">
+                    <UnparsedEmailAddress>DBADataMasking@NJM.COM</UnparsedEmailAddress>
+                  </EmailAddresses>
+                  <Telephones id="117">
+                    <PartyUseCd>Personal</PartyUseCd>
+                    <TransmissionContentCd>Cellular</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Cellular</TransmissionTechnologyCd>
+                    <PhoneNumber id="121">
+                      <UnparsedPhoneNr>632-632-6321</UnparsedPhoneNr>
+                      <AreaCd>632</AreaCd>
+                      <ExchangeId>632</ExchangeId>
+                      <SubscriberLineId>6321</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                  <Telephones id="127">
+                    <PartyUseCd>Business</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="131">
+                      <UnparsedPhoneNr>732-732-7321</UnparsedPhoneNr>
+                      <AreaCd>732</AreaCd>
+                      <ExchangeId>732</ExchangeId>
+                      <SubscriberLineId>7321</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                  <Telephones id="137">
+                    <PartyUseCd>Personal</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="141">
+                      <UnparsedPhoneNr>456-456-4564</UnparsedPhoneNr>
+                      <AreaCd>456</AreaCd>
+                      <ExchangeId>456</ExchangeId>
+                      <SubscriberLineId>4564</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                </Person>
+                <PartyRoles>Primary Named Insured</PartyRoles>
+              </Party>
+            </ListedParties>
+          </PolicyPeriod>
+        </Policy>
+        <CoverageStatus id="148">
+          <StatusIn>false</StatusIn>
+        </CoverageStatus>
+      </typ:RetrievePolicyByPolicyNumberResponseMessage>
+    </cglpir:retrievePolicyByPolicyNumberResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,16 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaVehicleCheckboxLstController">
+    <div class="panel-heading">* Insured's Vehicle(s)</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12 row">
+                    <div ng-repeat="item in Vehicle track by item.VehicleId" class="col-md-12" ng-required="true">
+                        <input ng-model="item.checked" ng-click="selectVehicle(item)" type="checkbox" ng-required="SelectedVehicle.length==0" name="VehicleCheckboxLst" id="VehicleLstId{{item._id}}" value="" />
+                        <span ng-bind="item.ModelYearNr + ' ' + item.VehicleTradeNm + ' ' + item.ModelNm + ' ' + item.ManufacturerVehicleIdentificationNr"></span>
+                    </div>
+                    <span class="alert-danger" ng-if="Vehicle.length === 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

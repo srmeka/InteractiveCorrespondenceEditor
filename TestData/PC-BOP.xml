@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CorrespondenceDataResponse xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:boppir="http://njm.com/esb/pds/bop/1.0/interfaces/BOPPolicyInfomationRetriever" xmlns:typ="http://njm.com/esb/pds/bop/1.0/types" xmlns:esbcommon="http://njm.com/esb/common/types" xmlns:ebt="http://njm.com/esb/business/1.3.0/types">
+  <Policy id="1">
+    <PolicyNumber>1501139588</PolicyNumber>
+    <UnderwritingCompany id="3">
+      <DisplayName>New Jersey Manufacturers Insurance</DisplayName>
+    </UnderwritingCompany>
+    <LineOfBusinessCd>Businessowners</LineOfBusinessCd>
+    <BaseStateCd>NJ</BaseStateCd>
+    <AccountNo>AA625403048</AccountNo>
+    <PolicyProductCd>BP7BusinessOwners</PolicyProductCd>
+    <IndustryOfferingCd>7221</IndustryOfferingCd>
+    <QuoteNumber>QQ652770989</QuoteNumber>
+    <StartDt>2020-01-30T00:01:00-05:00</StartDt>
+    <EndDt>2021-01-30T00:01:00-05:00</EndDt>
+    <StatusCd>In Force</StatusCd>
+    <Party id="17">
+      <PartyId>pc:2423053</PartyId>
+      <DisplayName>Shashank Dikay Company 1</DisplayName>
+      <Addresses id="21">
+        <Address id="22">
+          <Line1Tx>14 Witherspoon St Ste A</Line1Tx>
+          <Municipality id="24">
+            <MunicipalityNm>Princeton</MunicipalityNm>
+            <MunicipalityTypeCd>City</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality id="27">
+            <MunicipalityNm>Mercer</MunicipalityNm>
+            <MunicipalityTypeCd>County</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision id="30">
+            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>08542</PostalCd>
+        </Address>
+        <AddressUseCd>Business</AddressUseCd>
+        <PrimaryAddressIn>true</PrimaryAddressIn>
+      </Addresses>
+      <PartyTypeCd>Organization</PartyTypeCd>
+      <PartyRoles id="4">
+        <PartyRole>Primary Named Insured</PartyRole>
+      </PartyRoles>
+    </Party>
+    <Party id="39">
+      <PartyId>pc:2423054</PartyId>
+      <DisplayName>This is the Shashank Co 1 Doing Business As</DisplayName>
+      <Addresses id="43">
+        <Address id="44">
+          <Line1Tx>14 Witherspoon St Ste A</Line1Tx>
+          <Municipality id="46">
+            <MunicipalityNm>Princeton</MunicipalityNm>
+            <MunicipalityTypeCd>City</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality id="49">
+            <MunicipalityNm>Mercer</MunicipalityNm>
+            <MunicipalityTypeCd>County</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision id="52">
+            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>08542</PostalCd>
+        </Address>
+        <AddressUseCd>Business</AddressUseCd>
+        <PrimaryAddressIn>true</PrimaryAddressIn>
+      </Addresses>
+      <PartyTypeCd>Organization</PartyTypeCd>
+      <PartyRoles id="4">
+        <PartyRole>DBA</PartyRole>
+      </PartyRoles>
+    </Party>
+    <Party id="61">
+      <PartyId>pc:2423055</PartyId>
+      <DisplayName>Shashank  Dikay</DisplayName>
+      <Addresses id="68">
+        <Address id="69">
+          <Line1Tx>14 Witherspoon St Ste A</Line1Tx>
+          <Municipality id="71">
+            <MunicipalityNm>Princeton</MunicipalityNm>
+            <MunicipalityTypeCd>City</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality id="74">
+            <MunicipalityNm>Mercer</MunicipalityNm>
+            <MunicipalityTypeCd>County</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision id="77">
+            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>08542</PostalCd>
+        </Address>
+        <AddressUseCd>Business</AddressUseCd>
+        <PrimaryAddressIn>true</PrimaryAddressIn>
+      </Addresses>
+      <PartyTypeCd>Person</PartyTypeCd>
+      <PartyRoles id="4">
+        <PartyRole>Additional Named Insured</PartyRole>
+      </PartyRoles>
+    </Party>
+    <Party id="86">
+      <PartyId>pc:2423056</PartyId>
+      <DisplayName>Zamir  Dikay</DisplayName>
+      <Addresses id="93">
+        <Address id="94">
+          <Line1Tx>280 Nassau St</Line1Tx>
+          <Municipality id="96">
+            <MunicipalityNm>Princeton</MunicipalityNm>
+            <MunicipalityTypeCd>City</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality id="99">
+            <MunicipalityNm>Mercer</MunicipalityNm>
+            <MunicipalityTypeCd>County</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision id="102">
+            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>08540</PostalCd>
+          <PostalExtensionCd>4620</PostalExtensionCd>
+        </Address>
+        <AddressUseCd>Home</AddressUseCd>
+        <PrimaryAddressIn>true</PrimaryAddressIn>
+      </Addresses>
+      <PartyTypeCd>Person</PartyTypeCd>
+      <PartyRoles id="4">
+        <PartyRole>Additional Named Insured</PartyRole>
+      </PartyRoles>
+    </Party>
+    <Party id="112">
+      <PartyId>pc:2423057</PartyId>
+      <DisplayName>Shashank Company 1 Addl Named Ins DBA</DisplayName>
+      <Addresses id="116">
+        <Address id="117">
+          <Line1Tx>14 Witherspoon St Ste A</Line1Tx>
+          <Municipality id="119">
+            <MunicipalityNm>Princeton</MunicipalityNm>
+            <MunicipalityTypeCd>City</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality id="122">
+            <MunicipalityNm>Mercer</MunicipalityNm>
+            <MunicipalityTypeCd>County</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision id="125">
+            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>08542</PostalCd>
+        </Address>
+        <AddressUseCd>Business</AddressUseCd>
+        <PrimaryAddressIn>true</PrimaryAddressIn>
+      </Addresses>
+      <PartyTypeCd>Organization</PartyTypeCd>
+      <PartyRoles id="4">
+        <PartyRole>DBA</PartyRole>
+      </PartyRoles>
+    </Party>
+    <Party id="134">
+      <PartyId>pc:2387459</PartyId>
+      <DisplayName>CHASE CORRESPONDENCE LENDING</DisplayName>
+      <Addresses id="138">
+        <Address id="139">
+          <Line1Tx>1051 DEERWD PRK BLV</Line1Tx>
+          <Line2Tx>BLD 300</Line2Tx>
+          <Municipality id="142">
+            <MunicipalityNm>JCKSNVL</MunicipalityNm>
+            <MunicipalityTypeCd>City</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality id="145">
+            <MunicipalityTypeCd>County</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision id="147">
+            <CountrySubdivisionNm>FL</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>32256</PostalCd>
+        </Address>
+        <AddressUseCd>Business</AddressUseCd>
+        <PrimaryAddressIn>true</PrimaryAddressIn>
+      </Addresses>
+      <PartyTypeCd>Organization</PartyTypeCd>
+      <PartyRoles id="4">
+        <PartyRole>Additional Interest</PartyRole>
+      </PartyRoles>
+    </Party>
+    <Party id="156">
+      <PartyId>pc:2423064</PartyId>
+      <DisplayName>WELLS FARGO</DisplayName>
+      <Addresses id="160">
+        <Address id="161">
+          <Line1Tx>439 ELIZABETH AVE</Line1Tx>
+          <Municipality id="163">
+            <MunicipalityNm>SOMERSET</MunicipalityNm>
+            <MunicipalityTypeCd>City</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality id="166">
+            <MunicipalityTypeCd>County</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision id="168">
+            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>08873</PostalCd>
+          <PostalExtensionCd>1292</PostalExtensionCd>
+        </Address>
+        <AddressUseCd>Business</AddressUseCd>
+        <PrimaryAddressIn>true</PrimaryAddressIn>
+      </Addresses>
+      <PartyTypeCd>Organization</PartyTypeCd>
+      <PartyRoles id="4">
+        <PartyRole>Additional Interest</PartyRole>
+      </PartyRoles>
+    </Party>
+  </Policy>
+  <CoverageStatus id="177">
+    <AsOfDt>2019-12-27T11:01:39.41-05:00</AsOfDt>
+    <StatusIn>false</StatusIn>
+  </CoverageStatus>
+</CorrespondenceDataResponse>

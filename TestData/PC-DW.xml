@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CorrespondenceDataResponse xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:hce="http://njm.com/esb/pds/ho/correditor/1.0/interfaces/HOPolicyInfomationRetriever">
+  <Policy id="3">
+    <PolicyNumber>D101387785</PolicyNumber>
+    <LineOfBusinessCd>Personal Lines</LineOfBusinessCd>
+    <PolicyTypeCd>Dwelling</PolicyTypeCd>
+    <InceptionDt>1989-01-06T00:00:00-05:00</InceptionDt>
+    <ConvertedIn>N</ConvertedIn>
+    <BaseStateCd>PA</BaseStateCd>
+    <UnderwritingCompany id="4">
+      <OrganizationNm>New Jersey Manufacturers Insurance</OrganizationNm>
+      <OrganizationNameCd>NJM</OrganizationNameCd>
+    </UnderwritingCompany>
+    <PolicyPeriod id="5">
+      <QuoteNumber>QQ166510359</QuoteNumber>
+      <StartDt>2018-11-28T00:01:00-05:00</StartDt>
+      <EndDt>2019-11-28T00:01:00-05:00</EndDt>
+      <RenewedIn>N</RenewedIn>
+      <RenewalDt>2019-11-28T00:01:00-05:00</RenewalDt>
+      <StatusCd>In Force</StatusCd>
+      <DividendYr>2017</DividendYr>
+      <EndorsementEffectiveDt>2018-11-28T00:01:00-05:00</EndorsementEffectiveDt>
+      <PolicyLines id="6">
+        <HomeownersLine id="7">
+          <CoveragesElectionParameters id="8">
+            <CoverageTypeCd>Section I Deductible</CoverageTypeCd>
+            <CoverageParameterTypeCd>Deductible</CoverageParameterTypeCd>
+            <CoverageParameterUnformattedValueTx>1000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm />
+          </CoveragesElectionParameters>
+          <CoveragesElectionParameters id="9">
+            <CoverageTypeCd>Coverage A - Dwelling</CoverageTypeCd>
+            <CoverageParameterTypeCd>Limit</CoverageParameterTypeCd>
+            <CoverageParameterUnformattedValueTx>50000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm />
+          </CoveragesElectionParameters>
+          <ListedDwellings id="10">
+            <DwellingAddress id="11">
+              <Address id="12">
+                <Line1Tx>117 MEADOW RIDGE ACRES RD</Line1Tx>
+                <Municipality id="13">
+                  <MunicipalityNm>DINGMANS FERRY</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality id="14">
+                  <MunicipalityNm>PIKE COUNTY</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality id="15">
+                  <MunicipalityNm>DELAWARE TOWNSHIP</MunicipalityNm>
+                  <MunicipalityTypeCd>TOWNSHIP</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="16">
+                  <CountrySubdivisionNm>PA</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>18328</PostalCd>
+                <PostalExtensionCd>3480</PostalExtensionCd>
+              </Address>
+            </DwellingAddress>
+            <DwellingTypeCd>Risk</DwellingTypeCd>
+            <DwellingUsage id="17">
+              <DwellingUsageCd>Non-seasonal</DwellingUsageCd>
+            </DwellingUsage>
+            <RCTCoverageIn>N</RCTCoverageIn>
+            <MortgageeIn>N</MortgageeIn>
+          </ListedDwellings>
+          <FormTypeCd>DP-1 Basic Form</FormTypeCd>
+          <TenureDt>2018-11-28T00:01:00-05:00</TenureDt>
+          <SummaryAmounts id="18">
+            <AmountTypeCd>Total Base Premium</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>214.00</SummaryAm>
+          </SummaryAmounts>
+          <SummaryAmounts id="19">
+            <AmountTypeCd>Subtotal Policy Premium</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>214.00</SummaryAm>
+          </SummaryAmounts>
+          <SummaryAmounts id="20">
+            <AmountTypeCd>Total Policy Premium</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>214.00</SummaryAm>
+          </SummaryAmounts>
+          <SummaryAmounts id="21">
+            <AmountTypeCd>Total Additional/Return premium</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>214.00</SummaryAm>
+          </SummaryAmounts>
+          <NonCoverageCharges id="22">
+            <ChargeReasonCd>NJ PLIGA Charge</ChargeReasonCd>
+            <ChargeAm />
+          </NonCoverageCharges>
+          <ExtendedCoverageIn>Y</ExtendedCoverageIn>
+          <VandalismMLSCMischiefCoverageIn>N</VandalismMLSCMischiefCoverageIn>
+          <ModFuncValueIn>N</ModFuncValueIn>
+          <OtherInsuredLocationIn>N</OtherInsuredLocationIn>
+          <PolicyDiscountsIn>N</PolicyDiscountsIn>
+          <WorkersCompensationIn>Y</WorkersCompensationIn>
+        </HomeownersLine>
+      </PolicyLines>
+      <ListedParties id="23">
+        <Party id="24">
+          <PartyId>pc:262942</PartyId>
+          <PartyOrderNr>29984100</PartyOrderNr>
+          <Person id="25">
+            <PersonName id="26">
+              <UnparsedNameTx>EUGENE J JARVIS Jr.</UnparsedNameTx>
+              <FirstGivenNm>EUGENE</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>JARVIS</FamilyNm>
+              <FamilyNameGenerationCd>Jr.</FamilyNameGenerationCd>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1947-01-25</BirthDt>
+            <MaritalStatusCd>Married</MaritalStatusCd>
+            <Addresses id="27">
+              <Address id="28">
+                <Line1Tx>47 DEER TRAIL RD</Line1Tx>
+                <Municipality id="29">
+                  <MunicipalityNm>N CALDWELL</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality id="30">
+                  <MunicipalityNm>ESSEX COUNTY</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="31">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>07006</PostalCd>
+              </Address>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>true</PrimaryAddressIn>
+            </Addresses>
+            <EmailAddresses id="43">
+              <EmailAddress id="44">
+                <UnparsedEmailAddress>DBADataMasking2@NJM.COM</UnparsedEmailAddress>
+              </EmailAddress>
+            </EmailAddresses>
+            <EmailAddresses id="143">
+              <EmailAddress id="144">
+                <UnparsedEmailAddress>BADataMasking2@NJM.COM</UnparsedEmailAddress>
+              </EmailAddress>
+            </EmailAddresses>
+            <EmailAddresses id="243">
+              <EmailAddress id="244">
+                <UnparsedEmailAddress>SoBADataMasking2@NJM.COM</UnparsedEmailAddress>
+              </EmailAddress>
+            </EmailAddresses>
+            <Telephones id="32">
+              <PartyUseCd>Business</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber id="33">
+                <UnparsedPhoneNr>973-226-3110</UnparsedPhoneNr>
+                <AreaCd>973</AreaCd>
+                <ExchangeId>226</ExchangeId>
+                <SubscriberLineId>3110</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>true</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Secondary Named Insured</PartyRoles>
+          <PartyRoles>Driver</PartyRoles>
+          <PartyRoles>NamedInsured</PartyRoles>
+        </Party>
+      </ListedParties>
+      <ListedParties id="34">
+        <Party id="35">
+          <PartyId>pc:262941</PartyId>
+          <PartyOrderNr>29984081</PartyOrderNr>
+          <Person id="36">
+            <PersonName id="37">
+              <UnparsedNameTx>SUSAN J JARVIS</UnparsedNameTx>
+              <FirstGivenNm>SUSAN</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>JARVIS</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1955-12-31</BirthDt>
+            <MaritalStatusCd>Married</MaritalStatusCd>
+            <Addresses id="38">
+              <Address id="39">
+                <Line1Tx>47 DEER TRAIL RD</Line1Tx>
+                <Municipality id="40">
+                  <MunicipalityNm>N CALDWELL</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality id="41">
+                  <MunicipalityNm>ESSEX COUNTY</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="42">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>07006</PostalCd>
+              </Address>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>true</PrimaryAddressIn>
+            </Addresses>
+            <EmailAddresses id="43">
+              <EmailAddress id="44">
+                <UnparsedEmailAddress>DBADataMasking@NJM.COM</UnparsedEmailAddress>
+              </EmailAddress>
+            </EmailAddresses>
+            <Telephones id="45">
+              <PartyUseCd>Business</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber id="46">
+                <UnparsedPhoneNr>973-466-7636</UnparsedPhoneNr>
+                <AreaCd>973</AreaCd>
+                <ExchangeId>466</ExchangeId>
+                <SubscriberLineId>7636</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>false</PrimaryPhoneIn>
+            </Telephones>
+            <Telephones id="47">
+              <PartyUseCd>Personal</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber id="48">
+                <UnparsedPhoneNr>973-226-3110</UnparsedPhoneNr>
+                <AreaCd>973</AreaCd>
+                <ExchangeId>226</ExchangeId>
+                <SubscriberLineId>3110</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>true</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Primary Named Insured</PartyRoles>
+          <PartyRoles>Driver</PartyRoles>
+          <PartyRoles>NamedInsured</PartyRoles>
+          <PartyRoles>Account Holder</PartyRoles>
+        </Party>
+      </ListedParties>
+      <PolicyLocation id="49">
+        <Address id="50">
+          <Line1Tx>47 DEER TRAIL RD</Line1Tx>
+          <Municipality id="51">
+            <MunicipalityNm>N CALDWELL</MunicipalityNm>
+            <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality id="52">
+            <MunicipalityNm>ESSEX COUNTY</MunicipalityNm>
+            <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision id="53">
+            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>07006</PostalCd>
+        </Address>
+      </PolicyLocation>
+      <NotableEvents id="54">
+        <EventNumber>QQ188062138</EventNumber>
+        <EventTypeCd>Renewal</EventTypeCd>
+        <EventStatusCd>New</EventStatusCd>
+        <EventCreationDt>2019-09-14T01:44:36.551-04:00</EventCreationDt>
+        <EventChangeEffectiveDt>2019-11-28T00:01:00-05:00</EventChangeEffectiveDt>
+        <EventDescriptionTx>Policy is brand new. Submission, Issuance and Renewal jobs initially set this status</EventDescriptionTx>
+      </NotableEvents>
+      <NotableEvents id="55">
+        <EventNumber>QQ166510359</EventNumber>
+        <EventCategoryCd>CurrentWorkOrder</EventCategoryCd>
+        <EventTypeCd>Submission</EventTypeCd>
+        <EventStatusCd>Bound</EventStatusCd>
+        <EventCreationDt>2018-11-27T15:46:53.523-05:00</EventCreationDt>
+        <EventChangeEffectiveDt>2018-11-28T00:01:00-05:00</EventChangeEffectiveDt>
+        <EventCloseDt>2018-11-27T15:56:51.181-05:00</EventCloseDt>
+        <EventDescriptionTx>Policy has been bound. Cancellation, Issuance, Reinstatement, Rewrite, RewriteNewAccount, Submission and PolicyChange jobs set this status</EventDescriptionTx>
+      </NotableEvents>
+      <RelatedPolicies id="56">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="57">
+          <PolicyNumber>D101387504</PolicyNumber>
+          <PolicyTypeCd>Homeowners</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <RelatedPolicies id="58">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="59">
+          <PolicyNumber>H5154521</PolicyNumber>
+          <PolicyTypeCd>Homeowners</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <RelatedPolicies id="60">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="61">
+          <PolicyNumber>F7649478</PolicyNumber>
+          <PolicyTypeCd>PersonalAuto</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <RelatedPolicies id="62">
+        <RelationshipReasonCd>Primary</RelationshipReasonCd>
+        <Policy id="63">
+          <PolicyNumber>H5154521</PolicyNumber>
+        </Policy>
+      </RelatedPolicies>
+      <PolicyMailingAddressIn>N</PolicyMailingAddressIn>
+      <SecondaryPolicyIn>Y</SecondaryPolicyIn>
+    </PolicyPeriod>
+  </Policy>
+  <CoverageStatus id="64">
+    <AsOfDt>2019-09-20T12:01:39.41-04:00</AsOfDt>
+    <StatusIn>true</StatusIn>
+  </CoverageStatus>
+</CorrespondenceDataResponse>

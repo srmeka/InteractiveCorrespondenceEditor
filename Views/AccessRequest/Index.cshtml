@@ -1,0 +1,112 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Home/HomeService.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Home/HomeController.js")"></script>
+
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <label>ICE / Inspire AD Groups</label>
+    </div>
+    <table cellspacing=2 cellpadding=2 align=center class="table" border="1">
+        <tr class="panel panel-primary">
+            <th width="20">Line Of Business</th>
+            <th width="40">Inspire AD Groups- Employee Only</th>
+            <th width="40">Inspire AD Groups- Consultants Only</th>
+        </tr>
+        <tbody>
+            <tr class="info">
+                <td>PL PC - ALL</td>
+                <td>Inspire_Personal_Lines</td>
+                <td>Inspire_CNSLT_PersLines</td>
+            </tr>
+            <tr class="info">
+                <td>PL PC AUTO</td>
+                <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;white-space:normal;">
+                    Inspire_PL_Auto_General,Inspire_PL_Auto_OffCallProc,
+                    Inspire_PL_Auto_PolicyAudit,
+                    Inspire_PL_Auto_RenewalUW,
+                    Inspire_PL_Auto_Scansheet
+                </td>
+                <td>Inspire_CNSLT_PersLines</td>
+            </tr>
+            <tr class="info">
+                <td>PL PC HO/DW</td>
+                <td>
+                    Inspire_PL_HD_Audit,
+                    Inspire_PL_HD_CSR,
+                    Inspire_PL_HD_SS,
+                    Inspire_PL_HD_SUP_UW_RCT,
+                    Inspire_PL_HUD_Admin
+                </td>
+                <td>Inspire_CNSLT_PersLines</td>
+            </tr>
+            <tr class="info">
+                <td>PL PC UMB</td>
+                <td>
+                    Inspire_PL_MailerSheet,
+                    Inspire_PL_UM_SS,
+                    Inspire_PL_UM_SUP_UW_CSR,
+                    Inspire_UMB_Submission
+                </td>
+                <td>Inspire_CNSLT_PersLines</td>
+            </tr>
+            <tr class="danger">
+                <td>CL PC CA</td>
+                <td>
+                    Inspire_Commercial_Lines,Inspire_Blank_Letter_Template
+                </td>
+                <td>Inspire_CNSL_Commercial_Lines</td>
+            </tr>
+            <tr class="danger">
+                <td>CL PC CGL</td>
+                <td>
+                    Inspire_Commercial_Lines,Inspire_Blank_Letter_Template
+                </td>
+                <td>Inspire_CNSL_Commercial_Lines</td>
+            </tr>
+            <tr class="danger">
+                <td>PL/CL/WCU BC</td>
+                <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;white-space:normal;">Inspire_CNSLT_PersLines,Inspire_CNSLT_PL_HUD_Admin,Inspire_Credit_and_Collections,Inspire_Remittance,Inspire_Accounts_Receivable</td>
+                <td style="word-wrap: break-word;min-width: 160px;max-width: 160px;white-space:normal;">Inspire_CNSLT_AR,Inspire_CNSLT_BLT,Inspire_CNSLT_CredandColl,Inspire_CNSLT_PersLines,Inspire_CNSLT_Remit</td>
+            </tr>
+            <tr class="warning">
+                <td>WCU PC</td>
+                <td>TBD</td>
+                <td>TBD</td>
+            </tr>
+            <tr class="success">
+                <td>GC</td>
+                <td>Inspire_General_Claims</td>
+                <td>Inspire_CNSLT_GC</td>
+            </tr>
+            <tr class="success">
+                <td>WCC</td>
+                <td>Inspire_WC_Claims</td>
+                <td>Inspire_CNSLT_WCC</td>
+            </tr>
+            <tr>
+                <td>ES Admins/FA/Developer/QA</td>
+                <td>Inspire_Administrator,Inspire_Developers,Inspire_Dev_Users</td>
+                <td>Inspire_Dev_Users</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+
+</div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <label>Instrutions for requesting access to ICE and ICE Categories</label>
+        </div>    
+        <div class="panel-body">
+            <label>1. Basesd of source system(s) (PC/BC or WCC/GC) and Line of Business lookup above table</label>
+            <br />
+            <label>2. Copy AD Groups from respective column(s) (empoloyee or consultant)</label>
+            <br />
+            <label>3. Go to <a href="http://enet.njmgroup.com/Business%20Applications/BusinessForms/_layouts/FormServer.aspx?Xsnlocation=http://enet.njmgroup.com/Business%20Applications/BusinessForms/FRM0047_ADGroupRequest/Forms/template.xsn&openIn=browser&SaveLocat" target="_blank">AD Group Request Form</a>  and submit request to add/delete/update access to users based on group selected from step 2</label>
+        </div>
+  </div>

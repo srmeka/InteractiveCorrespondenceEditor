@@ -1,0 +1,21 @@
+﻿<div class="panel panel-primary" ng-controller="WccClaimantNameDropdownController">
+    <div class="panel-heading">Claimant</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Claimant Name dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>Claimant Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ClaimantNameData" name="ClaimantNameSelection" ng-model="selectedName" class="form-control" id="ClaimantNameSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantNameData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

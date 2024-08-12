@@ -1,0 +1,21 @@
+﻿<div class="panel panel-primary" ng-controller="GcLienholderNameDropdownController">
+    <div class="panel-heading">Lienholder</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Lienholder's Name dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>Lienholder's Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in LienholderNameOneData" name="LienholderNameSelection" ng-model="selectedName" class="form-control" id="LienholderNameSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="LienholderNameOneData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

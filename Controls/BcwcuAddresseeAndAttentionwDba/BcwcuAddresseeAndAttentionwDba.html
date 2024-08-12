@@ -1,0 +1,59 @@
+﻿<div class="panel panel-primary" ng-controller="BcwcuAddresseeAndAttentionwDbaController">
+    <div class="panel-heading">
+        Addressee Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label>
+                        Attention Name
+                    </label>
+                    <!--<select ng-disabled="Addressee.length == 0" name="AddresseeName" ng-model="SelectedAddressee" ng-change="updateAddreesseeAddress(SelectedAddressee)" ng-options="AddresseeInfo.DisplayName + AddresseeInfo.Contact.entityPerson.Prefix.DisplayName+' '+ AddresseeInfo.Contact.entityPerson.FirstName +' '+ AddresseeInfo.Contact.entityPerson.MiddleName+' '+ AddresseeInfo.Contact.entityPerson.LastName  for AddresseeInfo in Addressee track by AddresseeInfo._id" class="form-control"  id="AddresseeNameID" ng-required="true">-->
+                    <select ng-disabled="Addressee.length == 0" name="AttentionNm" ng-model="SelectedAttentionNm" ng-options="AttentionNmInfo.DisplayName for AttentionNmInfo in AttentionNm track by AttentionNmInfo._id" class="form-control" id="AttentionNmID">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="Addressee.length == 0">Information not provided by source</span>
+                </div>
+                <div class="col-md-4">
+                    <label>
+                        * Addressee Name 1
+                    </label>
+                    <!--<select ng-disabled="Addressee.length == 0" name="AddresseeName" ng-model="SelectedAddressee" ng-change="updateAddreesseeAddress(SelectedAddressee)" ng-options="AddresseeInfo.DisplayName + AddresseeInfo.Contact.entityPerson.Prefix.DisplayName+' '+ AddresseeInfo.Contact.entityPerson.FirstName +' '+ AddresseeInfo.Contact.entityPerson.MiddleName+' '+ AddresseeInfo.Contact.entityPerson.LastName  for AddresseeInfo in Addressee track by AddresseeInfo._id" class="form-control"  id="AddresseeNameID" ng-required="true">-->
+                    <select ng-disabled="Addressee.length == 0 || DBACheckBox" name="AddresseeName" ng-model="SelectedAddressee" ng-change="updateAddreesseeAddress(SelectedAddressee)" ng-options="AddresseeInfo.DisplayName for AddresseeInfo in Addressee track by AddresseeInfo._id" class="form-control" id="AddresseeNameID" ng-required="!DBACheckBox">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="Addressee.length == 0">Information not provided by source</span>
+                </div>
+                <div class="col-md-4">
+                    <label>
+                        * Addressee Address
+                    </label>
+                    <select ng-disabled="AddresseeAddress.length == 0 || DBACheckBox" name="AddresseeAddress" ng-options="Address.PrimaryAddress.AddressLine1+ ' '+Address.PrimaryAddress.AddressLine2+' '+Address.PrimaryAddress.AddressLine3+', '+ Address.PrimaryAddress.City+ ' '+ Address.PrimaryAddress.State.Code+ ' '+ Address.PrimaryAddress.PostalCode for Address in AddresseeAddress" id="AddresseeAddressID" xml="Addressee_Address"
+                            ng-model="SelectedAddress" class="form-control" ng-required="!DBACheckBox">
+                        <option value="">-- Select --</option>
+                    </select>
+                    <span class="alert-danger" ng-show="AddresseeAddress.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <label>
+                    <input type="checkbox" name="DBACheckBox" ng-model="DBACheckBox" ng-true-value="true" ng-init="DBACheckBox=true" ng-false-value="false" id="DBACheckBoxId" />
+                </label>
+            </div>
+            <div class="col-md-4">
+                <label ng-disabled="!DBACheckBox" ng-class="(DBACheckBox)?'':'disabled-class'">DBA Name: </label>
+                <input type="text" value="{{DBAName}}" ng-required="DBACheckBox" class="LabelText" ng-class="(DBACheckBox)?'':'disabled-class'" ng-model="DBAName" name="DBAName" id="DBANameId" ng-disabled="!DBACheckBox" readonly style="width:500px" />
+                <span class="alert-danger" ng-show="DBANameLength == 0">Information not provided by source</span>
+            </div>
+            <div class="col-md-4">
+                <label ng-disabled="!DBACheckBox" ng-class="(DBACheckBox)?'':'disabled-class'">DBA Address: </label>
+                <input type="text" value="{{DBAAddress}}" ng-required="DBACheckBox" class="LabelText" ng-class="(DBACheckBox)?'':'disabled-class'" ng-model="DBAAddress" name="DBAAddress" id="DBAAddressId" ng-disabled="!DBACheckBox" readonly style="width:500px" />
+                <span class="alert-danger" ng-show="DBAAddress.length == 0">Information not provided by source</span>
+            </div>
+
+        </div>
+    </div>
+</div>

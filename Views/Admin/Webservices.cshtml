@@ -1,0 +1,97 @@
+﻿
+@{
+    ViewBag.Title = "Webservices";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Admin/WebservicesController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Home/HomeService.js")"></script>
+<form ng-controller="WebservicesController">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-xs-6">
+                <label class="radio-inline">
+                    <input type="radio" class="insert" name="optradio" value="0" ng-click="InsertUpdate(insert)" id="OptradioInsertId" checked />Insert
+                </label>
+            </div>
+
+        </div>
+    </div>
+    <div class="collapse insert" style="display:block">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Insert Category- Dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>
+                                LOB
+                            </label>
+                            <select class="form-control" name="LOB" ng-model="SelectedDevLOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown | orderBy : 'lobName'" id="LOBId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>
+                                Region
+                            </label>
+                            <select class="form-control" name="Region" ng-model="SelectedDevRegion" ng-options="RegionDropdownInfo.region1 for RegionDropdownInfo in RegionDropdown | orderBy : 'region1'" id="RegionId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <label>
+                                Environment
+                            </label>
+                            <select class="form-control" name="Environment" ng-model="SelectedDevEnvironment" ng-options="EnvironmentEnvironmentInfo for EnvironmentEnvironmentInfo in Environment | orderBy : 'EnvironmentEnvironmentInfo'" id="EnvironmentId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-3">
+                            <label>
+                                URLType
+                            </label>
+                            <select class="form-control" name="URLType" ng-model="SelectedDevURLType" ng-options="URLTypeInfo for URLTypeInfo in URLType | orderBy : 'URLTypeInfo'" id="URLTypeId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-3">
+                            <label>
+                                URLInfo
+                            </label>
+                            <select class="form-control" name="URLInfo" ng-model="SelectedDevURLInfo" ng-options="URLInfoValue for URLInfoValue in URLInfo | orderBy : 'URLInfoValue'" id="URLInfoId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-3">
+                            <label>
+                                URL
+                            </label>
+                            <input type="text" ng-model="URL" class="form-control" id="URLId" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="InsertWebServices()">Insert Webservice</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <div class="alert-danger" ng-hide="!errorDetail" id="DivAlert"> <h4> {{errorDetail}}</h4> </div>
+    </div>
+</form>

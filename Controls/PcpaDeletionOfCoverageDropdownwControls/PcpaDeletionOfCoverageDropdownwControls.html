@@ -1,0 +1,42 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaDeletionOfCoverageDropdownwControlsController">
+    <div class="panel-heading">Deletion of Coverage</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <!--Chckbox to enable control-->
+                    <input ng-click="clearAllSelectedData()" ng-model="SelectedDeletion" type="checkbox" id="CtrlEnableChecboxId" name="CtrlEnableChecbox" value="" /> <label>Deletion of Coverage Reason</label>
+                </div>
+                <div class="col-md-8">
+                    <select ng-model="selectedReason" ng-disabled="!SelectedDeletion" class="form-control" name="reasonSelector" id="reasonSelectorId" ng-options="item.optionValue for item in ReasonData">
+                        <option value="">--Select--</option>
+                    </select>
+                    <div ng-show="SelectedDeletion &&  (selectedReason.slectedType === 'driver' || selectedReason.slectedType === 'both')" class="row" style="margin-top:15px">
+                        <!--Driver name checkbox list or input-->
+                        <label class="col-md-12">Driver Name:</label>
+                        <div l class="col-md-6">
+                            <div ng-repeat="item in DriverInfo track by item._id">
+                                <input ng-model="item.checked" ng-click="selectDriver(item)" type="checkbox" name="deletionDriverCheckboxLst" id="deletionDrivereCheckboxLstId{{item._id}}" value="" /> <span ng-bind="item.Person.PersonName.FirstGivenNm + ' ' + item.Person.SecondGivenNameInitial + ' ' + item.Person.PersonName.FamilyNm + ' ' + item.Person.PersonName.FamilyNameGenerationCd"></span>
+                            </div>
+                            <span class="alert-danger" ng-if="!DriverInfo && DriverInfo.length ===0">Information not provided by source</span>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="freeTextName" ng-disabled="SelectedDriverData.length !== 0" ng-model="freeTextName" class="form-control" />
+                        </div>
+
+                    </div>
+                    <div ng-show="SelectedDeletion && (selectedReason.slectedType === 'vehicle' || selectedReason.slectedType === 'both')" class="row" style="margin-top:15px">
+                        <!--Driver name checkbox list -->
+                        <label class="col-md-12">Vehicle:</label>
+                        <div class="col-md-12">
+                            <div ng-repeat="item in Vehicle track by item.VehicleId">
+                                <input ng-model="item.checked" ng-click="selectVehicle(item)" type="checkbox" name="deletionVehicleCheckboxLst" id="deletionVehicleCheckboxLstId{{item.VehicleId}}" value="" /> <span ng-bind="item.ModelYearNr + ' ' + item.VehicleTradeNm + ' ' + item.ModelNm + ' ' + item.ManufacturerVehicleIdentificationNr"></span>
+                            </div>
+                        </div>
+                        <span class="alert-danger" ng-if="!Vehicle && Vehicle.length ===0">Information not provided by source</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

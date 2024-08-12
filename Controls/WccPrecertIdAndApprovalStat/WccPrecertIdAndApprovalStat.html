@@ -1,0 +1,47 @@
+﻿<div class="panel panel-primary" ng-controller="WccPrecertIdAndApprovalStatController">
+    <div class="panel-heading">Precert Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Precert ID dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>* Precert ID:</label></div>
+                <div class="col-md-4">
+                    <select ng-if="PrecertIdData && PrecertIdData.length > 0"
+                            ng-options="item.PreCertificationNumber for item in PrecertIdData"
+                            ng-required="true"
+                            name="PrecertIdSelection"
+                            ng-change="selectedIDItem(selectedId)"
+                            ng-model="selectedId"
+                            class="form-control"
+                            id="PrecertIdSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span style="display:inline-block;margin-top:5px;margin-bottom:5px" ng-if="PrecertIdData.length == 0" class="alert-danger" ng-bind="'Information not provided from ClaimCenter'"></span>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:15px">
+                <div class="col-md-4"><label>Approval Status:</label></div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-4 col-xs-4"><label>CPT Code(s)</label></div>
+                        <div class="col-md-4 col-xs-4"><label>Assistant Surgeon Status</label></div>
+                        <div class="col-md-4 col-xs-4"><label>Co-Surgeon Status</label></div>
+                    </div>
+                    <div class="row" style="margin-top:5px" ng-if="selectedId" ng-repeat="selectedItem in selectedProcs track by $index" >
+                        <div class="col-md-4 col-xs-4">
+                            <input type="checkbox" name="CtrlProcedureItem{{$index}}" id="CtrlProcedureItem{{$index}}Id" ng-model="selectedItem.ctrlChecked"/>
+                            <label ng-bind="selectedItem.ProcedureCode"></label>
+                        </div>
+                        <div class="col-md-4 col-xs-4"><span ng-bind="selectedItem.AssistantStatus"></span></div>
+                        <div class="col-md-4 col-xs-4"><span ng-bind="selectedItem.CoSurgeonStatus"></span></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

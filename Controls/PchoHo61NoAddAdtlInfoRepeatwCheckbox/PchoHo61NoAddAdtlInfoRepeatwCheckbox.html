@@ -1,0 +1,159 @@
+﻿<div class="panel panel-primary" ng-controller="PchoHo61NoAddAdtlInfoRepeatwCheckboxController">
+    <div class="panel-heading">HO-61 Not Added - Need Additional Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" ng-repeat="slector in TotalCount track by $index" style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray">
+                <div class="col-md-3">
+                    <!--Checkbox to enable control-->
+                    <input ng-change="clearAllData($index)" 
+                           ng-model="SelectedH061[$index]" 
+                           type="checkbox" 
+                           id="CtrlEnableCheckboxId{{$index}}" 
+                           name="CtrlEnableCheckbox{{$index}}" 
+                           value="" />
+                    <label>HO-61 Not Added-Need Adtl Info</label>
+                </div>
+                <div class="col-md-9 row">
+
+                    <!--HO-61 description dropdown list-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedH061[$index])?'':'disabled-class'">HO-61 Description:</label>
+                        <div class="col-md-4">
+                            <select ng-disabled="!SelectedH061[$index] || descriptionData.length == 0" ng-options="item.ScheduledItemDescriptionTx for item in descriptionData track by item._id" name="{{'ho60SelectionSelection'+$index}}" id="{{'ho60SelectionSelectionId'+$index}}" ng-model="selectDESC[$index]" class="form-control">
+                                <option value="">--Select--</option>
+                            </select>
+                            <span class="alert-danger" ng-show="descriptionData.length == 0">Information not provided by source</span>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" ng-disabled="!SelectedH061[$index] || selectDESC[$index]" ng-model="freeTextDesc[$index]" name="driverName" id="driverNameID" value="" />
+                        </div>
+                    </div>
+
+                    <!--Floater form checkbox-->
+                    <div class="col-md-4" style="margin-top:5px">
+                        <input ng-disabled="!SelectedH061[$index]" type="checkbox" ng-model="floatForm[$index]" name="{{'floatFormCheckbox'+ $index}}" id="{{'floatFormCheckboxId'+$index}}" value="" />
+                        <label ng-class="(SelectedH061[$index])?'':'disabled-class'">Floater Form</label>
+                    </div>
+
+                    <!--Desc Appraisal checkbox-->
+                    <div class="col-md-4" style="margin-top:5px">
+                        <input ng-disabled="!SelectedH061[$index]" type="checkbox" ng-model="descAppraisal[$index]" name="{{'descAppraisalCheckbox'+ $index}}" id="{{'descAppraisalCheckboxId'+ $index}}" value="" />
+                        <label ng-class="(SelectedH061[$index])?'':'disabled-class'">Desc Appraisal</label>
+                    </div>
+
+                    <!--Number Of textbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <div class="col-md-4"><label ng-class="(SelectedH061[$index])?'':'disabled-class'">Number Of:</label></div>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedH061[$index]" type="text" class="form-control" ng-model="numberOf[$index]" name="{{'numberOfCheckbox'+ $index}}" id="{{'numberOfCheckboxId'+ $index}}" value="" />
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+
+                    <!--Color/Clarity dropdown list and input-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedH061[$index])?'':'disabled-class'">Color/Clarity:</label>
+                        <div class="col-md-4">
+                            <select ng-required="" ng-disabled="!SelectedH061[$index]" ng-options="item for item in colorOrClarityData" ng-model="colorOrClarity[$index]" class="form-control" name="colorOrClarity{{$index}}" id="colorOrClarity{{$index}}Id">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <input ng-required="" type="text" class="form-control" ng-disabled="!SelectedH061[$index] || !colorOrClarity[$index]" ng-model="colorOrClarityText[$index]" name="colorOrClarityText{{$index}}" id="colorOrClarityText{{$index}}Id" value="" />
+                        </div>
+                    </div>
+
+                    <!--Carat weight checkbox-->
+                    <div class="col-md-4" style="margin-top:5px">
+                        <input ng-disabled="!SelectedH061[$index]" type="checkbox" ng-model="caratWeight[$index]" name="{{'caratWeightCheckbox'+ $index}}" id="{{'caratWeightCheckboxId'+ $index}}" value="" />
+                        <label ng-class="(SelectedH061[$index])?'':'disabled-class'">Carat Weight</label>
+                    </div>
+
+                    <!--Watch checkbox-->
+                    <div class="col-md-4" style="margin-top:5px">
+                        <input ng-disabled="!SelectedH061[$index]" type="checkbox" ng-model="Watch[$index]" name="{{'WatchCheckbox'+ $index}}" id="{{'WatchCheckboxId'+ $index}}" value="" />
+                        <label ng-class="(SelectedH061[$index])?'':'disabled-class'">Watch</label>
+                    </div>
+
+                    <!--Weight textbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedH061[$index])?'':'disabled-class'">Weight Of:</label>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedH061[$index]" type="text" class="form-control" ng-model="weightOf[$index]" name="{{'weightOfText'+ $index}}" id="{{'weightOfTextId'+ $index}}" value="" />
+                        </div>
+                    </div>
+
+                    <!--Separate Value/Description checkbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedH061[$index])?'':'disabled-class'">Separate Value/Description:</label>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedH061[$index]" type="text" class="form-control" ng-model="separate[$index]" name="{{'separateText'+ $index}}" id="{{'separateTextId'+ $index}}" value="" />
+                        </div>
+                    </div>
+
+                    <!--Furs checkbox-->
+                    <div class="col-md-4" style="margin-top:5px">
+                        <input ng-disabled="!SelectedH061[$index]" type="checkbox" ng-model="furs[$index]" name="{{'fursCheckbox'+ $index}}" id="{{'fursCheckboxId'+ $index}}" value="" />
+                        <label ng-class="(SelectedH061[$index])?'':'disabled-class'">Furs</label>
+                    </div>
+
+                    <!--Length/Sweep checkbox-->
+                    <div class="col-md-4" style="margin-top:5px">
+                        <input ng-disabled="!SelectedH061[$index]" type="checkbox" ng-model="lengthOrSweep[$index]" name="{{'lengthOrSweepCheckbox'+$index}}" id="{{'lengthOrSweepCheckboxId'+ $index}}" value="" />
+                        <label ng-class="(SelectedH061[$index])?'':'disabled-class'">Length/Sweep</label>
+                    </div>
+
+                    <!--Receipt checkbox-->
+                    <div class="col-md-4" style="margin-top:5px">
+                        <input ng-disabled="!SelectedH061[$index]" type="checkbox" ng-model="receipt[$index]" name="{{'receiptCheckbox'+ $index}}" id="{{'receiptCheckboxId'+ $index}}" value="" />
+                        <label ng-class="(SelectedH061[$index])?'':'disabled-class'">Receipt</label>
+                    </div>
+
+                    <!--Certificates dropdown list and input-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedH061[$index])?'':'disabled-class'">Certificates:</label>
+
+                        <div class="col-md-4">
+                            <select ng-required="" ng-disabled="!SelectedH061[$index]" ng-options="item for item in certificatesData" ng-model="certificate[$index]" class="form-control" name="{{'colorOrClarity'+ $index}}" id="{{'colorOrClarityId'+ $index}}">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <input ng-required="" type="text" class="form-control" ng-disabled="!SelectedH061[$index] || certificate[$index]" ng-model="certificateText[$index]" name="{{'certificateText'+ $index}}" id="{{'certificateTextId'+$index}}" value="" />
+                        </div>
+                    </div>
+
+                    <!--Certificate Number checkbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedH061[$index])?'':'disabled-class'">Certificate Number:</label>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedH061[$index]" type="text" class="form-control" ng-model="certificateNumber[$index]" name="{{'certificateNumberText'+ $index}}" id="{{'certificateNumberTextId'+ $index}}" value="" />
+                        </div>
+                    </div>
+
+                    <!--Free Form 1-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <div class="col-md-4"><label ng-class="(SelectedH061[$index])?'':'disabled-class'">Free Form 1:</label></div>
+                        <div class="col-md-8">
+                            <textarea ng-disabled="!SelectedH061[$index]" type="text" class="form-control" ng-model="freeForm1[$index]" name="{{'freeForm1'+ $index}}" id="{{'freeForm1Id'+ $index}}" value=""></textarea>
+                        </div>
+                    </div>
+
+                    <!--Free Form 2-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <div class="col-md-4"><label ng-class="(SelectedH061[$index])?'':'disabled-class'">Free Form 2:</label></div>
+                        <div class="col-md-8">
+                            <textarea ng-disabled="!SelectedH061[$index]" type="text" class="form-control" ng-model="freeForm2[$index]" name="{{'freeForm2'+$index}}" id="{{'freeForm2Id'+ $index}}" value=""></textarea>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+            <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+        </div>
+    </div>
+</div> 

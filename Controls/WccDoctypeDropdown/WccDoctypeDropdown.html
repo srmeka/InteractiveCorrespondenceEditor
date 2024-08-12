@@ -1,0 +1,22 @@
+﻿<div class="panel panel-primary" ng-controller="WccDoctypeDropdownController">
+    <div class="panel-heading">Document Type</div>
+    <div class="panel-body">
+        <div class="form-group">
+            
+            <!--Document Type drop down list-->
+            <div class="row">
+                <div class="col-md-4"><label>* Document Type:</label></div>
+                <div class="col-md-4">
+                    <select required ng-options="item.categoryFriendlyName for item in displayData | orderBy:'categoryFriendlyName'" 
+                            ng-model="selectedDocType" 
+                            class="form-control" 
+                            name="DocumentType" 
+                            id="DocementTypeId">
+                        <option value="">-Select-</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

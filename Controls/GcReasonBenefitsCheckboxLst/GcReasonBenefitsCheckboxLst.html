@@ -1,0 +1,17 @@
+﻿<div class="panel panel-primary" ng-controller="GcReasonBenefitsCheckboxLstController">
+    <div class="panel-heading">Reason Benefits Ceased</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <!--Docs Referenced checkbox list-->
+            <div class="row">
+                <div class="col-md-4"><label>Reason(s):</label></div>
+                <div class="col-md-8">
+                    <div ng-repeat="item in ReasonData track by $index">
+                        <input type="checkbox" ng-change="selectItem(item)" name="BenifitsReason{{$index}}" id="BenifitsReason{{$index}}Id" ng-model="item.checked" value="" />
+                        <label ng-bind="item.insert_text"></label>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>

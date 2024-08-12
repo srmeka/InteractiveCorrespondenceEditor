@@ -1,0 +1,38 @@
+﻿<div class="panel panel-primary" ng-controller="ClAddresseeOneController">
+    <div class="panel-heading">
+        Addressee Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Addressee Name 1:</label>
+                </div>
+                <div class="col-md-4">
+                    <select ng-disabled="Addressee.length == 0" name="AddresseeName" ng-model="SelectedAddressee" ng-change="updateAddreesseeAddress(SelectedAddressee)" ng-options="AddresseeInfo.DisplayName for AddresseeInfo in Addressee track by AddresseeInfo._id" class="form-control" id="AddresseeNameID">
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="Addressee.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4">
+                    <label>Addressee Address:</label>
+                </div>
+                <div class="col-md-4">
+                    <select ng-disabled="AddresseeAddress.length == 0" name="AddresseeAddress" ng-options="Address.Address.Line1Tx+ ' '+Address.Address.Line2Tx+' '+Address.Address.Line3Tx+', '+ Address.Address.Municipality[0].MunicipalityNm+ ' '+ Address.Address.CountrySubdivision.CountrySubdivisionNm+ ' '+ Address.Address.PostalCd for Address in AddresseeAddress" id="AddresseeAddressID"
+                            ng-model="SelectedAddress" class="form-control">
+                        <option value="">-- Select --</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="AddresseeAddress.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

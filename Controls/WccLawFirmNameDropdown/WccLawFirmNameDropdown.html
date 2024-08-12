@@ -1,0 +1,18 @@
+﻿<div class="panel panel-primary" ng-controller="WccLawFirmNameDropdownController">
+    <div class="panel-heading">Outside Law Firm</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Outside Law Firm Name dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>Outside Law Firm Name:</label></div>
+                <div class="col-md-8">
+                    <select ng-options="item.displayName for item in ClaimantNameData | orderBy:'displayName'" name="ClaimantNameSelection" ng-model="selectedName" class="form-control" id="ClaimantNameSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

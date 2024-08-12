@@ -1,0 +1,25 @@
+﻿<div class="panel panel-primary" ng-controller="PlScanSheetPrinterController">
+    <div class="panel-body">
+        <div class="form-group">
+            
+            <div class="row">
+                <div class="col-md-3">
+                    <label>* Printer:</label>
+                </div>
+                <div class="col-md-9">
+                    <select class="form-control"
+                            name="PlScanSheetPrinterId"
+                            ng-model="SelectedPlScanSheetPrinter"
+                            ng-options="PlScanSheetPrinterInfo.lookupItemValue for PlScanSheetPrinterInfo in PlScanSheetPrinter | orderBy:'lookupItemValue'"
+                            id="PlScanSheetPrinterID"
+                            ng-required="true">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger"
+                          ng-show="PlScanSheetPrinterInfo.lookupItemValue == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

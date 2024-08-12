@@ -1,0 +1,15 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaAddedPipCheckboxListController">
+    <div class="panel-heading">Added PIP Listed on Policy</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <!--Report checkbox list-->
+            <div class="col-md-12">
+                <div class="row" style="margin-top:5px" ng-repeat="item in displayData track by $index">
+                    <input type="checkbox" name="{{item.checkboxName}}" id="{{item.checkboxName}}Id" ng-model="item.onChecked" value="" />
+                    <label ng-bind="item.labelText"></label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

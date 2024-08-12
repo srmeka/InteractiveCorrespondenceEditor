@@ -1,0 +1,20 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaFinanceVehCheckboxwCheckboxlstController">
+    <div class="panel-heading">Finance Agreement</div>
+    <div class="panel-body">
+       <div class="form-group">
+           <div class="row">
+               <div class="col-md-4">
+                   <!--Checkbox to enable control-->
+                       <input ng-click="clearAllSelectedData()" ng-model="SelectedFinance" type="checkbox" id="CtrlEnableCheckboxId" name="CtrlEnableCheckbox" value="" /> <label>Include Finance Vehicle(s)</label>
+               </div>
+               <div class="col-md-8">
+                   <!--Vehicle dropdown list-->
+                   <div ng-repeat="item in Vehicle track by item.VehicleId" class="col-md-12 row">
+                       <input ng-model="item.financeChecked" ng-change="selectVehicle(item)" type="checkbox" ng-disabled="!SelectedFinance" name="FinanceVehicleCheckboxLst" id="FinanceVehicleCheckboxLstId{{item.VehicleId}}" value="" /> <span ng-bind="item.ModelYearNr + ' ' + item.VehicleTradeNm + ' ' + item.ModelNm + ' ' + item.ManufacturerVehicleIdentificationNr"></span>   
+                   </div> 
+                   <span class="alert-danger" ng-if="Vehicle.length === 0">Information not provided by source</span>
+               </div>
+           </div>
+       </div>
+    </div>
+</div> 

@@ -1,0 +1,22 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaCsfBlankPrefilledDropdownController">
+    <div class="panel-heading">
+        CSF Blank or Pre-Filled
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label>
+                        * CSF Blank or Pre-Filled
+                    </label>
+                </div>
+                <div class="col-md-8">
+                    <!--CSF blank prefilled dropdown list-->
+                    <select class="form-control" name="CSFBlank" ng-required="true" ng-model="SelectedCSF" ng-options="item.text for item in CFSData" id="SelectedCSFID">
+                        <option value="" disabled selected>--Select--</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

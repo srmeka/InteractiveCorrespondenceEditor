@@ -1,0 +1,112 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}
+.custom-class{
+  background-color: gray
+}
+
+.default-color{
+  background-color: red
+}
+
+
+Home.ng-invalid input.ng-invalid, Home.ng-invalid select.ng-invalid {
+    border-color: red;
+}
+.disabled-class {
+    color:gray;
+}
+
+.normal-label-class{
+    font-weight:normal
+}
+.navbar {
+  z-index: 90;
+}
+.second-navbar{
+    z-index: 80;
+  top:50px;
+
+}
+
+.page-panel
+{
+    padding-top:70px
+}
+.li-pad-left
+{
+    padding-left:15px
+}
+.glyph-btn {
+  width: 50px;
+  height: 50px;
+  border:none
+ 
+}
+.navbar-label{
+    padding-top:15px;
+}
+.navbar-right
+{
+    padding-right:20px;
+    padding-top:15px;
+    color:white;
+}
+.disabled-class {
+    color:gray;
+}
+.LabelText{
+      background:rgba(0,0,0,0);
+    border:none;
+}
+.loading-bar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0px 0px -50px;
+    background-color:white;
+    border: 1px; border-color:lightgray; border-style:solid;
+    /*background-color:transparent;*/
+}
+select:invalid {
+  border-color: red;
+}
+input:invalid {
+  border-color: red;
+}
+textarea:invalid {
+  border-color: red;
+}

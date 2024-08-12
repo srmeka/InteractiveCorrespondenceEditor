@@ -1,0 +1,88 @@
+﻿<div class="panel panel-primary" ng-controller="PcumbWatercraftRepeaterwCheckboxController">
+    <div class="panel-heading">Watercarft Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray" ng-repeat="slector  in TotalCount track by $index">
+                <div class="col-md-4">
+                    <!--Checkbox to enable control-->
+                    <input type="checkbox" ng-change="clearAllData($index)" ng-model="CtrlEnabledCheckbox[$index]" id="CtrlEnableCheckboxId{{$index}}" name="CtrlEnableCheckbox{{$index}}" value="" />
+                    <label>Include Watercraft</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <!--Watercraft Dropdown list and input-->
+                        <div class="col-md-6">
+                            <select ng-disabled="!CtrlEnabledCheckbox[$index]"  ng-options="(item.Watercraft.ModelYearNr + ' ' + item.Watercraft.WatercraftTradeNm)  for item in watercraftData track by item._id" name="WatercraftSelection" ng-model="selectedValue[$index]" class="form-control" id="WatercraftSelectionId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] || selectedValue[$index]" ng-model="freeTextGroup[$index]" type="text" class="form-control" name="addressText" value="" />
+                        </div>
+                    </div>
+
+                    <!--Watercraft Ownership checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] " ng-model="ownership[$index]" type="checkbox" name="ownership" id="ownershipId{{$index}}" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Watercraft Ownership</label>
+                        </div>
+                    </div>
+
+                    <!--Watercraft Type checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] " ng-model="type[$index]" type="checkbox" name="type" id="typeId{{$index}}" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Watercraft Type</label>
+                        </div>
+                    </div>
+
+                    <!--Watercraft Year checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] " ng-model="year[$index]" type="checkbox" name="year" id="yearId{{$index}}" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Watercraft Year</label>
+                        </div>
+                    </div>
+
+                    <!--Watercraft Make checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] " ng-model="make[$index]" type="checkbox" name="make" id="makeId{{$index}}" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Watercraft Make</label>
+                        </div>
+                    </div>
+
+                    <!--Watercraft Length checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] " ng-model="length[$index]" type="checkbox" name="length" id="lengthId{{$index}}" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Watercraft Length</label>
+                        </div>
+                    </div>
+
+                    <!--Max Horsepower checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] " ng-model="horsepower[$index]" type="checkbox" name="horsepower{{$index}}" id="horsepowerId{{$index}}" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Max Horsepower</label>
+                        </div>
+                    </div>
+
+                    <!--Underlying Policy checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] " ng-model="policy[$index]" type="checkbox" name="policy{{$index}}" id="policyId{{$index}}" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Underlying Policy</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-12 text-center" style="margin-top:10px;">
+                <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+                <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+            </div>
+        </div>
+    </div>
+</div>

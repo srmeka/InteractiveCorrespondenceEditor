@@ -1,0 +1,42 @@
+﻿<div class="panel panel-primary" ng-controller="PlScanSheetDropdownController">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" ng-hide="!LabelName1">
+                <div class="col-md-3">
+                    <label>{{LabelName1}}</label>
+                </div>
+                <div class="col-md-9">
+                    <select class="form-control" name="PlScanSheetDropdown1" ng-model="SelectedDropdownValue1" ng-options="PopulateDropdownInfo1 for PopulateDropdownInfo1 in PopulateDropdown1" id="PlScanSheetDropdownID1">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="PopulateDropdownInfo1 == 0">Information not provided</span>
+                </div>
+            </div>
+
+            <div class="row" ng-hide="!LabelName2" style="margin-top:5px">
+                <div class="col-md-3">
+                    <label>{{LabelName2}}</label>
+                </div>
+                <div class="col-md-9">
+                    <select class="form-control" name="PlScanSheetDropdown2" ng-model="SelectedDropdownValue2" ng-options="PopulateDropdownInfo2 for PopulateDropdownInfo2 in PopulateDropdown2" id="PlScanSheetDropdownID2">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="PopulateDropdownInfo2 == 0">Information not provided</span>
+                </div>
+            </div>
+
+            <div class="row" ng-hide="!LabelName3" style="margin-top:5px">
+                <div class="col-md-3">
+                    <label>{{LabelName3}}</label>
+                </div>
+                <div class="col-md-9">
+                    <select class="form-control" name="PlScanSheetDropdown3" ng-model="SelectedDropdownValue3" ng-options="PopulateDropdownInfo3 for PopulateDropdownInfo3 in PopulateDropdown3" id="PlScanSheetDropdownID3">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="PopulateDropdownInfo3 == 0">Information not provided</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

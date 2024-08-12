@@ -1,0 +1,17 @@
+﻿<div class="panel panel-primary" ng-controller="GcRiskCheckboxLstController">
+    <div class="panel-heading">Risk</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Checkbox list-->
+            <div class="row" ng-repeat="item in displayData track by $index"  style="margin-top:5px">
+                <!--control with checkbox label-->
+                <div class="col-md-6">
+                    <input style="width:15px;vertical-align:top" type="checkbox" name="{{item.checkboxName}}" id="{{item.checkboxName}}Id" ng-model="item.ctrlSelected" value="" />
+                    <label style="width:calc(100% - 20px);margin-top:2px" ng-bind="item.labelText"></label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

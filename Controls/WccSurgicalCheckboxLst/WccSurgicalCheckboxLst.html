@@ -1,0 +1,63 @@
+﻿<div class="panel panel-primary" ng-controller="WccSurgicalCheckboxLstController">
+    <div class="panel-heading">Surgical Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <!--Checkbox list-->
+            <div class="row"
+                 ng-repeat="item in displayData track by $index"
+                 style="margin-top:5px">
+
+                <!--checkbox label-->
+                <div class="col-md-6" ng-if="item.controlType === '1' || item.controlType === '3'">
+                    <input ng-if="item.controlType === '1'"
+                           style="width:15px;vertical-align:top;margin-top:7px" type="checkbox"
+                           name="{{item.checkboxName}}"
+                           id="{{item.checkboxName}}Id"
+                           ng-click="selectedItem(item)"
+                           ng-model="item.ctrlSelected"
+                           value="" />
+                    <label style="width:calc(100% - 20px);margin-top:5px"
+                           ng-bind="item.labelText"></label>
+                </div>
+
+                <!--control with checkbox label-->
+                <div class="col-md-6"
+                     ng-if="item.controlType === '2'">
+                     <!--ng-class="!item.ctrlSelected? 'disabled-class':''">-->
+                    <input style="width:15px;vertical-align:top;margin-top:7px"
+                           type="checkbox"
+                           name="{{item.checkboxName}}"
+                           id="{{item.checkboxName}}Id"
+                           ng-click="!item.ctrlSelected? item.bindValue = '':''"
+                           ng-model="item.ctrlSelected"
+                           value="" />
+                    <label style="width:calc(100% - 20px);margin-top:5px"
+                           ng-bind="item.labelText"></label>
+                </div>
+
+                <div class="col-md-6"
+                     ng-if="item.controlType === '2'"
+                     ng-class="!item.ctrlSelected? 'disabled-class':''">
+                    <input type="text"
+                           class="form-control"
+                           ng-disabled="!item.ctrlSelected"
+                           ng-required="item.ctrlSelected"
+                           name="{{item.checkboxName}}Content"
+                           id="{{item.checkboxName}}ContentId"
+                           ng-model="item.bindValue"
+                           value="" maxlength="500"/>
+                </div>
+
+                <!--textbox-->
+                <div class="col-md-6"
+                     ng-if="item.controlType === '3'">
+                    <input type="text"
+                           class="form-control"
+                           ng-model="item.bindValue"
+                           name="{{item.controlName}}Value"
+                           id="{{item.controlName}}ValueId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

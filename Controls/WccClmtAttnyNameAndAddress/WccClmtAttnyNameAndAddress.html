@@ -1,0 +1,37 @@
+﻿<div class="panel panel-primary" ng-controller="WccClmtAttnyNameAndAddressController">
+    <div class="panel-heading">Claimant Attorney</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Claimant Attorney dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>Claimant Attorney Name:</label></div>
+                <div class="col-md-4">
+                    <select class="form-control" ng-change="selectedName()" ng-model="nameSelector" ng-options="item.displayName for item in ClaimantData" name="AttyName" id="AttyNameID">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--Claimant attorney address dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4" ng-show="{{ShowAddress}}"><label>Claimant Attorney Address:</label></div>
+                <div class="col-md-4">
+                    <select ng-model="addressSelector" 
+                            class="form-control" 
+                            ng-show="{{ShowAddress}}"
+                            ng-options="('(' + address.Category + ') ' + address.StreetAddress1 + ' ' + address.City + ', '  + address.State + ' ' + address.ZipCode )  for address in addressData">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="nameSelector && addressData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

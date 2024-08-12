@@ -1,0 +1,57 @@
+﻿<div class="panel panel-primary" ng-controller="PcumbCancelWithdrawalDropdownController">
+    <div class="panel-heading">Cancellation Withdrawal Reason</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    <label>Withdrawal Reason</label>
+                </div>
+                <div class="col-md-9">
+                    <!--Cancel reason dropdown list-->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <select class="form-control" ng-model="CancelReason" ng-options="item for item in Reasons" ng-change="ClearAllData()" name="CancelReasons" id="CancelReasonsId">
+                                <option value="" selected>--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!--Licensed Family Member repeater-->
+                    <div ng-repeat="section in TotalCount track by $index">
+                        <div class="row" style="padding-top:10px" ng-show="ShowLicFamilyMember()">
+                            <label class="col-md-4">* Licensed Family Member:</label>
+                            <div class="col-md-4">
+                                <select class="form-control" ng-model="SelectedLicFamilyMember[$index]" ng-options="item.Person.PersonName.FirstGivenNm + ' ' + item.Person.PersonName.SecondGivenNm + ' ' + item.Person.PersonName.FamilyNm for item in LicFamilyMember track by item._id" ng-disabled="LicFamilyMember.length == 0" name="SelectLicFamilyMember{{index}}" id="SelectLicFamilyMember{{index}}Id" ng-required="ShowLicFamilyMember() && ManualLicFamilyMember[$index]===''">
+                                    <option value="" selected>--Select--</option>
+                                </select>
+                                <span class="alert-danger" ng-show="LicFamilyMember.length == 0">Information not provided by source</span>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" ng-model="ManualLicFamilyMember[$index]" ng-disabled="SelectedLicFamilyMember[$index]" name="ManualLicFamilyMember{{index}}" id="ManualLicFamilyMember{{index}}Id" ng-required="ShowLicFamilyMember() && !SelectedLicFamilyMember[$index]" />
+                            </div>
+                        </div>
+                        <div style="padding-top:10px; border-bottom: 2px solid lightgray" ng-show="CancelReason=='Driving Record'"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center" ng-show="CancelReason=='Driving Record'" style="margin-top:10px; padding-top:10px;">
+                            <input type="button" class="btn-primary" value="Add" ng-click="addCtlRow()" ng-hide="TotalCount.length=={{MaxCtls}}" />
+                            <input type="button" class="btn-primary" value="Remove" ng-click="removeCtlRow()" ng-hide="TotalCount.length==1" />
+                        </div>
+                    </div>
+
+                    <!--Underlying Policy Type-->
+                    <div class="row" style="margin-top:10px" ng-show="ShowUnderlyingPolicy()">
+                        <div class="col-md-4"><label>* Underlying Policy:</label></div>
+                        <div class="col-md-8">
+                            <select class="form-control" ng-model="SelectedUnderlyingPolicy" ng-options="item for item in UnderlyingPolicy" ng-disabled="UnderlyingPolicy.length == 0" ng-required="ShowUnderlyingPolicy()" name="SelectUnderlyingPolicy" id="SelectUnderlyingPolicyId">
+                                <option value="" selected>--Select--</option>
+                            </select>
+                            <span class="alert-danger" ng-show="UnderlyingPolicy.length == 0">Information not provided by source</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

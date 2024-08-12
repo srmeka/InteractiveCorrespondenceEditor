@@ -1,0 +1,71 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaClaimOnPolDrpdwnwCntrlswCheckboxController">
+    <div class="panel-heading">Claims on Policy information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="margin-bottom:15px">
+                <div class="col-md-4">
+                    <!--Checkbox to enable control-->
+                    <input ng-click="clearAllData()" ng-model="SelectedClaim" type="checkbox" id="CtrlEnableCheckboxId" name="CtrlEnableCheckbox" value="" />
+                    <label>Claims On Policy</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-6"></div>
+                        <div class="col-md-6">
+                            <!---->
+                            <select ng-disabled="!SelectedClaim" ng-options="item.optionValue  for item in ClaimData" name="policySelection" ng-model="selectedValue" class="form-control" id="policySelectionId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div ng-show="SelectedClaim && (selectedValue && selectedValue.selectedType !== 1)" class="row" style="margin-top:10px">
+                        <div class="col-md-6">
+                            <label>Number of Claims Reported:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="reportedNumber" ng-model="reportedNum" id="reportedNumberId" class="form-control" value="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Claim information repeater-->
+            <div ng-style="{'margin-top':$index === 0?'0':'10px'}" ng-show="SelectedClaim && (selectedValue && selectedValue.selectedType !== 1)" style="padding-bottom: 10px; border-bottom: 2px solid lightgray"ng-repeat="selector in TotalCount track by $index" class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-8">
+                        <div class="row">
+                            <label class="col-md-12">Claim Information</label>
+                        </div>
+                        <div class="row">
+                            <!--NJM Claim Number-->
+                            <div class="col-md-6">
+                                <label>NJM Claim Number:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" name="claimNumber{{$index}}" id="claimNumberId{{$index}}" ng-model="claimNumber[$index]" class="form-control" value="" />
+                            </div>
+                        </div>
+                      
+                        <div class="row"  style="margin-top:5px">
+                            <!--NJM Claim Date-->
+                            <div class="col-md-6">
+                                <label>NJM Claim Date:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <input datepicker class="form-control" name="claimDate{{$index}}" id="claimDateId{{$index}}" ng-model="claimDate[$index]" placeholder="YYYY-MM-DD" data-date-format="yyyy-mm-dd" type="date"/>
+                            </div>
+                        </div>
+                        <div class="row"  style="margin-top:5px">
+                            <!--NJM Claim Description-->
+                            <div class="col-md-6"><label>NJM Claim Description:</label></div>
+                            <div class="col-md-6"><input type="text" name="claimDescription{{$index}}" id="claimDescription{{$index}}" ng-model="claimDescription[$index]" class="form-control" value="" /></div>
+                        </div>
+                    </div>
+                </div>
+              
+            <div class="col-md-12 text-center" style="margin-top:10px;" ng-show="SelectedClaim && (selectedValue && selectedValue.selectedType !== 1)">
+                <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === {{MaxCtls}}" ng-click="addCtlRow()">
+                <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1"  ng-click="removeCtlRow()">
+            </div>
+           </div>
+      </div>
+</div> 

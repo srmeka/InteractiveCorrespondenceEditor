@@ -1,0 +1,20 @@
+﻿<div class="panel panel-primary" ng-controller="PrinterDropdownController">
+    <div class="panel-heading">
+        Output Profile
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4" style="margin-top:5px;">
+                    <label>* Printer:</label>
+                </div>
+                <div class="col-md-8">
+                    <select class="form-control" name="PrinterDropdown" ng-model="SelectedPrinter" ng-options="PrinterDropdownInfo.lookupItemCode for PrinterDropdownInfo in PrinterDropdown | orderBy:'lookupItemCode'" id="PrinterDropdownID" ng-required="true">
+                        <option value="" disabled selected>--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="PrinterDropdownInfo.lookupItemCode == 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

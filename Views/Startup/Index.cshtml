@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Startup/StartupController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Home/HomeService.js")"></script>
+@section SPAViews {
+    @Html.Partial("Startup")
+}

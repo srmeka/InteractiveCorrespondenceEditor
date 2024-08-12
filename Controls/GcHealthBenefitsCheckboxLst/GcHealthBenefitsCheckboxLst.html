@@ -1,0 +1,23 @@
+﻿<div class="panel panel-primary" ng-controller="GcHealthBenefitsCheckboxLstController">
+    <div class="panel-heading">Health Benefits not Provided</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4"><label>* Reason(s):</label></div>
+                <div class="col-md-8">
+                    <!--Health Benefits not Provided checkbox list-->
+                    <div ng-repeat="item in BenefitsData track by $index">
+                        <input type="checkbox" 
+                               ng-change="selectItem(item)" 
+                               ng-required="selectedData.length == 0" 
+                               name="BenifitsReason{{$index}}" 
+                               id="BenifitsReason{{$index}}Id" 
+                               ng-model="item.checked" 
+                               value="" />
+                        <label ng-bind="item.insert_text"></label>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>

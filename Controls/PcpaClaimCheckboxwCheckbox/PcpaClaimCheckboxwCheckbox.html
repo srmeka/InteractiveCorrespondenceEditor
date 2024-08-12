@@ -1,0 +1,51 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaClaimCheckboxwCheckboxController">
+    <div class="panel-heading">
+        Claim Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group" ng-repeat="ClaimSection in TotalCount track by $index" name="RepeatLoop" id="RepeatLoopId">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="checkbox" ng-model="ClaimCheckbox[$index]" ng-change="ClearData($index)" ng-init="ApplyDatePicker($index)" name="ClaimCheckbox{{$index}}" id="ClaimCheckBox{{$index}}Id" />
+                    <label>
+                        Include Claim
+                    </label>
+                </div>
+                <div class="col-md-4" style="margin-top: 5px;">
+                    <label ng-class="(ClaimCheckbox[$index])?'':'disabled-class'">
+                        * Claim Date:
+                    </label>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" ng-model="ClaimDate[$index]" ng-disabled="!ClaimCheckbox[$index]" ng-required="ClaimCheckbox[$index]" name="ClaimDate{{$index}}" id="ClaimDate{{$index}}Id" datepicker/>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <input type="checkbox" ng-model="DriverNmCheck[$index]" ng-disabled="!ClaimCheckbox[$index]" name="DriverNm{{$index}}" id="DriverNm{{$index}}Id" />
+                    <span ng-class="(ClaimCheckbox[$index])?'':'disabled-class'">Driver Name</span>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <input type="checkbox" ng-model="PoliceReportCheck[$index]" ng-disabled="!ClaimCheckbox[$index]" name="PoliceReportComp{{$index}}" id="PoliceReportComp{{$index}}Id" /> 
+                    <span ng-class="(ClaimCheckbox[$index])?'':'disabled-class'">Police Report</span>
+            </div>
+            </div>
+            <div class="row" style="margin-top: 5px; padding-bottom: 10px; border-bottom: 2px solid lightgray">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <input type="checkbox" ng-model="InsLtrCheck[$index]" ng-disabled="!ClaimCheckbox[$index]" name="InsLtrComp{{$index}}" id="InsLtrComp{{$index}}Id" />
+                    <span ng-class="(ClaimCheckbox[$index])?'':'disabled-class'">Insurance Letter</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 text-center">
+            <input type="button" class="btn-primary" value="Add" ng-click="AddNewClaimSection()" ng-hide="TotalCount.length=={{MaxCtls}}" />
+            <input type="button" class="btn-primary" value="Remove" ng-click="RemoveClaimSection()" ng-hide="TotalCount.length==1" />
+        </div>
+    </div>
+</div>

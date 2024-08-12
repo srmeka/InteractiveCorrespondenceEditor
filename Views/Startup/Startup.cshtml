@@ -1,0 +1,150 @@
+﻿
+<div class="panel panel-default" ng-controller="StartupController">
+
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label>
+                        Line of Business:
+                    </label>
+                </div>
+                <div class="col-xs-8">
+                    <select class="form-control" name="LOB" ng-model="LOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown" id="LOBId">
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label>
+                        Policy number:
+                    </label>
+                </div>
+                <div class="col-xs-8">
+                    <input ng-model="PolicyNumber" type="text" class="form-control" id="PolNumId" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <!-- Date input -->
+                    <label class="control-label" for="date">As of date:</label>
+                </div>
+                <div class="col-xs-8">
+                    <input class="form-control" id="AsOfDateId" name="Date" placeholder="YYYY-MM-DD" type="date" ng-model="AsOfDate" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label>
+                        Quote Number:
+                    </label>
+                </div>
+                <div class="col-xs-8">
+                    <input ng-model="QuoteNumber" type="text" class="form-control" id="QuoteNumberId" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label>
+                        Producer code:
+                    </label>
+                </div>
+                <div class="col-xs-8">
+                    <input ng-model="ProducerCode" type="text" class="form-control" id="ProducerCodeId" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label>
+                        Claim Number:
+                    </label>
+                </div>
+                <div class="col-xs-8">
+                    <input ng-model="ClaimNumber" type="text" class="form-control" id="ClaimNumberId" />
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label>
+                        State:
+                    </label>
+                </div>
+                <div class="col-xs-8">
+                    <input ng-model="State" type="text" class="form-control" id="StateId" />
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label>
+                        Select XML data:
+                    </label>
+                </div>
+                <div class="col-xs-8">
+                    <select ng-model="SelectedXML" class="form-control" id="XMLId">
+                        <option value="">--Select--</option>
+                        <option value="~/TestData/BC-PA.xml">BC-PA.xml</option>
+                        <option value="~/TestData/PC-CA.xml">PC-CA.xml</option>
+                        <option value="~/TestData/PC-CGL.xml">PC-CGL.xml</option>
+                        <option value="~/TestData/WCU BC.xml">WCU BC.xml</option>
+                        <option value="~/TestData/PC-PA.xml">PC-PA.xml</option>
+                        <option value="~/TestData/PC-HO.xml">PC-HO.xml</option>
+                        <option value="~/TestData/PC-DW.xml">PC-DW.xml</option>
+                        <option value="~/TestData/PC-UMB.xml">PC-UMB.xml</option>
+                        <option value="~/TestData/Producer_Statement.xml">Producer_Statement.xml</option>
+                        <option value="~/TestData/ProducerStatement.xml">ProducerStatement.xml</option>
+                        <option value="~/TestData/GC-Data.xml">GC-Data.xml</option>
+                        <option value="~/TestData/WCC-Data.xml">WCC-Data.xml</option>
+                        <option value="~/TestData/Claim Mark.xml">Claim Mark.xml</option>
+                        <option value="~/TestData/WCC_PresertID.xml">WCC_PresertID.xml</option>
+                        <option value="~/TestData/WCCDS_W2016_019343.xml">WCCDS_W2016_019343.xml</option>
+                        <option value="~/TestData/PC-BOP.xml">PC-BOP.xml</option>
+                        <option value="~/TestData/PC-CUMB.xml">PC-CUMB.xml</option>
+                        <option value="~/TestData/PC-WCU.xml">PC-WCU.xml</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-4">
+                    <label>
+                        ESB Environment:
+                    </label>
+                </div>
+                <div class="col-xs-8">
+                    <select class="form-control" name="Env" ng-model="SelectedEnv" ng-options="EnvDropdownInfo for EnvDropdownInfo in EnvDropdown" id="EnvId">
+                        <option value="">--Select--</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-primary" ng-click="CreateDocument()">Create new document</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="alert-danger" ng-hide="!errorDetail" id="DivAlert"> <h4> {{errorDetail}}</h4> </div>
+        </div>
+    </div>
+</div>
+

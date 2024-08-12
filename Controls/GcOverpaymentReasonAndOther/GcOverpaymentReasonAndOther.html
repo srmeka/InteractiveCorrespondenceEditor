@@ -1,0 +1,36 @@
+﻿<div class="panel panel-primary" ng-controller="GcOverpaymentReasonAndOtherController">
+    <div class="panel-heading">Overpayment Reason(s)</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Overpayment Reason(s) checkbox list-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Overpayment Reason(s):</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="row" ng-repeat="item in displayData track by $index" style="margin-top:5px">
+                        <div class="col-md-12">
+                            <input style="width:15px;vertical-align:top" type="checkbox" name="{{item.checkboxName}}" id="{{item.checkboxName}}Id" ng-model="item.ctrlSelected" value="" />
+                            <label style="width:calc(100% - 20px)" ng-bind="item.labelText"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Other Overpayment Reason text box-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <input ng-click="enabledCtrl()" style="width:15px;vertical-align:top" type="checkbox" name="CtrlOtherControl" id="CtrlOtherControlId" ng-model="selectedOther" value="" />
+                    <label style="width:calc(100% - 20px)">Other Overpayment Reason:</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" ng-class="!selectedOther? 'disabled-class':''" ng-disabled="!selectedOther" ng-required="selectedOther" class="form-control" name="OtherReasonInfo" id="OtherReasonInfoId" ng-model="otherReasonInfo" value="" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

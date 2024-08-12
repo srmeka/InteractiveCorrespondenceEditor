@@ -1,0 +1,71 @@
+﻿<div class="panel panel-primary" ng-controller="GcReSectionDropdownwControlsController">
+    <div class="panel-heading">Re: Section</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--RE table header-->
+            <div class="row" style="border-bottom: 2px solid lightgray">
+                <div class="col-md-4"><label>Label</label></div>
+                <div class="col-md-8"><label>Reference</label></div>
+            </div>
+
+            <!--Loss Location-->
+            <div class="row" style="margin-top:15px" ng-show="{{ShowLossLoc}}">
+                <div class="col-md-4">
+                    <input type="checkbox" name="CtrlEnableRe0" ng-model="CtrlEnableRe0" id="CtrlEnableRe0Id" value="" />
+                    <label>Loss Location:</label>
+                </div>
+                <div class="col-md-8">
+                    <span ng-class="(CtrlEnableRe0)?'':'disabled-class'" ng-init="LossLocation = (ClaimData[0].LossLocationCity + ', ' + ClaimData[0].LossLocationState)" ng-bind="ClaimData[0].LossLocationCity + ', ' + ClaimData[0].LossLocationState" ng-model="LossLocation"></span>
+                </div>
+            </div>
+
+            <!--Repeater from Look-up table-->
+            <div class="row" ng-repeat="item in ReLabels track by $index" style="margin-top:5px" ng-show="{{ShowRepeater}}">
+                <div class="col-md-4" style="margin-top:5px" >
+                    <input type="checkbox" ng-click="selectedLabels(item, $index)" name="include{{item.lookupItemCode}}" ng-model="chkReItem[$index]" id="include{{item.lookupItemCode}}ID" />
+                    <label ng-bind="item.lookupItemCode"></label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" ng-disabled="!chkReItem[$index]" ng-required="chkReItem[$index]" ng-model="inputValue[$index]" class="form-control" name="Input{{item.lookupItemCode}}" id="Input{{item.lookupItemCode}}Id" />
+                </div>
+            </div>
+
+            <!--Claimant -->
+            <div class="row" style="margin-top:5px" ng-show="{{ShowClaimant}}">
+                <div class="col-md-4">
+                    <input type="checkbox" name="CtrlEnableRe1" ng-model="CtrlEnableRe1" id="CtrlEnableRe1Id" value=""/>
+                    <label>Claimant:</label>
+                </div>
+                <div class="col-md-8">
+                    <select ng-options="item.displayName for item in ClaimantNameData" name="ClaimantNameSelection" ng-model="selectedName" class="form-control" id="ClaimantNameSelectionId" ng-disabled="!CtrlEnableRe1" ng-required="CtrlEnableRe1" >
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--Medicare # -->
+            <div class="row" style="margin-top:5px" ng-show="{{ShowMedicare}}">
+                <div class="col-md-4" style="margin-top:5px">
+                    <input type="checkbox" name="CtrlEnableRe2" ng-model="CtrlEnableRe2" id="CtrlEnableRe2Id" value="" ng-show="!HideCtrlEnableRe2" />
+                    <label>Medicare:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" ng-disabled="!CtrlEnableRe2" ng-required="CtrlEnableRe2" ng-model="txtRe2" class="form-control" name="txtInput2" id="txtInput2Id" maxlength="30" />
+                </div>
+            </div>
+
+            <!--Case ID # -->
+            <div class="row" style="margin-top:5px" ng-show="{{ShowCaseID}}">
+                <div class="col-md-4">
+                    <input type="checkbox" name="CtrlEnableRe3" ng-model="CtrlEnableRe3" id="CtrlEnableRe3Id" value="" />
+                    <label>{{LabelName1}}</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" ng-disabled="!CtrlEnableRe3" ng-required="CtrlEnableRe3" ng-model="txtRe3" class="form-control" name="txtInput3" id="txtInput3Id" maxlength="40" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,49 @@
+﻿<div class="panel panel-primary" ng-controller="WccClaimPetNumCheckboxwCheckboxLstController">
+    <div class="panel-heading">Claim Petition Number(s)</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <!--Re Section-->
+            <div class="row" ng-show="{{ShowInRe}}">
+                <div class="col-md-4">
+                    <label ng-show="{{Required}}">* </label>
+                    <label>Re Section Claim Petition Number(s):</label>
+                </div>
+                <div class="col-md-8">
+                    <!--Re Section Claim petition number checkbox list-->
+                        <div class="col-md-12 row" ng-repeat="itemRe in numberDataRe">
+                        <input type="checkbox" 
+                               ng-disabled="(OnlyOne && !itemRe.checked && SelectedDataRe.length >= 1)"
+                               ng-change="selectedNumRe(itemRe)" 
+                               ng-required="Required && ShowInRe && SelectedDataRe.length==0" 
+                               ng-model="itemRe.checked" 
+                               name="ClaimPetRe" 
+                               id="ClaimPetReId" />
+                        <span ng-bind="itemRe.CaseNumber"></span>
+                    </div>
+                    <span class="alert-danger" ng-show="numberDataRe.length == 0" id="ErrorId">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--seperator space-->
+            <div class="row" style="margin-top:20px" ng-show="{{ShowInRe && ShowInBody}}">
+            </div>
+
+            <!--Body Section-->
+            <div class="row" ng-show="{{ShowInBody}}">
+                <div class="col-md-4">
+                    <label ng-show="{{Required}}">* </label>
+                    <label>Body Section Claim Petition Number(s):</label>
+                </div>
+                <div class="col-md-8">
+                    <!--Body Section Claim petition number checkbox list-->
+                    <div class="col-md-12 row" ng-repeat="itemBody in numberDataBody">
+                        <input type="checkbox" ng-click="selectedNumBody(itemBody)" ng-required="Required && ShowInBody && SelectedDataBody.length==0" ng-model="itemBody.checked" name="ClaimPetBody" id="ClaimPetBodyId" />
+                        <span ng-bind="itemBody.CaseNumber"></span>
+                    </div>
+                    <span class="alert-danger" ng-show="numberDataBody.length == 0" id="ErrorId">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

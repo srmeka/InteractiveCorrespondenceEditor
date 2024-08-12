@@ -1,0 +1,23 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaVehicleDropdownController">
+    <div class="panel-heading">
+        Vehicle Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col-md-4" style="margin-top: 5px;">
+                    <label>
+                        * Vehicle:
+                    </label>
+                </div>
+                <div class="col-md-8" style="margin-top:5px;">
+                    <select ng-disabled="Vehicle.length == 0" name="VehicleName" ng-model="SelectedVehicle" ng-change="updateVehicle(SelectedVehicle)" ng-options="VehicleInfo.Vehicle.ModelYearNr+' '+VehicleInfo.Vehicle.VehicleTradeNm+' '+VehicleInfo.Vehicle.ModelNm+' '+VehicleInfo.Vehicle.ManufacturerVehicleIdentificationNr for VehicleInfo in Vehicle track by VehicleInfo._id" class="form-control" id="VehicleNameID" ng-required="true" style="width:auto">
+                        <option value="" disabled selected>--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="Vehicle.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+        <div></div>
+    </div>
+</div>

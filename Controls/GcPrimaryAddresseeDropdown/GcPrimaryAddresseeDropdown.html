@@ -1,0 +1,21 @@
+﻿<div class="panel panel-primary" ng-controller="GcPrimaryAddresseeDropdownController">
+    <div class="panel-heading">Primary Addressee</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Primary addressee dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>Primary Addressee:</label></div>
+                <div class="col-md-4">
+                    <select ng-change="selectAddr()" ng-options="item.displayName for item in PrimaryAddress | orderBy:'displayName'" name="PrimaryAddressSelection" ng-model="selectedAddressee" class="form-control" id="PrimaryAddressSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="PrimaryAddress.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿<div class="panel panel-primary" ng-controller="WccRecipientRoleAndAddressController">
+    <div class="panel-heading">CC Recipient</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--CC Recipient Role dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>CC Recipient Role:</label></div>
+                <div class="col-md-8">
+                    <select ng-change="selectedAutherRole(selectedAuthorRole)" ng-options="item for item in RoleData | orderBy" name="AuthorRoleSelection" ng-model="selectedAuthorRole" class="form-control" id="AuthorRoleSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--CC Recipient dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>CC Recipient Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in AuthorsData | orderBy:'displayName'" name="AuthorSelection" ng-model="selectedAuthor" class="form-control" id="AuthorSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="selectedAuthorRole && AuthorsData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

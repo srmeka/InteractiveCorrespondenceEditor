@@ -1,0 +1,40 @@
+﻿<div class="panel panel-primary" ng-controller="DropdownwTextboxController">
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    <label>
+                        Return Payment
+                    </label>
+                </div>
+                <select ng-model="SelectedPayment"   ng-options="ReturnPaymentInfo.name for ReturnPaymentInfo in ReturnPayment" class="form-control"  id="ReturnPaymentID">
+                    <option value="">--Select--</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    <label ng-show="SelectedPayment.Id == 2">
+                        * Deposit Amount
+                    </label>
+                </div>
+                <input type="text" name="Depositamount" ng-model="Depositamount" class="form-control" ng-show="SelectedPayment.Id == 2" ng-required="SelectedPayment.Id == 2" />
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    <label ng-show="SelectedPayment.Id == 3" >
+                        * Installment Amount
+                    </label>
+                </div>
+                <input type="text" name="InstallmentAmount" ng-model="InstallmentAmount" class="form-control" ng-show="SelectedPayment.Id == 3" ng-required="SelectedPayment.Id == 3" />
+
+            </div>
+        </div>
+    </div>
+</div>

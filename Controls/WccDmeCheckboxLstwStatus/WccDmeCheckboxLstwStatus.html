@@ -1,0 +1,25 @@
+﻿<div class="panel panel-primary" ng-controller="WccDmeCheckboxLstwStatusController">
+    <div class="panel-heading">DME Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <div class="row" style="border-bottom: 2px solid lightgray">
+                <div class="col-md-4"><label>DME Details</label></div>
+                <div class="col-md-8"><label>Status</label></div>
+            </div>
+            <div class="row" style="margin-top:5px" ng-repeat="item in DMEData track by $index">
+                <!--control with checkbox label-->
+                <div class="col-md-4">
+                    <input style="width:15px;vertical-align:top" type="checkbox" name="DmeDtialsCheckbox{{$index}}" id="DmeDtialsCheckbox{{$index}}Id" ng-model="item.ctrlSelected" value="" />
+                    <label style="width:calc(100% - 20px)" ng-bind="(item.Notes + '-' + item.EquipmentDetails).substr(0,20)"></label>
+                </div>
+
+                <!--status drop-down list-->
+                <div class="col-md-8">
+                    <select class="form-control" name="DmeStatusSelection{{$index}}" id="DmeStatusSelection{{$index}}id" ng-options="statusItem for statusItem in statusData" ng-model="item.selectedStatus" ng-disabled="!item.ctrlSelected"></select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaDuiDropdownwCheckboxController">
+    <div class="panel-heading">Driving Under Influence</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <!--Checkbox to enable control-->
+                    <input ng-click="clearAllSelectedData()" ng-model="SelectedInfluence" type="checkbox" id="CtrlEnableCheckboxId" name="CtrlEnableCheckbox" value="" /> 
+                    <label>Driving Under Influence</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <!--Name dropdown list-->
+                        <div class="col-md-6" style="margin-top:5px">
+                            <select ng-disabled="!SelectedInfluence" ng-required="SelectedInfluence && !freeText" ng-options="(item.Person.PersonName.FirstGivenNm + ' ' + item.Person.PersonName.SecendGivenNmInitial + ' ' + item.Person.PersonName.FamilyNm + ' ' + item.Person.PersonName.FamilyNameGenerationCd)  for item in Influence track by item._id" name="InfluenceSelection" ng-model="selectedInfluenceData" class="form-control" id="InfluenceId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6" style="margin-top:5px">
+                            <input ng-disabled="!SelectedInfluence || selectedInfluenceData" ng-required="SelectedInfluence && !selectedInfluenceData" ng-model="freeText" type="text" class="form-control" name="InfluenceText" value="" />
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

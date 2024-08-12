@@ -1,0 +1,887 @@
+﻿<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:capir="http://njm.com/esb/pds/ca/1.0/interfaces/CAPolicyInfomationRetriever" xmlns:typ="http://njm.com/esb/pds/ca/1.0/types" xmlns:esbcommon="http://njm.com/esb/common/types">
+  <soapenv:Body>
+    <capir:retrievePolicyByPolicyNumberResponse>
+      <typ:RetrievePolicyByPolicyNumberResponseMessage>
+        <esbcommon:Header>
+          <esbcommon:Version>1.0</esbcommon:Version>
+          <esbcommon:CorrelationContext>
+            <esbcommon:CorrelationId>20110125-0948-3300-0000-000000000000</esbcommon:CorrelationId>
+          </esbcommon:CorrelationContext>
+          <esbcommon:ErrorIn>false</esbcommon:ErrorIn>
+        </esbcommon:Header>
+        <Policy id="1">
+          <StartDt>2019-01-21T00:01:00-05:00</StartDt>
+          <PolicyNumber>1500953690</PolicyNumber>
+          <UnderwritingCompany id="3">
+            <OrganizationNm>New Jersey Manufacturers Insurance</OrganizationNm>
+            <OrganizationNameCd>NJM</OrganizationNameCd>
+          </UnderwritingCompany>
+          <LineOfBusinessCd>Commercial Auto</LineOfBusinessCd>
+          <BaseStateCd>NY</BaseStateCd>
+          <Account id="7">
+            <AccountNo>AA625000476</AccountNo>
+          </Account>
+          <PolicyProductCd>CAC9</PolicyProductCd>
+          <IndustryOfferingCd>C9</IndustryOfferingCd>
+          <PolicyPeriod id="11">
+            <QuoteNumber>QQ5340348823</QuoteNumber>
+            <StartDt>2019-01-21T00:01:00-05:00</StartDt>
+            <EndDt>2020-01-21T00:01:00-05:00</EndDt>
+            <StatusCd>In Force</StatusCd>
+            <PolicyLines id="16">
+              <CommercialAutoLine id="17">
+                <VehicleCoverageDetails id="18">
+                  <Vehicle id="19">
+                    <VehicleId>2</VehicleId>
+                    <ManufacturerVehicleIdentificationNr>XV4654VC7B985643213</ManufacturerVehicleIdentificationNr>
+                    <ModelYearNr>2015</ModelYearNr>
+                    <VehicleTradeNm>GMC</VehicleTradeNm>
+                    <ModelNm>SIERRA</ModelNm>
+                  </Vehicle>
+                  <AssociatedParties id="25">
+                    <Organization id="26">
+                      <OrganizationNm>BANK OF AMERICA</OrganizationNm>
+                      <Addresses id="28">
+                        <Address id="29">
+                          <Line1Tx>PO BOX 5170</Line1Tx>
+                          <Municipality id="31">
+                            <MunicipalityNm>SIMI VLY</MunicipalityNm>
+                            <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                          </Municipality>
+                          <Municipality id="34">
+                            <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                          </Municipality>
+                          <CountrySubdivision id="36">
+                            <CountrySubdivisionNm>CA</CountrySubdivisionNm>
+                            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                          </CountrySubdivision>
+                          <PostalCd>93062</PostalCd>
+                        </Address>
+                        <AddressUseCd>Business</AddressUseCd>
+                        <PrimaryAddressIn>true</PrimaryAddressIn>
+                      </Addresses>
+                    </Organization>
+                    <PartyRoles>Lien Holder</PartyRoles>
+                    <PartyRoles>Additional Interest</PartyRoles>
+                  </AssociatedParties>
+                  <AssociatedParties id="44">
+                    <Organization id="45">
+                      <OrganizationNm>WELLS</OrganizationNm>
+                      <Addresses id="47">
+                        <Address id="48">
+                          <Line1Tx>PO BOX 11701</Line1Tx>
+                          <Municipality id="50">
+                            <MunicipalityNm>NEWARK</MunicipalityNm>
+                            <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                          </Municipality>
+                          <Municipality id="53">
+                            <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                          </Municipality>
+                          <CountrySubdivision id="55">
+                            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                          </CountrySubdivision>
+                          <PostalCd>07101</PostalCd>
+                          <PostalExtensionCd>4701</PostalExtensionCd>
+                        </Address>
+                        <AddressUseCd>Business</AddressUseCd>
+                        <PrimaryAddressIn>true</PrimaryAddressIn>
+                      </Addresses>
+                    </Organization>
+                    <PartyRoles>Lessor</PartyRoles>
+                    <PartyRoles>Additional Interest</PartyRoles>
+                  </AssociatedParties>
+                  <Coverages id="64">
+                    <CoverageTypeCd>Collision</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Collision Deductible</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>50</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>50</CoverageParameterUnformattedValueTx>
+                  </Coverages>
+                  <Coverages id="69">
+                    <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>50</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>50</CoverageParameterUnformattedValueTx>
+                  </Coverages>
+                  <OwnershipTypeCd>Leased</OwnershipTypeCd>
+                  <VehicleClassificationTypeCd>Private Passenger</VehicleClassificationTypeCd>
+                </VehicleCoverageDetails>
+                <VehicleCoverageDetails id="76">
+                  <Vehicle id="77">
+                    <VehicleId>4</VehicleId>
+                    <ManufacturerVehicleIdentificationNr>ADF64659873213</ManufacturerVehicleIdentificationNr>
+                    <ModelYearNr>2015</ModelYearNr>
+                    <VehicleTradeNm>MERCEDEZ</VehicleTradeNm>
+                    <ModelNm>G63 AMG</ModelNm>
+                  </Vehicle>
+                  <Coverages id="83">
+                    <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>ACV</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>ACV</CoverageParameterUnformattedValueTx>
+                  </Coverages>
+                  <Coverages id="88">
+                    <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>$5,000</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>5000</CoverageParameterUnformattedValueTx>
+                  </Coverages>
+                  <Coverages id="93">
+                    <CoverageTypeCd>Collision</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Collision Deductible</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>$5,000</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>5000</CoverageParameterUnformattedValueTx>
+                  </Coverages>
+                  <OwnershipTypeCd>Owned</OwnershipTypeCd>
+                  <VehicleClassificationTypeCd>Zone Rated Truck</VehicleClassificationTypeCd>
+                </VehicleCoverageDetails>
+                <VehicleCoverageDetails id="100">
+                  <Vehicle id="101">
+                    <VehicleId>1</VehicleId>
+                    <ManufacturerVehicleIdentificationNr>ASFA7987564654656</ManufacturerVehicleIdentificationNr>
+                    <ModelYearNr>2015</ModelYearNr>
+                    <VehicleTradeNm>FORD</VehicleTradeNm>
+                    <ModelNm>F150</ModelNm>
+                  </Vehicle>
+                  <AssociatedParties id="107">
+                    <Organization id="108">
+                      <OrganizationNm>CHASE</OrganizationNm>
+                      <Addresses id="110">
+                        <Address id="111">
+                          <Line1Tx>PO BOX 78420</Line1Tx>
+                          <Municipality id="113">
+                            <MunicipalityNm>PHOENIX</MunicipalityNm>
+                            <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                          </Municipality>
+                          <Municipality id="116">
+                            <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                          </Municipality>
+                          <CountrySubdivision id="118">
+                            <CountrySubdivisionNm>AZ</CountrySubdivisionNm>
+                            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                          </CountrySubdivision>
+                          <PostalCd>85062</PostalCd>
+                        </Address>
+                        <AddressUseCd>Business</AddressUseCd>
+                        <PrimaryAddressIn>true</PrimaryAddressIn>
+                      </Addresses>
+                    </Organization>
+                    <PartyRoles>Lien Holder</PartyRoles>
+                    <PartyRoles>Additional Interest</PartyRoles>
+                  </AssociatedParties>
+                  <Coverages id="126">
+                    <CoverageTypeCd>Roadside Assistance</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Roadside Assistance Limit</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>125</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>125</CoverageParameterUnformattedValueTx>
+                  </Coverages>
+                  <Coverages id="131">
+                    <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>50</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>50</CoverageParameterUnformattedValueTx>
+                  </Coverages>
+                  <Coverages id="136">
+                    <CoverageTypeCd>Collision</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Collision Deductible</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>50</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>50</CoverageParameterUnformattedValueTx>
+                  </Coverages>
+                  <OwnershipTypeCd>Financed</OwnershipTypeCd>
+                  <VehicleClassificationTypeCd>Truck</VehicleClassificationTypeCd>
+                </VehicleCoverageDetails>
+                <VehicleCoverageDetails id="143">
+                  <Vehicle id="144">
+                    <VehicleId>3</VehicleId>
+                    <ManufacturerVehicleIdentificationNr>A5465484465466546</ManufacturerVehicleIdentificationNr>
+                    <ModelYearNr>2015</ModelYearNr>
+                    <VehicleTradeNm>DODGE</VehicleTradeNm>
+                    <ModelNm>RAM 2500</ModelNm>
+                  </Vehicle>
+                  <Coverages id="150">
+                    <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>Not Applicable</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>NotApplicable</CoverageParameterUnformattedValueTx>
+                  </Coverages>
+                  <Coverages id="155">
+                    <CoverageTypeCd>Collision</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Collision Deductible</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>Not Applicable</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>NotApplicable</CoverageParameterUnformattedValueTx>
+                  </Coverages>
+                  <OwnershipTypeCd>Owned</OwnershipTypeCd>
+                  <VehicleClassificationTypeCd>Public Transportation</VehicleClassificationTypeCd>
+                </VehicleCoverageDetails>
+                <ListedDrivers id="162">
+                  <PartyId>5</PartyId>
+                  <Person id="164">
+                    <PersonName id="165">
+                      <FirstGivenNm>VAIDA</FirstGivenNm>
+                      <FamilyNm>ABDALLAH</FamilyNm>
+                    </PersonName>
+                    <BirthDt>1992-01-01</BirthDt>
+                    <VehicleDriverLicense id="169">
+                      <LicenseId>M321645978023</LicenseId>
+                    </VehicleDriverLicense>
+                  </Person>
+                  <PartyRoles>Policy Driver</PartyRoles>
+                </ListedDrivers>
+                <ListedDrivers id="172">
+                  <PartyId>3</PartyId>
+                  <Person id="174">
+                    <PersonName id="175">
+                      <FirstGivenNm>DANIEL</FirstGivenNm>
+                      <FamilyNm>ABDALLAH</FamilyNm>
+                    </PersonName>
+                    <BirthDt>1971-01-01</BirthDt>
+                    <VehicleDriverLicense id="179">
+                      <LicenseId>M321645978022</LicenseId>
+                    </VehicleDriverLicense>
+                  </Person>
+                  <PartyRoles>Policy Driver</PartyRoles>
+                </ListedDrivers>
+                <ListedDrivers id="182">
+                  <PartyId>2</PartyId>
+                  <Person id="184">
+                    <PersonName id="185">
+                      <FirstGivenNm>OLIVETTE</FirstGivenNm>
+                      <FamilyNm>ABDALLAH</FamilyNm>
+                    </PersonName>
+                    <BirthDt>1970-01-01</BirthDt>
+                    <VehicleDriverLicense id="189">
+                      <LicenseId>M321645978024</LicenseId>
+                    </VehicleDriverLicense>
+                  </Person>
+                  <PartyRoles>Policy Driver</PartyRoles>
+                </ListedDrivers>
+                <ListedDrivers id="192">
+                  <PartyId>1</PartyId>
+                  <Person id="194">
+                    <PersonName id="195">
+                      <FirstGivenNm>RAMADAN</FirstGivenNm>
+                      <FamilyNm>ABDALLAH</FamilyNm>
+                    </PersonName>
+                    <BirthDt>1975-01-01</BirthDt>
+                    <VehicleDriverLicense id="199">
+                      <LicenseId>M321645978021</LicenseId>
+                    </VehicleDriverLicense>
+                  </Person>
+                  <PartyRoles>Policy Driver</PartyRoles>
+                </ListedDrivers>
+                <FormTypeCd>Business Auto</FormTypeCd>
+              </CommercialAutoLine>
+            </PolicyLines>
+            <ListedParties id="203">
+              <Party id="204">
+                <Person id="205">
+                  <PersonName id="206">
+                    <UnparsedNameTx>NATHAN  ASTLE</UnparsedNameTx>
+                    <FirstGivenNm>NATHAN</FirstGivenNm>
+                    <FamilyNm>ASTLE</FamilyNm>
+                  </PersonName>
+                  <BirthDt>1980-01-01</BirthDt>
+                  <Addresses id="211">
+                    <Address id="212">
+                      <Line1Tx>12 CARNIVAL</Line1Tx>
+                      <Municipality id="214">
+                        <MunicipalityNm>AVENEL</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="217">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="219">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>07001</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <Telephones id="225">
+                    <PartyUseCd>Personal</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="229">
+                      <UnparsedPhoneNr>978-546-1325</UnparsedPhoneNr>
+                      <AreaCd>978</AreaCd>
+                      <ExchangeId>546</ExchangeId>
+                      <SubscriberLineId>1325</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                </Person>
+                <PartyRoles>Risk Consultant</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="236">
+              <Party id="237">
+                <Person id="238">
+                  <PersonName id="239">
+                    <UnparsedNameTx>JACOB  ORAM</UnparsedNameTx>
+                    <FirstGivenNm>JACOB</FirstGivenNm>
+                    <FamilyNm>ORAM</FamilyNm>
+                  </PersonName>
+                  <BirthDt>1980-01-01</BirthDt>
+                  <Addresses id="244">
+                    <Address id="245">
+                      <Line1Tx>12 911GTS</Line1Tx>
+                      <Municipality id="247">
+                        <MunicipalityNm>AVENEL</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="250">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="252">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>07001</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <Telephones id="258">
+                    <PartyUseCd>Personal</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="262">
+                      <UnparsedPhoneNr>798-654-3214</UnparsedPhoneNr>
+                      <AreaCd>798</AreaCd>
+                      <ExchangeId>654</ExchangeId>
+                      <SubscriberLineId>3214</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                </Person>
+                <PartyRoles>Broker</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="269">
+              <Party id="270">
+                <Organization id="271">
+                  <OrganizationNm>JACK</OrganizationNm>
+                  <Addresses id="273">
+                    <Address id="274">
+                      <Line1Tx>12 911R</Line1Tx>
+                      <Municipality id="276">
+                        <MunicipalityNm>ACCORD</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="279">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="281">
+                        <CountrySubdivisionNm>NY</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>10005</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <Telephones id="287">
+                    <PartyUseCd>Business</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="291">
+                      <UnparsedPhoneNr>609-456-8765</UnparsedPhoneNr>
+                      <AreaCd>609</AreaCd>
+                      <ExchangeId>456</ExchangeId>
+                      <SubscriberLineId>8765</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                </Organization>
+                <PartyRoles>Additional Named Insured</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="298">
+              <Party id="299">
+                <Organization id="300">
+                  <OrganizationNm>WILL</OrganizationNm>
+                  <Addresses id="302">
+                    <Address id="303">
+                      <Line1Tx>12 911R</Line1Tx>
+                      <Municipality id="305">
+                        <MunicipalityNm>ACCORD</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="308">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="310">
+                        <CountrySubdivisionNm>NY</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>10005</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                </Organization>
+                <PartyRoles>DBA</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="317">
+              <Party id="318">
+                <Organization id="319">
+                  <OrganizationNm>BRUCE</OrganizationNm>
+                  <Addresses id="321">
+                    <Address id="322">
+                      <Line1Tx>2301 BOARDWALK</Line1Tx>
+                      <Municipality id="324">
+                        <MunicipalityNm>ATLANTIC WALK</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="327">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="329">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>08401</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                </Organization>
+                <PartyRoles>DBA</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="336">
+              <Party id="337">
+                <Organization id="338">
+                  <OrganizationNm>Historic Boardwalk Hall LLC</OrganizationNm>
+                  <Addresses id="340">
+                    <Address id="341">
+                      <Line1Tx>366 Newminister Ln</Line1Tx>
+                      <Municipality id="343">
+                        <MunicipalityNm>Edison</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="346">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="348">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>08825</PostalCd>
+                    </Address>
+                    <AddressUseCd>Home</AddressUseCd>
+                    <PrimaryAddressIn>false</PrimaryAddressIn>
+                  </Addresses>
+                  <Addresses id="354">
+                    <Address id="355">
+                      <Line1Tx>301 Sycamore Ln</Line1Tx>
+                      <Municipality id="357">
+                        <MunicipalityNm>Ewing</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="360">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="362">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>08258</PostalCd>
+                    </Address>
+                    <AddressUseCd>Mailing</AddressUseCd>
+                    <PrimaryAddressIn>false</PrimaryAddressIn>
+                  </Addresses>
+                  <Addresses id="368">
+                    <Address id="369">
+                      <Line1Tx>2301 BOARDWALK</Line1Tx>
+                      <Municipality id="371">
+                        <MunicipalityNm>ATLANTIC WALK</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="374">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="376">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>08401</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <Telephones id="382">
+                    <PartyUseCd>Business</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="386">
+                      <UnparsedPhoneNr>609-333-9876</UnparsedPhoneNr>
+                      <AreaCd>609</AreaCd>
+                      <ExchangeId>333</ExchangeId>
+                      <SubscriberLineId>9876</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                </Organization>
+                <PartyRoles>Primary Named Insured</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="393">
+              <Party id="394">
+                <Organization id="395">
+                  <OrganizationNm>HYUNDAI</OrganizationNm>
+                  <Addresses id="397">
+                    <Address id="398">
+                      <Line1Tx>12 911R</Line1Tx>
+                      <Municipality id="400">
+                        <MunicipalityNm>ACCORD</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="403">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="405">
+                        <CountrySubdivisionNm>NY</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>10005</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                </Organization>
+                <PartyRoles>DBA</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="412">
+              <Party id="413">
+                <Person id="414">
+                  <PersonName id="415">
+                    <UnparsedNameTx>JONATHAN  LIVINGSTON</UnparsedNameTx>
+                    <FirstGivenNm>JONATHAN</FirstGivenNm>
+                    <FamilyNm>LIVINGSTON</FamilyNm>
+                  </PersonName>
+                  <BirthDt>1990-01-01</BirthDt>
+                  <Addresses id="420">
+                    <Address id="421">
+                      <Line1Tx>12 330D</Line1Tx>
+                      <Municipality id="423">
+                        <MunicipalityNm>AVON</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="426">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="428">
+                        <CountrySubdivisionNm>CT</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>06001</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <Telephones id="434">
+                    <PartyUseCd>Personal</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="438">
+                      <UnparsedPhoneNr>978-465-3215</UnparsedPhoneNr>
+                      <AreaCd>978</AreaCd>
+                      <ExchangeId>465</ExchangeId>
+                      <SubscriberLineId>3215</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                </Person>
+                <PartyRoles>Additional Named Insured</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="445">
+              <Party id="446">
+                <Organization id="447">
+                  <OrganizationNm>CHASE</OrganizationNm>
+                  <Addresses id="449">
+                    <Address id="450">
+                      <Line1Tx>PO BOX 78420</Line1Tx>
+                      <Municipality id="452">
+                        <MunicipalityNm>PHOENIX</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="455">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="457">
+                        <CountrySubdivisionNm>AZ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>85062</PostalCd>
+                    </Address>
+                    <AddressUseCd>Business</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                </Organization>
+                <PartyRoles>Additional Interest</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="464">
+              <Party id="465">
+                <Organization id="466">
+                  <OrganizationNm>billing</OrganizationNm>
+                  <Addresses id="468">
+                    <Address id="469">
+                      <Line1Tx>2301 BOARDWALK</Line1Tx>
+                      <Municipality id="471">
+                        <MunicipalityNm>ATLANTIC WALK</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="474">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="476">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>08401</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <Telephones id="482">
+                    <PartyUseCd>Business</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="486">
+                      <UnparsedPhoneNr>609-865-9876</UnparsedPhoneNr>
+                      <AreaCd>609</AreaCd>
+                      <ExchangeId>865</ExchangeId>
+                      <SubscriberLineId>9876</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                </Organization>
+                <PartyRoles>Billing Contact</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="493">
+              <Party id="494">
+                <Organization id="495">
+                  <OrganizationNm>BANK OF AMERICA</OrganizationNm>
+                  <Addresses id="497">
+                    <Address id="498">
+                      <Line1Tx>PO BOX 5170</Line1Tx>
+                      <Municipality id="500">
+                        <MunicipalityNm>SIMI VLY</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="503">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="505">
+                        <CountrySubdivisionNm>CA</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>93062</PostalCd>
+                    </Address>
+                    <AddressUseCd>Business</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                </Organization>
+                <PartyRoles>Additional Interest</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="512">
+              <Party id="513">
+                <Organization id="514">
+                  <OrganizationNm>WELLS</OrganizationNm>
+                  <Addresses id="516">
+                    <Address id="517">
+                      <Line1Tx>PO BOX 11701</Line1Tx>
+                      <Municipality id="519">
+                        <MunicipalityNm>NEWARK</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="522">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="524">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>07101</PostalCd>
+                      <PostalExtensionCd>4701</PostalExtensionCd>
+                    </Address>
+                    <AddressUseCd>Business</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                </Organization>
+                <PartyRoles>Additional Interest</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="532">
+              <Party id="533">
+                <Organization id="534">
+                  <OrganizationNm>new company</OrganizationNm>
+                  <Addresses id="536">
+                    <Address id="537">
+                      <Line1Tx>2301 BOARDWALK</Line1Tx>
+                      <Municipality id="539">
+                        <MunicipalityNm>ATLANTIC WALK</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="542">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="544">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>08401</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <Telephones id="550">
+                    <PartyUseCd>Business</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="554">
+                      <UnparsedPhoneNr>609-111-2222</UnparsedPhoneNr>
+                      <AreaCd>609</AreaCd>
+                      <ExchangeId>111</ExchangeId>
+                      <SubscriberLineId>2222</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                </Organization>
+                <PartyRoles>DBA</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="561">
+              <Party id="562">
+                <Organization id="563">
+                  <OrganizationNm>KIA</OrganizationNm>
+                  <Addresses id="565">
+                    <Address id="566">
+                      <Line1Tx>12 330D</Line1Tx>
+                      <Municipality id="568">
+                        <MunicipalityNm>AVON</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="571">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="573">
+                        <CountrySubdivisionNm>CT</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>06001</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                </Organization>
+                <PartyRoles>DBA</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="580">
+              <Party id="581">
+                <Person id="582">
+                  <PersonName id="583">
+                    <UnparsedNameTx>risk  consultant</UnparsedNameTx>
+                    <FirstGivenNm>risk</FirstGivenNm>
+                    <FamilyNm>consultant</FamilyNm>
+                  </PersonName>
+                  <BirthDt>1980-02-07</BirthDt>
+                  <Addresses id="588">
+                    <Address id="589">
+                      <Line1Tx>2301 BOARDWALK</Line1Tx>
+                      <Municipality id="591">
+                        <MunicipalityNm>ATLANTIC WALK</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="594">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="596">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>08401</PostalCd>
+                    </Address>
+                    <AddressUseCd>Billing</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <Telephones id="602">
+                    <PartyUseCd>Personal</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="606">
+                      <UnparsedPhoneNr>609-333-4444</UnparsedPhoneNr>
+                      <AreaCd>609</AreaCd>
+                      <ExchangeId>333</ExchangeId>
+                      <SubscriberLineId>4444</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                </Person>
+                <PartyRoles>Risk Consultant</PartyRoles>
+              </Party>
+            </ListedParties>
+            <ListedParties id="613">
+              <Party id="614">
+                <Person id="615">
+                  <PersonName id="616">
+                    <UnparsedNameTx>sales contact broker  broker</UnparsedNameTx>
+                    <FirstGivenNm>sales contact broker</FirstGivenNm>
+                    <FamilyNm>broker</FamilyNm>
+                  </PersonName>
+                  <BirthDt>1970-01-01</BirthDt>
+                  <Addresses id="621">
+                    <Address id="622">
+                      <Line1Tx>PO BOX 861</Line1Tx>
+                      <Municipality id="624">
+                        <MunicipalityNm>BAYONNE</MunicipalityNm>
+                        <MunicipalityTypeCd>City</MunicipalityTypeCd>
+                      </Municipality>
+                      <Municipality id="627">
+                        <MunicipalityTypeCd>County</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="629">
+                        <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>07002</PostalCd>
+                    </Address>
+                    <AddressUseCd>Business</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <Telephones id="635">
+                    <PartyUseCd>Business</PartyUseCd>
+                    <TransmissionContentCd>Landline</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="639">
+                      <UnparsedPhoneNr>609-222-3333</UnparsedPhoneNr>
+                      <AreaCd>609</AreaCd>
+                      <ExchangeId>222</ExchangeId>
+                      <SubscriberLineId>3333</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>false</PrimaryPhoneIn>
+                  </Telephones>
+                </Person>
+                <PartyRoles>Broker</PartyRoles>
+              </Party>
+            </ListedParties>
+          </PolicyPeriod>
+        </Policy>
+        <CoverageStatus id="646">
+          <StatusIn>true</StatusIn>
+        </CoverageStatus>
+      </typ:RetrievePolicyByPolicyNumberResponseMessage>
+    </capir:retrievePolicyByPolicyNumberResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

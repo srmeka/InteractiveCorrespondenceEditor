@@ -1,0 +1,80 @@
+﻿<div class="panel panel-primary" ng-show="showControl" ng-controller="ClaimsCcBccDropdownwCheckboxController">
+    <div class="panel-heading">CC Section</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <!--section header-->
+            <div class="row" style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray">
+                <div class="col-md-1">
+                    <label>CC</label>
+                </div>
+                <div class="col-md-1">
+                    <label>BCC</label>
+                </div>
+                <div class="col-md-3">
+                    <label>Name</label>
+                </div>
+                <div class="col-md-3">
+                    <label>Address</label>
+                </div>
+                <div class="col-md-4">
+                    <label>Reference</label>
+                </div>
+            </div>
+
+            <!--CC/BCC dropdown list repeater-->
+            <div class="row" 
+                 style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray" 
+                 ng-repeat="slector in TotalCount track by $index">
+                <div class="col-md-1">
+                    <input type="checkbox" 
+                           ng-click="selectedCC($index)" 
+                           ng-model="checkedCC[$index]" 
+                           name="CtrlCCSelection{{$index}}" 
+                           id="CtrlCCSelection{{$index}}Id" />
+                </div>
+                <div class="col-md-1">
+                    <input type="checkbox" 
+                           ng-click="selectedBCC($index)" 
+                           ng-model="checkedBCC[$index]" 
+                           name="CtrlBCCSelection{{$index}}" 
+                           id="CtrlBCCSelection{{$index}}Id" />
+                </div>
+                <div class="col-md-3">
+                    <select class="form-control" 
+                            name="ccName{{$index}}"
+                            id="ccName{{$index}}Id"
+                            ng-change="selectedName($index)" 
+                            ng-disabled="!checkedCC[$index] && !checkedBCC[$index]" 
+                            ng-model="nameSelector[$index]" 
+                            ng-options="item.displayName for item in CCInfo | orderBy:'displayName'">
+                    <option value="">--Select One--</option></select>
+                    <span class="alert-danger" ng-if="CCInfo.length == 0">Information not provided by source</span>
+                 </div>
+                 <div class="col-md-3">
+                    <select style="" 
+                            name="ccAddress{{$index}}"
+                            id="ccAddress{{$index}}Id"
+                            ng-disabled="!checkedCC[$index] && !checkedBCC[$index]" 
+                            ng-model="addressSelector[$index]" 
+                            class="form-control" 
+                            ng-options="( '(' + address.Category + ') ' + address.Attention + ' ' + address.StreetAddress1 + ' ' + address.StreetAddress2 + ' ' + address.StreetAddress3 + ' ' + address.City + ' ' + address.State + ' ' + address.ZipCode) for address in addressData[$index]">
+                    <option value="">--Select One--</option></select>
+                     <span class="alert-danger" ng-if="addressData[$index].length == 0">Information not provided by source</span>
+                </div>
+                <div class="col-md-4">
+                    <input style="" 
+                           name="ccReference{{$index}}"
+                           id="ccReference{{$index}}Id"
+                           ng-disabled="!checkedCC[$index] && !checkedBCC[$index]" 
+                           ng-model="references[$index]" 
+                           class="form-control" 
+                           type="text" />
+                </div>
+            </div>
+            <div class="col-md-12 text-center" style="margin-top:10px;">
+                <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+                <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+            </div>
+        </div>
+    </div>
+</div>

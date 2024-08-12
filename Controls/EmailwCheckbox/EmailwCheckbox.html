@@ -1,0 +1,89 @@
+﻿<div class="panel panel-primary" ng-controller="EmailwCheckboxController">
+    <div class="panel-heading">Email</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+
+                <!--Checkbox to enable control-->
+                <div class="col-md-4">
+                    <input ng-click="clearAllSelectedData()" ng-model="SelectedEmail" type="checkbox" id="EmailcheckboxId" name="Emailcheckbox" value="" />
+                    <label>Send to Email Addresses</label>
+                </div>
+                <div class="col-md-8">
+                    <label class="col-md-12 row"
+                           ng-class="(SelectedEmail)?'':'disabled-class'">* Select and/or Enter Email Addresses</label>
+
+                    <!--Email checkbox list-->
+                    <div class="col-md-12 row">
+                        <div class="row" ng-repeat="item in emailData" style="margin-bottom:5px" ng-class="(SelectedEmail)?'':'disabled-class'">
+                            <div class="col-md-9">
+                                <input type="checkbox"
+                                       ng-click="selectEmail(item)"
+                                       ng-disabled="!SelectedEmail || invalidEmail(item.EmailAddress)"
+                                       name="emailSelection{{item._id}}"
+                                       ng-model="item.checked"
+                                       id="emailSelection{{item._id}}" />
+                                <span ng-bind="item.EmailAddress + ' ('+ item.FirstName + ' ' + item.LastName +')'"></span>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="alert-danger" ng-if="emailData.length === 0">Information not provided by source</span>
+                                <span class="alert-danger" ng-if="!validEmail(item.EmailAddress)">Invalid email format</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email input group-->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row" style="margin-bottom:5px">
+                                <div class="col-md-12">
+                                    <input ng-disabled="!SelectedEmail"
+                                           ng-model="freeText1"
+                                           type="email"
+                                           class="form-control"
+                                           id="freeEmail1Id"
+                                           name="freeEmail1"
+                                           value=""
+                                           placeholder="username@companyname.com"
+                                           ng-change="freeText1=removeSpecialChars(freeText1)"
+                                           ng-required="(SelectedEmail && selectData.length == 0)" />
+                                    <!--<span class="alert-danger" ng-show="freeEmail1.$error.email">Invalid email address!</span>-->
+                                </div>
+                            </div>
+                            <div class="row" style="margin-bottom:5px">
+                                <div class="col-md-12">
+                                    <input ng-disabled="!SelectedEmail"
+                                           ng-model="freeText2"
+                                           type="email"
+                                           class="form-control"
+                                           id="freeEmail2Id"
+                                           name="freeEmail2"
+                                           ng-change="freeText2=removeSpecialChars(freeText2)"
+                                           value=""
+                                           placeholder="username@companyname.com" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input ng-disabled="!SelectedEmail"
+                                           ng-model="freeText3"
+                                           type="email"
+                                           class="form-control"
+                                           id="freeEmail3Id"
+                                           name="freeEmail3"
+                                           ng-change="freeText3=removeSpecialChars(freeText3)"
+                                           value=""
+                                           placeholder="username@companyname.com" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!--<label ng-class="(SelectedEmail)?'':'disabled-class'">username@companyname.com</label>-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,145 @@
+﻿<div class="panel panel-primary" ng-controller="GcEmailwCheckboxController">
+    <div class="panel-heading">Email</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <!--Checkbox to enable control-->
+                <div class="col-md-4">
+                    <input ng-click="clearAllData()"
+                           ng-model="SelectedEmail"
+                           type="checkbox"
+                           id="CtrlEnabledCheckboxId"
+                           name="GCEmailCheckbox"
+                           value="" />
+                    <label>Send to Email Addresses</label>
+                </div>
+                <div class="col-md-8">
+
+                    <div class="row">
+                        <label class="col-md-12"
+                               ng-class="(SelectedEmail)?'':'disabled-class'">* Select and/or Enter Email Addresses<span class="alert-danger" ng-show="SelectedEmail && (selectData.length == 0 && freeTextGroup.length == 0)">Please select/enter email</span></label>
+                    </div>
+
+                    <!--Email checkbox list-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-bordered" style="padding: 5px">
+                                <div style="height:180px;overflow-y:auto;overflow-x:hidden">
+                                    <div ng-repeat="item in emailData | orderBy:'FirstName + LastName'" style="margin-bottom:5px;margin-top:5px">
+                                        <div class="col-md-9">
+                                            <input type="checkbox"
+                                                   ng-class="(SelectedEmail)?'':'disabled-class'"
+                                                   ng-click="selectEmail(item)"
+                                                   ng-disabled="!SelectedEmail || invalidEmail(item.EmailAddresses.EmailAddress.EmailAddressValue)"
+                                                   name="emailSelection{{item._id}}"
+                                                   ng-model="item.checked"
+                                                   id="emailSelectionId{{item._id}}"
+                                                   ng-required="SelectedEmail && (selectData.length == 0 && freeTextGroup.length == 0)" />
+
+                                            <span ng-class="(SelectedEmail)?'':'disabled-class'"
+                                                  ng-bind="item.Name + ' ' + item.FirstName + ' ' +  item.MiddleInitial + ' ' + item.LastName + ' - ' + item.EmailAddresses.EmailAddress.EmailAddressValue"></span>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <span class="alert-danger" ng-if="emailData.length === 0">Information not provided by source</span>
+                                            <span class="alert-danger" ng-if="!validEmail(item.EmailAddresses.EmailAddress.EmailAddressValue)">Invalid email format</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Email input group-->
+                    <div class="row" style="margin-top:10px ;margin-bottom:5px">
+                        <div class="col-md-12 ">
+                            <label ng-class="(SelectedEmail)?'':'disabled-class'"
+                                   style="margin-bottom:5px">Additional Email Addresses:</label>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin-top:5px ;margin-bottom:5px">
+                        <div class="col-md-6">
+
+                            <div style="margin-bottom:5px" ng-repeat="slector in TotalCount track by $index">
+                                <input ng-disabled="!SelectedEmail"
+                                       ng-model="freeTextGroup[$index]"
+                                       ng-change="freeTextGroup[$index]=removeSpecialChars(freeTextGroup[$index])"
+                                       type="email"
+                                       ng-class="(SelectedEmail)?'':'disabled-class'"
+                                       class="form-control"
+                                       id="freeEmail{{$index}}Id"
+                                       name="freeEmail{{$index}}Id"
+                                       value="" placeholder="username@companyname.com"
+                                       ng-required="(SelectedEmail && selectData.length == 0)" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <!--<label ng-class="(SelectedEmail)?'':'disabled-class'"
+                                   style="margin-bottom:5px" ng-show="{{$index}}==1">username@companyname.com</label>-->
+                        </div>
+
+                        <div class="col-md-12 text-center" style="padding-top: 5px; padding-bottom: 5px">
+                            <input type="button" class="btn-primary" value="Add" ng-disabled="!SelectedEmail" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+                            <input type="button" class="btn-primary" value="Remove" ng-disabled="!SelectedEmail" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+                        </div>
+                    </div>
+
+                    <div class="col-md-12" style="border-bottom: 1px solid lightgray">
+                    </div>
+
+                    <!--Email encrypted checkbox-->
+                    <div class="row" style="margin-top:15px">
+                        <div class="col-md-6">
+                            <input ng-model="emailEncrypted"
+                                   type="checkbox"
+                                   id="CtrlEnableEncryptedId"
+                                   name="CtrlEnableEncrypted"
+                                   ng-disabled="!SelectedEmail"
+                                   ng-init="emailEncrypted = true"
+                                   value="true" />
+                            <label ng-class="(SelectedEmail)?'':'disabled-class'">Email encrypted</label>
+                        </div>
+
+                        <div class="col-md-6">
+                            <!--<label ng-class="(SelectedEmail)?'':'disabled-class'">username@companyname.com</label>-->
+                        </div>
+                    </div>
+
+                    <!--From input-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <label ng-class="(SelectedEmail)?'':'disabled-class'">* From Email:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email"
+                                   class="form-control"
+                                   ng-required="SelectedEmail"
+                                   ng-disabled="!SelectedEmail"
+                                   ng-model="fromInput"
+                                   ng-change="fromInput=removeSpecialChars(fromInput)"
+                                   name="fromInput"
+                                   id="fromInputId"
+                                   placeholder="username@companyname.com" />
+                        </div>
+                    </div>
+
+                    <!--Subject input-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <label ng-class="(SelectedEmail)?'':'disabled-class'">* Subject:</label>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text"
+                                   class="form-control"
+                                   ng-required="SelectedEmail"
+                                   ng-disabled="!SelectedEmail"
+                                   ng-model="subjectInput"
+                                   name="SubjectInput"
+                                   id="SubjectInputId" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

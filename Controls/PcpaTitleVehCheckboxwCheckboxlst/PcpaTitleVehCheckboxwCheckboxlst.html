@@ -1,0 +1,33 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaTitleVehCheckboxwCheckboxlstController">
+    <div class="panel-heading">Title</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <!--Checkbox to enable control-->
+                <div class="col-md-4">
+                    <input ng-change="clearAllSelectedTitle()" 
+                           ng-model="SelectedTitle" 
+                           type="checkbox" 
+                           id="CtrlEnableCheckboxId" 
+                           name="CtrlEnableCheckbox" 
+                           value="" /> <label>Include Title Vehicle(s)</label>
+                </div>
+                <div class="col-md-8">
+                    <!--Vehicle data dropdown list-->
+                    <div ng-repeat="item in Vehicletitle track by item.VehicleId" 
+                         class="row col-md-12">
+                        <input ng-model="item.VehicleTitlechecked" 
+                               ng-change="selectVehicle(item)" 
+                               type="checkbox" 
+                               ng-disabled="!SelectedTitle" 
+                               name="VehicleTitleCheckboxLst" 
+                               id="VehicleTitleCheckboxLstId{{item.VehicleId}}" 
+                               value="" /> 
+                        <span ng-class="(SelectedTitle)?'':'disabled-class'" ng-bind="item.ModelYearNr + ' ' + item.VehicleTradeNm + ' ' + item.ModelNm + ' ' + item.ManufacturerVehicleIdentificationNr"></span>
+                    </div>
+                    <span class="alert-danger" ng-if="Vehicletitle.length === 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

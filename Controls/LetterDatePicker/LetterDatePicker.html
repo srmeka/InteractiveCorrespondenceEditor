@@ -1,0 +1,17 @@
+﻿<div class="panel panel-primary" ng-controller="LetterDatePickerController">
+    <div class="panel-heading">
+        {{LabelName}}
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    <label id="DateLabelID">{{LabelName}}</label>
+                </div>
+                <div class="col-md-3">
+                    <input class="form-control" id="DateId" name="Date" type="text" ng-model="SelectedDate" date-format="{{DateOutputFormat}}" ng-required="{{Required}}" datepicker />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

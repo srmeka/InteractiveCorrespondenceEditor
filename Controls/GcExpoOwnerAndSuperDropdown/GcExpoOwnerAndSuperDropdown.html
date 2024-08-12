@@ -1,0 +1,38 @@
+﻿<div class="panel panel-primary" ng-controller="GcExpoOwnerAndSuperDropdownController">
+    <div class="panel-heading">Exposure Owner and Supervisor</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Exposure Owner Name dropdown list-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Exposure Owner Name:</label>
+                </div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ExposureOwnData | orderBy:'displayName'" name="ExposureOwnSelection" ng-model="selectedNameOwn" class="form-control" id="ExposureOwnSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ExposureOwnData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--Exposure Owner Supervisor dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4">
+                    <label>Exposure Owner Supervisor:</label>
+                </div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ExposureSupData | orderBy:'displayName'" name="ExposureSupSelection" ng-model="selectedNameSup" class="form-control" id="ExposureSupSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ExposureSupData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

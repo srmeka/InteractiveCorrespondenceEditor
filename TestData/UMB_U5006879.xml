@@ -1,0 +1,2600 @@
+<CorrespondenceDataResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header id="1">
+    <CorrelationContext id="2">
+      <CorrelationId>ade7137d-6887-4836-b216-16f9e97c73af</CorrelationId>
+    </CorrelationContext>
+  </Header>
+  <Policy id="4">
+    <PolicyNumber>U5006879</PolicyNumber>
+    <LineOfBusinessCd>Personal Lines</LineOfBusinessCd>
+    <PolicyTypeCd>PersonalUmbrella</PolicyTypeCd>
+    <InceptionDt>2016-08-25T00:01:00-04:00</InceptionDt>
+    <ConvertedIn>N</ConvertedIn>
+    <BaseStateCd>NJ</BaseStateCd>
+    <UnderwritingCompany id="11">
+      <OrganizationNm>New Jersey Manufacturers Insurance</OrganizationNm>
+      <OrganizationNameCd>NJM</OrganizationNameCd>
+    </UnderwritingCompany>
+    <PolicyPeriod id="14">
+      <QuoteNumber>QQ405088353</QuoteNumber>
+      <StartDt>2016-08-22T00:01:00-04:00</StartDt>
+      <EndDt>2017-08-22T00:01:00-04:00</EndDt>
+      <RenewedIn>N</RenewedIn>
+      <RenewalDt>2017-08-22T00:01:00-04:00</RenewalDt>
+      <StatusCd>In Force</StatusCd>
+      <DividendYr>2015</DividendYr>
+      <EndorsementEffectiveDt>2016-08-22T00:01:00-04:00</EndorsementEffectiveDt>
+      <PolicyLines id="23">
+        <UmbrellaLine id="24">
+          <HouseholdMembers id="25">
+            <Person id="26">
+              <PersonName id="27">
+                <FirstGivenNm>DAVID</FirstGivenNm>
+                <SecondGivenNm>J</SecondGivenNm>
+                <FamilyNm>FRED</FamilyNm>
+              </PersonName>
+              <FirstLicensedMonthAndYr>1956</FirstLicensedMonthAndYr>
+              <VehicalDriverLicense id="32">
+                <LicenseId>F12345678902541</LicenseId>
+                <LicenseStatusCd>Active DL</LicenseStatusCd>
+              </VehicalDriverLicense>
+            </Person>
+            <HouseholdMemeberStatusCd>Insured Driver</HouseholdMemeberStatusCd>
+          </HouseholdMembers>
+          <HouseholdMembers id="36">
+            <Person id="37">
+              <PersonName id="38">
+                <FirstGivenNm>THOMAS</FirstGivenNm>
+                <SecondGivenNm>F</SecondGivenNm>
+                <FamilyNm>CONVERTINO</FamilyNm>
+              </PersonName>
+              <FirstLicensedMonthAndYr>1980</FirstLicensedMonthAndYr>
+              <VehicalDriverLicense id="43">
+                <LicenseId>C12345678901234</LicenseId>
+                <LicenseStatusCd>Active DL</LicenseStatusCd>
+              </VehicalDriverLicense>
+            </Person>
+            <HouseholdMemeberStatusCd>Insured Driver</HouseholdMemeberStatusCd>
+          </HouseholdMembers>
+          <HouseholdMembers id="47">
+            <Person id="48">
+              <PersonName id="49">
+                <FirstGivenNm>WILLIAM</FirstGivenNm>
+                <SecondGivenNm>J</SecondGivenNm>
+                <FamilyNm>FRED</FamilyNm>
+              </PersonName>
+              <FirstLicensedMonthAndYr>1983</FirstLicensedMonthAndYr>
+              <VehicalDriverLicense id="54">
+                <LicenseId>F12345678902134</LicenseId>
+                <LicenseStatusCd>Active DL</LicenseStatusCd>
+              </VehicalDriverLicense>
+            </Person>
+            <HouseholdMemeberStatusCd>Insured Driver</HouseholdMemeberStatusCd>
+          </HouseholdMembers>
+          <HouseholdMembers id="58">
+            <Person id="59">
+              <PersonName id="60">
+                <FirstGivenNm>LINDA</FirstGivenNm>
+                <SecondGivenNm>J</SecondGivenNm>
+                <FamilyNm>FRED</FamilyNm>
+              </PersonName>
+              <FirstLicensedMonthAndYr>1983</FirstLicensedMonthAndYr>
+              <VehicalDriverLicense id="65">
+                <LicenseId>F12345678903214</LicenseId>
+                <LicenseStatusCd>Active DL</LicenseStatusCd>
+              </VehicalDriverLicense>
+            </Person>
+            <HouseholdMemeberStatusCd>Insured Driver</HouseholdMemeberStatusCd>
+          </HouseholdMembers>
+          <HouseholdMembers id="69">
+            <Person id="70">
+              <PersonName id="71">
+                <FirstGivenNm>OSCAR</FirstGivenNm>
+                <SecondGivenNm>J</SecondGivenNm>
+                <FamilyNm>FRED</FamilyNm>
+              </PersonName>
+              <FirstLicensedMonthAndYr>1986</FirstLicensedMonthAndYr>
+              <VehicalDriverLicense id="76">
+                <LicenseId>F14785236901234</LicenseId>
+                <LicenseStatusCd>Active DL</LicenseStatusCd>
+              </VehicalDriverLicense>
+            </Person>
+            <HouseholdMemeberStatusCd>Insured Driver</HouseholdMemeberStatusCd>
+          </HouseholdMembers>
+          <HouseholdMembers id="80">
+            <Person id="81">
+              <PersonName id="82">
+                <FirstGivenNm>JOHNSON</FirstGivenNm>
+                <SecondGivenNm>J</SecondGivenNm>
+                <FamilyNm>FRED</FamilyNm>
+              </PersonName>
+              <FirstLicensedMonthAndYr>1996</FirstLicensedMonthAndYr>
+              <VehicalDriverLicense id="87">
+                <LicenseId>F12457869301234</LicenseId>
+                <LicenseStatusCd>Active DL</LicenseStatusCd>
+              </VehicalDriverLicense>
+            </Person>
+            <HouseholdMemeberStatusCd>Insured Driver</HouseholdMemeberStatusCd>
+          </HouseholdMembers>
+          <HouseholdMembers id="91">
+            <Person id="92">
+              <PersonName id="93">
+                <FirstGivenNm>Laura</FirstGivenNm>
+                <SecondGivenNm>J</SecondGivenNm>
+                <FamilyNm>FRED</FamilyNm>
+              </PersonName>
+              <FirstLicensedMonthAndYr>1960</FirstLicensedMonthAndYr>
+              <VehicalDriverLicense id="98">
+                <LicenseId>F12345678901234</LicenseId>
+                <LicenseStatusCd>Active DL</LicenseStatusCd>
+              </VehicalDriverLicense>
+            </Person>
+            <HouseholdMemeberStatusCd>Insured Driver</HouseholdMemeberStatusCd>
+          </HouseholdMembers>
+          <CoverageElectionParameters id="102">
+            <CoverageTypeCd>Personal Liability</CoverageTypeCd>
+            <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>10000000</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>10000000</CoverageParameterUnformattedValueTx>
+          </CoverageElectionParameters>
+          <UnderlyingPolicies id="107">
+            <PolicyNumber>H400052288</PolicyNumber>
+            <PolicyTypeCd>Property</PolicyTypeCd>
+          </UnderlyingPolicies>
+          <UnderlyingPolicies id="110">
+            <PolicyNumber>H400052304</PolicyNumber>
+            <PolicyTypeCd>Property</PolicyTypeCd>
+          </UnderlyingPolicies>
+          <UnderlyingPolicies id="113">
+            <PolicyNumber>H400050936</PolicyNumber>
+            <PolicyTypeCd>Property</PolicyTypeCd>
+          </UnderlyingPolicies>
+          <UnderlyingPolicies id="116">
+            <PolicyNumber>H400052767</PolicyNumber>
+            <PolicyTypeCd>Property</PolicyTypeCd>
+          </UnderlyingPolicies>
+          <UnderlyingPolicies id="119">
+            <PolicyNumber>D400050886</PolicyNumber>
+            <PolicyTypeCd>Property</PolicyTypeCd>
+          </UnderlyingPolicies>
+          <UnderlyingPolicies id="122">
+            <PolicyNumber>H400053286</PolicyNumber>
+            <PolicyTypeCd>Property</PolicyTypeCd>
+          </UnderlyingPolicies>
+          <UnderlyingPolicies id="125">
+            <PolicyNumber>D400054003</PolicyNumber>
+            <PolicyTypeCd>Property</PolicyTypeCd>
+          </UnderlyingPolicies>
+          <UnderlyingPolicies id="128">
+            <PolicyNumber>H400052866</PolicyNumber>
+            <PolicyTypeCd>Property</PolicyTypeCd>
+          </UnderlyingPolicies>
+          <Endorsements id="131">
+            <EndorsementNr>FR-U180</EndorsementNr>
+            <EditionDt>03/17</EditionDt>
+            <EndorsementNm>Excess Uninsured and Underinsured Motorists Coverage</EndorsementNm>
+            <EndorsementPremiumAm>130.00</EndorsementPremiumAm>
+          </Endorsements>
+          <Endorsements id="136">
+            <EndorsementNr>FR-U179</EndorsementNr>
+            <EditionDt>03/17</EditionDt>
+            <EndorsementNm>Trust Endorsement</EndorsementNm>
+            <EndorsementPremiumAm />
+          </Endorsements>
+          <SummaryAmounts id="141">
+            <AmountTypeCd>Subtotal Policy Premium</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>3343.00</SummaryAm>
+          </SummaryAmounts>
+          <SummaryAmounts id="145">
+            <AmountTypeCd>Total Additional Premium</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>3343.00</SummaryAm>
+          </SummaryAmounts>
+          <SummaryAmounts id="149">
+            <AmountTypeCd>Total Policy Premium</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>3343.00</SummaryAm>
+          </SummaryAmounts>
+          <NonCoverageCharges id="153">
+            <ChargeReasonCd>PLIGA</ChargeReasonCd>
+            <ChargeAm>20</ChargeAm>
+          </NonCoverageCharges>
+          <VehicleExposures id="156">
+            <Vehicle id="157">
+              <ModelYearNr>Unknown</ModelYearNr>
+              <VehicleTradeNm>Unknown</VehicleTradeNm>
+              <VehicleTypeCd>Unknown</VehicleTypeCd>
+            </Vehicle>
+          </VehicleExposures>
+          <VehicleExposures id="156">
+            <Vehicle id="157">
+              <ModelYearNr>2016</ModelYearNr>
+              <VehicleTradeNm>NISSAN</VehicleTradeNm>
+              <VehicleTypeCd>Private Passenger </VehicleTypeCd>
+            </Vehicle>
+          </VehicleExposures>
+          <VehicleExposures id="161">
+            <Vehicle id="162">
+              <ModelYearNr>2015</ModelYearNr>
+              <VehicleTradeNm>Ducati</VehicleTradeNm>
+              <VehicleTypeCd>Motorcycle</VehicleTypeCd>
+            </Vehicle>
+          </VehicleExposures>
+          <VehicleExposures id="166">
+            <Vehicle id="167">
+              <ModelYearNr>2014</ModelYearNr>
+              <VehicleTradeNm>ALPINE</VehicleTradeNm>
+              <VehicleTypeCd>Motorhomes</VehicleTypeCd>
+            </Vehicle>
+          </VehicleExposures>
+          <VehicleExposures id="171">
+            <Vehicle id="172">
+              <ModelYearNr>2015</ModelYearNr>
+              <VehicleTradeNm>MORGAN</VehicleTradeNm>
+              <VehicleTypeCd>Antiques/RUC/Exotic</VehicleTypeCd>
+            </Vehicle>
+          </VehicleExposures>
+          <VehicleExposures id="176">
+            <Vehicle id="177">
+              <ModelYearNr>2014</ModelYearNr>
+              <VehicleTradeNm>Yamaha</VehicleTradeNm>
+              <VehicleTypeCd>Recreational Motor Vehicle</VehicleTypeCd>
+              <VehicleSubTypeCd>Golf Cart</VehicleSubTypeCd>
+            </Vehicle>
+          </VehicleExposures>
+          <VehicleExposures id="182">
+            <Vehicle id="183">
+              <ModelYearNr>2014</ModelYearNr>
+              <VehicleTradeNm>Honda</VehicleTradeNm>
+              <VehicleTypeCd>Recreational Motor Vehicle</VehicleTypeCd>
+              <VehicleSubTypeCd>Snowmobile</VehicleSubTypeCd>
+            </Vehicle>
+          </VehicleExposures>
+          <WatercraftExposures id="188">
+            <Watercraft id="189">
+              <ModelYearNr>2015</ModelYearNr>
+              <WatercraftTradeNm>Yamaha</WatercraftTradeNm>
+              <BodyLengthCd>Less than 26'</BodyLengthCd>
+              <WatercraftTypeCd>Jet Ski</WatercraftTypeCd>
+              <HorsePowerTypeCd>Less than or equal to 25</HorsePowerTypeCd>
+            </Watercraft>
+          </WatercraftExposures>
+          <WatercraftExposures id="195">
+            <Watercraft id="196">
+              <ModelYearNr>2014</ModelYearNr>
+              <WatercraftTradeNm>Honda</WatercraftTradeNm>
+              <BodyLengthCd>Less than 26'</BodyLengthCd>
+              <WatercraftTypeCd>Outboard less than 25 HP</WatercraftTypeCd>
+              <HorsePowerTypeCd>Less than or equal to 25</HorsePowerTypeCd>
+            </Watercraft>
+          </WatercraftExposures>
+          <WatercraftExposures id="202">
+            <Watercraft id="203">
+              <ModelYearNr>2015</ModelYearNr>
+              <WatercraftTradeNm>Suzuki</WatercraftTradeNm>
+              <BodyLengthCd>26' - 39'</BodyLengthCd>
+              <WatercraftTypeCd>Power Watercraft</WatercraftTypeCd>
+              <HorsePowerTypeCd>Greater than 25</HorsePowerTypeCd>
+            </Watercraft>
+          </WatercraftExposures>
+          <WatercraftExposures id="209">
+            <Watercraft id="210">
+              <ModelYearNr>2012</ModelYearNr>
+              <WatercraftTradeNm>Alpine</WatercraftTradeNm>
+              <BodyLengthCd>39' or greater</BodyLengthCd>
+              <WatercraftTypeCd>Sailboat w/auxiliary power</WatercraftTypeCd>
+            </Watercraft>
+          </WatercraftExposures>
+          <WatercraftExposures id="215">
+            <Watercraft id="216">
+              <ModelYearNr>2013</ModelYearNr>
+              <WatercraftTradeNm>Bentley</WatercraftTradeNm>
+              <BodyLengthCd>39' or greater</BodyLengthCd>
+              <WatercraftTypeCd>Sailboat w/o auxiliary power</WatercraftTypeCd>
+            </Watercraft>
+          </WatercraftExposures>
+          <LocationExposures id="221">
+            <LocationTypeCd>Property</LocationTypeCd>
+            <OccupancyTypeCd>Tenant Occupied</OccupancyTypeCd>
+            <Address id="224">
+              <Line1Tx>5 BUCKLEY LN STE 213</Line1Tx>
+              <Line3Tx>OPP BOA</Line3Tx>
+              <Municipality id="227">
+                <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <Municipality id="230">
+                <MunicipalityNm>MERCER</MunicipalityNm>
+                <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="233">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>08691</PostalCd>
+              <PostalExtensionCd>3004</PostalExtensionCd>
+            </Address>
+          </LocationExposures>
+          <LocationExposures id="238">
+            <LocationTypeCd>Property</LocationTypeCd>
+            <OccupancyTypeCd>Owner Occupied</OccupancyTypeCd>
+            <Address id="241">
+              <Line1Tx>5 BUCKLEY LN STE 213</Line1Tx>
+              <Line3Tx>OPP BOA</Line3Tx>
+              <Municipality id="244">
+                <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <Municipality id="247">
+                <MunicipalityNm>MERCER</MunicipalityNm>
+                <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="250">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>08691</PostalCd>
+              <PostalExtensionCd>3004</PostalExtensionCd>
+            </Address>
+          </LocationExposures>
+          <LocationExposures id="255">
+            <LocationTypeCd>Property</LocationTypeCd>
+            <OccupancyTypeCd>Tenant Occupied</OccupancyTypeCd>
+            <Address id="258">
+              <Line1Tx>5 BUCKLEY LN STE 213</Line1Tx>
+              <Line3Tx>OPP BOA</Line3Tx>
+              <Municipality id="261">
+                <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <Municipality id="264">
+                <MunicipalityNm>MERCER</MunicipalityNm>
+                <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="267">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>08691</PostalCd>
+              <PostalExtensionCd>3004</PostalExtensionCd>
+            </Address>
+          </LocationExposures>
+          <LocationExposures id="272">
+            <LocationTypeCd>Property</LocationTypeCd>
+            <OccupancyTypeCd>Tenant Occupied</OccupancyTypeCd>
+            <Address id="275">
+              <Line1Tx>5 BUCKLEY LN STE 213</Line1Tx>
+              <Line3Tx>OPP BOA</Line3Tx>
+              <Municipality id="278">
+                <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <Municipality id="281">
+                <MunicipalityNm>MERCER</MunicipalityNm>
+                <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="284">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>08691</PostalCd>
+              <PostalExtensionCd>3004</PostalExtensionCd>
+            </Address>
+          </LocationExposures>
+          <LocationExposures id="289">
+            <LocationTypeCd>Vacant Land</LocationTypeCd>
+            <Address id="291">
+              <Line1Tx>5 BUCKLEY LN STE 213</Line1Tx>
+              <Line3Tx>OPP BOA</Line3Tx>
+              <Municipality id="294">
+                <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <Municipality id="297">
+                <MunicipalityNm>MERCER</MunicipalityNm>
+                <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="300">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>08691</PostalCd>
+              <PostalExtensionCd>3004</PostalExtensionCd>
+            </Address>
+          </LocationExposures>
+          <LocationExposures id="305">
+            <LocationTypeCd>Property</LocationTypeCd>
+            <OccupancyTypeCd>Owner Occupied</OccupancyTypeCd>
+            <Address id="308">
+              <Line1Tx>5 BUCKLEY LN STE 213</Line1Tx>
+              <Line3Tx>OPP BOA</Line3Tx>
+              <Municipality id="311">
+                <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <Municipality id="314">
+                <MunicipalityNm>MERCER</MunicipalityNm>
+                <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="317">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>08691</PostalCd>
+              <PostalExtensionCd>3004</PostalExtensionCd>
+            </Address>
+          </LocationExposures>
+          <LocationExposures id="322">
+            <LocationTypeCd>Property</LocationTypeCd>
+            <OccupancyTypeCd>Tenant Occupied</OccupancyTypeCd>
+            <Address id="325">
+              <Line1Tx>5 BUCKLEY LN STE 213</Line1Tx>
+              <Line3Tx>OPP BOA</Line3Tx>
+              <Municipality id="328">
+                <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <Municipality id="331">
+                <MunicipalityNm>MERCER</MunicipalityNm>
+                <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="334">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>08691</PostalCd>
+              <PostalExtensionCd>3004</PostalExtensionCd>
+            </Address>
+          </LocationExposures>
+          <LocationExposures id="339">
+            <LocationTypeCd>Property</LocationTypeCd>
+            <OccupancyTypeCd>Tenant Occupied</OccupancyTypeCd>
+            <Address id="342">
+              <Line1Tx>5 BUCKLEY LN STE 213</Line1Tx>
+              <Line3Tx>OPP BOA</Line3Tx>
+              <Municipality id="345">
+                <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <Municipality id="348">
+                <MunicipalityNm>MERCER</MunicipalityNm>
+                <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="351">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>08691</PostalCd>
+              <PostalExtensionCd>3004</PostalExtensionCd>
+            </Address>
+          </LocationExposures>
+          <ExposureIndicators id="356">
+            <FamilyMemberIn>Y</FamilyMemberIn>
+            <LicensedFamilyMembersIn>Y</LicensedFamilyMembersIn>
+            <AutoMobileIndicators id="359">
+              <AutoMobileIn>Y</AutoMobileIn>
+              <CompanyPersonalAutoCountNr>0</CompanyPersonalAutoCountNr>
+              <PrivatePassengerCountNr>1</PrivatePassengerCountNr>
+              <MotorHomesCountNr>1</MotorHomesCountNr>
+              <AntiquesRUCExoticCountNr>1</AntiquesRUCExoticCountNr>
+            </AutoMobileIndicators>
+            <MotorCycleIndicators id="365">
+              <MotorCycleIn>Y</MotorCycleIn>
+              <MotorCyleCountNr>1</MotorCyleCountNr>
+              <MopedCountNr>0</MopedCountNr>
+            </MotorCycleIndicators>
+            <RecreationalMotorVehicleIndicators id="369">
+              <RecreationalVehicleIn>Y</RecreationalVehicleIn>
+              <ATVsCountNr>0</ATVsCountNr>
+              <GolfCartsCountNr>1</GolfCartsCountNr>
+              <SnowMobilesCountNr>1</SnowMobilesCountNr>
+              <DirtBikesCountNr>0</DirtBikesCountNr>
+              <MopedsCountNr>0</MopedsCountNr>
+              <DuneBuggysNr>0</DuneBuggysNr>
+              <OtherRecreationalVehicleCountNr>0</OtherRecreationalVehicleCountNr>
+            </RecreationalMotorVehicleIndicators>
+            <WatercraftIndicators id="378">
+              <WatercraftIn>Y</WatercraftIn>
+              <SailBoatLengthOver39CountNr>2</SailBoatLengthOver39CountNr>
+              <SailBoatLengthBW2639CountNr>0</SailBoatLengthBW2639CountNr>
+              <SailBoatLengthLess26CountNr>0</SailBoatLengthLess26CountNr>
+              <PowerBoatLengthOver39CountNr>0</PowerBoatLengthOver39CountNr>
+              <PowerBoatLengthBW2639CountNr>1</PowerBoatLengthBW2639CountNr>
+              <PowerBoatLengthLess26CountNr>1</PowerBoatLengthLess26CountNr>
+            </WatercraftIndicators>
+            <VacatLandIndicators id="386">
+              <VacantLandIn>Y</VacantLandIn>
+              <LotAndBlock>5 BUCKLEY LN STE 213</LotAndBlock>
+            </VacatLandIndicators>
+            <ExcessUnAndUnderInsuredMotoritsIn>Y</ExcessUnAndUnderInsuredMotoritsIn>
+          </ExposureIndicators>
+          <SpouseOfPrimaryNamedInsured>THOMAS CONVERTINO</SpouseOfPrimaryNamedInsured>
+        </UmbrellaLine>
+      </PolicyLines>
+      <ListedParties id="391">
+        <Party id="392">
+          <PartyId>hud1:415306</PartyId>
+          <Person id="394">
+            <PersonName id="395">
+              <UnparsedNameTx>DAVID FRED Sr.</UnparsedNameTx>
+              <NameSalutationCd>Estate Of</NameSalutationCd>
+              <FirstGivenNm>DAVID</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>FRED</FamilyNm>
+              <FamilyNameGenerationCd>Sr.</FamilyNameGenerationCd>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1940-01-01</BirthDt>
+            <MaritalStatusCd>Married</MaritalStatusCd>
+            <Addresses id="405">
+              <Address id="406">
+                <Line1Tx>5 BUCKLEY LN</Line1Tx>
+                <Line2Tx>STE # 213</Line2Tx>
+                <Line3Tx>OPP BOA</Line3Tx>
+                <Municipality id="410">
+                  <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality id="413">
+                  <MunicipalityNm>Mercer</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="416">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>08691</PostalCd>
+                <PostalExtensionCd>3304</PostalExtensionCd>
+              </Address>
+              <AddressUseCd>Mailing</AddressUseCd>
+              <PrimaryAddressIn>Y</PrimaryAddressIn>
+            </Addresses>
+            <EmailAddresses id="423">
+              <EmailAddress id="424">
+                <UnparsedEmailAddress>DAVIDFRED@ABC.COM</UnparsedEmailAddress>
+              </EmailAddress>
+            </EmailAddresses>
+            <Telephones id="426">
+              <PartyUseCd>Personal</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Cellular</TransmissionTechnologyCd>
+              <PhoneNumber id="430">
+                <UnparsedPhoneNr>123-456-7890</UnparsedPhoneNr>
+                <AreaCd>123</AreaCd>
+                <ExchangeId>456</ExchangeId>
+                <SubscriberLineId>7890</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>Y</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Primary Named Insured</PartyRoles>
+          <PartyRoles>Account Holder</PartyRoles>
+        </Party>
+      </ListedParties>
+      <ListedParties id="439">
+        <Party id="440">
+          <PartyId>hud1:415306</PartyId>
+          <Person id="442">
+            <PersonName id="443">
+              <UnparsedNameTx>DAVID FRED Sr.</UnparsedNameTx>
+              <NameSalutationCd>Estate Of</NameSalutationCd>
+              <FirstGivenNm>DAVID</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>FRED</FamilyNm>
+              <FamilyNameGenerationCd>Sr.</FamilyNameGenerationCd>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1940-01-01</BirthDt>
+            <MaritalStatusCd>Married</MaritalStatusCd>
+            <Addresses id="453">
+              <Address id="454">
+                <Line1Tx>5 BUCKLEY LN</Line1Tx>
+                <Line2Tx>STE # 213</Line2Tx>
+                <Line3Tx>OPP BOA</Line3Tx>
+                <Municipality id="458">
+                  <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality id="461">
+                  <MunicipalityNm>Mercer</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="464">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>08691</PostalCd>
+                <PostalExtensionCd>3304</PostalExtensionCd>
+              </Address>
+              <AddressUseCd>Mailing</AddressUseCd>
+              <PrimaryAddressIn>Y</PrimaryAddressIn>
+            </Addresses>
+            <EmailAddresses id="471">
+              <EmailAddress id="472">
+                <UnparsedEmailAddress>DAVIDFRED@ABC.COM</UnparsedEmailAddress>
+              </EmailAddress>
+            </EmailAddresses>
+            <Telephones id="474">
+              <PartyUseCd>Personal</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Cellular</TransmissionTechnologyCd>
+              <PhoneNumber id="478">
+                <UnparsedPhoneNr>123-456-7890</UnparsedPhoneNr>
+                <AreaCd>123</AreaCd>
+                <ExchangeId>456</ExchangeId>
+                <SubscriberLineId>7890</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>Y</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Household Member</PartyRoles>
+          <PartyRoles>Account Holder</PartyRoles>
+          <RelationshipCd>Self</RelationshipCd>
+        </Party>
+      </ListedParties>
+      <ListedParties id="488">
+        <Party id="489">
+          <PartyId>hud1:415517</PartyId>
+          <Person id="491">
+            <PersonName id="492">
+              <UnparsedNameTx>THOMAS CONVERTINO</UnparsedNameTx>
+              <FirstGivenNm>THOMAS</FirstGivenNm>
+              <SecondGivenNm>F</SecondGivenNm>
+              <FamilyNm>CONVERTINO</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>F</SecondGivenNameInitial>
+            <BirthDt>1964-08-23</BirthDt>
+            <MaritalStatusCd>Married</MaritalStatusCd>
+            <Addresses id="500">
+              <Address id="501">
+                <Line1Tx>178 HARDENBURGHAVE</Line1Tx>
+                <Line2Tx>STE # 213</Line2Tx>
+                <Line3Tx>OPP BOA</Line3Tx>
+                <Municipality id="505">
+                  <MunicipalityNm>DEMAREST</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality id="508">
+                  <MunicipalityNm>Mercer</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="511">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>07627</PostalCd>
+                <PostalExtensionCd>1620</PostalExtensionCd>
+              </Address>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>Y</PrimaryAddressIn>
+            </Addresses>
+            <Telephones id="518">
+              <PartyUseCd>Personal</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber id="522">
+                <UnparsedPhoneNr>154-263-9870</UnparsedPhoneNr>
+                <AreaCd>154</AreaCd>
+                <ExchangeId>263</ExchangeId>
+                <SubscriberLineId>9870</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>Y</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Secondary Named Insured</PartyRoles>
+          <RelationshipCd>Spouse</RelationshipCd>
+        </Party>
+      </ListedParties>
+      <ListedParties id="531">
+        <Party id="532">
+          <PartyId>hud1:415517</PartyId>
+          <Person id="534">
+            <PersonName id="535">
+              <UnparsedNameTx>THOMAS CONVERTINO</UnparsedNameTx>
+              <FirstGivenNm>THOMAS</FirstGivenNm>
+              <SecondGivenNm>F</SecondGivenNm>
+              <FamilyNm>CONVERTINO</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>F</SecondGivenNameInitial>
+            <BirthDt>1964-08-23</BirthDt>
+            <MaritalStatusCd>Married</MaritalStatusCd>
+            <Addresses id="543">
+              <Address id="544">
+                <Line1Tx>178 HARDENBURGHAVE</Line1Tx>
+                <Line2Tx>STE # 213</Line2Tx>
+                <Line3Tx>OPP BOA</Line3Tx>
+                <Municipality id="548">
+                  <MunicipalityNm>DEMAREST</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality id="551">
+                  <MunicipalityNm>Mercer</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="554">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>07627</PostalCd>
+                <PostalExtensionCd>1620</PostalExtensionCd>
+              </Address>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>Y</PrimaryAddressIn>
+            </Addresses>
+            <Telephones id="561">
+              <PartyUseCd>Personal</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber id="565">
+                <UnparsedPhoneNr>154-263-9870</UnparsedPhoneNr>
+                <AreaCd>154</AreaCd>
+                <ExchangeId>263</ExchangeId>
+                <SubscriberLineId>9870</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>Y</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Household Member</PartyRoles>
+          <RelationshipCd>Relative</RelationshipCd>
+        </Party>
+      </ListedParties>
+      <ListedParties id="574">
+        <Party id="575">
+          <PartyId>hud1:414630</PartyId>
+          <Person id="577">
+            <PersonName id="578">
+              <UnparsedNameTx>WILLIAM FRED</UnparsedNameTx>
+              <FirstGivenNm>WILLIAM</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>FRED</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1967-09-21</BirthDt>
+            <MaritalStatusCd>Married</MaritalStatusCd>
+            <Addresses id="586">
+              <Address id="587">
+                <Line1Tx>726 DRAKE AVE</Line1Tx>
+                <Municipality id="589">
+                  <MunicipalityNm>MIDDLESEX</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="592">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>08846</PostalCd>
+                <PostalExtensionCd>2142</PostalExtensionCd>
+              </Address>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>Y</PrimaryAddressIn>
+            </Addresses>
+            <Telephones id="599">
+              <PartyUseCd>Business</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber id="603">
+                <UnparsedPhoneNr>154-236-9871</UnparsedPhoneNr>
+                <AreaCd>154</AreaCd>
+                <ExchangeId>236</ExchangeId>
+                <SubscriberLineId>9871</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>Y</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Household Member</PartyRoles>
+          <RelationshipCd>Relative</RelationshipCd>
+        </Party>
+      </ListedParties>
+      <ListedParties id="612">
+        <Party id="613">
+          <PartyId>hud1:414632</PartyId>
+          <Person id="615">
+            <PersonName id="616">
+              <UnparsedNameTx>LINDA FRED</UnparsedNameTx>
+              <FirstGivenNm>LINDA</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>FRED</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1967-09-08</BirthDt>
+            <MaritalStatusCd>Married</MaritalStatusCd>
+            <Addresses id="624">
+              <Address id="625">
+                <Line1Tx>726 DRAKE AVE</Line1Tx>
+                <Municipality id="627">
+                  <MunicipalityNm>MIDDLESEX</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="630">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>08846</PostalCd>
+                <PostalExtensionCd>2142</PostalExtensionCd>
+              </Address>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>Y</PrimaryAddressIn>
+            </Addresses>
+            <Telephones id="637">
+              <PartyUseCd>Business</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber id="641">
+                <UnparsedPhoneNr>963-258-7410 x215463</UnparsedPhoneNr>
+                <AreaCd>963</AreaCd>
+                <ExchangeId>258</ExchangeId>
+                <SubscriberLineId>7410 </SubscriberLineId>
+                <ExtensionId>215463</ExtensionId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>Y</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Household Member</PartyRoles>
+          <RelationshipCd>Relative</RelationshipCd>
+        </Party>
+      </ListedParties>
+      <ListedParties id="651">
+        <Party id="652">
+          <PartyId>hud1:414657</PartyId>
+          <Person id="654">
+            <PersonName id="655">
+              <UnparsedNameTx>OSCAR FRED</UnparsedNameTx>
+              <NameSalutationCd>Estate Of</NameSalutationCd>
+              <FirstGivenNm>OSCAR</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>FRED</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1970-01-01</BirthDt>
+            <MaritalStatusCd>Married</MaritalStatusCd>
+            <Addresses id="664">
+              <Address id="665">
+                <Line1Tx>12 Matthews Ln</Line1Tx>
+                <Line2Tx>test ad line 2</Line2Tx>
+                <Line3Tx>test ad line 3</Line3Tx>
+                <Municipality id="669">
+                  <MunicipalityNm>Pennsville</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality id="672">
+                  <MunicipalityNm>Ocean</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="675">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>08070</PostalCd>
+              </Address>
+              <AddressUseCd>Mailing</AddressUseCd>
+              <PrimaryAddressIn>Y</PrimaryAddressIn>
+            </Addresses>
+            <Telephones id="681">
+              <PartyUseCd>Personal</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber id="685">
+                <UnparsedPhoneNr>125-487-9630</UnparsedPhoneNr>
+                <AreaCd>125</AreaCd>
+                <ExchangeId>487</ExchangeId>
+                <SubscriberLineId>9630</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>Y</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Household Member</PartyRoles>
+          <RelationshipCd>Relative</RelationshipCd>
+        </Party>
+      </ListedParties>
+      <ListedParties id="694">
+        <Party id="695">
+          <PartyId>hud1:414626</PartyId>
+          <Person id="697">
+            <PersonName id="698">
+              <UnparsedNameTx>JOHNSON FRED</UnparsedNameTx>
+              <FirstGivenNm>JOHNSON</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>FRED</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1980-09-19</BirthDt>
+            <MaritalStatusCd>Married</MaritalStatusCd>
+            <Addresses id="706">
+              <Address id="707">
+                <Line1Tx>18 POPLAR ST</Line1Tx>
+                <Municipality id="709">
+                  <MunicipalityNm>WARETOWN</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="712">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>08758</PostalCd>
+                <PostalExtensionCd>1535</PostalExtensionCd>
+              </Address>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>Y</PrimaryAddressIn>
+            </Addresses>
+            <Telephones id="719">
+              <PartyUseCd>Business</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber id="723">
+                <UnparsedPhoneNr>985-623-1470</UnparsedPhoneNr>
+                <AreaCd>985</AreaCd>
+                <ExchangeId>623</ExchangeId>
+                <SubscriberLineId>1470</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>N</PrimaryPhoneIn>
+            </Telephones>
+            <Telephones id="729">
+              <PartyUseCd>Personal</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Cellular</TransmissionTechnologyCd>
+              <PhoneNumber id="733">
+                <UnparsedPhoneNr>985-623-1470</UnparsedPhoneNr>
+                <AreaCd>985</AreaCd>
+                <ExchangeId>623</ExchangeId>
+                <SubscriberLineId>1470</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>Y</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Household Member</PartyRoles>
+          <RelationshipCd>Relative</RelationshipCd>
+        </Party>
+      </ListedParties>
+      <ListedParties id="742">
+        <Party id="743">
+          <PartyId>hud1:414629</PartyId>
+          <Person id="745">
+            <PersonName id="746">
+              <UnparsedNameTx>Laura FRED</UnparsedNameTx>
+              <FirstGivenNm>Laura</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>FRED</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1944-01-01</BirthDt>
+            <MaritalStatusCd>Married</MaritalStatusCd>
+            <Addresses id="754">
+              <Address id="755">
+                <Line1Tx>5 BUCKLEY LN</Line1Tx>
+                <Line2Tx>STE # 123</Line2Tx>
+                <Line3Tx>OPP BOA</Line3Tx>
+                <Municipality id="759">
+                  <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality id="762">
+                  <MunicipalityNm>Mercer</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="765">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>08691</PostalCd>
+                <PostalExtensionCd>3004</PostalExtensionCd>
+              </Address>
+              <AddressUseCd>Mailing</AddressUseCd>
+              <PrimaryAddressIn>Y</PrimaryAddressIn>
+            </Addresses>
+            <EmailAddresses id="772">
+              <EmailAddress id="773">
+                <UnparsedEmailAddress>LAURAFRED@ABC.COM</UnparsedEmailAddress>
+              </EmailAddress>
+            </EmailAddresses>
+            <Telephones id="775">
+              <PartyUseCd>Personal</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber id="779">
+                <UnparsedPhoneNr>123-569-8740</UnparsedPhoneNr>
+                <AreaCd>123</AreaCd>
+                <ExchangeId>569</ExchangeId>
+                <SubscriberLineId>8740</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>Y</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Household Member</PartyRoles>
+          <RelationshipCd>Spouse</RelationshipCd>
+        </Party>
+      </ListedParties>
+      <PolicyLocation id="788">
+        <Address id="789">
+          <Line1Tx>5 BUCKLEY LN</Line1Tx>
+          <Line2Tx>STE # 213</Line2Tx>
+          <Line3Tx>OPP BOA</Line3Tx>
+          <Municipality id="793">
+            <MunicipalityNm>ROBBINSVILLE</MunicipalityNm>
+            <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality id="796">
+            <MunicipalityNm>Mercer</MunicipalityNm>
+            <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision id="799">
+            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>08691</PostalCd>
+          <PostalExtensionCd>3304</PostalExtensionCd>
+        </Address>
+      </PolicyLocation>
+      <NotableEvents id="804">
+        <EventNumber>QQ405088353</EventNumber>
+        <EventCategoryCd>CurrentWorkOrder</EventCategoryCd>
+        <EventTypeCd>Submission</EventTypeCd>
+        <EventStatusCd>Bound</EventStatusCd>
+        <EventCreationDt>2016-10-27T07:29:58.738-04:00</EventCreationDt>
+        <EventChangeEffectiveDt>2016-08-22T00:01:00-04:00</EventChangeEffectiveDt>
+        <EventCloseDt>2016-10-27T07:52:19.169-04:00</EventCloseDt>
+      </NotableEvents>
+      <RelatedPolicies id="812">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="814">
+          <PolicyNumber>D400050886</PolicyNumber>
+          <PolicyTypeCd>Homeowners</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <RelatedPolicies id="817">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="819">
+          <PolicyNumber>H400050936</PolicyNumber>
+          <PolicyTypeCd>Homeowners</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <RelatedPolicies id="822">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="824">
+          <PolicyNumber>H400052288</PolicyNumber>
+          <PolicyTypeCd>Homeowners</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <RelatedPolicies id="827">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="829">
+          <PolicyNumber>H400052304</PolicyNumber>
+          <PolicyTypeCd>Homeowners</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <RelatedPolicies id="832">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="834">
+          <PolicyNumber>H400052767</PolicyNumber>
+          <PolicyTypeCd>Homeowners</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <RelatedPolicies id="837">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="839">
+          <PolicyNumber>H400052866</PolicyNumber>
+          <PolicyTypeCd>Homeowners</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <RelatedPolicies id="842">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="844">
+          <PolicyNumber>H400053286</PolicyNumber>
+          <PolicyTypeCd>Homeowners</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <RelatedPolicies id="847">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="849">
+          <PolicyNumber>D400054003</PolicyNumber>
+          <PolicyTypeCd>Homeowners</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <PolicyMailingAddressIn>Y</PolicyMailingAddressIn>
+    </PolicyPeriod>
+  </Policy>
+  <CoverageStatus id="853">
+    <AsOfDt>2016-08-22T08:00:00-04:00</AsOfDt>
+    <StatusIn>Y</StatusIn>
+  </CoverageStatus>
+  <Lookups>
+    <Lookup>
+      <LookupType>Greeting</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>None</Key>
+          <Value />
+        </LookupItem>
+        <LookupItem>
+          <Key>Mr.</Key>
+          <Value>Mr.</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Mrs.</Key>
+          <Value>Mrs.</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Ms.</Key>
+          <Value>Ms.</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Dr.</Key>
+          <Value>Dr.</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>Attention</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Attn:</Key>
+          <Value>Attn:</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>c/o</Key>
+          <Value>c/o</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>ReItem</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Your Claim No:</Key>
+          <Value>Your Claim No:</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Your Policy No:</Key>
+          <Value>Your Policy No:</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Your Insured:</Key>
+          <Value>Your Insured:</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Case Caption:</Key>
+          <Value>Case Caption:</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Your Client:</Key>
+          <Value>Your Client:</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Your File No:</Key>
+          <Value>Your File No:</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Date(s) of Service:</Key>
+          <Value>Date(s) of Service:</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>TransExpense</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>$15/$450</Key>
+          <Value>15/450</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>$20/$600</Key>
+          <Value>20/600</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>$30/$1200</Key>
+          <Value>30/1200</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>$50/$2000</Key>
+          <Value>50/2000</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>NJMCompany</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>NJM Insurance Company</Key>
+          <Value>Manufacturers Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJM</Key>
+          <Value>Manufacturers Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>njm_ext</Key>
+          <Value>Manufacturers Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>njc_ext</Key>
+          <Value>Casualty Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJC</Key>
+          <Value>Casualty Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJM Re-Insurance Company</Key>
+          <Value>Re-Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJM Indemnity Insurance Company</Key>
+          <Value>Indemnity Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJRE</Key>
+          <Value>Re-Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>njre_ext</Key>
+          <Value>Re-Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>nji_ext</Key>
+          <Value>Indemnity Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJI</Key>
+          <Value>Indemnity Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJM Casualty Insurance Company</Key>
+          <Value>Casualty Insurance</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJM Claims Management Services LLC</Key>
+          <Value>NJM Claims Management Services LLC</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>ReSection</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Claim Petition Number</Key>
+          <Value>Claim Petition Number</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>State ID Number</Key>
+          <Value>State ID Number</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Docket Number</Key>
+          <Value>Docket Number</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Listing Date</Key>
+          <Value>Listing Date</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NY WCB Number</Key>
+          <Value>NY WCB Number</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Reference Number</Key>
+          <Value>Reference Number</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>GenderPronoun</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>He</Key>
+          <Value>He</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>She</Key>
+          <Value>She</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>GenderPronounLow</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>he</Key>
+          <Value>he</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>she</Key>
+          <Value>she</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>child</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>child</Key>
+          <Value>child</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>children</Key>
+          <Value>children</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>widow</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>widow</Key>
+          <Value>widow</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>widower</Key>
+          <Value>widower</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>himher</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>him</Key>
+          <Value>him</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>her</Key>
+          <Value>her</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>hisher</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>his</Key>
+          <Value>his</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>her</Key>
+          <Value>her</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>ampm</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>AM</Key>
+          <Value>AM</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PM</Key>
+          <Value>PM</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>attorneytype</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Plaintiff</Key>
+          <Value>Plaintiff</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Respondent</Key>
+          <Value>Respondent</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>contacttort</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Contact </Key>
+          <Value>Contact </Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Tort</Key>
+          <Value>Tort</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>copies</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>copy</Key>
+          <Value>copy</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>copies</Key>
+          <Value>copies</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>MedTreatment</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>NO MEDICAL TREATMENT</Key>
+          <Value>0</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>MINOR BY EMPLOYER</Key>
+          <Value>1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>MINOR CLINIC/HOSP</Key>
+          <Value>2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>EMERGENCY CARE</Key>
+          <Value>3</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HOSPITALIZED &gt; 24 HRS</Key>
+          <Value>4</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>FUTURE MAJOR MEDICAL/LOST TIME ANTICIPATED</Key>
+          <Value>5</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>InsCompany</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>NJM Insurance Company</Key>
+          <Value>NJM</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJM Re-Insurance Company</Key>
+          <Value>NJRe</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJM Indemnity Insurance Company</Key>
+          <Value>NJ Indemnity</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJM Casualty Insurance Company</Key>
+          <Value>NJ Casualty</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>NjmSite</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>West Trenton</Key>
+          <Value>West Trenton</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Hammonton</Key>
+          <Value>Hammonton</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Parsippany</Key>
+          <Value>Parsippany</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>LineOfBusiness</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Personal Lines Underwriting</Key>
+          <Value>Personal Lines Underwriting</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Commercial Lines Underwriting</Key>
+          <Value>Commercial Lines Underwriting</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>AttorneyOptions</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>You may wish</Key>
+          <Value>You may wish</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>You may have</Key>
+          <Value>You may have</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>DeductibleType</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Collision</Key>
+          <Value>Collision</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Comprehensive</Key>
+          <Value>Comprehensive</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>CommittalType</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Committal</Key>
+          <Value>Committal</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Non-Committal</Key>
+          <Value>Non-Committal</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>Drivable</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Yes</Key>
+          <Value>Yes</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>No</Key>
+          <Value>No</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>WorkStatus</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Modified Duty</Key>
+          <Value>Modified Duty</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Full Duty</Key>
+          <Value>Full Duty</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>TortOption</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Limited</Key>
+          <Value>Limited</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Full</Key>
+          <Value>Full</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>PurposeOfRequest</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>PIP IME</Key>
+          <Value>PIP IME</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PIP RE-EXAM</Key>
+          <Value>PIP RE-EXAM</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Expedited IME</Key>
+          <Value>Expedited IME</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>PaymentProcess</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Contractural Agreement</Key>
+          <Value>Contractural Agreement</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJ Fee Sched Procura Magnacare</Key>
+          <Value>NJ Fee Sched Procura Magnacare</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Horizon Casualty Contract</Key>
+          <Value>Horizon Casualty Contract</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Pre Negotiated Rate Agreement</Key>
+          <Value>Pre Negotiated Rate Agreement</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>CoverageForm</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>HO-1</Key>
+          <Value>HO-1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HO-2</Key>
+          <Value>HO-2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HO-3</Key>
+          <Value>HO-3</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HO-4</Key>
+          <Value>HO-4</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HO-6</Key>
+          <Value>HO-6</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>YesNo</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Yes</Key>
+          <Value>Yes</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>No</Key>
+          <Value>No</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>Gender</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Male</Key>
+          <Value>Male</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Female</Key>
+          <Value>Female</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>CopyingServiceFee</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>$5.00</Key>
+          <Value>$5.00</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>$10.00</Key>
+          <Value>$10.00</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>AppraisalType</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Appraisal Req-Heavy Duty Vehicles</Key>
+          <Value>APPRAISAL REQUEST FOR HEAVY DUTY VEHICLES</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Appraisal Req-Passenger Vehicle</Key>
+          <Value>APPRAISAL REQUEST FOR PASSENGER VEHICLE</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Appraisal Req-Other</Key>
+          <Value>Appraisal Req-Other</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Photos Only</Key>
+          <Value>PHOTOS ONLY REQUEST</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>RequestResponse</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Authorized</Key>
+          <Value>Authorized</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Denied</Key>
+          <Value>Denied</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Modified</Key>
+          <Value>Modified</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>BreakdownOfClaimExpenses</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Hosp Med Temp Perm</Key>
+          <Value>Hosp Med Temp Perm</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Hosp Med Perm</Key>
+          <Value>Hosp Med Perm</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Hosp Med Temp</Key>
+          <Value>Hosp Med Temp</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Anticipated Total</Key>
+          <Value>Anticipated Total</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Anticipated Total Med and Perm</Key>
+          <Value>Anticipated Total Med and Perm</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>No Claim Payments</Key>
+          <Value>No Claim Payments</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Hosp and Med</Key>
+          <Value>Hosp and Med</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Anticipated Total Death</Key>
+          <Value>Anticipated Total Death</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>DPRRecipient</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Provider</Key>
+          <Value>Provider</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Claimant</Key>
+          <Value>Claimant</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>NOYES</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>NO</Key>
+          <Value>NO</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>YES</Key>
+          <Value>YES</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>GCPrinters</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>HBIBC1</Key>
+          <Value>HBIBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HCLBC1</Key>
+          <Value>HCLBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HPIPBC1</Key>
+          <Value>HPIPBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HPIPBC2</Key>
+          <Value>HPIPBC2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HPIPTRN1</Key>
+          <Value>HPIPTRN1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PHOBC1</Key>
+          <Value>PHOBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PLEGBC1</Key>
+          <Value>PLEGBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PPDBC1</Key>
+          <Value>PPDBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PPDBC2</Key>
+          <Value>PPDBC2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PPIPBC1</Key>
+          <Value>PPIPBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PPIPBC2</Key>
+          <Value>PPIPBC2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TBIBC1</Key>
+          <Value>TBIBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TCLERBC1</Key>
+          <Value>TCLERBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TLEGBC1</Key>
+          <Value>TLEGBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TLEGBC2</Key>
+          <Value>TLEGBC2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TMSABPUBC1</Key>
+          <Value>TMSABPUBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TPDBC1</Key>
+          <Value>TPDBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TPDBC2</Key>
+          <Value>TPDBC2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TPDBC3</Key>
+          <Value>TPDBC3</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TPIPBC1</Key>
+          <Value>TPIPBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TPIPBC2</Key>
+          <Value>TPIPBC2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TSUBROBC1</Key>
+          <Value>TSUBROBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>TSUBROBC2</Key>
+          <Value>TSUBROBC2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>XPADMINBC1</Key>
+          <Value>XPADMINBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>XP4250</Key>
+          <Value>XP4250</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>GCSALVAG3</Key>
+          <Value>GCSALVAG3</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HAMFP2</Key>
+          <Value>HAMFP2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HOADJ</Key>
+          <Value>HOADJ</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>GCMFP2</Key>
+          <Value>GCMFP2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>GCMFP1</Key>
+          <Value>GCMFP1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>GCMFP3</Key>
+          <Value>GCMFP3</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Archive Only</Key>
+          <Value>Archive Only</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HAMFP</Key>
+          <Value>HAMFP</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>ACLB2</Key>
+          <Value>ACLB2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WMSAPROSVCSBC5</Key>
+          <Value>WMSAPROSVCSBC5</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_MSA_CLRMFP1</Key>
+          <Value>PRT_MSA_CLRMFP1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_WC_MFP2</Key>
+          <Value>PRT_WC_MFP2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_GC_HCLRMFP1</Key>
+          <Value>PRT_GC_HCLRMFP1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_GC_HCLRMFP2</Key>
+          <Value>PRT_GC_HCLRMFP2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_MSA_PMFP1</Key>
+          <Value>PRT_MSA_PMFP1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_MSA_PMFP2</Key>
+          <Value>PRT_MSA_PMFP2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_MSA_WCMFP</Key>
+          <Value>PRT_MSA_WCMFP</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>TypeOfReport</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>New</Key>
+          <Value>New</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Addendum</Key>
+          <Value>Addendum</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>TransportationExpense</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>$15</Key>
+          <Value>$15</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>$20</Key>
+          <Value>$20</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>$30</Key>
+          <Value>$30</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>$50</Key>
+          <Value>$50</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>ReasonUnresolved</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>First Notice</Key>
+          <Value>First Notice</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Liability Issue</Key>
+          <Value>Liability Issue</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Negotiations at Impasse</Key>
+          <Value>Negotiations at Impasse</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Statute of Limitations</Key>
+          <Value>Statute of Limitations</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Threshold</Key>
+          <Value>Threshold</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Uncooperative Claimant/Attorney</Key>
+          <Value>Uncooperative Claimant/Attorney</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Value Dispute</Key>
+          <Value>Value Dispute</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Other</Key>
+          <Value>Other</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>LossType</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Comprehensive</Key>
+          <Value>Comprehensive</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Collision</Key>
+          <Value>Collision</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Homeowner</Key>
+          <Value>Homeowner</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>UMBI</Key>
+          <Value>UMBI</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PIP</Key>
+          <Value>PIP</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Collision and PIP</Key>
+          <Value>Collision and PIP</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>bicyclist</Key>
+          <Value>bicyclist</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>pedestrian</Key>
+          <Value>pedestrian</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>PCPrinters</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>XP4250</Key>
+          <Value>XP4250</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_CM_MFP3</Key>
+          <Value>PRT_CM_MFP3</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>ACLB10</Key>
+          <Value>ACLB10</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>ACLB9</Key>
+          <Value>ACLB9</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>BCPrinters</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>CASHPRT1</Key>
+          <Value>CASHPRT1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>XP4250</Key>
+          <Value>XP4250</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>COLLECT3</Key>
+          <Value>COLLECT3</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>ACLB9</Key>
+          <Value>ACLB9</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_IT_ACLB2</Key>
+          <Value>PRT_IT_ACLB2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>ACLB10</Key>
+          <Value>ACLB10</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>ACLB9</Key>
+          <Value>ACLB9</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>DISBURS2</Key>
+          <Value>DISBURS2</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>PCReItem</LookupType>
+      <LookupItems />
+    </Lookup>
+    <Lookup>
+      <LookupType>BCReItem</LookupType>
+      <LookupItems />
+    </Lookup>
+    <Lookup>
+      <LookupType>WCDocSource</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Incoming</Key>
+          <Value>Incoming</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Internal</Key>
+          <Value>Internal</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Outgoing</Key>
+          <Value>Outgoing</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>WCCorrType</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Cancel-reinstate</Key>
+          <Value>Cancel-reinstate</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Engineering</Key>
+          <Value>Engineering</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Finance Agreement</Key>
+          <Value>Finance Agreement</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Ownership</Key>
+          <Value>Ownership</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Payroll Info</Key>
+          <Value>Payroll Info</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Rating Bureau</Key>
+          <Value>Rating Bureau</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>WCUCSFType</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Mid-term</Key>
+          <Value>Mid-term</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>New Bus</Key>
+          <Value>New Bus</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Renewal</Key>
+          <Value>Renewal</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>QuoteType</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>New Bus</Key>
+          <Value>New Bus</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Renewal</Key>
+          <Value>Renewal</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>WCUAuditSuppDoc</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Audit documentation</Key>
+          <Value>Audit documentation</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Audit worksheet</Key>
+          <Value>Audit worksheet</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Final Audit</Key>
+          <Value>Final Audit</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Mail Audit</Key>
+          <Value>Mail Audit</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Payroll Report form</Key>
+          <Value>Payroll Report form</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Payroll Report Summary</Key>
+          <Value>Payroll Report Summary</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Reaudit Declined</Key>
+          <Value>Reaudit Declined</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Reaudit</Key>
+          <Value>Reaudit</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Bureau Audit</Key>
+          <Value>Bureau Audit</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>CMCollType</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Agreement</Key>
+          <Value>Agreement</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Bankruptcy</Key>
+          <Value>Bankruptcy</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Miscellaneous</Key>
+          <Value>Miscellaneous</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>DocumentsReferenced</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>AMA</Key>
+          <Value>AMA</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>AAOS</Key>
+          <Value>AAOS</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJ Fee Schedule guidelines</Key>
+          <Value>NJ Fee Schedule guidelines</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Coding Companion</Key>
+          <Value>Coding Companion</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Physician’s Fee Reference</Key>
+          <Value>Physician’s Fee Reference</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>RedBook PFR</Key>
+          <Value>RedBook PFR</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>DenialType</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Previously Covered</Key>
+          <Value>Previously Covered</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>No Coverage</Key>
+          <Value>No Coverage</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>No Coverage due to Occupation</Key>
+          <Value>No Coverage due to Occupation</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>TowingType</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>New Jersey Turnpike</Key>
+          <Value>New Jersey Turnpike</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Garden State Pkwy</Key>
+          <Value>Garden State Pkwy</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>LetterToState</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>NJ Reg Ltr</Key>
+          <Value>NJ</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PA Reg Ltr</Key>
+          <Value>PA</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>NJ HO Reg Ltr</Key>
+          <Value>NJ</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PA HO Reg Ltr</Key>
+          <Value>PA</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>PCPAPrinters</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Parsippany 1</Key>
+          <Value>PPLBC3</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>ACLB9</Key>
+          <Value>ACLB9</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_IT_ACLB2</Key>
+          <Value>PRT_IT_ACLB2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Off Call Processing</Key>
+          <Value>PL_ONLINEAUTOAPP</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>POLAUDIT2</Key>
+          <Value>POLAUDIT2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WPLBC1</Key>
+          <Value>WPLBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WPLBC2</Key>
+          <Value>WPLBC2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>West Trenton 1</Key>
+          <Value>PL_CUS2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_PL_IN11</Key>
+          <Value>PRT_PL_IN11</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Hammonton 1</Key>
+          <Value>PL_HA1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Hammonton 2</Key>
+          <Value>PL_HA2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Hammonton 3</Key>
+          <Value>PL_HA3</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_PL_PAIPREIN3</Key>
+          <Value>PRT_PL_PAIPREIN3</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Auto Underwriting 1</Key>
+          <Value>PRT_PL_IN12</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>XP4250</Key>
+          <Value>XP4250</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PL_PLIN12</Key>
+          <Value>PL_PLIN12</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PAIPCLRMFP</Key>
+          <Value>PAIPCLRMFP</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_PL_P004</Key>
+          <Value>PRT_PL_P004</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>IDPrinters</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Hammonton ID</Key>
+          <Value>HPLBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Parsippany ID</Key>
+          <Value>PPLBC1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Parsippany 2</Key>
+          <Value>PPLBC2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>West Trenton ID</Key>
+          <Value>WPLBC3</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>PLLineOfBusiness</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>Automobile</Key>
+          <Value>Automobile</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Homeowners</Key>
+          <Value>Homeowners</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Dwelling</Key>
+          <Value>Dwelling</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Umbrella</Key>
+          <Value>Umbrella</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>CSFEffective</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>New Policy</Key>
+          <Value>N</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Mid-Term Change</Key>
+          <Value>M</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Renewal Change</Key>
+          <Value>R</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>CSFCoverage</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>NJM</Key>
+          <Value>NJM</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Health Insurance</Key>
+          <Value>Health insurance primary</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>Limitation on Lawsuit</Key>
+          <Value>Limitation</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>No Limitation on Lawsuit</Key>
+          <Value>NoLimitation</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+    <Lookup>
+      <LookupType>WCCPrinters</LookupType>
+      <LookupItems>
+        <LookupItem>
+          <Key>WCC ARCHIVE ONLY</Key>
+          <Value>WCC ARCHIVE ONLY</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>HADJBC1-WCC</Key>
+          <Value>HADJBC1-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PADJBC2-WCC</Key>
+          <Value>PADJBC2-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PMSAMEDMGMTBC3-WCC</Key>
+          <Value>PMSAMEDMGMTBC3-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WADJBC1-WCC</Key>
+          <Value>WADJBC1-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WADJBC3-WCC</Key>
+          <Value>WADJBC3-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WAWARDSBC1-WCC</Key>
+          <Value>WAWARDSBC1-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WCC PRINT Engine Room 6-(XP4250)</Key>
+          <Value>WCC PRINT Engine Room 6-(XP4250)</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WCOLORBC1-WCC</Key>
+          <Value>WCOLORBC1-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WINFOSVCSBC7-WCC</Key>
+          <Value>WINFOSVCSBC7-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WLEGALBC10-WCC</Key>
+          <Value>WLEGALBC10-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WLEGALBC8-WCC</Key>
+          <Value>WLEGALBC8-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WLEGALBC9-WCC</Key>
+          <Value>WLEGALBC9-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WMSABPUBC1-WCC</Key>
+          <Value>WMSABPUBC1-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WMSAMEDBILLPROCBC3-WCC</Key>
+          <Value>WMSAMEDBILLPROCBC3-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WMSAPROSVCSBC1-WCC</Key>
+          <Value>WMSAPROSVCSBC1-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WMSAPROSVCSBC5-WCC</Key>
+          <Value>WMSAPROSVCSBC5-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>WSUBROBC4-WCC</Key>
+          <Value>WSUBROBC4-WCC</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_WC_MFP2</Key>
+          <Value>PRT_WC_MFP2</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_MSA_WCMFP</Key>
+          <Value>PRT_MSA_WCMFP</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_WC_MFP1</Key>
+          <Value>PRT_WC_MFP1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_WC_CLRMFP1</Key>
+          <Value>PRT_WC_CLRMFP1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_WC_PMFP1</Key>
+          <Value>PRT_WC_PMFP1</Value>
+        </LookupItem>
+        <LookupItem>
+          <Key>PRT_WC_PMFP2</Key>
+          <Value>PRT_WC_PMFP2</Value>
+        </LookupItem>
+      </LookupItems>
+    </Lookup>
+  </Lookups>
+  <InboundDocumentTypeCode>001034</InboundDocumentTypeCode>
+</CorrespondenceDataResponse>

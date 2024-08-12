@@ -1,0 +1,21 @@
+﻿<div class="panel panel-primary" ng-controller="WccBoardWNumDropdownController">
+    <div class="panel-heading">Board W</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Board W number dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>Board W Number:</label></div>
+                <div class="col-md-8">
+                    <select class="form-control" ng-model="BoardWNumber" ng-options="item.CaseNumber for item in numberData | orderBy:'CaseNumber'">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="numberData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

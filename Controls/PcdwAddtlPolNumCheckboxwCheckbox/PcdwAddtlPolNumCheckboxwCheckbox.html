@@ -1,0 +1,33 @@
+﻿<div class="panel panel-primary" ng-controller="PcdwAddtlPolNumCheckboxwCheckboxController">
+    <div class="panel-heading">Additional Policy Number(s)</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <input ng-click="clearAllSelectedData()" 
+                           ng-model="isPolicySelected" 
+                           type="checkbox" 
+                           name="PolicyCheckbox" 
+                           value="" 
+                           id="PolicyCheckboxID" />
+                    <label>Include Policy Number(s)</label>
+                </div>
+                <div class="col-md-8 row">
+                    <!--Additional policy number checkbox list-->
+                    <div ng-repeat="item in Policy track by $index" 
+                         class="col-md-12">
+                        <input ng-model="item.checked" 
+                               ng-change="selectPolicy(item)" 
+                               type="checkbox" 
+                               ng-disabled="!isPolicySelected" 
+                               name="PolicyCheckboxLst{{$index}}" 
+                               id="PolicyLstId{{$index}}"
+                               value="" />
+                        <span ng-bind="item.Policy.PolicyNumber" ng-class="(isPolicySelected)?'':'disabled-class'" ></span>
+                    </div>
+                    <span class="alert-danger" ng-if="Policy.length === 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

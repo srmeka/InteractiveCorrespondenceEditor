@@ -1,0 +1,50 @@
+﻿<div class="panel panel-primary" ng-controller="FaxwCheckboxController" ng-show="showFaxControl">
+    <div class="panel-heading">Fax Number / Recipient Name</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <div class="row">
+                <div class="col-md-4">
+                    <!--Checkbox to enable control-->
+                    <input ng-click="clearAllSelectedData()" ng-model="SelectedFax" type="checkbox" id="FaxCheckboxId" name="FaxCheckbox" />
+                    <label>Send Output to Fax</label>
+                </div>
+
+                <div class="col-md-8">
+                    <label ng-class="(SelectedFax)?'':'disabled-class'">* Enter Fax Numbers (up to 3)</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+
+                <div class="col-md-4">
+                    <label style="margin-bottom: 5px" ng-class="(SelectedFax)?'':'disabled-class'">
+                        Fax (i.e. 1xxxxxxxxxx):
+                    </label>
+                    <input class="form-control" style="margin-bottom: 5px" ng-model="FaxNum1" type="text" ng-disabled="!SelectedFax" name="FaxNum1Input" id="FaxNum1InputId" ng-required="SelectedFax" ng-change="FaxNum1=numbersOnly(FaxNum1)" maxlength="11" />
+                    <input class="form-control" style="margin-bottom: 5px" ng-model="FaxNum2" type="text" ng-disabled="!SelectedFax" name="FaxNum2Input" id="FaxNum2InputId" ng-change="FaxNum2=numbersOnly(FaxNum2)" maxlength="11" />
+                    <input class="form-control" style="margin-bottom: 5px" ng-model="FaxNum3" type="text" ng-disabled="!SelectedFax" name="FaxNum3Input" id="FaxNum3InputId" ng-change="FaxNum3=numbersOnly(FaxNum3)" maxlength="11" />
+                </div>
+                <div class="col-md-4">
+                    <label ng-class="(SelectedFax)?'':'disabled-class'">
+                        Name (i.e. Jane Doe Jr):
+                    </label>
+                    <input class="form-control" style="margin-bottom: 5px" ng-model="RecipientName1" type="text" ng-disabled="!SelectedFax" name="RecipientName1Input" id="RecipientName1InputId" ng-required="SelectedFax && FaxNum1" ng-change="RecipientName1=removeSpecialChars(RecipientName1)" />
+                    <input class="form-control" style="margin-bottom: 5px" ng-model="RecipientName2" type="text" ng-disabled="!SelectedFax" name="RecipientName2Input" id="RecipientName2InputId" ng-required="SelectedFax && FaxNum2" ng-change="RecipientName2=removeSpecialChars(RecipientName2)" />
+                    <input class="form-control" style="margin-bottom: 5px" ng-model="RecipientName3" type="text" ng-disabled="!SelectedFax" name="RecipientName3Input" id="RecipientName3InputId" ng-required="SelectedFax && FaxNum3" ng-change="RecipientName3=removeSpecialChars(RecipientName3)" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <label ng-class="(SelectedFax)?'':'disabled-class'">* Fax Subject:</label>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="form-control" ng-disabled="!SelectedFax" ng-init="faxSubject = GetFaxSubject()" ng-model="faxSubject" ng-required="SelectedFax" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

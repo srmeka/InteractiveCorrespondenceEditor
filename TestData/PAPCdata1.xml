@@ -1,0 +1,1342 @@
+﻿<CorrespondenceDataResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Header>
+    <CorrelationContext>
+      <CorrelationId>F3573193XY</CorrelationId>
+    </CorrelationContext>
+    <ErrorIn>false</ErrorIn>
+  </Header>
+  <Policy id="1130">
+    <PolicyNumber>F3573193</PolicyNumber>
+    <Account id="11">
+      <AccountNo>AA41537XXXX</AccountNo>
+    </Account>
+    <PolicyPeriod id="1129">
+      <QuoteNumber>QQ40156XXXX</QuoteNumber>
+      <InceptionDt>2015-04-28T04:01:00Z</InceptionDt>
+      <StartDt>2014-04-28T04:01:00Z</StartDt>
+      <EndDt>2016-04-28T04:01:00Z</EndDt>
+      <RenewedIn>false</RenewedIn>
+      <RenewalDt>2016-04-28T04:01:00Z</RenewalDt>
+      <ChangeEffectiveDt>2015-04-28T04:01:00Z</ChangeEffectiveDt>
+      <UnderwritingCompany id="12">
+        <OrganizationNm>New Jersey Manufacturers Insurance Co</OrganizationNm>
+        <OrganizationNameCd>NJM</OrganizationNameCd>
+      </UnderwritingCompany>
+      <StatusCd>In Force</StatusCd>
+      <BaseStateCd>PA</BaseStateCd>
+      <DividendYr>2014</DividendYr>
+      <TotalDividendAm>0</TotalDividendAm>
+      <PolicyLines id="1108">
+        <PersonalAutoLine id="1107">
+          <VehicleCoverageDetails id="120">
+            <Vehicle id="13">
+              <VehicleId>2</VehicleId>
+              <ManufacturerVehicleIdentificationNr>5TDYK3DC0DS282033</ManufacturerVehicleIdentificationNr>
+              <ModelYearNr>2013</ModelYearNr>
+              <VehicleTradeNm>TOYOTA</VehicleTradeNm>
+              <ModelNm>SIENNA XLE/SIENNA XLE LIMITED</ModelNm>
+              <BodyCategoryCd>Wagon Or Minivan</BodyCategoryCd>
+              <VehicleTypeCd>Private Passenger</VehicleTypeCd>
+              <CylinderNumberCd>6</CylinderNumberCd>
+            </Vehicle>
+            <AssociatedParties id="16">
+              <PartyId>3</PartyId>
+              <Person id="15">
+                <PersonName>
+                  <UnparsedNameTx>HENRY J ELLIOT</UnparsedNameTx>
+                  <FirstGivenNm>HENRY</FirstGivenNm>
+                  <SecondGivenNm>J</SecondGivenNm>
+                  <FamilyNm>ELLIOT</FamilyNm>
+                </PersonName>
+                <SecondGivenNameInitial>J</SecondGivenNameInitial>
+                <BirthDt>1991-05-17</BirthDt>
+                <GenderCd>M</GenderCd>
+                <MaritalStatusCd>M</MaritalStatusCd>
+                <FirstLicensedMonthAndYr>012011</FirstLicensedMonthAndYr>
+                <VehicleDriverLicense>
+                  <IssuingAdministrativeCountrySubdivisionCd>New Jersey</IssuingAdministrativeCountrySubdivisionCd>
+                  <LicenseId>L05034377753904</LicenseId>
+                  <LicenseStatusCd>Active</LicenseStatusCd>
+                </VehicleDriverLicense>
+                <Addresses id="14">
+                  <Address>
+                    <Line1Tx>784 E 19TH ST</Line1Tx>
+                    <Line2Tx>APT 3</Line2Tx>
+                    <Municipality>
+                      <MunicipalityNm>PATERSON</MunicipalityNm>
+                      <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                    </Municipality>
+                    <Municipality>
+                      <MunicipalityNm>Passaic</MunicipalityNm>
+                      <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                    </Municipality>
+                    <CountrySubdivision>
+                      <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                      <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                    </CountrySubdivision>
+                    <PostalCd>07501</PostalCd>
+                    <PostalExtensionCd>2426</PostalExtensionCd>
+                  </Address>
+                  <TerritoryCd>151</TerritoryCd>
+                  <AddressUseCd>Home</AddressUseCd>
+                  <PrimaryAddressIn>true</PrimaryAddressIn>
+                </Addresses>
+              </Person>
+              <PartyTypeCd>Person</PartyTypeCd>
+              <PartyRoles>Principal Driver</PartyRoles>
+              <PartyRoles>Vehicle Driver</PartyRoles>
+            </AssociatedParties>
+            <Coverages id="17">
+              <CoverageTypeCd>Collision</CoverageTypeCd>
+              <CoverageParameterTypeCd>Collision Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$750</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>750</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>689.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="18">
+              <CoverageTypeCd>Roadside Assistance</CoverageTypeCd>
+              <CoverageParameterTypeCd>Roadside Assistance Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$75</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>75</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm />
+            </Coverages>
+            <Coverages id="19">
+              <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+              <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$750</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>750</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>211.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="110">
+              <CoverageTypeCd>Transportation Expense</CoverageTypeCd>
+              <CoverageParameterTypeCd>Transportation Expense Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$30/$1200</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>30/1200</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>8.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="111">
+              <CoverageTypeCd>MedicalPayment</CoverageTypeCd>
+              <CoverageParameterTypeCd>Medical Payment Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>1.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="112">
+              <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Un Insured Under Insured Motorist Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>119.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="113">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Medical Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="114">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Non Medical Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="115">
+              <CoverageTypeCd>Liability</CoverageTypeCd>
+              <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>729.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="116">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>Regular PIP Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>371.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <VehicleUsage>
+              <VehicleUsageCd>Commuting</VehicleUsageCd>
+            </VehicleUsage>
+            <GarageLocation>
+              <Line1Tx>784 E 19TH ST</Line1Tx>
+              <Line2Tx>APT 3</Line2Tx>
+              <Municipality>
+                <MunicipalityNm>PATERSON</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision>
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>07501-2426</PostalCd>
+            </GarageLocation>
+            <JointOwnershipIn>false</JointOwnershipIn>
+            <OwnershipTypeCd>Owned</OwnershipTypeCd>
+            <VehicleDiscounts id="117">
+              <DiscountReasonCd>AntiLockBrakeDiscount</DiscountReasonCd>
+              <DiscountPc>0.05</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts id="118">
+              <DiscountReasonCd>AntiTheftDiscount</DiscountReasonCd>
+              <DiscountPc>0.15</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts id="119">
+              <DiscountReasonCd>PassiveRestraintDiscount</DiscountReasonCd>
+              <DiscountPc>0.3</DiscountPc>
+            </VehicleDiscounts>
+            <TotalPremiumAm>2128</TotalPremiumAm>
+          </VehicleCoverageDetails>
+          <VehicleCoverageDetails id="140">
+            <Vehicle id="121">
+              <VehicleId>3</VehicleId>
+              <ManufacturerVehicleIdentificationNr>1G4GC5GD3BF130197</ManufacturerVehicleIdentificationNr>
+              <ModelYearNr>2011</ModelYearNr>
+              <VehicleTradeNm>BUICK</VehicleTradeNm>
+              <ModelNm>LACROSSE CXL</ModelNm>
+              <BodyCategoryCd>Trailer</BodyCategoryCd>
+              <VehicleTypeCd>Private Passenger</VehicleTypeCd>
+              <CylinderNumberCd>6</CylinderNumberCd>
+            </Vehicle>
+            <AssociatedParties id="126">
+              <PartyId>1</PartyId>
+              <Person id="125">
+                <PersonName>
+                  <UnparsedNameTx>HENRY J ELLIOT</UnparsedNameTx>
+                  <FirstGivenNm>HENRY</FirstGivenNm>
+                  <SecondGivenNm>J</SecondGivenNm>
+                  <FamilyNm>ELLIOT</FamilyNm>
+                </PersonName>
+                <SecondGivenNameInitial>J</SecondGivenNameInitial>
+                <BirthDt>1977-11-12</BirthDt>
+                <GenderCd>M</GenderCd>
+                <MaritalStatusCd>M</MaritalStatusCd>
+                <FirstLicensedMonthAndYr>021997</FirstLicensedMonthAndYr>
+                <OccupationDescriptionTx>QA</OccupationDescriptionTx>
+                <VehicleDriverLicense>
+                  <IssuingAdministrativeCountrySubdivisionCd>New Jersey</IssuingAdministrativeCountrySubdivisionCd>
+                  <LicenseId>C07236170062354</LicenseId>
+                  <LicenseStatusCd>Active</LicenseStatusCd>
+                </VehicleDriverLicense>
+                <Addresses id="122">
+                  <Address>
+                    <Line1Tx>784 E 19TH ST</Line1Tx>
+                    <Line2Tx>APT 3</Line2Tx>
+                    <Municipality>
+                      <MunicipalityNm>PATERSON</MunicipalityNm>
+                      <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                    </Municipality>
+                    <Municipality>
+                      <MunicipalityNm>Passaic</MunicipalityNm>
+                      <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                    </Municipality>
+                    <CountrySubdivision>
+                      <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                      <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                    </CountrySubdivision>
+                    <PostalCd>07501</PostalCd>
+                    <PostalExtensionCd>2426</PostalExtensionCd>
+                  </Address>
+                  <TerritoryCd>151</TerritoryCd>
+                  <AddressUseCd>Home</AddressUseCd>
+                  <PrimaryAddressIn>true</PrimaryAddressIn>
+                </Addresses>
+                <Telephones id="123">
+                  <PartyUseCd>Business</PartyUseCd>
+                  <TransmissionContentCd>Voice</TransmissionContentCd>
+                  <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                  <PhoneNumber>
+                    <UnparsedPhoneNr>782-364-5745 x763565</UnparsedPhoneNr>
+                    <AreaCd>782</AreaCd>
+                    <ExchangeId>364</ExchangeId>
+                    <SubscriberLineId>5745</SubscriberLineId>
+                    <ExtensionId>763565</ExtensionId>
+                  </PhoneNumber>
+                  <PrimaryPhoneIn>true</PrimaryPhoneIn>
+                </Telephones>
+                <OfficialIdentifications id="124">
+                  <IdentificationTypeCd>NJBIA MemeberShip Number</IdentificationTypeCd>
+                  <IdentificationCd>51111</IdentificationCd>
+                  <IssuingCountrySubdivisionCd>NJ</IssuingCountrySubdivisionCd>
+                </OfficialIdentifications>
+              </Person>
+              <PartyTypeCd>Person</PartyTypeCd>
+              <PartyRoles>Principal Driver</PartyRoles>
+              <PartyRoles>Vehicle Driver</PartyRoles>
+            </AssociatedParties>
+            <Coverages id="127">
+              <CoverageTypeCd>Roadside Assistance</CoverageTypeCd>
+              <CoverageParameterTypeCd>Roadside Assistance Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$75</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>75</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm />
+            </Coverages>
+            <Coverages id="128">
+              <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+              <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$750</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>750</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>134.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="129">
+              <CoverageTypeCd>Transportation Expense</CoverageTypeCd>
+              <CoverageParameterTypeCd>Transportation Expense Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$30/$1200</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>30/1200</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>8.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="130">
+              <CoverageTypeCd>Collision</CoverageTypeCd>
+              <CoverageParameterTypeCd>Collision Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$750</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>750</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>396.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="131">
+              <CoverageTypeCd>Liability</CoverageTypeCd>
+              <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>685.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="132">
+              <CoverageTypeCd>MedicalPayment</CoverageTypeCd>
+              <CoverageParameterTypeCd>Medical Payment Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>1.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="133">
+              <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Un Insured Under Insured Motorist Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>119.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="134">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>Regular PIP Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>382.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="135">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Medical Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="136">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Non Medical Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <VehicleUsage>
+              <VehicleUsageCd>Commuting</VehicleUsageCd>
+            </VehicleUsage>
+            <GarageLocation>
+              <Line1Tx>784 E 19TH ST</Line1Tx>
+              <Line2Tx>APT 3</Line2Tx>
+              <Municipality>
+                <MunicipalityNm>PATERSON</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision>
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>07501-2426</PostalCd>
+            </GarageLocation>
+            <JointOwnershipIn>false</JointOwnershipIn>
+            <OwnershipTypeCd>Owned</OwnershipTypeCd>
+            <VehicleDiscounts id="137">
+              <DiscountReasonCd>AntiLockBrakeDiscount</DiscountReasonCd>
+              <DiscountPc>0.05</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts id="138">
+              <DiscountReasonCd>AntiTheftDiscount</DiscountReasonCd>
+              <DiscountPc>0.15</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts id="139">
+              <DiscountReasonCd>PassiveRestraintDiscount</DiscountReasonCd>
+              <DiscountPc>0.3</DiscountPc>
+            </VehicleDiscounts>
+            <TotalPremiumAm>1725</TotalPremiumAm>
+          </VehicleCoverageDetails>
+          <VehicleCoverageDetails id="159">
+            <Vehicle id="141">
+              <VehicleId>1</VehicleId>
+              <ManufacturerVehicleIdentificationNr>1ZVHT80N185111060</ManufacturerVehicleIdentificationNr>
+              <ModelYearNr>2008</ModelYearNr>
+              <VehicleTradeNm>FORD </VehicleTradeNm>
+              <ModelNm>MUSTANG</ModelNm>
+              <BodyCategoryCd>Trailer</BodyCategoryCd>
+              <VehicleTypeCd>Private Passenger</VehicleTypeCd>
+              <CylinderNumberCd>6</CylinderNumberCd>
+            </Vehicle>
+            <AssociatedParties id="145">
+              <PartyId>2</PartyId>
+              <Person id="144">
+                <PersonName>
+                  <UnparsedNameTx>WAYNE CADWUNS</UnparsedNameTx>
+                  <FirstGivenNm>WAYNE</FirstGivenNm>
+                  <SecondGivenNm>T</SecondGivenNm>
+                  <FamilyNm>CADWUNS</FamilyNm>
+                </PersonName>
+                <SecondGivenNameInitial>T</SecondGivenNameInitial>
+                <BirthDt>1985-03-19</BirthDt>
+                <GenderCd>M</GenderCd>
+                <MaritalStatusCd>M</MaritalStatusCd>
+                <FirstLicensedMonthAndYr>012005</FirstLicensedMonthAndYr>
+                <OccupationDescriptionTx>QA2</OccupationDescriptionTx>
+                <VehicleDriverLicense>
+                  <IssuingAdministrativeCountrySubdivisionCd>New Jersey</IssuingAdministrativeCountrySubdivisionCd>
+                  <LicenseId>P59345977925997</LicenseId>
+                  <LicenseStatusCd>Active</LicenseStatusCd>
+                </VehicleDriverLicense>
+                <Addresses id="142">
+                  <Address>
+                    <Line1Tx>784 E 19TH ST</Line1Tx>
+                    <Line2Tx>APT 3</Line2Tx>
+                    <Municipality>
+                      <MunicipalityNm>PATERSON</MunicipalityNm>
+                      <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                    </Municipality>
+                    <Municipality>
+                      <MunicipalityNm>Passaic</MunicipalityNm>
+                      <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                    </Municipality>
+                    <CountrySubdivision>
+                      <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                      <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                    </CountrySubdivision>
+                    <PostalCd>07501</PostalCd>
+                    <PostalExtensionCd>2426</PostalExtensionCd>
+                  </Address>
+                  <TerritoryCd>151</TerritoryCd>
+                  <AddressUseCd>Home</AddressUseCd>
+                  <PrimaryAddressIn>true</PrimaryAddressIn>
+                </Addresses>
+                <Telephones id="143">
+                  <PartyUseCd>Business</PartyUseCd>
+                  <TransmissionContentCd>Voice</TransmissionContentCd>
+                  <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                  <PhoneNumber>
+                    <UnparsedPhoneNr>785-736-7463 x746734</UnparsedPhoneNr>
+                    <AreaCd>785</AreaCd>
+                    <ExchangeId>736</ExchangeId>
+                    <SubscriberLineId>7463</SubscriberLineId>
+                    <ExtensionId>746734</ExtensionId>
+                  </PhoneNumber>
+                  <PrimaryPhoneIn>true</PrimaryPhoneIn>
+                </Telephones>
+              </Person>
+              <PartyTypeCd>Person</PartyTypeCd>
+              <PartyRoles>Principal Driver</PartyRoles>
+              <PartyRoles>Vehicle Driver</PartyRoles>
+            </AssociatedParties>
+            <Coverages id="146">
+              <CoverageTypeCd>Roadside Assistance</CoverageTypeCd>
+              <CoverageParameterTypeCd>Roadside Assistance Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$75</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>75</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm />
+            </Coverages>
+            <Coverages id="147">
+              <CoverageTypeCd>Transportation Expense</CoverageTypeCd>
+              <CoverageParameterTypeCd>Transportation Expense Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$30/$1200</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>30/1200</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>8.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="148">
+              <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+              <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$750</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>750</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>153.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="149">
+              <CoverageTypeCd>Collision</CoverageTypeCd>
+              <CoverageParameterTypeCd>Collision Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$750</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>750</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>347.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="150">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Medical Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="151">
+              <CoverageTypeCd>Liability</CoverageTypeCd>
+              <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>627.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="152">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Non Medical Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="153">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>Regular PIP Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>294.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="154">
+              <CoverageTypeCd>MedicalPayment</CoverageTypeCd>
+              <CoverageParameterTypeCd>Medical Payment Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>1.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="155">
+              <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Un Insured Under Insured Motorist Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>119.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <VehicleUsage>
+              <VehicleUsageCd>Commuting</VehicleUsageCd>
+            </VehicleUsage>
+            <GarageLocation>
+              <Line1Tx>784 E 19TH ST</Line1Tx>
+              <Line2Tx>APT 3</Line2Tx>
+              <Municipality>
+                <MunicipalityNm>PATERSON</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision>
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>07501-2426</PostalCd>
+            </GarageLocation>
+            <JointOwnershipIn>false</JointOwnershipIn>
+            <OwnershipTypeCd>Owned</OwnershipTypeCd>
+            <VehicleDiscounts id="156">
+              <DiscountReasonCd>AntiLockBrakeDiscount</DiscountReasonCd>
+              <DiscountPc>0</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts id="157">
+              <DiscountReasonCd>AntiTheftDiscount</DiscountReasonCd>
+              <DiscountPc>0.15</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts id="158">
+              <DiscountReasonCd>PassiveRestraintDiscount</DiscountReasonCd>
+              <DiscountPc>0.3</DiscountPc>
+            </VehicleDiscounts>
+            <TotalPremiumAm>1549</TotalPremiumAm>
+          </VehicleCoverageDetails>
+          <VehicleCoverageDetails id="174">
+            <Vehicle id="160">
+              <VehicleId>4</VehicleId>
+              <ManufacturerVehicleIdentificationNr>JS2YB5A34A6302205</ManufacturerVehicleIdentificationNr>
+              <ModelYearNr>2010</ModelYearNr>
+              <VehicleTradeNm>SUZUKI</VehicleTradeNm>
+              <ModelNm>SX4 AWD</ModelNm>
+              <BodyCategoryCd>4 Door</BodyCategoryCd>
+              <VehicleTypeCd>Private Passenger</VehicleTypeCd>
+              <CylinderNumberCd>4</CylinderNumberCd>
+            </Vehicle>
+            <Coverages id="161">
+              <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+              <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$750</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>750</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>112.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="162">
+              <CoverageTypeCd>Collision</CoverageTypeCd>
+              <CoverageParameterTypeCd>Collision Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$750</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>750</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>386.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="163">
+              <CoverageTypeCd>Roadside Assistance</CoverageTypeCd>
+              <CoverageParameterTypeCd>Roadside Assistance Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$75</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>75</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm />
+            </Coverages>
+            <Coverages id="164">
+              <CoverageTypeCd>Transportation Expense</CoverageTypeCd>
+              <CoverageParameterTypeCd>Transportation Expense Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$30/$1200</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>30/1200</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>8.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="165">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Medical Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="166">
+              <CoverageTypeCd>MedicalPayment</CoverageTypeCd>
+              <CoverageParameterTypeCd>Medical Payment Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>1.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="167">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Non Medical Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="168">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>Regular PIP Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>319.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="169">
+              <CoverageTypeCd>Liability</CoverageTypeCd>
+              <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>599.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="170">
+              <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Un Insured Under Insured Motorist Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>119.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <VehicleUsage>
+              <VehicleUsageCd>Commuting</VehicleUsageCd>
+            </VehicleUsage>
+            <GarageLocation>
+              <Line1Tx>784 E 19TH ST</Line1Tx>
+              <Line2Tx>APT 3</Line2Tx>
+              <Municipality>
+                <MunicipalityNm>PATERSON</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision>
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>07501-2426</PostalCd>
+            </GarageLocation>
+            <JointOwnershipIn>false</JointOwnershipIn>
+            <OwnershipTypeCd>Owned</OwnershipTypeCd>
+            <VehicleDiscounts id="171">
+              <DiscountReasonCd>AntiLockBrakeDiscount</DiscountReasonCd>
+              <DiscountPc>0.05</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts id="172">
+              <DiscountReasonCd>AntiTheftDiscount</DiscountReasonCd>
+              <DiscountPc>0.15</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts id="173">
+              <DiscountReasonCd>PassiveRestraintDiscount</DiscountReasonCd>
+              <DiscountPc>0.3</DiscountPc>
+            </VehicleDiscounts>
+            <TotalPremiumAm>1544</TotalPremiumAm>
+          </VehicleCoverageDetails>
+          <VehicleCoverageDetails id="189">
+            <Vehicle id="175">
+              <VehicleId>5</VehicleId>
+              <ManufacturerVehicleIdentificationNr>1G1AL55F677132115</ManufacturerVehicleIdentificationNr>
+              <ModelYearNr>2007</ModelYearNr>
+              <VehicleTradeNm>CHEVROLET</VehicleTradeNm>
+              <ModelNm>COBALT LT</ModelNm>
+              <BodyCategoryCd>4 Door</BodyCategoryCd>
+              <VehicleTypeCd>Private Passenger</VehicleTypeCd>
+              <CylinderNumberCd>4</CylinderNumberCd>
+            </Vehicle>
+            <Coverages id="176">
+              <CoverageTypeCd>Transportation Expense</CoverageTypeCd>
+              <CoverageParameterTypeCd>Transportation Expense Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$30/$1200</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>30/1200</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>8.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="177">
+              <CoverageTypeCd>Collision</CoverageTypeCd>
+              <CoverageParameterTypeCd>Collision Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$750</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>750</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>366.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="178">
+              <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+              <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$750</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>750</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>102.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="179">
+              <CoverageTypeCd>Roadside Assistance</CoverageTypeCd>
+              <CoverageParameterTypeCd>Roadside Assistance Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$75</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>75</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm />
+            </Coverages>
+            <Coverages id="180">
+              <CoverageTypeCd>Liability</CoverageTypeCd>
+              <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>684.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="181">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Non Medical Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="182">
+              <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Un Insured Under Insured Motorist Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>119.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="183">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>Regular PIP Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>352.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="184">
+              <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+              <CoverageParameterTypeCd>PIP Medical Coverage</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages id="185">
+              <CoverageTypeCd>MedicalPayment</CoverageTypeCd>
+              <CoverageParameterTypeCd>Medical Payment Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>1.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <VehicleUsage>
+              <VehicleUsageCd>Commuting</VehicleUsageCd>
+            </VehicleUsage>
+            <GarageLocation>
+              <Line1Tx>784 E 19TH ST</Line1Tx>
+              <Line2Tx>APT 3</Line2Tx>
+              <Municipality>
+                <MunicipalityNm>PATERSON</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision>
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>07501-2426</PostalCd>
+            </GarageLocation>
+            <JointOwnershipIn>false</JointOwnershipIn>
+            <OwnershipTypeCd>Owned</OwnershipTypeCd>
+            <VehicleDiscounts id="186">
+              <DiscountReasonCd>AntiLockBrakeDiscount</DiscountReasonCd>
+              <DiscountPc>0</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts id="187">
+              <DiscountReasonCd>AntiTheftDiscount</DiscountReasonCd>
+              <DiscountPc>0.15</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts id="188">
+              <DiscountReasonCd>PassiveRestraintDiscount</DiscountReasonCd>
+              <DiscountPc>0.3</DiscountPc>
+            </VehicleDiscounts>
+            <TotalPremiumAm>1632</TotalPremiumAm>
+          </VehicleCoverageDetails>
+          <AssociatedReports id="190">
+            <ReportTypeCd>MVRReport</ReportTypeCd>
+            <ReportReferenceId>1430228943446</ReportReferenceId>
+          </AssociatedReports>
+          <AssociatedReports id="191">
+            <ReportTypeCd>MVRReport</ReportTypeCd>
+            <ReportReferenceId>1430228959822</ReportReferenceId>
+          </AssociatedReports>
+          <AssociatedReports id="192">
+            <ReportTypeCd>MVRReport</ReportTypeCd>
+            <ReportReferenceId>1430228919727</ReportReferenceId>
+          </AssociatedReports>
+          <AssociatedReports id="193">
+            <ReportTypeCd>CreditReport</ReportTypeCd>
+            <ReportReferenceId>1430228919727</ReportReferenceId>
+          </AssociatedReports>
+          <AssociatedReports id="194">
+            <ReportTypeCd>VehicleHistoryReport</ReportTypeCd>
+            <ReportReferenceId>1430228919727</ReportReferenceId>
+          </AssociatedReports>
+          <AssociatedReports id="195">
+            <ReportTypeCd>CLUEReport</ReportTypeCd>
+            <ReportReferenceId>1430228919727</ReportReferenceId>
+          </AssociatedReports>
+          <AssociatedReports id="196">
+            <ReportTypeCd>PrefilledReport</ReportTypeCd>
+            <ReportReferenceId>1430228420203</ReportReferenceId>
+          </AssociatedReports>
+          <PolicyDiscounts id="197">
+            <DiscountReasonCd>MultiVehiclesDiscount</DiscountReasonCd>
+          </PolicyDiscounts>
+          <CoverageElectionParameters id="198">
+            <CoverageTypeCd>MedicalPayment</CoverageTypeCd>
+            <CoverageParameterTypeCd>Medical Payment Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>$10,000</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>10000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>1.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters id="199">
+            <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+            <CoverageParameterTypeCd>PIP Provider</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>NJM primary</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>NJM</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters id="1100">
+            <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+            <CoverageParameterTypeCd>PIP Medical Expense Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>$250,000</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>250000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters id="1101">
+            <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+            <CoverageParameterTypeCd>PIP Deductible</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>$250</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>250</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters id="1102">
+            <CoverageTypeCd>Personal Injury Protection</CoverageTypeCd>
+            <CoverageParameterTypeCd>PIP Non Medical Benefits</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>$100/week ($5,200 Max) | $12/day ($4,380 Max)</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>Extra PIP</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters id="1103">
+            <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+            <CoverageParameterTypeCd>PIP Un Insured Under Insured Motorist Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>$300,000</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>300000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>119.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters id="1104">
+            <CoverageTypeCd>Lawsuit Threshold</CoverageTypeCd>
+            <CoverageParameterTypeCd>Lawsuit Threshold Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>Limitation on Lawsuit</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>Limitation</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm />
+          </CoverageElectionParameters>
+          <CoverageElectionParameters id="1105">
+            <CoverageTypeCd>Liability</CoverageTypeCd>
+            <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>$300,000</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>300000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>685.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters id="1106">
+            <CoverageTypeCd>Extended NonOwned Liability</CoverageTypeCd>
+            <CoverageParameterTypeCd>Extended NonOwned Liability</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>Single Named Individual</CoverageParameterValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <NonCoverageCharges>
+            <ChargeReasonCd>NJ PLIGA Charge</ChargeReasonCd>
+            <ChargeAm>77</ChargeAm>
+          </NonCoverageCharges>
+          <VehicleCoverageDetails>
+            <Vehicle>
+              <VehicleId>1</VehicleId>
+              <ManufacturerVehicleIdentificationNr>1VWAT7A37FC121268</ManufacturerVehicleIdentificationNr>
+              <ModelYearNr>2015</ModelYearNr>
+              <VehicleTradeNm>VW</VehicleTradeNm>
+              <ModelNm>PASSAT 1.8T S/WOLFSBURG EDITION</ModelNm>
+              <BodyCategoryCd>4 Door</BodyCategoryCd>
+              <VehicleTypeCd>Private Passenger</VehicleTypeCd>
+              <CylinderNumberCd>4</CylinderNumberCd>
+            </Vehicle>
+            <Coverages>
+              <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+              <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$500</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>500</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>30.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>Collision</CoverageTypeCd>
+              <CoverageParameterTypeCd>Collision Deductible</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$500</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>500</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>88.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>Roadside Assistance</CoverageTypeCd>
+              <CoverageParameterTypeCd>Roadside Assistance Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$75</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>75</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>8.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>Transportation Expense</CoverageTypeCd>
+              <CoverageParameterTypeCd>Transportation Expense Limit</CoverageParameterTypeCd>
+              <CoverageParameterValueTx>$30/$1200</CoverageParameterValueTx>
+              <CoverageParameterUnformattedValueTx>30/1200</CoverageParameterUnformattedValueTx>
+              <CoverageParameterPremiumAm>8.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>First Party Benefits</CoverageTypeCd>
+              <CoverageParameterTypeCd>Medical Expense Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>First Party Benefits</CoverageTypeCd>
+              <CoverageParameterTypeCd>Medical Expense Basic Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>27.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>First Party Benefits</CoverageTypeCd>
+              <CoverageParameterTypeCd>Funeral Expense Benefit Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>UnInsured Motorist</CoverageTypeCd>
+              <CoverageParameterTypeCd>Uninsured Motorist Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>26.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>First Party Benefits</CoverageTypeCd>
+              <CoverageParameterTypeCd>Accidental Death Benefits Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>Liability</CoverageTypeCd>
+              <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>107.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>First Party Benefits</CoverageTypeCd>
+              <CoverageParameterTypeCd>Combination Benefits Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>UnderInsured Motorist</CoverageTypeCd>
+              <CoverageParameterTypeCd>Underinsured Motorist Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>22.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>First Party Benefits Extraordinary Medical Expenses</CoverageTypeCd>
+              <CoverageParameterTypeCd>Extraordinary Medical Expenses Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <Coverages>
+              <CoverageTypeCd>First Party Benefits</CoverageTypeCd>
+              <CoverageParameterTypeCd>Work Loss Benefits Limit</CoverageParameterTypeCd>
+              <CoverageParameterPremiumAm>2.00</CoverageParameterPremiumAm>
+            </Coverages>
+            <VehicleUsage>
+              <VehicleUsageCd>Commuting</VehicleUsageCd>
+              <OneWayMileageNr>10</OneWayMileageNr>
+            </VehicleUsage>
+            <GarageLocation>
+              <Line1Tx>905 Parkview Dr</Line1Tx>
+              <Municipality>
+                <MunicipalityNm>Johnstown</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision>
+                <CountrySubdivisionNm>PA</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>15905</PostalCd>
+            </GarageLocation>
+            <JointOwnershipIn>false</JointOwnershipIn>
+            <OwnershipTypeCd>Owned</OwnershipTypeCd>
+            <VehicleDiscounts>
+              <DiscountReasonCd>AntiLockBrakeDiscount</DiscountReasonCd>
+              <DiscountPc>0.05</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts>
+              <DiscountReasonCd>AntiTheftDiscount</DiscountReasonCd>
+              <DiscountPc>0.15</DiscountPc>
+            </VehicleDiscounts>
+            <VehicleDiscounts>
+              <DiscountReasonCd>PassiveRestraintDiscount</DiscountReasonCd>
+              <DiscountPc>0.3</DiscountPc>
+            </VehicleDiscounts>
+            <TotalPremiumAm>318.0</TotalPremiumAm>
+          </VehicleCoverageDetails>
+          <AssociatedReports>
+            <ReportTypeCd>PrefilledReport</ReportTypeCd>
+            <ReportReferenceId>1497041416681</ReportReferenceId>
+          </AssociatedReports>
+          <AssociatedReports>
+            <ReportTypeCd>VehicleHistoryReport</ReportTypeCd>
+            <ReportReferenceId>1497041485792</ReportReferenceId>
+          </AssociatedReports>
+          <AssociatedReports>
+            <ReportTypeCd>CreditReport</ReportTypeCd>
+            <ReportReferenceId>1497041485730</ReportReferenceId>
+          </AssociatedReports>
+          <AssociatedReports>
+            <ReportTypeCd>MVRReport</ReportTypeCd>
+            <ReportReferenceId>1497041485730</ReportReferenceId>
+          </AssociatedReports>
+          <AssociatedReports>
+            <ReportTypeCd>CLUEReport</ReportTypeCd>
+            <ReportReferenceId>1497041517277</ReportReferenceId>
+          </AssociatedReports>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>Liability</CoverageTypeCd>
+            <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>$100,000</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>100000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>107.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>Tort</CoverageTypeCd>
+            <CoverageParameterTypeCd>Tort Option</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>Limited Tort</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>Limited</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm/>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>UnInsured Motorist</CoverageTypeCd>
+            <CoverageParameterTypeCd>Uninsured Motorist Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>$100,000</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>100000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>26.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>UnInsured Motorist</CoverageTypeCd>
+            <CoverageParameterTypeCd>Stacking Option</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>Reject Stacking</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>Unstacked</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>26.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>UnderInsured Motorist</CoverageTypeCd>
+            <CoverageParameterTypeCd>Underinsured Motorist Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>$100,000</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>100000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>22.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>UnderInsured Motorist</CoverageTypeCd>
+            <CoverageParameterTypeCd>Stacking Option</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>Reject Stacking</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>Stacked</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>22.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>First Party Benefits</CoverageTypeCd>
+            <CoverageParameterTypeCd>Medical Expense Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>$10,000</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>10000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>First Party Benefits</CoverageTypeCd>
+            <CoverageParameterTypeCd>Work Loss Benefits Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>$1,000/$5,000</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>1000/5000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>First Party Benefits</CoverageTypeCd>
+            <CoverageParameterTypeCd>Accidental Death Benefits Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>No Coverage</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>Decline</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>First Party Benefits</CoverageTypeCd>
+            <CoverageParameterTypeCd>Funeral Expense Benefit Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>No Coverage</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>Decline</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>First Party Benefits</CoverageTypeCd>
+            <CoverageParameterTypeCd>Combination Benefits Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>No Coverage</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>50000/2500/10000</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>First Party Benefits Extraordinary Medical Expenses</CoverageTypeCd>
+            <CoverageParameterTypeCd>Extraordinary Medical Expenses Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>No Coverage</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>Decline</CoverageParameterUnformattedValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <CoverageElectionParameters>
+            <CoverageTypeCd>Extended NonOwned Liability</CoverageTypeCd>
+            <CoverageParameterTypeCd>Extended NonOwned Liability</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>Single Named Individual</CoverageParameterValueTx>
+            <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+          </CoverageElectionParameters>
+          <NonCoverageCharges>
+            <ChargeReasonCd>NJ PLIGA Charge</ChargeReasonCd>
+            <ChargeAm>0.0</ChargeAm>
+          </NonCoverageCharges>
+          <SummaryAmounts>
+            <AmountTypeCd>Total Basic Premium</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>116</SummaryAm>
+          </SummaryAmounts>
+          <SummaryAmounts>
+            <AmountTypeCd>Total Basic Premium Full Tort</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>91</SummaryAm>
+          </SummaryAmounts>
+        </PersonalAutoLine>
+      </PolicyLines>
+      <ListedParties id="1113">
+        <Party id="1112">
+          <PartyId>3</PartyId>
+          <Person id="1111">
+            <PersonName>
+              <UnparsedNameTx>HENRY J ELLIOT</UnparsedNameTx>
+              <FirstGivenNm>HENRY</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>ELLIOT</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1991-05-17</BirthDt>
+            <GenderCd>M</GenderCd>
+            <MaritalStatusCd>M</MaritalStatusCd>
+            <FirstLicensedMonthAndYr>012011</FirstLicensedMonthAndYr>
+            <VehicleDriverLicense>
+              <IssuingAdministrativeCountrySubdivisionCd>New Jersey</IssuingAdministrativeCountrySubdivisionCd>
+              <LicenseId>L05034377753904</LicenseId>
+              <LicenseStatusCd>Active</LicenseStatusCd>
+            </VehicleDriverLicense>
+            <Addresses id="1109">
+              <Address>
+                <Line1Tx>784 E 19TH ST</Line1Tx>
+                <Line2Tx>APT 3</Line2Tx>
+                <Municipality>
+                  <MunicipalityNm>PATERSON</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality>
+                  <MunicipalityNm>Passaic</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision>
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>07501</PostalCd>
+                <PostalExtensionCd>2426</PostalExtensionCd>
+              </Address>
+              <TerritoryCd>151</TerritoryCd>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>true</PrimaryAddressIn>
+            </Addresses>
+            <Addresses id="1120">
+              <Address>
+                <Line1Tx>784 E 19TH ST</Line1Tx>
+                <Line2Tx>APT 5</Line2Tx>
+                <Municipality>
+                  <MunicipalityNm>PATERSON</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality>
+                  <MunicipalityNm>Passaic</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision>
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>07501</PostalCd>
+                <PostalExtensionCd>2426</PostalExtensionCd>
+              </Address>
+              <TerritoryCd>151</TerritoryCd>
+              <AddressUseCd>Business</AddressUseCd>
+              <PrimaryAddressIn>true</PrimaryAddressIn>
+            </Addresses>
+            <OfficialIdentifications id="1110">
+              <IdentificationTypeCd>Driver License</IdentificationTypeCd>
+              <IdentificationCd>L05034377753904</IdentificationCd>
+              <IssuingCountrySubdivisionCd>New Jersey</IssuingCountrySubdivisionCd>
+            </OfficialIdentifications>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Policy Driver</PartyRoles>
+          <PartyRoles>Resident Relative</PartyRoles>
+        </Party>
+        <UnderwritingConcernIn>false</UnderwritingConcernIn>
+        <DriverStatusCd>Insured Driver</DriverStatusCd>
+      </ListedParties>
+      <ListedParties id="1119">
+        <Party id="1118">
+          <PartyId>2</PartyId>
+          <Person id="1117">
+            <PersonName>
+              <UnparsedNameTx>WAYNE CADWUNS</UnparsedNameTx>
+              <FirstGivenNm>WAYNE</FirstGivenNm>
+              <SecondGivenNm>T</SecondGivenNm>
+              <FamilyNm>CADWUNS</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>T</SecondGivenNameInitial>
+            <BirthDt>1985-03-19</BirthDt>
+            <GenderCd>M</GenderCd>
+            <MaritalStatusCd>M</MaritalStatusCd>
+            <FirstLicensedMonthAndYr>012005</FirstLicensedMonthAndYr>
+            <OccupationDescriptionTx>QA2</OccupationDescriptionTx>
+            <VehicleDriverLicense>
+              <IssuingAdministrativeCountrySubdivisionCd>New Jersey</IssuingAdministrativeCountrySubdivisionCd>
+              <LicenseId>P59345977925997</LicenseId>
+              <LicenseStatusCd>Active</LicenseStatusCd>
+            </VehicleDriverLicense>
+            <Addresses id="1114">
+              <Address>
+                <Line1Tx>784 E 19TH ST</Line1Tx>
+                <Line2Tx>APT 3</Line2Tx>
+                <Municipality>
+                  <MunicipalityNm>PATERSON</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality>
+                  <MunicipalityNm>Passaic</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision>
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>07501</PostalCd>
+                <PostalExtensionCd>2426</PostalExtensionCd>
+              </Address>
+              <TerritoryCd>151</TerritoryCd>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>true</PrimaryAddressIn>
+            </Addresses>
+            <Telephones id="1115">
+              <PartyUseCd>Business</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber>
+                <UnparsedPhoneNr>785-736-7463 x746734</UnparsedPhoneNr>
+                <AreaCd>785</AreaCd>
+                <ExchangeId>736</ExchangeId>
+                <SubscriberLineId>7463</SubscriberLineId>
+                <ExtensionId>746734</ExtensionId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>true</PrimaryPhoneIn>
+            </Telephones>
+            <OfficialIdentifications id="1116">
+              <IdentificationTypeCd>Driver License</IdentificationTypeCd>
+              <IdentificationCd>P59345977925997</IdentificationCd>
+              <IssuingCountrySubdivisionCd>New Jersey</IssuingCountrySubdivisionCd>
+            </OfficialIdentifications>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Policy Driver</PartyRoles>
+          <PartyRoles>Secondary Named Insured</PartyRoles>
+          <PartyRoles>Spouse</PartyRoles>
+        </Party>
+        <UnderwritingConcernIn>false</UnderwritingConcernIn>
+        <DriverStatusCd>Insured Driver</DriverStatusCd>
+      </ListedParties>
+      <ListedParties id="1126">
+        <Party id="1125">
+          <PartyId>1</PartyId>
+          <Person id="1124">
+            <PersonName>
+              <UnparsedNameTx>HENRY J ELLIOT</UnparsedNameTx>
+              <FirstGivenNm>HENRY1</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>ELLIOT1</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1977-11-12</BirthDt>
+            <GenderCd>M</GenderCd>
+            <MaritalStatusCd>M</MaritalStatusCd>
+            <FirstLicensedMonthAndYr>021997</FirstLicensedMonthAndYr>
+            <OccupationDescriptionTx>QA</OccupationDescriptionTx>
+            <VehicleDriverLicense>
+              <IssuingAdministrativeCountrySubdivisionCd>New Jersey</IssuingAdministrativeCountrySubdivisionCd>
+              <LicenseId>C07236170062354</LicenseId>
+              <LicenseStatusCd>Active</LicenseStatusCd>
+            </VehicleDriverLicense>
+            <Addresses id="1120">
+              <Address>
+                <Line1Tx>784 E 19TH ST</Line1Tx>
+                <Line2Tx>APT 3</Line2Tx>
+                <Municipality>
+                  <MunicipalityNm>PATERSON</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality>
+                  <MunicipalityNm>Passaic</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision>
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>07501</PostalCd>
+                <PostalExtensionCd>2426</PostalExtensionCd>
+              </Address>
+              <TerritoryCd>151</TerritoryCd>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>true</PrimaryAddressIn>
+            </Addresses>
+            <Addresses id="2220">
+              <Address>
+                <Line1Tx>784 E 19TH ST</Line1Tx>
+                <Line2Tx>APT 5</Line2Tx>
+                <Municipality>
+                  <MunicipalityNm>PATERSON</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality>
+                  <MunicipalityNm>Passaic</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision>
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>07501</PostalCd>
+                <PostalExtensionCd>2426</PostalExtensionCd>
+              </Address>
+              <TerritoryCd>151</TerritoryCd>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>true</PrimaryAddressIn>
+            </Addresses>
+            <Telephones id="1121">
+              <PartyUseCd>Business</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber>
+                <UnparsedPhoneNr>782-364-5745 x763565</UnparsedPhoneNr>
+                <AreaCd>782</AreaCd>
+                <ExchangeId>364</ExchangeId>
+                <SubscriberLineId>5745</SubscriberLineId>
+                <ExtensionId>763565</ExtensionId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>true</PrimaryPhoneIn>
+            </Telephones>
+            <OfficialIdentifications id="1122">
+              <IdentificationTypeCd>NJBIA MemeberShip Number</IdentificationTypeCd>
+              <IdentificationCd>51111</IdentificationCd>
+              <IssuingCountrySubdivisionCd>NJ</IssuingCountrySubdivisionCd>
+            </OfficialIdentifications>
+            <OfficialIdentifications id="1123">
+              <IdentificationTypeCd>Driver License</IdentificationTypeCd>
+              <IdentificationCd>C07236170062354</IdentificationCd>
+              <IssuingCountrySubdivisionCd>New Jersey</IssuingCountrySubdivisionCd>
+            </OfficialIdentifications>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Policy Driver</PartyRoles>
+          <PartyRoles>Account Holder</PartyRoles>
+          <PartyRoles>Primary Named Insured</PartyRoles>
+        </Party>
+        <UnderwritingConcernIn>false</UnderwritingConcernIn>
+        <DriverStatusCd>Insured Driver</DriverStatusCd>
+      </ListedParties>
+      <NotableEvents id="1127">
+        <EventNumber>QQ40156XXXX</EventNumber>
+        <EventCategoryCd>CurrentWorkOrder</EventCategoryCd>
+        <EventTypeCd>Submission</EventTypeCd>
+        <EventStatusCd>Bound</EventStatusCd>
+        <EventCreationDt>2015-04-28T13:40:07.283Z</EventCreationDt>
+        <EventChangeEffectiveDt>2015-04-28T04:01:00Z</EventChangeEffectiveDt>
+        <EventCloseDt>2015-04-28T13:49:56.137Z</EventCloseDt>
+      </NotableEvents>
+      <PolicyLocation id="1128">
+        <Address>
+          <Line1Tx>784 E 19TH ST</Line1Tx>
+          <Line2Tx>APT 3</Line2Tx>
+          <Municipality>
+            <MunicipalityNm>PATERSON</MunicipalityNm>
+            <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality>
+            <MunicipalityNm>Passaic</MunicipalityNm>
+            <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision>
+            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>07501</PostalCd>
+          <PostalExtensionCd>2426</PostalExtensionCd>
+        </Address>
+        <TerritoryCd>151</TerritoryCd>
+      </PolicyLocation>
+      <NJBIAMembershipMemberNm>MCDONALD'S 2053</NJBIAMembershipMemberNm>
+      <NJBIAMembershipMemberNumber>51111</NJBIAMembershipMemberNumber>
+    </PolicyPeriod>
+  </Policy>
+  <CoverageStatus>
+    <AsOfDt>2015-04-28T04:01:00Z</AsOfDt>
+    <StatusIn>true</StatusIn>
+  </CoverageStatus> 
+  <InboundDocumentTypeCode>001034</InboundDocumentTypeCode>
+</CorrespondenceDataResponse>

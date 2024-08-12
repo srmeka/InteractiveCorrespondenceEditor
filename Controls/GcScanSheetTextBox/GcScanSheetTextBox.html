@@ -1,0 +1,87 @@
+﻿<div class="panel panel-primary" ng-controller="GcScanSheetTextBoxController">
+    <div class="panel-body">
+        <div class="form-group">
+
+            <div class="row" ng-hide="!LabelName1" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label>
+                        {{LabelName1}}
+                    </label>
+                </div>
+                <div class="col-md-9">
+                    <input class="form-control"
+                           name="GcScanSheetTextBox1"
+                           type="text"
+                           ng-model="GcScanSheetTextBoxValue1"
+                           ng-pattern=TextType1
+                           ng-change="GcScanSheetTextBoxValue1=validateNumber1(GcScanSheetTextBoxValue1, TextType1)"
+                           maxlength="{{MaxLen1}}"
+                           ng-required="{{Required1}}"
+                           id="GcScanSheetTextBoxId1"
+                           placeholder="{{Hint1}}" />
+                </div>
+            </div>
+
+            <div class="row" ng-hide="!LabelName2" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label>
+                        {{LabelName2}}
+                    </label>
+                </div>
+                <div class="col-md-9">
+                    <input class="form-control"
+                           name="GcScanSheetTextBox2"
+                           type="text"
+                           ng-model="GcScanSheetTextBoxValue2"
+                           ng-pattern=TextType2
+                           ng-change="GcScanSheetTextBoxValue2=validateNumber1(GcScanSheetTextBoxValue2, TextType2)"
+                           maxlength="{{MaxLen2}}"
+                           ng-required="{{Required2}}"
+                           id="GcScanSheetTextBoxId2"
+                           placeholder="{{Hint2}}" />
+                </div>
+            </div>
+
+            <div class="row" ng-hide="!LabelName3" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label>
+                        {{LabelName3}}
+                    </label>
+                </div>
+                <div class="col-md-9">
+                    <input class="form-control"
+                           name="GcScanSheetTextBox3"
+                           type="text"
+                           ng-model="GcScanSheetTextBoxValue3"
+                           ng-pattern=TextType3
+                           ng-change="GcScanSheetTextBoxValue3=validateNumber1(GcScanSheetTextBoxValue3, TextType3)"
+                           maxlength="{{MaxLen3}}"
+                           ng-required="{{Required3}}"
+                           id="GcScanSheetTextBoxId3"
+                           placeholder="{{Hint3}}" />
+                </div>
+            </div>
+
+            <div class="row" ng-hide="!LabelName4" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label>
+                        {{LabelName4}}
+                    </label>
+                </div>
+                <div class="col-md-9">
+                    <input class="form-control"
+                           name="GcScanSheetTextBox4"
+                           type="text"
+                           ng-model="GcScanSheetTextBoxValue4"
+                           ng-pattern=TextType4
+                           ng-change="GcScanSheetTextBoxValue4=validateNumber1(GcScanSheetTextBoxValue4, TextType4)"
+                           maxlength="{{MaxLen4}}"
+                           ng-required="{{Required4}}"
+                           id="GcScanSheetTextBoxId4"
+                           placeholder="{{Hint4}}" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

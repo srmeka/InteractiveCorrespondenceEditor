@@ -1,0 +1,41 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaNonrenewCancelDropdownwControlsController">
+    <div class="panel-heading">
+        Nonrenewal or Cancellation
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <!--enable/disable checkbox-->
+                <input type="checkbox" ng-model="NonrenewChecked" ng-click="clearAllData()" name="NonrenewCheckbox" id="NonrenewCheckboxId" />
+                <label>
+                    Include Nonrenewal/Cancellation
+                </label>
+            </div>
+            <div class="col-md-8">
+                <!-- Nonrenew/Cancel dropdown -->
+                <select class="form-control" ng-model="NonrenewChoice" ng-disabled="!NonrenewChecked" ng-options="item for item in Categories" ng-change="clearVehData()" name="NonrenewalSelect" id="NonrenewalSelectId">
+                    <option value="" selected>--Select--</option>
+                </select>
+            </div>
+        </div>
+        <div class="row" ng-hide="NonrenewChoice !='Physical Damage Inspection'" style="margin-top:5px">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <!-- Vehicle checkbox list (if applicable) -->
+                <label>* Vehicle:</label>
+                <div ng-repeat="item in Vehicle">
+                    <input ng-model="item.VehChecked" 
+                           ng-change="selectVehicle(item)" 
+                           ng-required="NonrenewChoice == 'Physical Damage Inspection' && !SelectedVehicles.length" 
+                           type="checkbox" 
+                           ng-disabled="Vehicle.length === 0" 
+                           name="VehCheckboxLst" 
+                           id="VehCheckboxLstId{{item._id}}" 
+                           value="" />
+                    <span ng-bind="item.ModelYearNr + ' ' + item.VehicleTradeNm + ' ' + item.ModelNm + ' ' + item.ManufacturerVehicleIdentificationNr"></span>
+                </div>
+                <span class="alert-danger" ng-if="Vehicle.length === 0">Information not provided by source</span>
+            </div>
+        </div>
+    </div>
+</div>

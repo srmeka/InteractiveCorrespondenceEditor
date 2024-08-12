@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CorrespondenceDataResponse xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pir="http://PolicyInformationRetrievalLib/PolicyInfomationRetriever">
+  <Policy id="7">
+    <PolicyNumber>M872887</PolicyNumber>
+    <Account id="9">
+      <AccountNo>AA112755734</AccountNo>
+      <OrganizationTypeNm>Limited Liability Company</OrganizationTypeNm>
+    </Account>
+    <PolicyPeriod id="12">
+      <PolicyLines id="13">
+        <WorkerCompensiationLine id="14">
+          <Jurisdictions id="15">
+            <ClassCodes id="16">
+              <ClassCd>5445</ClassCd>
+              <ClassCodeDesc>Dry-wall Construction Within Bu</ClassCodeDesc>
+              <Classification>Dry-wall Construction Within Building - &amp; D</Classification>
+              <ClassCodeType>Governing</ClassCodeType>
+              <ClassCodeIn>0</ClassCodeIn>
+            </ClassCodes>
+          </Jurisdictions>
+          <CoveredEmployees id="22">
+            <ClassCode id="23">
+              <ClassCd>8810</ClassCd>
+              <ClassCodeDesc>Clerical Office Employees Noc</ClassCodeDesc>
+              <Classification>Clerical Office Employees Noc</Classification>
+              <ClassCodeIn>0</ClassCodeIn>
+            </ClassCode>
+          </CoveredEmployees>
+          <CoveredEmployees id="28">
+            <ClassCode id="29">
+              <ClassCd>5445</ClassCd>
+              <ClassCodeDesc>Dry-wall Construction Within Bu</ClassCodeDesc>
+              <Classification>Dry-wall Construction Within Building - &amp; D</Classification>
+              <ClassCodeIn>0</ClassCodeIn>
+            </ClassCode>
+          </CoveredEmployees>
+          <ExcludedStates>ND</ExcludedStates>
+          <ExcludedStates>OH</ExcludedStates>
+          <ExcludedStates>WA</ExcludedStates>
+          <ExcludedStates>WY</ExcludedStates>
+          <ExcludedStates>NJ</ExcludedStates>
+          <Coverages id="39">
+            <CoverageTypeCd>Employee Liability Limit</CoverageTypeCd>
+            <CoverageParameterValueTx>100,000/500,000/100,000</CoverageParameterValueTx>
+          </Coverages>
+        </WorkerCompensiationLine>
+        <CoveredStates>NJ</CoveredStates>
+      </PolicyLines>
+      <InvolvedParties id="43">
+        <Person id="44">
+          <PersonName id="45">
+            <FirstGivenNm>Chuck</FirstGivenNm>
+            <FamilyNm>Nwodili</FamilyNm>
+          </PersonName>
+          <Addresses id="48">
+            <Address id="49">
+              <Line1Tx>11 39th St</Line1Tx>
+              <Municipality id="51">
+                <MunicipalityNm>Irvington</MunicipalityNm>
+                <MunicipalityTypeCd>City</MunicipalityTypeCd>
+              </Municipality>
+              <Municipality id="54">
+                <MunicipalityNm>Gloucester</MunicipalityNm>
+                <MunicipalityTypeCd>County</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="57">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>07111</PostalCd>
+            </Address>
+            <PrimaryAddressIn>true</PrimaryAddressIn>
+          </Addresses>
+          <Telephones id="62">
+            <PartyUseCd>Business</PartyUseCd>
+            <TransmissionContentCd>Voice</TransmissionContentCd>
+            <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+            <PhoneNumber id="66">
+              <AreaCd>973</AreaCd>
+              <ExchangeId>704</ExchangeId>
+              <SubscriberLineId>2006</SubscriberLineId>
+            </PhoneNumber>
+            <PrimaryPhoneIn>true</PrimaryPhoneIn>
+          </Telephones>
+          <Telephones id="71">
+            <PartyUseCd>Business</PartyUseCd>
+            <TransmissionContentCd>Voice</TransmissionContentCd>
+            <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+            <PhoneNumber id="75">
+              <AreaCd>973</AreaCd>
+              <ExchangeId>704</ExchangeId>
+              <SubscriberLineId>2006</SubscriberLineId>
+            </PhoneNumber>
+            <PrimaryPhoneIn>false</PrimaryPhoneIn>
+          </Telephones>
+        </Person>
+        <Organization />
+        <PartyTypeCd>Person</PartyTypeCd>
+        <PartyRoles>Owner Officer</PartyRoles>
+        <CoverageExcludedIn>false</CoverageExcludedIn>
+      </InvolvedParties>
+      <InvolvedParties id="84">
+        <Organization id="85">
+          <OrganizationNm>Big Chuck Gen Contractor LLC</OrganizationNm>
+          <OrganizationNameCd>limitedliabilitycompany_ext</OrganizationNameCd>
+          <OrganizationTypeNm>Limited Liability Company</OrganizationTypeNm>
+          <Addresses id="89">
+            <Address id="90">
+              <Line1Tx>11B 39th St</Line1Tx>
+              <Municipality id="92">
+                <MunicipalityNm>Irvington</MunicipalityNm>
+                <MunicipalityTypeCd>City</MunicipalityTypeCd>
+              </Municipality>
+              <Municipality id="95">
+                <MunicipalityNm>Gloucester</MunicipalityNm>
+                <MunicipalityTypeCd>County</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="98">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>07111</PostalCd>
+            </Address>
+            <PrimaryAddressIn>true</PrimaryAddressIn>
+          </Addresses>
+          <Telephones id="129">
+            <PartyUseCd>Business</PartyUseCd>
+            <TransmissionContentCd>Voice</TransmissionContentCd>
+            <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+            <PhoneNumber id="133">
+              <AreaCd>609</AreaCd>
+              <ExchangeId>883</ExchangeId>
+              <SubscriberLineId>1300</SubscriberLineId>
+            </PhoneNumber>
+            <PrimaryPhoneIn>true</PrimaryPhoneIn>
+          </Telephones>
+          <Telephones id="138">
+            <PartyUseCd>Business</PartyUseCd>
+            <TransmissionContentCd>Voice</TransmissionContentCd>
+            <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+            <PhoneNumber id="142">
+              <AreaCd>609</AreaCd>
+              <ExchangeId>883</ExchangeId>
+              <SubscriberLineId>1300</SubscriberLineId>
+            </PhoneNumber>
+            <PrimaryPhoneIn>false</PrimaryPhoneIn>
+          </Telephones>
+          <OfficialIdentifications id="103">
+            <IdentificationTypeCd>FEIN</IdentificationTypeCd>
+            <IdentificationCd>27-0672234</IdentificationCd>
+          </OfficialIdentifications>
+          <OfficialIdentifications id="106">
+            <IdentificationTypeCd>BureauID</IdentificationTypeCd>
+            <IdentificationCd>704072</IdentificationCd>
+            <IssuingCountrySubdivisionCd>NJ</IssuingCountrySubdivisionCd>
+          </OfficialIdentifications>
+        </Organization>
+        <PartyTypeCd>Organization</PartyTypeCd>
+        <PartyRoles>Named Insured</PartyRoles>
+        <CoverageExcludedIn>false</CoverageExcludedIn>
+      </InvolvedParties>
+      <InvolvedParties id="113">
+        <Person id="114">
+          <PersonName id="115">
+            <FirstGivenNm>Linda</FirstGivenNm>
+            <FamilyNm>MacFarland</FamilyNm>
+          </PersonName>
+          <Addresses id="118">
+            <Address id="119">
+              <Line1Tx>301 Sullivan Way</Line1Tx>
+              <Municipality id="121">
+                <MunicipalityNm>West Trenton</MunicipalityNm>
+                <MunicipalityTypeCd>City</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="124">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>08628</PostalCd>
+            </Address>
+            <PrimaryAddressIn>true</PrimaryAddressIn>
+          </Addresses>
+          <Telephones id="129">
+            <PartyUseCd>Business</PartyUseCd>
+            <TransmissionContentCd>Voice</TransmissionContentCd>
+            <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+            <PhoneNumber id="133">
+              <AreaCd>609</AreaCd>
+              <ExchangeId>883</ExchangeId>
+              <SubscriberLineId>1300</SubscriberLineId>
+            </PhoneNumber>
+            <PrimaryPhoneIn>true</PrimaryPhoneIn>
+          </Telephones>
+          <Telephones id="138">
+            <PartyUseCd>Business</PartyUseCd>
+            <TransmissionContentCd>Voice</TransmissionContentCd>
+            <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+            <PhoneNumber id="142">
+              <AreaCd>609</AreaCd>
+              <ExchangeId>883</ExchangeId>
+              <SubscriberLineId>1300</SubscriberLineId>
+            </PhoneNumber>
+            <PrimaryPhoneIn>false</PrimaryPhoneIn>
+          </Telephones>
+        </Person>
+        <PartyTypeCd>Person</PartyTypeCd>
+        <PartyRoles>Creator</PartyRoles>
+      </InvolvedParties>
+      <InvolvedParties id="149">
+        <Organization id="150">
+          <OrganizationNm>DEPENDABLE INSURANCE AGENCY INC</OrganizationNm>
+          <Addresses id="152">
+            <Address id="153">
+              <Line1Tx>1030 S ORANGE AVE</Line1Tx>
+              <Municipality id="155">
+                <MunicipalityNm>NEWARK</MunicipalityNm>
+                <MunicipalityTypeCd>City</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="158">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>07106</PostalCd>
+            </Address>
+            <PrimaryAddressIn>true</PrimaryAddressIn>
+          </Addresses>
+          <Telephones id="163">
+            <PartyUseCd>Business</PartyUseCd>
+            <TransmissionContentCd>Voice</TransmissionContentCd>
+            <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+            <PhoneNumber id="167">
+              <AreaCd>973</AreaCd>
+              <ExchangeId>372</ExchangeId>
+              <SubscriberLineId>0002</SubscriberLineId>
+            </PhoneNumber>
+            <PrimaryPhoneIn>true</PrimaryPhoneIn>
+          </Telephones>
+          <OfficialIdentifications id="172">
+            <IdentificationTypeCd>Broker Code</IdentificationTypeCd>
+            <IdentificationCd>W7660</IdentificationCd>
+          </OfficialIdentifications>
+        </Organization>
+        <PartyTypeCd>Organization</PartyTypeCd>
+        <PartyRoles>Additional Insured</PartyRoles>
+      </InvolvedParties>
+      <InvolvedParties id="177">
+        <Organization id="178">
+          <OrganizationNm>DEPENDABLE INSURANCE AGENCY INC</OrganizationNm>
+          <Addresses id="180">
+            <Address id="181">
+              <Line1Tx>1030 S ORANGE AVE</Line1Tx>
+              <Municipality id="183">
+                <MunicipalityNm>NEWARK</MunicipalityNm>
+                <MunicipalityTypeCd>City</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="186">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>07106</PostalCd>
+            </Address>
+            <PrimaryAddressIn>true</PrimaryAddressIn>
+          </Addresses>
+          <Telephones id="191">
+            <PartyUseCd>Business</PartyUseCd>
+            <TransmissionContentCd>Voice</TransmissionContentCd>
+            <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+            <PhoneNumber id="195">
+              <AreaCd>973</AreaCd>
+              <ExchangeId>372</ExchangeId>
+              <SubscriberLineId>0002</SubscriberLineId>
+            </PhoneNumber>
+            <PrimaryPhoneIn>true</PrimaryPhoneIn>
+          </Telephones>
+          <OfficialIdentifications id="200">
+            <IdentificationTypeCd>Broker Code</IdentificationTypeCd>
+            <IdentificationCd>W7660</IdentificationCd>
+          </OfficialIdentifications>
+        </Organization>
+        <PartyTypeCd>Organization</PartyTypeCd>
+        <PartyRoles>Producer Of Service</PartyRoles>
+      </InvolvedParties>
+      <UnderwritingCompany id="205">
+        <OrganizationNm>New Jersey Casualty Insurance Co</OrganizationNm>
+        <OrganizationNameCd>NJC</OrganizationNameCd>
+      </UnderwritingCompany>
+      <QuoteNr>QQ198499154</QuoteNr>
+      <StartDt>2019-11-20T00:01:00-05:00</StartDt>
+      <EndDt>2020-11-20T00:01:00-05:00</EndDt>
+      <CancellationDt>2014-12-15T00:01:00-05:00</CancellationDt>
+      <CancellationReason>Business Sold</CancellationReason>
+      <PendingCancellationDt>2017-07-18T00:01:00-05:00</PendingCancellationDt>
+      <InceptionDt>2019-11-20T00:00:00-05:00</InceptionDt>
+      <StatusCd>In Force</StatusCd>      
+      <PolicyLocations id="213">
+        <PolicyAddress id="214">
+          <Line1Tx>11A 39th St</Line1Tx>
+          <Municipality id="216">
+            <MunicipalityNm>Irvington</MunicipalityNm>
+            <MunicipalityTypeCd>City</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality id="219">
+            <MunicipalityNm>Essex</MunicipalityNm>
+            <MunicipalityTypeCd>County</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision id="222">
+            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>07111-6222</PostalCd>
+        </PolicyAddress>
+        <PrimaryLocationIn>true</PrimaryLocationIn>
+      </PolicyLocations>
+      <BaseState>NJ</BaseState>
+      <Endorsements id="228">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 99 04 03</FormNm>
+        <Desc>Assigned Risk General Change End</Desc>
+      </Endorsements>
+      <Endorsements id="233">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 204</FormNm>
+        <Desc>Change Endorsement Cover Letter</Desc>
+      </Endorsements>
+      <Endorsements id="238">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 211</FormNm>
+        <Desc>Mailer Page</Desc>
+      </Endorsements>
+      <Endorsements id="243">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 190</FormNm>
+        <Desc>NJC Cover Letter</Desc>
+      </Endorsements>
+      <Endorsements id="248">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 173</FormNm>
+        <Desc>M Pols Over 5K Control Costs Ltr</Desc>
+      </Endorsements>
+      <Endorsements id="253">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 00 00 01A</FormNm>
+        <Desc>Dec Page 1</Desc>
+      </Endorsements>
+      <Endorsements id="258">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 00 00 01A</FormNm>
+        <Desc>Assigned Risk Dec Page 2</Desc>
+      </Endorsements>
+      <Endorsements id="263">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 00 04 21 D</FormNm>
+        <Desc>Catastrophe Premium End</Desc>
+      </Endorsements>
+      <Endorsements id="268">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 00 04 22 B</FormNm>
+        <Desc>TRIA End</Desc>
+      </Endorsements>
+      <Endorsements id="273">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 00 04 24</FormNm>
+        <Desc>NJ Audit Non Compliance End</Desc>
+      </Endorsements>
+      <Endorsements id="278">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 29 03 06B</FormNm>
+        <Desc>NJ Part Two Employers Liab End</Desc>
+      </Endorsements>
+      <Endorsements id="283">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 29 03 09 A</FormNm>
+        <Desc>NJ Limited Other States End</Desc>
+      </Endorsements>
+      <Endorsements id="288">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 29 03 10</FormNm>
+        <Desc>NJ WC Ins Plan Elig End</Desc>
+      </Endorsements>
+      <Endorsements id="293">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 160</FormNm>
+        <Desc>M Cover Ltr and Questionnaire</Desc>
+      </Endorsements>
+      <Endorsements id="298">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>WC 222</FormNm>
+        <Desc>Posting Notice Mailer Page</Desc>
+      </Endorsements>
+      <Endorsements id="303">
+        <EffectiveDt>2019-11-20T00:01:00-05:00</EffectiveDt>
+        <ExpirationDt>2020-11-20T00:01:00-05:00</ExpirationDt>
+        <FormNm>16 NJ A</FormNm>
+        <Desc>Posting Notice</Desc>
+      </Endorsements>
+    </PolicyPeriod>
+  </Policy>
+</CorrespondenceDataResponse>

@@ -1,0 +1,21 @@
+﻿<div class="panel panel-primary" ng-controller="GcAdjusterNmDropdownController">
+    <div class="panel-heading">Adjuster</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!-- Adjuster's Name dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>Adjuster's Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in AdjusterNameData" name="AdjusterNameSelection" ng-model="selectedName" class="form-control" id="AdjusterNameSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="AdjusterNameData.length == 0">Information not provided by source</span>
+                </div>            
+            </div>
+
+        </div>
+    </div>
+</div> 

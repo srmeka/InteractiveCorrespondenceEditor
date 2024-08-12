@@ -1,0 +1,18 @@
+﻿<div class="panel panel-primary" ng-controller="PcdwCertificateHolderNameDropdownController">
+    <div class="panel-heading">Certificate Holder</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col-md-4" style="margin-top: 5px;">
+                    <label>* Certificate Holder Name</label>
+                </div>
+                <div class="col-md-8" style="margin-top:5px;">
+                    <select ng-disabled="Holder.length == 0 || HolderInfo.CertificateHolderNm == ''" name="HolderName" ng-model="SelectedHolder" ng-options="HolderInfo.CertificateHolderNm for HolderInfo in Holder track by HolderInfo._id" class="form-control" id="HolderNameID" ng-required="true">
+                        <option value="" disabled selected>--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="Holder.length == 0 || HolderInfo.CertificateHolderNm == ''">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

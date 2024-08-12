@@ -1,0 +1,34 @@
+﻿<div class="panel panel-primary" ng-controller="GcVehicleOwnerAndInsuranceController">
+    <div class="panel-heading">Vehicle Owner</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Vehicle Owner's Name dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>* Vehicle Owner's Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ClaimantNameData" name="ClaimantNameSelection" ng-model="selectedName" class="form-control" id="ClaimantNameSelectionId" ng-required="true">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantNameData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--Vehicle Owner's Insurer dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>* Vehicle Owner's Insurer:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in InsuranceNameData" name="InsurerNameSelection" ng-model="selectedInsurer" class="form-control" id="InsurerNameSelectionId" ng-required="true">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="InsuranceNameData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

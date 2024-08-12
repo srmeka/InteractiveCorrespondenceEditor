@@ -1,0 +1,815 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Home/HomeService.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Home/HomeController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Home/OutputXML.js")"></script>
+
+@section SPAViews {
+    @Html.Partial("Home")
+}
+
+
+<script>
+
+    var baseURL = location.href.split("Home?")
+    var lob = getUrlParameter('LOB');
+    switch (lob) {
+        case "GC":
+            {
+                $('body').append("<script src=\"@Url.Content("~/Controls/GcExposureNameAndTypeDropdown/GcExposureNameAndTypeDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcExposureNameAndTypeDropdown/GcExposureNameAndTypeDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcAddrOneandTwowGreetingName/GcAddrOneandTwowGreetingNameDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcAddrOneandTwowGreetingName/GcAddrOneandTwowGreetingNameController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcReSectionDropdownwControls/GcReSectionDropdownwControlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcReSectionDropdownwControls/GcReSectionDropdownwControlsController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcBatchCheckbox/GcBatchCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcBatchCheckbox/GcBatchCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcAuthorDropdown/GcAuthorDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcAuthorDropdown/GcAuthorDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcBatchCheckboxwControls/GcBatchCheckboxwControlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcBatchCheckboxwControls/GcBatchCheckboxwControlsController.js")\" type=\"text\/javascript\"><\/script>")
+                    
+    .append("<script src=\"@Url.Content("~/Controls/GcEmailwCheckbox/GcEmailwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcEmailwCheckbox/GcEmailwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/ClaimsFaxwCheckbox/ClaimsFaxwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/ClaimsFaxwCheckbox/ClaimsFaxwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/ClaimsCcBccDropdownwCheckbox/ClaimsCcBccDropdownwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/ClaimsCcBccDropdownwCheckbox/ClaimsCcBccDropdownwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcMortgageeDropdown/GcMortgageeDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcMortgageeDropdown/GcMortgageeDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNmContactsOneDropdown/GcClaimantNmContactsOneDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNmContactsOneDropdown/GcClaimantNmContactsOneDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNmContactstwoDropdown/GcClaimantNmContactstwoDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNmContactstwoDropdown/GcClaimantNmContactstwoDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcNjmHiredNmDropdown/GcNjmHiredNmDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcNjmHiredNmDropdown/GcNjmHiredNmDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcVehicleDropdown/GcVehicleDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcVehicleDropdown/GcVehicleDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcLienholderNameDropdown/GcLienholderNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcLienholderNameDropdown/GcLienholderNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimReportDate/GcClaimReportDateDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimReportDate/GcClaimReportDateController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcOutOfPocketRentalCheckbox/GcOutOfPocketRentalCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcOutOfPocketRentalCheckbox/GcOutOfPocketRentalCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNameDropdown/GcClaimantNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNameDropdown/GcClaimantNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantOneTwoAndThree/GcClaimantOneTwoAndThreeDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantOneTwoAndThree/GcClaimantOneTwoAndThreeController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcPhysicianNameDropdown/GcPhysicianNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcPhysicianNameDropdown/GcPhysicianNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNmAndAddrDropdown/GcClaimantNmAndAddrDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNmAndAddrDropdown/GcClaimantNmAndAddrDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcAttnyNmAndAddrDropdown/GcAttnyNmAndAddrDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcAttnyNmAndAddrDropdown/GcAttnyNmAndAddrDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcPhysicianNmAndAddrDropdown/GcPhysicianNmAndAddrDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcPhysicianNmAndAddrDropdown/GcPhysicianNmAndAddrDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcPipDeductibileValue/GcPipDeductibileValueDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcPipDeductibileValue/GcPipDeductibileValueController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcAdjusterNmDropdown/GcAdjusterNmDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcAdjusterNmDropdown/GcAdjusterNmDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcAppForBenefitsDropdown/GcAppForBenefitsDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcAppForBenefitsDropdown/GcAppForBenefitsDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcOverpaymentTypeDropdownwControls/GcOverpaymentTypeDropdownwControlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcOverpaymentTypeDropdownwControls/GcOverpaymentTypeDropdownwControlsController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNameFiveDropdown/GcClaimantNameFiveDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNameFiveDropdown/GcClaimantNameFiveDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcDocsReferencedCheckboxLst/GcDocsReferencedCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcDocsReferencedCheckboxLst/GcDocsReferencedCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcReasonBenefitsCheckboxLst/GcReasonBenefitsCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcReasonBenefitsCheckboxLst/GcReasonBenefitsCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcSubroPartyDropdown/GcSubroPartyDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcSubroPartyDropdown/GcSubroPartyDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcDeceasedPolNmDropdown/GcDeceasedPolNmDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcDeceasedPolNmDropdown/GcDeceasedPolNmDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcProviderNameDropdown/GcProviderNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcProviderNameDropdown/GcProviderNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcSupervisorNmDropdown/GcSupervisorNmDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcSupervisorNmDropdown/GcSupervisorNmDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcLienholderNmAddrDropdown/GcLienholderNmAddrDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcLienholderNmAddrDropdown/GcLienholderNmAddrDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNameFourDropdown/GcClaimantNameFourDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNameFourDropdown/GcClaimantNameFourDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcSubroCarrierDropdown/GcSubroCarrierDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcSubroCarrierDropdown/GcSubroCarrierDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcPayeeNameDropdown/GcPayeeNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcPayeeNameDropdown/GcPayeeNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcExpoOwnerAndSuperDropdown/GcExpoOwnerAndSuperDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcExpoOwnerAndSuperDropdown/GcExpoOwnerAndSuperDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantOneAndTwoDropdown/GcClaimantOneAndTwoDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantOneAndTwoDropdown/GcClaimantOneAndTwoDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcVehShopNameDropdown/GcVehShopNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcVehShopNameDropdown/GcVehShopNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcIcdCodeFiveTextboxes/GcIcdCodeFiveTextboxesDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcIcdCodeFiveTextboxes/GcIcdCodeFiveTextboxesController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcHealthBenefitsCheckboxLst/GcHealthBenefitsCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcHealthBenefitsCheckboxLst/GcHealthBenefitsCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcAddresseeOneandTwo/GcAddresseeOneandTwoDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcAddresseeOneandTwo/GcAddresseeOneandTwoController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcVehicleOwnerAndInsurance/GcVehicleOwnerAndInsuranceDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcVehicleOwnerAndInsurance/GcVehicleOwnerAndInsuranceController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcParentsAndMinorNames/GcParentsAndMinorNamesDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcParentsAndMinorNames/GcParentsAndMinorNamesController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcTortfeasorNameDropdown/GcTortfeasorNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcTortfeasorNameDropdown/GcTortfeasorNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcTortfeasorNameAndInsDropdown/GcTortfeasorNameAndInsDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcTortfeasorNameAndInsDropdown/GcTortfeasorNameAndInsDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcTreatmentDates/GcTreatmentDatesDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcTreatmentDates/GcTreatmentDatesController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcReportCheckboxList/GcReportCheckboxListDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcReportCheckboxList/GcReportCheckboxListController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcOperatorCheckboxList/GcOperatorCheckboxListDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcOperatorCheckboxList/GcOperatorCheckboxListController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNmOneDropdown/GcClaimantNmOneDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcClaimantNmOneDropdown/GcClaimantNmOneDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcPrimaryAddresseeDropdown/GcPrimaryAddresseeDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcPrimaryAddresseeDropdown/GcPrimaryAddresseeDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcAuditDelayCheckboxLst/GcAuditDelayCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcAuditDelayCheckboxLst/GcAuditDelayCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcExposureNmAndTypewPrecertId/GcExposureNmAndTypewPrecertIdDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcExposureNmAndTypewPrecertId/GcExposureNmAndTypewPrecertIdController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcExpoNmAndTypewPrecertIdNoCntrls/GcExpoNmAndTypewPrecertIdNoCntrlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcExpoNmAndTypewPrecertIdNoCntrls/GcExpoNmAndTypewPrecertIdNoCntrlsController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcParagraphCheckboxList/GcParagraphCheckboxListDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcParagraphCheckboxList/GcParagraphCheckboxListController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcImeParagraphCheckboxLst/GcImeParagraphCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcImeParagraphCheckboxLst/GcImeParagraphCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcRiskCheckboxLst/GcRiskCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcRiskCheckboxLst/GcRiskCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcDeleteCoverageCheckboxLst/GcDeleteCoverageCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcDeleteCoverageCheckboxLst/GcDeleteCoverageCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcOverpaymentReasonAndOther/GcOverpaymentReasonAndOtherDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcOverpaymentReasonAndOther/GcOverpaymentReasonAndOtherController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetPrinter/GcScanSheetPrinterDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetPrinter/GcScanSheetPrinterController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetCheckbox/GcScanSheetCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetCheckbox/GcScanSheetCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetDatePicker/GcScanSheetDatePickerDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetDatePicker/GcScanSheetDatePickerController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetTextBox/GcScanSheetTextBoxDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetTextBox/GcScanSheetTextBoxController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetClmtExp/GcScanSheetClmtExpDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetClmtExp/GcScanSheetClmtExpController.js")\" type=\"text\/javascript\"><\/script>")
+
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetAssignToDropdown/GcScanSheetAssignToDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+    .append("<script src=\"@Url.Content("~/Controls/GcScanSheetAssignToDropdown/GcScanSheetAssignToDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+                break;
+            }
+        case "BC-PA":
+            {
+                $('body').append("<script src=\"@Url.Content("~/Controls/plbcAddresseeOneAndTwo/PlbcAddresseeOneAndTwoDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/plbcAddresseeOneAndTwo/PlbcAddresseeOneAndTwoController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PlbcCcSection/PlbcCcSectionDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PlbcCcSection/PlbcCcSectionController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PlbcAddresseewAttentionNm/PlbcAddresseewAttentionNmDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PlbcAddresseewAttentionNm/PlbcAddresseewAttentionNmController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PlbcActStmtAddresseeOneTwoNtRequired/PlbcActStmtAddresseeOneTwoNtRequiredDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PlbcActStmtAddresseeOneTwoNtRequired/PlbcActStmtAddresseeOneTwoNtRequiredController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetDropdown/PlScanSheetDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetDropdown/PlScanSheetDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetYearDropdown/PlScanSheetYearDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetYearDropdown/PlScanSheetYearDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetPrinter/PlScanSheetPrinterDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetPrinter/PlScanSheetPrinterController.js")\" type=\"text\/javascript\"><\/script>")
+                break;
+            }
+        case "PC-PA":
+            {
+                $('body').append("<script src=\"@Url.Content("~/Controls/PcpaLeaseVehCheckboxwCheckboxlst/PcpaLeaseVehCheckboxwCheckboxlstDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaLeaseVehCheckboxwCheckboxlst/PcpaLeaseVehCheckboxwCheckboxlstController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaVehicleCheckboxwCheckboxlist/PcpaVehicleCheckboxwCheckboxlistDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaVehicleCheckboxwCheckboxlist/PcpaVehicleCheckboxwCheckboxlistController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaVehicleCheckboxLst/PcpaVehicleCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaVehicleCheckboxLst/PcpaVehicleCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaVehicleCheckboxLstNotReq/PcpaVehicleCheckboxLstNotReqDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaVehicleCheckboxLstNotReq/PcpaVehicleCheckboxLstNotReqController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaAddresseeOneAndTwo/pcpaAddresseeOneAndTwoDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaAddresseeOneAndTwo/pcpaAddresseeOneAndTwoController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaVehicleDropDown/pcpaVehicleDropDownDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaVehicleDropDown/pcpaVehicleDropDownController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaRegistrVehCheckboxwCheckboxlst/PcpaRegistrVehCheckboxwCheckboxlstDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaRegistrVehCheckboxwCheckboxlst/PcpaRegistrVehCheckboxwCheckboxlstController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaFinanceVehCheckboxwCheckboxlst/PcpaFinanceVehCheckboxwCheckboxlstDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaFinanceVehCheckboxwCheckboxlst/PcpaFinanceVehCheckboxwCheckboxlstController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaAddresseeOneAndTwowGreetingName/PcpaAddresseeOneAndTwowGreetingNameDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaAddresseeOneAndTwowGreetingName/PcpaAddresseeOneAndTwowGreetingNameController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaTitleVehCheckboxwCheckboxlst/PcpaTitleVehCheckboxwCheckboxlstDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaTitleVehCheckboxwCheckboxlst/PcpaTitleVehCheckboxwCheckboxlstController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaAdditionalPolicyNumCheckbox/pcpaAdditionalPolicyNumCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaAdditionalPolicyNumCheckbox/pcpaAdditionalPolicyNumCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaDuiDropdownwCheckbox/PcpaDuiDropdownwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaDuiDropdownwCheckbox/PcpaDuiDropdownwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaDriverDropdown/PcpaDriverDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaDriverDropdown/PcpaDriverDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaSpousePartnerNameDropdown/pcpaSpousePartnerNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaSpousePartnerNameDropdown/pcpaSpousePartnerNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaInvalidLicenseDriverInfo/pcpaInvalidLicenseDriverInfoDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaInvalidLicenseDriverInfo/pcpaInvalidLicenseDriverInfoController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaDriverDropdownRepeater/PcpaDriverDropdownRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaDriverDropdownRepeater/PcpaDriverDropdownRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaCsfEffectiveDropdown/PcpaCsfEffectiveDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaCsfEffectiveDropdown/PcpaCsfEffectiveDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaLicenseSuspendedDriverInfo/pcpaLicenseSuspendedDriverInfoDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaLicenseSuspendedDriverInfo/pcpaLicenseSuspendedDriverInfoController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaDrivingWhileSuspendedDriverInfo/pcpaDrivingWhileSuspendedDriverInfoDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaDrivingWhileSuspendedDriverInfo/pcpaDrivingWhileSuspendedDriverInfoController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaCsfBlankPrefilledDropdown/PcpaCsfBlankPrefilledDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaCsfBlankPrefilledDropdown/PcpaCsfBlankPrefilledDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaPurchOrdVehCheckboxwCheckboxlst/PcpaPurchOrdVehCheckboxwCheckboxlstDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaPurchOrdVehCheckboxwCheckboxlst/PcpaPurchOrdVehCheckboxwCheckboxlstController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaClueReferenceNumRepeater/pcpaClueReferenceNumRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaClueReferenceNumRepeater/pcpaClueReferenceNumRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaSepDivorceDropwdownwControls/PcpaSepDivorceDropwdownwControlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaSepDivorceDropwdownwControls/PcpaSepDivorceDropwdownwControlsController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaDriverInfoRepeater/PcpaDriverInfoRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaDriverInfoRepeater/PcpaDriverInfoRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaNonrenewCancelDropdownwControls/pcpaNonrenewCancelDropdownwControlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaNonrenewCancelDropdownwControls/pcpaNonrenewCancelDropdownwControlsController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaMvrReferenceNumRepeater/PcpaMvrReferenceNumRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaMvrReferenceNumRepeater/PcpaMvrReferenceNumRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaClaimViolationRepeater/PcpaClaimViolationRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaClaimViolationRepeater/PcpaClaimViolationRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaPolReinstCancelRepeaterwCheckbox/pcpaPolReinstCancelRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaPolReinstCancelRepeaterwCheckbox/pcpaPolReinstCancelRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaLicenseDriverNameCheckbox/PcpaLicenseDriverNameCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaLicenseDriverNameCheckbox/PcpaLicenseDriverNameCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaVehicleCoverageDropdownwControls/PcpaVehicleCoverageDropdownwControlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaVehicleCoverageDropdownwControls/PcpaVehicleCoverageDropdownwControlsController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaOtherResidentsInHousewCheckbox/PcpaOtherResidentsInHousewCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaOtherResidentsInHousewCheckbox/PcpaOtherResidentsInHousewCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaVehicleInfoRepeater/pcpaVehicleInfoRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaVehicleInfoRepeater/pcpaVehicleInfoRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaClaimOnPolDrpdwnwCntrlswCheckbox/PcpaClaimOnPolDrpdwnwCntrlswCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaClaimOnPolDrpdwnwCntrlswCheckbox/PcpaClaimOnPolDrpdwnwCntrlswCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaAdditionalDriverInfo/pcpaAdditionalDriverInfoDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaAdditionalDriverInfo/pcpaAdditionalDriverInfoController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaDeletionOfCoverageDropdownwControls/PcpaDeletionOfCoverageDropdownwControlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaDeletionOfCoverageDropdownwControls/PcpaDeletionOfCoverageDropdownwControlsController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaClaimCheckboxwCheckbox/pcpaClaimCheckboxwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaClaimCheckboxwCheckbox/pcpaClaimCheckboxwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/pcpaNoticeNonrenewDropdownwControls/pcpaNoticeNonrenewDropdownwControlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/pcpaNoticeNonrenewDropdownwControls/pcpaNoticeNonrenewDropdownwControlsController.js")\" type=\"text\/javascript\"><\/script>")
+
+               .append("<script src=\"@Url.Content("~/Controls/PcpaAddresseeOneAndTwoNotReq/PcpaAddresseeOneAndTwoNotReqDirective.js")\" type=\"text\/javascript\"><\/script>")
+               .append("<script src=\"@Url.Content("~/Controls/PcpaAddresseeOneAndTwoNotReq/PcpaAddresseeOneAndTwoNotReqController.js")\" type=\"text\/javascript\"><\/script>")
+
+                .append("<script src=\"@Url.Content("~/Controls/PcpaReconsiderationDropdownwControls/PcpaReconsiderationDropdownwControlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+                .append("<script src=\"@Url.Content("~/Controls/PcpaReconsiderationDropdownwControls/PcpaReconsiderationDropdownwControlsController.js")\" type=\"text\/javascript\"><\/script>")
+
+                .append("<script src=\"@Url.Content("~/Controls/PcpaMidtermCancelReasonDrpdwnwCntrls/PcpaMidtermCancelReasonDrpdwnwCntrlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+                .append("<script src=\"@Url.Content("~/Controls/PcpaMidtermCancelReasonDrpdwnwCntrls/PcpaMidtermCancelReasonDrpdwnwCntrlsController.js")\" type=\"text\/javascript\"><\/script>")
+
+                .append("<script src=\"@Url.Content("~/Controls/PcpaDriverDropdownRepeaterwCheckbox/PcpaDriverDropdownRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+                .append("<script src=\"@Url.Content("~/Controls/PcpaDriverDropdownRepeaterwCheckbox/PcpaDriverDropdownRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+                .append("<script src=\"@Url.Content("~/Controls/PcpaVehInfoCheckboxwCheckboxlst/PcpaVehInfoCheckboxwCheckboxlstDirective.js")\" type=\"text\/javascript\"><\/script>")
+                .append("<script src=\"@Url.Content("~/Controls/PcpaVehInfoCheckboxwCheckboxlst/PcpaVehInfoCheckboxwCheckboxlstController.js")\" type=\"text\/javascript\"><\/script>")
+
+                .append("<script src=\"@Url.Content("~/Controls/PcpaCtNoticeOfNonrenewDropdown/PcpaCtNoticeOfNonrenewDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+                .append("<script src=\"@Url.Content("~/Controls/PcpaCtNoticeOfNonrenewDropdown/PcpaCtNoticeOfNonrenewDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+                .append("<script src=\"@Url.Content("~/Controls/PcpaCtMidtermCancelReasonDropdown/PcpaCtMidtermCancelReasonDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+                .append("<script src=\"@Url.Content("~/Controls/PcpaCtMidtermCancelReasonDropdown/PcpaCtMidtermCancelReasonDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+                .append("<script src=\"@Url.Content("~/Controls/PlScanSheetDropdown/PlScanSheetDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+                .append("<script src=\"@Url.Content("~/Controls/PlScanSheetDropdown/PlScanSheetDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+                .append("<script src=\"@Url.Content("~/Controls/PlScanSheetYearDropdown/PlScanSheetYearDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+                .append("<script src=\"@Url.Content("~/Controls/PlScanSheetYearDropdown/PlScanSheetYearDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+                .append("<script src=\"@Url.Content("~/Controls/PlScanSheetPrinter/PlScanSheetPrinterDirective.js")\" type=\"text\/javascript\"><\/script>")
+                .append("<script src=\"@Url.Content("~/Controls/PlScanSheetPrinter/PlScanSheetPrinterController.js")\" type=\"text\/javascript\"><\/script>")
+
+                .append("<script src=\"@Url.Content("~/Controls/PcpaAddedPipCheckboxList/PcpaAddedPipCheckboxListDirective.js")\" type=\"text\/javascript\"><\/script>")
+                .append("<script src=\"@Url.Content("~/Controls/PcpaAddedPipCheckboxList/PcpaAddedPipCheckboxListController.js")\" type=\"text\/javascript\"><\/script>")
+
+                .append("<script src=\"@Url.Content("~/Controls/PcpaVehicleAnnualMileage/PcpaVehicleAnnualMileageDirective.js")\" type=\"text\/javascript\"><\/script>")
+                .append("<script src=\"@Url.Content("~/Controls/PcpaVehicleAnnualMileage/PcpaVehicleAnnualMileageController.js")\" type=\"text\/javascript\"><\/script>")
+                break;
+            }
+
+        case "BC-WCU": {
+            $('body').append("<script src=\"@Url.Content("~/Controls/BcwcuAddresseewAttentionNm/BcwcuAddresseewAttentionNmDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/BcwcuAddresseewAttentionNm/BcwcuAddresseewAttentionNmController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/BcwcuAddresseeAndAttentionwDba/BcwcuAddresseeAndAttentionwDbaDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/BcwcuAddresseeAndAttentionwDba/BcwcuAddresseeAndAttentionwDbaController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/BcwcuCcSection/BcwcuCcSectionDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/BcwcuCcSection/BcwcuCcSectionController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/BcwcuAddresseewDba/BcwcuAddresseewDbaDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/BcwcuAddresseewDba/BcwcuAddresseewDbaController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/BcwcuAddresseewAttentionNmProducer/BcwcuAddresseewAttentionNmProducerDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/BcwcuAddresseewAttentionNmProducer/BcwcuAddresseewAttentionNmProducerController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/BcwcuCcSectionProducer/BcwcuCcSectionProducerDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/BcwcuCcSectionProducer/BcwcuCcSectionProducerController.js")\" type=\"text\/javascript\"><\/script>")
+            break;
+        }
+
+        case "PC-HO": {
+            $('body').append("<script src=\"@Url.Content("~/Controls/PchoHo61AddAdtlInfoRepeaterwCheckbox/PchoHo61AddAdtlInfoRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PchoHo61AddAdtlInfoRepeaterwCheckbox/PchoHo61AddAdtlInfoRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PchoHo61NoAddAdtlInfoRepeatwCheckbox/PchoHo61NoAddAdtlInfoRepeatwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PchoHo61NoAddAdtlInfoRepeatwCheckbox/PchoHo61NoAddAdtlInfoRepeatwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PchoHo61DecAdtlInfoRepeaterwCheckbox/PchoHo61DecAdtlInfoRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PchoHo61DecAdtlInfoRepeaterwCheckbox/PchoHo61DecAdtlInfoRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PchoUpdateAppraisalCheckboxlst/PchoUpdateAppraisalCheckboxlstDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PchoUpdateAppraisalCheckboxlst/PchoUpdateAppraisalCheckboxlstController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddrNmOneTwoThreewGreetNm/pchodwumbAddrNmOneTwoThreewGreetNmDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddrNmOneTwoThreewGreetNm/pchodwumbAddrNmOneTwoThreewGreetNmController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddresseeNameOneTwoAndThree/pchodwumbAddresseeNameOneTwoAndThreeDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddresseeNameOneTwoAndThree/pchodwumbAddresseeNameOneTwoAndThreeController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PchoAddtlPolNumCheckboxwCheckbox/PchoAddtlPolNumCheckboxwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PchoAddtlPolNumCheckboxwCheckbox/PchoAddtlPolNumCheckboxwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetDropdown/PlScanSheetDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetDropdown/PlScanSheetDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetYearDropdown/PlScanSheetYearDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetYearDropdown/PlScanSheetYearDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetPrinter/PlScanSheetPrinterDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetPrinter/PlScanSheetPrinterController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PchoCertificateHolderNameDropdown/PchoCertificateHolderNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PchoCertificateHolderNameDropdown/PchoCertificateHolderNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+            break;
+        }
+
+        case "PC-DW": {
+            $('body').append("<script src=\"@Url.Content("~/Controls/PcdwAddtlPolNumCheckboxwCheckbox/PcdwAddtlPolNumCheckboxwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcdwAddtlPolNumCheckboxwCheckbox/PcdwAddtlPolNumCheckboxwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcdwCertificateHolderNameDropdown/PcdwCertificateHolderNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcdwCertificateHolderNameDropdown/PcdwCertificateHolderNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcdwAddrNmOneTwoAndThreewDropdown/PcdwAddrNmOneTwoAndThreewDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcdwAddrNmOneTwoAndThreewDropdown/PcdwAddrNmOneTwoAndThreewDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcdwAddrNmOneTwoThreeDrpdwnwGreetNm/PcdwAddrNmOneTwoThreeDrpdwnwGreetNmDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcdwAddrNmOneTwoThreeDrpdwnwGreetNm/PcdwAddrNmOneTwoThreeDrpdwnwGreetNmController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetDropdown/PlScanSheetDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetDropdown/PlScanSheetDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetYearDropdown/PlScanSheetYearDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetYearDropdown/PlScanSheetYearDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetPrinter/PlScanSheetPrinterDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetPrinter/PlScanSheetPrinterController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddrNmOneTwoThreewGreetNm/pchodwumbAddrNmOneTwoThreewGreetNmDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddrNmOneTwoThreewGreetNm/pchodwumbAddrNmOneTwoThreewGreetNmController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddresseeNameOneTwoAndThree/pchodwumbAddresseeNameOneTwoAndThreeDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddresseeNameOneTwoAndThree/pchodwumbAddresseeNameOneTwoAndThreeController.js")\" type=\"text\/javascript\"><\/script>")
+            break;
+        }
+
+        case "PC-UMB": {
+            $('body').append("<script src=\"@Url.Content("~/Controls/PcumbCompleteAddrRepeaterwCheckbox/PcumbCompleteAddrRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbCompleteAddrRepeaterwCheckbox/PcumbCompleteAddrRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbVacLndCompInfoRepeaterwCheckbox/PcumbVacLndCompInfoRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbVacLndCompInfoRepeaterwCheckbox/PcumbVacLndCompInfoRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbNameOnDeedRepeaterwCheckbox/PcumbNameOnDeedRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbNameOnDeedRepeaterwCheckbox/PcumbNameOnDeedRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbPropInfoRepeaterwCheckbox/PcumbPropInfoRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbPropInfoRepeaterwCheckbox/PcumbPropInfoRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbWatercraftRepeaterwCheckbox/PcumbWatercraftRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbWatercraftRepeaterwCheckbox/PcumbWatercraftRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbVehRepeaterwCheckbox/PcumbVehRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbVehRepeaterwCheckbox/PcumbVehRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbBusinessUseOnPropwCheckbox/PcumbBusinessUseOnPropwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbBusinessUseOnPropwCheckbox/PcumbBusinessUseOnPropwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbAccidentInfoRepeaterwCheckbox/PcumbAccidentInfoRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbAccidentInfoRepeaterwCheckbox/PcumbAccidentInfoRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/pcumbPennTermReasonsDropdown/pcumbPennTermReasonsDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/pcumbPennTermReasonsDropdown/pcumbPennTermReasonsDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbDriverInfoRepeaterwCheckbox/PcumbDriverInfoRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbDriverInfoRepeaterwCheckbox/PcumbDriverInfoRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbDrivingRecRepeaterwCheckbox/PcumbDrivingRecRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbDrivingRecRepeaterwCheckbox/PcumbDrivingRecRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbAddtlPolNumCheckboxwCheckboxLst/PcumbAddtlPolNumCheckboxwCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbAddtlPolNumCheckboxwCheckboxLst/PcumbAddtlPolNumCheckboxwCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/pcumbNonrenewalWithdrawalDropdown/pcumbNonrenewalWithdrawalDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/pcumbNonrenewalWithdrawalDropdown/pcumbNonrenewalWithdrawalDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/pcumbNonrenewalReasonDropdown/pcumbNonrenewalReasonDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/pcumbNonrenewalReasonDropdown/pcumbNonrenewalReasonDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbInspectionRepeaterwCheckbox/PcumbInspectionRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbInspectionRepeaterwCheckbox/PcumbInspectionRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbClaimsAutoRepeaterwCheckbox/PcumbClaimsAutoRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbClaimsAutoRepeaterwCheckbox/PcumbClaimsAutoRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbRiskLocDropdownwCheckbox/PcumbRiskLocDropdownwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbRiskLocDropdownwCheckbox/PcumbRiskLocDropdownwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbMidtermCancelReasonDropdown/PcumbMidtermCancelReasonDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbMidtermCancelReasonDropdown/PcumbMidtermCancelReasonDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PcumbClaimsHomeRepeaterwCheckbox/PcumbClaimsHomeRepeaterwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PcumbClaimsHomeRepeaterwCheckbox/PcumbClaimsHomeRepeaterwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/pcumbCancelWithdrawalDropdown/pcumbCancelWithdrawalDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/pcumbCancelWithdrawalDropdown/pcumbCancelWithdrawalDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetDropdown/PlScanSheetDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetDropdown/PlScanSheetDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetYearDropdown/PlScanSheetYearDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetYearDropdown/PlScanSheetYearDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetPrinter/PlScanSheetPrinterDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/PlScanSheetPrinter/PlScanSheetPrinterController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddrNmOneTwoThreewGreetNm/pchodwumbAddrNmOneTwoThreewGreetNmDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddrNmOneTwoThreewGreetNm/pchodwumbAddrNmOneTwoThreewGreetNmController.js")\" type=\"text\/javascript\"><\/script>")
+
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddresseeNameOneTwoAndThree/pchodwumbAddresseeNameOneTwoAndThreeDirective.js")\" type=\"text\/javascript\"><\/script>")
+            .append("<script src=\"@Url.Content("~/Controls/pchodwumbAddresseeNameOneTwoAndThree/pchodwumbAddresseeNameOneTwoAndThreeController.js")\" type=\"text\/javascript\"><\/script>")
+            break;
+        }
+
+        case "WCC": {
+            $('body').append("<script src=\"@Url.Content("~/Controls/WccAddrOneAndTwoRolewAttn/WccAddrOneAndTwoRolewAttnDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccAddrOneAndTwoRolewAttn/WccAddrOneAndTwoRolewAttnController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccAuthorRoleAndName/WccAuthorRoleAndNameDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccAuthorRoleAndName/WccAuthorRoleAndNameController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccAttorneyNmDropdown/WccAttorneyNmDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccAttorneyNmDropdown/WccAttorneyNmDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccProviderNameAndAddrRepeater/WccProviderNameAndAddrRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccProviderNameAndAddrRepeater/WccProviderNameAndAddrRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccClmtAttnyNameAndAddress/WccClmtAttnyNameAndAddressDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccClmtAttnyNameAndAddress/WccClmtAttnyNameAndAddressController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccLawFirmNameDropdown/WccLawFirmNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccLawFirmNameDropdown/WccLawFirmNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccClaimPetNumCheckboxwCheckboxLst/WccClaimPetNumCheckboxwCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccClaimPetNumCheckboxwCheckboxLst/WccClaimPetNumCheckboxwCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccInterrogRecRoleAndReceiver/WccInterrogRecRoleAndReceiverDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccInterrogRecRoleAndReceiver/WccInterrogRecRoleAndReceiverController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccExamRoleNmAddrAndAttn/WccExamRoleNmAddrAndAttnDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccExamRoleNmAddrAndAttn/WccExamRoleNmAddrAndAttnController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccProviderNameAndAddress/WccProviderNameAndAddressDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccProviderNameAndAddress/WccProviderNameAndAddressController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccProviderNameDropdown/WccProviderNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccProviderNameDropdown/WccProviderNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccPhysicianNameAndAddress/WccPhysicianNameAndAddressDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccPhysicianNameAndAddress/WccPhysicianNameAndAddressController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccToDropdown/WccToDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccToDropdown/WccToDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccClaimantNameDropdown/WccClaimantNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccClaimantNameDropdown/WccClaimantNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccAddrRoleAndAddress/WccAddrRoleAndAddressDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccAddrRoleAndAddress/WccAddrRoleAndAddressController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccRecipientRoleAndAddress/WccRecipientRoleAndAddressDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccRecipientRoleAndAddress/WccRecipientRoleAndAddressController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccBoardWNumDropdown/WccBoardWNumDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccBoardWNumDropdown/WccBoardWNumDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccReferredDropdown/WccReferredDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccReferredDropdown/WccReferredDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccReSectionDropdownwControls/WccReSectionDropdownwControlsDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccReSectionDropdownwControls/WccReSectionDropdownwControlsController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccEmailwCheckbox/WccEmailwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccEmailwCheckbox/WccEmailwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccAttnyNameAndAddress/WccAttnyNameAndAddressDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccAttnyNameAndAddress/WccAttnyNameAndAddressController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccChartDataRepeater/WccChartDataRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccChartDataRepeater/WccChartDataRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccReasonForDenialCheckboxLst/WccReasonForDenialCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccReasonForDenialCheckboxLst/WccReasonForDenialCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccAdjrCaseMngrNameDropdown/WccAdjrCaseMngrNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccAdjrCaseMngrNameDropdown/WccAdjrCaseMngrNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccNurseCaseMngrDropdown/WccNurseCaseMngrDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccNurseCaseMngrDropdown/WccNurseCaseMngrDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccFiveProviderNmAndAddress/WccFiveProviderNmAndAddressDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccFiveProviderNmAndAddress/WccFiveProviderNmAndAddressController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccClaimantDependentDropdown/WccClaimantDependentDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccClaimantDependentDropdown/WccClaimantDependentDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccGuardianNameDropdown/WccGuardianNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccGuardianNameDropdown/WccGuardianNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccDmeCheckboxLstwStatus/WccDmeCheckboxLstwStatusDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccDmeCheckboxLstwStatus/WccDmeCheckboxLstwStatusController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccPrecertIdAndApprovalStat/WccPrecertIdAndApprovalStatDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccPrecertIdAndApprovalStat/WccPrecertIdAndApprovalStatController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccSurgicalCheckboxLst/WccSurgicalCheckboxLstDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccSurgicalCheckboxLst/WccSurgicalCheckboxLstController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccHospitalNmAndAddress/WccHospitalNmAndAddressDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccHospitalNmAndAddress/WccHospitalNmAndAddressController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccWitnessNameDropdown/WccWitnessNameDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccWitnessNameDropdown/WccWitnessNameDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccCheckAmountFields/WccCheckAmountFieldsDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccCheckAmountFields/WccCheckAmountFieldsController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccDoctypeDropdown/WccDoctypeDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccDoctypeDropdown/WccDoctypeDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccInfoForAddtlTreatmentAndOther/WccInfoForAddtlTreatmentAndOtherDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccInfoForAddtlTreatmentAndOther/WccInfoForAddtlTreatmentAndOtherController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccOverpaymentSection/WccOverpaymentSectionDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccOverpaymentSection/WccOverpaymentSectionController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccLawFirmDropdown/WccLawFirmDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccLawFirmDropdown/WccLawFirmDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WccCheckPayableNmAddrDropdown/WccCheckPayableNmAddrDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WccCheckPayableNmAddrDropdown/WccCheckPayableNmAddrDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClaimsFaxwCheckbox/ClaimsFaxwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClaimsFaxwCheckbox/ClaimsFaxwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClaimsCcBccDropdownwCheckbox/ClaimsCcBccDropdownwCheckboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClaimsCcBccDropdownwCheckbox/ClaimsCcBccDropdownwCheckboxController.js")\" type=\"text\/javascript\"><\/script>")
+            break;
+        }
+
+        case "PC-WCU": {
+            $('body').append("<script src=\"@Url.Content("~/Controls/WcuAddrNmCompanyAddress/WcuAddrNmCompanyAddressDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WcuAddrNmCompanyAddress/WcuAddrNmCompanyAddressController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WcuCCSectionRepeater/WcuCCSectionRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WcuCCSectionRepeater/WcuCCSectionRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WcuScanSheetDatePicker/WcuScanSheetDatePickerDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WcuScanSheetDatePicker/WcuScanSheetDatePickerController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WcuScanSheetDropdown/WcuScanSheetDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WcuScanSheetDropdown/WcuScanSheetDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WcuScanSheetTextBox/WcuScanSheetTextBoxDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WcuScanSheetTextBox/WcuScanSheetTextBoxController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WcuScanSheetPrinter/WcuScanSheetPrinterDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WcuScanSheetPrinter/WcuScanSheetPrinterController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WcuRetroDetailsRepeater/WcuRetroDetailsRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WcuRetroDetailsRepeater/WcuRetroDetailsRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WcuYearModRepeater/WcuYearModRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WcuYearModRepeater/WcuYearModRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WcuAddresseeRepeater/WcuAddresseeRepeaterDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WcuAddresseeRepeater/WcuAddresseeRepeaterController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/WcuPostingNoticeTextbox/WcuPostingNoticeTextboxDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/WcuPostingNoticeTextbox/WcuPostingNoticeTextboxController.js")\" type=\"text\/javascript\"><\/script>")
+            break;
+        }
+
+        case "PC-CA": {
+            $('body').append("<script src=\"@Url.Content("~/Controls/ClScanSheetDropdown/ClScanSheetDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetDropdown/ClScanSheetDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetYearDropdown/ClScanSheetYearDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetYearDropdown/ClScanSheetYearDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetPrinter/ClScanSheetPrinterDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetPrinter/ClScanSheetPrinterController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClAddresseeOne/ClAddresseeOneDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClAddresseeOne/ClAddresseeOneController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClCcSection/ClCcSectionDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClCcSection/ClCcSectionController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClVehicleDropdown/ClVehicleDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClVehicleDropdown/ClVehicleDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+            break;
+        }
+
+        case "PC-BOP": {
+      
+            $('body').append("<script src=\"@Url.Content("~/Controls/ClScanSheetDropdown/ClScanSheetDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetDropdown/ClScanSheetDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetYearDropdown/ClScanSheetYearDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetYearDropdown/ClScanSheetYearDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetPrinter/ClScanSheetPrinterDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetPrinter/ClScanSheetPrinterController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClAddresseeOne/ClAddresseeOneDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClAddresseeOne/ClAddresseeOneController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClCcSection/ClCcSectionDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClCcSection/ClCcSectionController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClVehicleDropdown/ClVehicleDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClVehicleDropdown/ClVehicleDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+            break;
+        }
+
+        case "PC-CUMB": {
+            $('body').append("<script src=\"@Url.Content("~/Controls/ClScanSheetDropdown/ClScanSheetDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetDropdown/ClScanSheetDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetYearDropdown/ClScanSheetYearDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetYearDropdown/ClScanSheetYearDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetPrinter/ClScanSheetPrinterDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetPrinter/ClScanSheetPrinterController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClAddresseeOne/ClAddresseeOneDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClAddresseeOne/ClAddresseeOneController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClCcSection/ClCcSectionDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClCcSection/ClCcSectionController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClVehicleDropdown/ClVehicleDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClVehicleDropdown/ClVehicleDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+            break;
+        }
+
+        case "PC-CGL": {
+            $('body').append("<script src=\"@Url.Content("~/Controls/ClScanSheetDropdown/ClScanSheetDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetDropdown/ClScanSheetDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetYearDropdown/ClScanSheetYearDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetYearDropdown/ClScanSheetYearDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetPrinter/ClScanSheetPrinterDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClScanSheetPrinter/ClScanSheetPrinterController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClAddresseeOne/ClAddresseeOneDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClAddresseeOne/ClAddresseeOneController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClCcSection/ClCcSectionDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClCcSection/ClCcSectionController.js")\" type=\"text\/javascript\"><\/script>")
+
+        .append("<script src=\"@Url.Content("~/Controls/ClVehicleDropdown/ClVehicleDropdownDirective.js")\" type=\"text\/javascript\"><\/script>")
+        .append("<script src=\"@Url.Content("~/Controls/ClVehicleDropdown/ClVehicleDropdownController.js")\" type=\"text\/javascript\"><\/script>")
+            break;
+        }
+
+    }
+    //get querystring parameters
+    function getUrlParameter(name) {
+        name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+        var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+        var results = regex.exec(location.search);
+        return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    };
+</script>

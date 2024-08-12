@@ -1,0 +1,145 @@
+﻿<div class="panel panel-primary" ng-controller="WccChartDataRepeaterController">
+    <div class="panel-heading">Chart Data</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray" ng-repeat="item in TotalCount track by $index">
+                <div class="col-md-3">
+                    <input ng-click="clearAllData($index)" ng-model="CtrlEnabledCheckbox[$index]" type="checkbox" id="CtrlEnableCheckboxId" name="CtrlEnableCheckbox" value="" />
+                    <label>Include Chart</label>
+                </div>
+                <div class="col-md-9">
+
+                    <!--Chart Title-->
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">* Chart Title:</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index]" ng-required="CtrlEnabledCheckbox[$index]" ng-model="chartTitle[$index]" type="text" class="form-control" name="ChartTitle{{$index}}" id="ChartTitle{{$index}}Id" value="" maxlength="15" />
+                        </div>
+                        <div class="col-md-5"></div>
+                    </div>
+
+                    <!--Label 1-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-2">
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">* Label 1:</label>
+                        </div>
+                        <div class="col-md-5">
+                            <select ng-disabled="!CtrlEnabledCheckbox[$index]" ng-required="CtrlEnabledCheckbox[$index]" ng-options="item for item in Labels" ng-model="chartLabel1[$index]" ng-init="chartLabel1[$index] = Labels[0]" class="form-control" name="ChartLabel1{{$index}}" id="ChartLabel1{{$index}}Id">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5 row" >
+                            <div class="col-md-1" ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">$</div>
+                            <div class="col-md-9">
+                                <input class="form-control" ng-disabled="!CtrlEnabledCheckbox[$index]" ng-required="CtrlEnabledCheckbox[$index]" ng-model="chartLabel1Val[$index]" type="text" placeholder="####.##" ng-change="chartLabel1Val[$index]=validateNumber(chartLabel1Val[$index])" name="ChartLabel1Val{{$index}}" id="ChartLabel1Val{{$index}}Id" value="" maxlength="15" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Label 2-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-2">
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Label 2:</label>
+                        </div>
+                        <div class="col-md-5">
+                            <select ng-disabled="!CtrlEnabledCheckbox[$index]" ng-options="item for item in Labels" ng-model="chartLabel2[$index]" ng-init="chartLabel2[$index] = Labels[1]" class="form-control" name="ChartLabel2{{$index}}" id="ChartLabel2{{$index}}Id">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5 row">
+                            <div class="col-md-1" ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">$</div>
+                            <div class="col-md-9">
+                                <input class="form-control" ng-disabled="!CtrlEnabledCheckbox[$index]" ng-model="chartLabel2Val[$index]" type="text" placeholder="####.##" ng-change="chartLabel2Val[$index]=validateNumber(chartLabel2Val[$index])" name="ChartLabel2Val{{$index}}" id="ChartLabel2Val{{$index}}Id" value="" maxlength="15" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Label 3-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-2">
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Label 3:</label>
+                        </div>
+                        <div class="col-md-5">
+                            <select ng-disabled="!CtrlEnabledCheckbox[$index]" ng-options="item for item in Labels" ng-model="chartLabel3[$index]" ng-init="chartLabel3[$index] = Labels[2]" class="form-control" name="ChartLabel3{{$index}}" id="ChartLabel3{{$index}}Id">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5 row">
+                            <div class="col-md-1" ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">$</div>
+                            <div class="col-md-9">
+                                <input class="form-control" ng-disabled="!CtrlEnabledCheckbox[$index]" ng-model="chartLabel3Val[$index]" type="text" placeholder="####.##" ng-change="chartLabel3Val[$index]=validateNumber(chartLabel3Val[$index])" name="ChartLabel3Val{{$index}}" id="ChartLabel3Val{{$index}}Id" value="" maxlength="15" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Label 4-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-2">
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Label 4:</label>
+                        </div>
+                        <div class="col-md-5">
+                            <select ng-disabled="!CtrlEnabledCheckbox[$index]" ng-options="item for item in Labels" ng-model="chartLabel4[$index]" ng-init="chartLabel4[$index] = Labels[3]" class="form-control" name="ChartLabel4{{$index}}" id="ChartLabel4{{$index}}Id">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5 row">
+                            <div class="col-md-1" ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">$</div>
+                            <div class="col-md-9">
+                                <input class="form-control" ng-disabled="!CtrlEnabledCheckbox[$index]" ng-model="chartLabel4Val[$index]" type="text" placeholder="####.##" ng-change="chartLabel4Val[$index]=validateNumber(chartLabel4Val[$index])" name="ChartLabel4Val{{$index}}" id="ChartLabel4Val{{$index}}Id" value="" maxlength="15" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Label 5-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-2">
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Label 5:</label>
+                        </div>
+                        <div class="col-md-5" ng-show="UCR">
+                            <select ng-disabled="!CtrlEnabledCheckbox[$index]" ng-options="item for item in Labels" ng-model="chartLabel5[$index]" ng-init="chartLabel5[$index] = Labels[4]" class="form-control" name="ChartLabel5{{$index}}" id="ChartLabel5{{$index}}Id">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5" ng-show="!UCR">
+                            <input class="form-control" ng-disabled="!CtrlEnabledCheckbox[$index]" ng-model="chartLabel5Text[$index]" type="text" name="ChartLabel5Text{{$index}}" id="ChartLabel5Text{{$index}}Id" value="" />
+                        </div>
+                        <div class="col-md-5 row">
+                            <div class="col-md-1" ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">$</div>
+                            <div class="col-md-9">
+                                <input class="form-control" ng-disabled="!CtrlEnabledCheckbox[$index]" ng-model="chartLabel5Val[$index]" type="text" placeholder="####.##" ng-change="chartLabel5Val[$index]=validateNumber(chartLabel5Val[$index])" name="ChartLabel5Val{{$index}}" id="ChartLabel5Val{{$index}}Id" value="" maxlength="15" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Label 6-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-2">
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Label 6:</label>
+                        </div>
+                        <div class="col-md-5" ng-show="UCR">
+                            <select ng-disabled="!CtrlEnabledCheckbox[$index]" ng-options="item for item in Labels" ng-model="chartLabel6[$index]" ng-init="chartLabel6[$index] = Labels[5]" class="form-control" name="ChartLabel6{{$index}}" id="ChartLabel6{{$index}}Id">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5" ng-show="!UCR">
+                            <input class="form-control" ng-disabled="!CtrlEnabledCheckbox[$index]" ng-model="chartLabel6Text[$index]" type="text" name="ChartLabel6Text{{$index}}" id="ChartLabel6Text{{$index}}Id" value="" />
+                        </div>
+                        <div class="col-md-5 row">
+                            <div class="col-md-1" ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">$</div>
+                            <div class="col-md-9">
+                                <input class="form-control" ng-disabled="!CtrlEnabledCheckbox[$index]" ng-model="chartLabel6Val[$index]" type="text" placeholder="####.##" ng-change="chartLabel6Val[$index]=validateNumber(chartLabel6Val[$index])" name="ChartLabel6Val{{$index}}" id="ChartLabel6Val{{$index}}Id" value="" maxlength="15" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-12 text-center" style="margin-top:10px;">
+                <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+                <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+            </div>
+        </div>
+    </div>
+</div> 

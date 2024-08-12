@@ -1,0 +1,29 @@
+﻿<div class="panel panel-primary" ng-controller="PrinterDropdownwCheckboxController">
+    <div class="panel-heading">
+       Printer Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label>
+                        <input type="checkbox" name="PrinterCheckbox" ng-model="PrinterCheckboxValue" ng-true-value="true" ng-init="PrinterCheckboxValue=false" ng-false-value="false" id="PrinterCheckboxValueId" />
+                        Send to Printer
+                    </label>
+                    </div>
+                    <div class="col-md-4">
+                        <label ng-class="(PrinterCheckboxValue)?'':'disabled-class'">
+                            * Printer Name:
+                        </label>
+                    </div>
+                    <div class="col-md-4">
+                        <select ng-disabled="!PrinterCheckboxValue" class="form-control" name="PrinterDropdownId" ng-model="SelectedPrinter" ng-options="PrinterDropdownInfo.lookupItemCode for PrinterDropdownInfo in PrinterDropdown | orderBy:'lookupItemCode'" id="PrinterDropdownID" ng-required="PrinterCheckboxValue">
+                            <option value="">--Select--</option>
+                        </select>
+
+                        <span class="alert-danger" ng-show="PrinterDropdownInfo.lookupItemCode == 0">Information not provided by source</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>

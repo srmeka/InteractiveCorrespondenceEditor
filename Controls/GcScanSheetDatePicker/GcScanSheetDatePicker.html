@@ -1,0 +1,53 @@
+﻿<div class="panel panel-primary" ng-controller="GcScanSheetDatePickerController">
+
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" ng-hide="!LabelName1">
+                <div class="col-md-3">
+                    <label id="DateLabelID1">{{LabelName1}}</label>
+                </div>
+                <div class="col-md-3">
+                    <input class="form-control"
+                           id="DateId1"
+                           name="Date1"
+                           type="text"
+                           ng-model="SelectedDate1"
+                           date-format="{{DateOutputFormat1}}"
+                           ng-required="Required1"
+                           placeholder="MM/DD/YYYY"
+                           datepicker />
+                </div>
+
+                <div class="col-md-6">
+                    <span>{{Hint1}}</span>
+                    <span class="alert-danger"
+                          ng-if="SelectedDate1 && !checkDateRange(SelectedDate1, dateFrom1, dateTo1)">Date must be between{{dateFrom1 | date }}and{{dateTo1 | date }}</span>
+                </div>
+            </div>
+
+            <div class="row" ng-hide="!LabelName2" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label id="DateLabelID1">{{LabelName2}}</label>
+                </div>
+                <div class="col-md-3">
+                    <input class="form-control"
+                           id="DateId2"
+                           name="Date2"
+                           type="text"
+                           ng-model="SelectedDate2"
+                           date-format="{{DateOutputFormat2}}"
+                           ng-required="Required2"
+                           placeholder="MM/DD/YYYY"
+                           datepicker />
+                </div>
+
+                <div class="col-md-6">
+                    <span>{{Hint2}}</span>
+                    <span class="alert-danger"
+                          ng-if="SelectedDate2 && !checkDateRange(SelectedDate2, dateFrom2, dateTo2)">Date must be between{{dateFrom2 | date }}and{{dateTo2 | date }}</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

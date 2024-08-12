@@ -1,0 +1,19 @@
+﻿<div class="panel panel-primary" ng-controller="GcClaimReportDateController">
+    <div class="panel-heading">Claim Report Date</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Claim Report Date-->
+            <div class="row">
+                <div class="col-md-4"><label>Claim Report Date:</label></div>
+                <div class="col-md-4">
+                    <input class="form-control" type="text" ng-disabled="true" ng-init="claimDate = (ClaimDate[0].AccidentReportDate | date: 'MMMM dd, yyyy')" ng-model="claimDate" name="ClaimReportDate" id="ClaimReportDateId" />
+                </div>
+                <div class="col-md-4">
+                    <span class="disabled-class">(MMMMM DD, YYYY)</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

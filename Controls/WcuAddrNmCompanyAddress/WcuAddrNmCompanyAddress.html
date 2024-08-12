@@ -1,0 +1,63 @@
+﻿<div class="panel panel-primary" ng-controller="WcuAddrNmCompanyAddressController">
+    <div class="panel-heading">
+        Addressee Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col-md-3" style="margin-top:5px;">
+                    <label>
+                        Addressee Name 
+                    </label>
+                </div>
+                <div class="col-md-9">
+                    <input type="text"
+                           name="AddresseeName"
+                           ng-model="AddresseeNameTxt"
+                           maxlength="35"
+                           class="form-control"
+                           id="AddresseeNameId" />
+
+                </div>
+                </div>
+                <div class="row" style="margin-bottom: 5px;">
+                    <div class="col-md-3" style="margin-top:5px;">
+                        <label>
+                            * Addressee Company
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                        <select ng-disabled="Addressee.length == 0"
+                                ng-model="selectedAddresseeComp"
+                                ng-change="updateAddreesseeAddress()"
+                                ng-options="item.displayName for item in AddresseeCompany | orderBy:'displayName'"
+                                class="form-control"
+                                name="AddresseeCompName"
+                                id="AddresseeCompNameID"
+                                ng-required="true">
+                            <option value="" disabled>--Select--</option>
+                        </select>
+                        <span class="alert-danger" ng-show="AddresseeCompany.length == 0">Information not provided by source</span>
+                    </div>
+                    <div class="col-md-3" style="margin-top:5px;">
+                        <label>
+                            * Addressee Address
+                        </label>
+                    </div>
+                    <div class="col-md-3">
+                        <select ng-disabled="AddresseeAddress.length == 0"
+                                name="AddresseeAddress"
+                                ng-options="item.Line1Tx + ' ' + item.Line2Tx + ' ' + item.Line3Tx + ', ' + item.MunicipalityNm + ' ' + item.CountrySubdivisionNm + ' (' + item.PostalCd + ')' for item in addressData | orderBy: ['Line1Tx', 'Line2Tx', 'Line3Tx', 'MunicipalityNm', 'CountrySubdivisionNm', 'PostalCd', 'AddressUseCd']"
+                                id="AddresseeAddressID"
+                                ng-model="SelectedAddress"
+                                class="form-control"
+                                ng-required="true">
+                            <option value="" disabled>-- Select --</option>
+                        </select>
+                        <span class="alert-danger" ng-show="AddresseeAddress.length == 0">Information not provided by source</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>

@@ -1,0 +1,275 @@
+﻿<div class="panel panel-primary" ng-controller="GcExposureNameAndTypeDropdownController">
+    <div class="panel-heading">Exposure Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Exposure name dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>* Exposure Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-required="true"
+                            ng-disabled="ExposureData.length == 0"
+                            ng-change="slectName()"
+                            ng-options="item.displayName for item in ExposureData | orderBy:'displayName'" name="ExposureNameSelection" ng-model="selectedName" class="form-control" id="ExposureNameSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ExposureData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--Exposure type input-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>* Exposure Type:</label></div>
+                <div class="col-md-4">
+                    <select ng-required="selectedName.displayName != 'No Coverage'"
+                            ng-disabled="typeData.length == 0"
+                            ng-options="item.ExposureType for item in typeData | orderBy: 'ExposureType'"
+                            name="ExposureTypeSelection"
+                            ng-model="selectedType"
+                            class="form-control"
+                            ng-change="getSalvRep();getValues();"
+                            id="ExposureTypeSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="typeData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+            <!--Salvage Representative input-->
+            <div class="row"
+                 ng-hide="!LabelName1"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>{{LabelName1}}</label></div>
+                <div class="col-md-4">
+                    <input class="form-control"
+                           name="GcSalvageRep"
+                           ng-model="GcSalvRepValue"
+                           type="text"
+                           maxlength="60"
+                           ng-required=RequireRep
+                           ng-readonly="GcSalvRepReadOnly"
+                           ng-bind="GcSalvRepValue"
+                           id="GcSalvageRepTextBoxId1" />
+                </div>
+            </div>
+            <!-- Vehicle Actual Cash Value -->
+            <div class="row"
+                 ng-hide="HideCashValue"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Vehicle Actual Cash Value: $</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-change="GcCashValue=validateNumber(GcCashValue)"
+                           ng-readonly="ReadOnly"
+                           name="GcCashValueTextBox"
+                           type="text"
+                           ng-model="GcCashValue"
+                           maxlength="15"
+                           id="GcCashValueId"
+                           placeholder="####.##" />
+                </div>
+            </div>
+            <!-- Vehicle Old Damage Amount -->
+            <div class="row"
+                 ng-hide="HideOldDamageAmt"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Vehicle Old Damage Amount: $</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReadOnly"
+                           ng-change="GcOldDamageAmt=validateNumber(GcOldDamageAmt)"
+                           name="GcOldDamageAmtTextBox"
+                           type="text"
+                           ng-model="GcOldDamageAmt"
+                           maxlength="15"
+                           id="GcOldDamageAmtId"
+                           placeholder="####.##" />
+                </div>
+            </div>
+            <!-- Salvage Sub Total -->
+            <div class="row"
+                 ng-hide="HideSalvageSubTot"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Salvage Sub Total: $</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReadOnly"
+                           ng-change="GcSalvageSubTot=validateNumber(GcSalvageSubTot)"
+                           name="GcSalvageSubTotTextBox"
+                           type="text"
+                           ng-model="GcSalvageSubTot"
+                           maxlength="15"
+                           id="GcSalvageSubTotId"
+                           placeholder="####.##" />
+                </div>
+            </div>
+            <!-- Tax Amount -->
+            <div class="row"
+                 ng-hide="HideTaxAmount"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Tax Amount: $</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReadOnly"
+                           ng-change="GcTaxAmount=validateNumber(GcTaxAmount)"
+                           name="GcTaxAmountTextBox"
+                           type="text"
+                           ng-model="GcTaxAmount"
+                           maxlength="15"
+                           id="GcTaxAmountId"
+                           placeholder="####.##" />
+                </div>
+            </div>
+            <!-- Salvage Value -->
+            <div class="row"
+                 ng-hide="HideSalvageValue"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Salvage Value: $</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReadOnly"
+                           ng-change="GcSalvageValue=validateNumber(GcSalvageValue)"
+                           name="GcSalvageValueTextBox"
+                           type="text"
+                           ng-model="GcSalvageValue"
+                           maxlength="15"
+                           id="GcSalvageValueId"
+                           placeholder="####.##" />
+                </div>
+            </div>
+            <!-- Salvage PD Deductible -->
+            <div class="row"
+                 ng-hide="HideSalvagePDDed"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Salvage PD Deductible: $</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReadOnly"
+                           ng-change="GcSalvagePDDed=validateNumber(GcSalvagePDDed)"
+                           name="GcSalvagePDDedTextBox"
+                           type="text"
+                           ng-model="GcSalvagePDDed"
+                           maxlength="15"
+                           id="GcSalvagePDDedId"
+                           placeholder="####.##" />
+                </div>
+            </div>
+            <!-- Salvage Other -->
+            <div class="row"
+                 ng-hide="HideSalvageOther"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Salvage Other: $</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReadOnly"
+                           name="GcSalvageOtherTextBox"
+                           type="text"
+                           ng-model="GcSalvageOther"
+                           maxlength="500"
+                           id="GcSalvageOtherId"
+                           placeholder="####.##" />
+                </div>
+            </div>
+            <!-- Salvage Net Settlement -->
+            <div class="row"
+                 ng-hide="HideSalvageNetSet"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Salvage Net Settlement: $</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReadOnly"
+                           ng-change="GcSalvageNetSet=validateNumber(GcSalvageNetSet)"
+                           name="GcSalvageNetSetTextBox"
+                           type="text"
+                           ng-model="GcSalvageNetSet"
+                           maxlength="15"
+                           id="GcSalvageNetSetId"
+                           placeholder="####.##" />
+                </div>
+            </div>
+            <!-- End Values -->
+            <!-- Salvage Vehicle Year -->
+            <div class="row"
+                 ng-hide="HideSalvageVehYear"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Salvage Vehicle Year:</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReceivedYear"
+                           ng-change="GcSalvageVehYear=validateOnlyNumbers(GcSalvageVehYear)"
+                           name="GcSalvageVehYearTextBox"
+                           type="text"
+                           ng-model="GcSalvageVehYear"
+                           maxlength="4"
+                           id="GcSalvageVehYearId"
+                           placeholder="####" />
+                </div>
+            </div>
+            <!-- Salvage Vehicle Make -->
+            <div class="row"
+                 ng-hide="HideSalvageVehMake"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Salvage Vehicle Make:</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReceivedMake"
+                           name="GcSalvageVehMakeTextBox"
+                           type="text"
+                           ng-model="GcSalvageVehMake"
+                           maxlength="40"
+                           id="GcSalvageVehMakeId" />
+                </div>
+            </div>
+            <!-- Salvage Vehicle Model -->
+            <div class="row"
+                 ng-hide="HideSalvageVehModel"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Salvage Vehicle Model:</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReceivedModel"
+                           name="GcSalvageVehModTextBox"
+                           type="text"
+                           ng-model="GcSalvageVehMod"
+                           maxlength="40"
+                           id="GcSalvageVehModId" />
+                </div>
+            </div>
+            <!-- Total Loss Vehicle Estimate Amount -->
+            <div class="row"
+                 ng-hide="HideTotalLossEst"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Total Loss Vehicle Estimate Amount: $</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReadOnly"
+                           ng-change="GcTotalLossEst=validateNumber(GcTotalLossEst)"
+                           name="GcTotalLossEstTextBox"
+                           type="text"
+                           ng-model="GcTotalLossEst"
+                           maxlength="15"
+                           id="GcTotalLossEstId"
+                           placeholder="####.##" />
+                </div>
+            </div>
+            <!-- Salvage Type Loss -->
+            <div class="row"
+                 ng-hide="HideSalvageTypeLoss"
+                 style="margin-top:5px ">
+                <div class="col-md-4"><label>Salvage Type Loss:</label></div>
+                <div class="col-md-8">
+                    <input class="form-control"
+                           ng-readonly="ReceivedSalvageType"
+                           name="GcSalvageTypeLossTextBox"
+                           type="text"
+                           ng-model="GcSalvageTypeLoss"
+                           maxlength="17"
+                           id="GcSalvageTypeLossId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,63 @@
+﻿<div class="panel panel-primary" ng-controller="WcuRetroDetailsRepeaterController">
+    <div class="panel-heading">Retro Details</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" ng-repeat="selector in TotalCount track by $index" style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray">
+                <div class="col-md-3">
+                    <!--Checkbox to enable control-->
+                    <input ng-click="clearAllData($index)" ng-model="SelectedRetro[$index]" type="checkbox" id="CtrlEnableCheckbox{{$index}}Id" name="CtrlEnableCheckbox{{$index}}" value="" />
+                    <label>Retro Details</label>
+                </div>
+                <div class="col-md-9 row">
+                   
+                     <!--Retro Bureau File Number textbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <div class="col-md-4"><label ng-class="(SelectedRetro[$index])?'':'disabled-class'">* Retro Bureau File Number:</label></div>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedRetro[$index]" ng-required="SelectedRetro[$index]" maxlength="7" type="text" class="form-control" ng-model="retFileNum[$index]" name="{{'retFileNumCheckbox'+ $index}}" id="{{'retFileNumCheckboxId'+ $index}}" value="" />
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+                                      
+                    <!--Retro Policy Number textbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedRetro[$index])?'':'disabled-class'">* Retro NJM Policy Number:</label>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedRetro[$index]" ng-required="SelectedRetro[$index]" type="text" maxlength="11" class="form-control" ng-model="retPolNum[$index]" name="{{'retPolNumText'+ $index}}" id="{{'retPolNumTextId'+ $index}}" value="" />
+                        </div>
+                    </div>
+
+                    <!--Retro Policy Name checkbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedRetro[$index])?'':'disabled-class'">* Retro NJM Policyholder Name:</label>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedRetro[$index]" ng-required="SelectedRetro[$index]" type="text" maxlength="255" class="form-control" ng-model="retPolName[$index]" name="{{'retPolNameText'+ $index}}" id="{{'retPolNameTextId'+ $index}}" value="" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <!--Retro Policy Effective Date input-->
+                        <label class="col-md-4" ng-class="(SelectedRetro[$index])?'':'disabled-class'">* Retro Policy Effective Date:</label>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedRetro[$index]" placeholder="YYYY-MM-DD" datePicker date-format="yyyy-mm-dd"  ng-required="SelectedRetro[$index]" type="text" class="form-control" ng-model="retPolDate[$index]" name="{{'retPolDateText'+ $index}}" id="{{'retPolDateTextId'+ $index}}" value=""/>
+                        </div>
+                    </div>
+                                      
+                    <!--Retro Policy Effective Year checkbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedRetro[$index])?'':'disabled-class'">* Retro Policy Effective Year: </label>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedRetro[$index]" type="text" placeholder="YY" ng-required="SelectedRetro[$index]" maxlength="2" class="form-control" ng-change="retPolYear[$index]=validateNumber(retPolYear[$index])" ng-model="retPolYear[$index]" name="{{'retPolYearText'+ $index}}" id="{{'retPolYearTextId'+ $index}}" value="" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+            <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+        </div>
+    </div>
+</div> 

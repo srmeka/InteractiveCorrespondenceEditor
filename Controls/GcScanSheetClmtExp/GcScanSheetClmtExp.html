@@ -1,0 +1,60 @@
+﻿<div class="panel panel-primary" ng-controller="GcScanSheetClmtExpController">
+    <div class="panel-body">
+        <div class="form-group">
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label>* Claimant Name:</label>
+                </div>
+                <div class="col-md-9">
+                    <select ng-options="item.displayName for item in ClaimantNameData"
+                            ng-change="selectedClaimant()"
+                            ng-required="true"
+                            name="ClaimantNameSelection"
+                            ng-model="selectedName"
+                            class="form-control"
+                            id="ClaimantNameSelectionId"
+                            ng-show="ClaimantNameData.length != 0">
+                        <option value="">--Select One--</option>
+                    </select>
+                    <span class="alert-danger"
+                          ng-show="ClaimantNameData.length == 0">Information not provided by source</span>
+                </div>
+
+            </div>
+
+            <div class="row" style="margin-top: 5px">
+                <div class="col-md-3">
+                    <label>* Exposure Type:</label>
+                </div>
+
+                <div class="col-md-9">
+                    <div ng-show="typeData.length != 0" style="margin-top: 5px">
+                        <span>Please select at least one value</span>
+                    </div>
+
+                    <div ng-repeat="item in typeData track by $index"
+                         style="margin-top:5px"
+                         ng-show="ShowItems">
+
+                        <div class="col-md-12" style="margin-top:5px">
+                            <input type="checkbox"
+                                   ng-click="selectedExp(item, $index)"
+                                   name="checkedExp{{$index}}"
+                                   ng-model="chkExpItem[$index]"
+                                   id="selectedExp{{$index}}ID"
+                                   ng-required="typeData.length != 0 && chkExpItem.length === 0" />
+                            <label ng-bind="item.ExposureType"></label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <span class="alert-danger"
+                              ng-show="typeData.length === 0">Information not provided by source</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

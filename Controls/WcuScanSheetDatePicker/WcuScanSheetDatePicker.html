@@ -1,0 +1,23 @@
+﻿<div class="panel panel-primary" ng-controller="WcuScanSheetDatePickerController">
+
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" ng-hide="!LabelName1">
+                <div class="col-md-3">
+                    <label id="DateLabelID1">{{LabelName1}}</label>
+                </div>
+                <div class="col-md-3">
+                    <input class="form-control"
+                           id="DateId1"
+                           name="Date1"
+                           type="text"
+                           ng-model="SelectedDate1"
+                           date-format="{{DateOutputFormat1}}"
+                           ng-required="Required1"
+                           placeholder="MM/DD/YYYY"
+                           datepicker />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

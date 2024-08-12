@@ -1,0 +1,137 @@
+﻿
+<form ng-controller="HomeController" name="Home">
+    <!-- As a heading -->
+    <nav class="navbar navbar-default navbar-fixed-top second-navbar">
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-btn" style="align-self:center">
+                <li class="li-pad-left">
+                    <button type="button" class="glyph-btn btn" data-toggle="tooltip" title="Edit document" ng-disabled="IsContinueDisabled" ng-click="SendData()">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+                </li>
+                <li class="li-pad-left">
+                    <button type="button" class="glyph-btn btn" data-toggle="tooltip" title="Sample" ng-disabled="IsSampleDisabled" ng-click="OpenSample()">
+                        <span class="glyphicon glyphicon-eye-open"></span>
+                    </button>
+                </li>
+                <li class="li-pad-left">
+                    <button type="button" class="glyph-btn btn" data-toggle="tooltip" title="Preview" ng-disabled="IsPreviewDisabled" ng-click="OpenPreview()" ng-show="ShowPreviewButton">
+                        <span class="glyphicon glyphicon-list-alt"></span>
+                    </button>
+                </li>
+                <li class="li-pad-left">
+                    <button type="button" class="glyph-btn btn" data-toggle="tooltip" title="Input XML" ng-disabled="IsIPXMLDisabled" ng-click="GetInputXML()" ng-show="ShowInputXMLButton">
+                        <span class="glyphicon glyphicon-log-in"></span>
+                    </button>
+                </li>
+                <li class="li-pad-left">
+                    <button type="button" class="glyph-btn btn" data-toggle="tooltip" title="Output XML" ng-disabled="IsOPXMLDisabled" ng-click="GetOutputXML()" ng-show="ShowOutputXMLButton">
+                        <span class="glyphicon glyphicon-share"></span>
+                    </button>
+                </li>
+                <li class="li-pad-left">
+                    <button type="button" class="glyph-btn btn" data-toggle="tooltip" title="Help" ng-click="GetUserManual()">
+                        <span class="glyphicon glyphicon-question-sign"></span>
+                    </button>
+                </li>
+                <li class="li-pad-left">
+                    <button type="button" class="glyph-btn btn" data-toggle="tooltip" title="Search Documents" ng-click="LaunchInteractive()">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </li>
+                <li class="li-pad-left" data-placement="top">
+                    <label class="navbar-label">{{SelectedDocument.documentFriendlyName}}</label>
+                </li>
+
+                <li class="li-pad-left" data-placement="top" style="margin-left:400px" ng-show="ShowEnv">
+                    <label class="navbar-label">Env: {{environment}}</label>
+                </li>
+
+                 <li class="li-pad-left" data-placement="top" ng-show="ShowRegionDropdown">
+                    <table style="margin-top:15px">
+                        <tr>
+                            <td>
+                                <label>
+                                    Instance:
+                                </label>
+                            </td>
+                            <td></td>
+                            <td>
+                                <select name="Region"
+                                        ng-model="selectedregion"
+                                        ng-change="redirecttoURL(selectedregion)"
+                                        ng-options="regionsInfo for regionsInfo in regions" class="control"
+                                        id="RegionID"></select>
+                            </td>
+                        </tr>
+                    </table>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label>
+                            Category
+                        </label>
+                        <select ng-options="Category as Category.categoryFriendlyName for Category in CategoryDropdown| orderBy : 'categoryFriendlyName'"
+                                ng-model="Category" ng-change="GetDocumentsForCategory()" class="form-control" id="DropDownCategory" ng-disabled="CategoryDisabled">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+
+                    <div class="col-xs-6">
+                        <label>
+                            Document
+                        </label>
+                        <select ng-options="InsertDocument as InsertDocument.documentFriendlyName for InsertDocument in DocumentForCategory| orderBy : 'documentFriendlyName'"
+                                ng-model="SelectedDocument" ng-change="GetControls()" class="form-control" id="DropDownDocument" ng-disabled="DocumentDisabled">
+                            <option value="" selected>--Select--</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-hide="SelectedDocument.documentFriendlyName != 'Policyholder Accounting Statement' && SelectedDocument.documentFriendlyName != 'Broker Accounting Statement'">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <!-- Date input -->
+                            <label class="control-label" for="date">Start Date</label>
+                            <input class="form-control" id="StartDate" name="Date" placeholder="YYYY-MM-DD" type="date" ng-model="SelectedStartDate" />
+                        </div>
+
+
+                        <div class="col-xs-6">
+                            <label class="control-label" for="date">End Date</label>
+                            <input class="form-control" id="EndDate" name="Date" placeholder="YYYY/MM/DD" type="date" ng-model="SelectedEndDate" />
+                        </div>
+                    </div>
+                    <div class="alert-danger" ng-hide="!TransactionStatus" id="DivAlert"> <h4> {{TransactionStatus}}</h4> </div>
+                </div>
+                <div class="row" style="padding-bottom:20px">
+                    <div class="col-xs-6">
+                        <input type="button" class="btn-primary" value="Get transactions" ng-click="GetTransaction()" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="alert-danger" ng-hide="!error" id="DivAlert"> <h4> {{error}}</h4> </div>
+                <div class="alert-danger" ng-hide="!InnerException" id="DivAlert1"> <h4>Error Message: {{InnerException}}</h4></div>
+                <div class="alert-danger" ng-hide="!ErrorCode" id="DivAlert1"> <h4>Error Code: {{ErrorCode}}</h4></div>
+                <div class="alert-danger" ng-hide="!User" id="DivAlert2"> <h4>Policy# {{PolicyNum}}  Quote# {{QuoteNum}}  UserId: {{User}}  Environment:{{Env}}  LOB:{{LineOfBusines}}</h4></div>
+                <div id="LoadControls" class="row"> </div>
+                <div class="loading-bar" id="loading-bar"></div>
+            </div>
+           
+        </div>
+
+
+
+    </div>
+</form>

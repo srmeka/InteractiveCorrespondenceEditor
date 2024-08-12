@@ -1,0 +1,22 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaSpousePartnerNameDropdownController">
+    <div class="panel-heading">
+        Spouse/Partner Name
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label style="margin-top: 5px;">
+                        * Spouse or Partner's Name
+                    </label>
+                </div>
+                <div class="col-md-8">
+                    <select ng-disabled="SpousePartner.length == 0" name="SpousePartnerName" ng-model="SelectedSpousePartner" ng-options="SpousePartnerInfo.Person.PersonName.NameSalutationCd + ' ' + SpousePartnerInfo.Person.PersonName.FirstGivenNm + ' ' + SpousePartnerInfo.Person.SecondGivenNameInitial + ' ' + SpousePartnerInfo.Person.PersonName.FamilyNm + ' ' + SpousePartnerInfo.Person.PersonName.FamilyNameGenerationCd for SpousePartnerInfo in SpousePartner track by SpousePartnerInfo._id" class="form-control" id="SpousePartnerID" ng-required="true">
+                        <option value="" disabled>--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="SpousePartner.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

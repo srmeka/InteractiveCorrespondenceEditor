@@ -1,0 +1,128 @@
+﻿<div class="panel panel-primary" ng-controller="WccExamRoleNmAddrAndAttnController">
+    <div class="panel-heading">Exam Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4"><label>* Send Notification of Exam to: Role</label></div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <!--Exam Role dropdown list-->
+                        <div class="col-md-6">
+                            <select ng-change="selectedRoleData(selectedRole)" 
+                                    ng-required="true"
+                                    ng-options="item for item in RoleData" 
+                                    name="PrimaryRoleSelection" 
+                                    ng-model="selectedRole" 
+                                    class="form-control" 
+                                    id="PrimaryRoleSelectionId">
+                                <option value="">--Select One--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:15px">
+                <div class="col-md-4"><label>* Name (for Send Notification of Exam to:)</label></div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <!--Exam name dropdown list-->
+                        <div class="col-md-6">
+                            <select ng-change="selectAddr(selectedAddressee)" 
+                                    ng-required="true"
+                                    ng-options="item.displayName for item in addresseeData" 
+                                    name="PrimaryAddressSelection" 
+                                    ng-model="selectedAddressee" 
+                                    class="form-control" 
+                                    id="PrimaryAddressSelectionId">
+                                <option value="">--Select One--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:15px">
+                <div class="col-md-4"><label>* Address (for Send Notification of Exam to:)</label></div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <!--Exam address dropdown list-->
+                        <div class="col-md-6">
+                            <select ng-show="showAddress != 'Information not provided from ClaimCenter'"
+                                    ng-required="true"
+                                    ng-change="selectedAddressData(selectedAddress)" 
+                                    ng-options="( '(' + item.Category + ') ' + item.StreetAddress1 + ' ' + item.StreetAddress2 + ' ' + item.StreetAddress3 + ' ' + item.City + ', ' + item.State + ' ' + item.ZipCode) for item in addressData"
+                                    name="ExposureTypeSelection" 
+                                    ng-model="selectedAddress" 
+                                    class="form-control" 
+                                    id="ExposureTypeSelectionId">
+                                <option value="">--Select One--</option>
+                            </select>
+                            <span style="display:inline-block;margin-top:5px;margin-bottom:5px" 
+                                  ng-if="showAddress == 'Information not provided from ClaimCenter'" 
+                                  class="alert-danger" 
+                                  ng-bind="showAddress"></span>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top:15px">
+                <div class="col-md-4">
+                    <input type="checkbox"  
+                           ng-disabled="selectFreeAttenString || attenString == 'Information not provided from ClaimCenter'"  
+                           ng-click="selectAttn()" 
+                           ng-model="selectAttenString" 
+                           name="AttenString" 
+                           id="AttenStringId" />
+                    <label ng-class="(!(selectFreeAttenString || attenString == 'Information not provided from ClaimCenter'))?'':'disabled-class'">Attention Line:</label>
+                </div>
+                <div class="col-md-8"> <!--Attention dropdown list-->
+                            <div class="col-md-3 row">
+                                <select ng-disabled="!selectAttenString" 
+                                        ng-options="item.lookupItemCode for item in attenData" 
+                                        name="AttentionSelection" 
+                                        ng-model="selectedAttenString" 
+                                        class="form-control" i
+                                        d="AttentionSelectionId">
+                                </select>
+                            </div>
+                            <div class="col-md-9" style="margin-top:5px">
+                                <span ng-class="(attenString == 'Information not provided from ClaimCenter')?'alert-danger':''" 
+                                      ng-bind="attenString"></span>
+                 </div>
+                </div>
+            </div>
+            <!--Attention dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4">
+                    <input ng-disabled="selectAttenString" 
+                           ng-click="selectFreeAttn()" 
+                           type="checkbox" 
+                           ng-model="selectFreeAttenString" 
+                           name="AttenString" 
+                           id="AttenStringId" />
+                    <label ng-class="(!selectAttenString)?'':'disabled-class'">Attention Line:</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="col-md-3 row">
+                        <select ng-disabled="!selectFreeAttenString"
+                                ng-options="item.lookupItemCode for item in attenData" 
+                                name="FreeAttentionSelection" 
+                                ng-model="selectedFreeAttenString" 
+                                class="form-control" 
+                                id="FreeAttentionSelectionId"></select>
+                    </div>
+                    <div class="col-md-9">
+                        <input class="form-control" 
+                               ng-required="selectFreeAttenString"
+                               ng-class="(selectFreeAttenString)?'':'disabled-class'" 
+                               ng-disabled="!selectFreeAttenString" 
+                               type="text" 
+                               ng-model="attenFreeString">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,34 @@
+﻿<div class="panel panel-primary" ng-controller="WccAuthorRoleAndNameController">
+    <div class="panel-heading">Author Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Author role dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>* Author's Role:</label></div>
+                <div class="col-md-4">
+                    <select ng-change="selectedAutherRole(selectedAuthorRole)" ng-options="item for item in RoleData" name="AuthorRoleSelection" ng-model="selectedAuthorRole" class="form-control" id="AuthorRoleSelectionId" ng-required="true">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="RoleData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--Author name dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>* Author's Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-change="selecAuthor()" ng-options="(item.FirstName + ' ' + item.LastName) for item in AuthorsData | orderBy:'FirstName + LastName'" name="AuthorSelection" ng-model="selectedAuthor" class="form-control" id="AuthorSelectionId" ng-required="true">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="selectedAuthorRole && AuthorsData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

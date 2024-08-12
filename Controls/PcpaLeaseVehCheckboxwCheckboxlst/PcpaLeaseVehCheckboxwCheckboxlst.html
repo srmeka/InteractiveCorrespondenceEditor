@@ -1,0 +1,22 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaLeaseVehCheckboxwCheckboxlstController">
+    <div class="panel-heading">Lease</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <!--Checkbox to enable control-->
+                    <input ng-click="clearAllSelectedData()" ng-model="isLeaseVehSelected" type="checkbox" name="LeaseVehCheckbox" value="" id="LeaseVehCheckboxID" />
+                    <label>Include Leased Vehicle(s)</label>
+                </div>
+                <div class="col-md-8">
+                    <!--Vehicle list-->
+                    <div ng-repeat="item in Vehicle track by item.VehicleId" class="col-md-12 row">
+                        <input ng-model="item.leasechecked" ng-change="selectLeaseVeh(item)" type="checkbox" ng-disabled="!isLeaseVehSelected" name="LeaseVehCheckboxLst" id="LeaseVehLstId{{item.VehicleId}}" value="" /> 
+                        <span ng-bind="item.ModelYearNr + ' ' + item.VehicleTradeNm + ' ' +item.ModelNm + ' ' + item.ManufacturerVehicleIdentificationNr"></span>
+                    </div>
+                    <span class="alert-danger" ng-if="Vehicle.length === 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

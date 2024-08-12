@@ -1,0 +1,723 @@
+﻿<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:capir="http://njm.com/esb/pds/ca/1.0/interfaces/CAPolicyInfomationRetriever" xmlns:typ="http://njm.com/esb/pds/ca/1.0/types" xmlns:esbcommon="http://njm.com/esb/common/types" xmlns:ebt="http://njm.com/esb/business/1.3.0/types">
+   <soapenv:Body>
+      <capir:retrievePolicyByPolicyNumberResponse>
+         <typ:RetrievePolicyByPolicyNumberResponseMessage>
+            <esbcommon:Header>
+               <esbcommon:Version>1.0</esbcommon:Version>
+               <esbcommon:CorrelationContext>
+                  <esbcommon:CorrelationId>20110125-0948-3300-0000-000000000000</esbcommon:CorrelationId>
+               </esbcommon:CorrelationContext>
+               <esbcommon:ErrorIn>false</esbcommon:ErrorIn>
+            </esbcommon:Header>
+            <typ:Policy id="1">
+               <typ:PolicyNumber>1100279959</typ:PolicyNumber>
+               <typ:UnderwritingCompany id="3">
+                  <typ:OrganizationNm>New Jersey Manufacturers Insurance</typ:OrganizationNm>
+               </typ:UnderwritingCompany>
+               <typ:LineOfBusinessCd>Commercial Auto</typ:LineOfBusinessCd>
+               <typ:BaseStateCd>PA</typ:BaseStateCd>
+               <typ:Account id="7">
+                  <typ:AccountNo>AA110048433</typ:AccountNo>
+               </typ:Account>
+               <typ:PolicyProductCd>CAPO</typ:PolicyProductCd>
+               <typ:IndustryOfferingCd>PO</typ:IndustryOfferingCd>
+               <typ:PolicyPeriod id="11">
+                  <typ:QuoteNumber>QQ180252265</typ:QuoteNumber>
+                  <typ:StartDt>2019-04-01T00:01:00-04:00</typ:StartDt>
+                  <typ:EndDt>2020-04-01T00:01:00-04:00</typ:EndDt>
+                  <typ:StatusCd>In Force</typ:StatusCd>
+                  <typ:PolicyLines id="16">
+                     <typ:CommercialAutoLine id="17">
+                        <typ:VehicleCoverageDetails id="18">
+                           <typ:Vehicle id="19">
+                              <typ:VehicleId>2</typ:VehicleId>
+                              <typ:ManufacturerVehicleIdentificationNr>1C3EL55R14N240124</typ:ManufacturerVehicleIdentificationNr>
+                              <typ:ModelYearNr>2008</typ:ModelYearNr>
+                              <typ:VehicleTradeNm>SEBRING</typ:VehicleTradeNm>
+                              <typ:ModelNm>SC</typ:ModelNm>
+                           </typ:Vehicle>
+                           <typ:Coverages id="25">
+                              <typ:CoverageTypeCd>Comprehensive</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Comprehensive Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>500</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>500</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="30">
+                              <typ:CoverageTypeCd>Collision</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Collision Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>500</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>500</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="35">
+                              <typ:CoverageTypeCd>Roadside Assistance</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Roadside Assistance Limit</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>75</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>75</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:OwnershipTypeCd>Owned</typ:OwnershipTypeCd>
+                           <typ:VehicleClassificationTypeCd>Private Passenger</typ:VehicleClassificationTypeCd>
+                        </typ:VehicleCoverageDetails>
+                        <typ:VehicleCoverageDetails id="42">
+                           <typ:Vehicle id="43">
+                              <typ:VehicleId>10</typ:VehicleId>
+                              <typ:ManufacturerVehicleIdentificationNr>1G1PC5SG9G7167691</typ:ManufacturerVehicleIdentificationNr>
+                              <typ:ModelYearNr>2016</typ:ModelYearNr>
+                              <typ:VehicleTradeNm>CHEVROLET</typ:VehicleTradeNm>
+                              <typ:ModelNm>CRUZE LIMITED LS</typ:ModelNm>
+                           </typ:Vehicle>
+                           <typ:AssociatedParties id="49">
+                              <typ:Organization id="50">
+                                 <typ:OrganizationNm>TOYOTA LEASE TRUST</typ:OrganizationNm>
+                                 <typ:Addresses id="52">
+                                    <typ:Address id="53">
+                                       <ebt:Line1Tx>PO BOX 105386</ebt:Line1Tx>
+                                       <ebt:Municipality id="55">
+                                          <ebt:MunicipalityNm>ATLANTA</ebt:MunicipalityNm>
+                                          <ebt:MunicipalityTypeCd>City</ebt:MunicipalityTypeCd>
+                                       </ebt:Municipality>
+                                       <ebt:Municipality id="58">
+                                          <ebt:MunicipalityTypeCd>County</ebt:MunicipalityTypeCd>
+                                       </ebt:Municipality>
+                                       <ebt:CountrySubdivision id="60">
+                                          <ebt:CountrySubdivisionNm>GA</ebt:CountrySubdivisionNm>
+                                          <ebt:CountrySubdivisionTypeCd>State</ebt:CountrySubdivisionTypeCd>
+                                       </ebt:CountrySubdivision>
+                                       <ebt:PostalCd>30348</ebt:PostalCd>
+                                    </typ:Address>
+                                    <typ:AddressUseCd>Business</typ:AddressUseCd>
+                                    <typ:PrimaryAddressIn>true</typ:PrimaryAddressIn>
+                                 </typ:Addresses>
+                              </typ:Organization>
+                              <typ:PartyTypeCd>Organization</typ:PartyTypeCd>
+                              <typ:PartyRoles>Lessor</typ:PartyRoles>
+                              <typ:PartyRoles>Additional Interest</typ:PartyRoles>
+                           </typ:AssociatedParties>
+                           <typ:Coverages id="69">
+                              <typ:CoverageTypeCd>Comprehensive</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Comprehensive Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="74">
+                              <typ:CoverageTypeCd>Collision</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Collision Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="79">
+                              <typ:CoverageTypeCd>Roadside Assistance</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Roadside Assistance Limit</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>75</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>75</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:OwnershipTypeCd>Leased</typ:OwnershipTypeCd>
+                           <typ:VehicleClassificationTypeCd>Private Passenger</typ:VehicleClassificationTypeCd>
+                        </typ:VehicleCoverageDetails>
+                        <typ:VehicleCoverageDetails id="86">
+                           <typ:Vehicle id="87">
+                              <typ:VehicleId>1</typ:VehicleId>
+                              <typ:ManufacturerVehicleIdentificationNr>JTHFN45Y689016243</typ:ManufacturerVehicleIdentificationNr>
+                              <typ:ModelYearNr>2008</typ:ModelYearNr>
+                              <typ:VehicleTradeNm>LEXUS</typ:VehicleTradeNm>
+                              <typ:ModelNm>SC</typ:ModelNm>
+                           </typ:Vehicle>
+                           <typ:Coverages id="93">
+                              <typ:CoverageTypeCd>Comprehensive</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Comprehensive Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="98">
+                              <typ:CoverageTypeCd>Collision</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Collision Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="103">
+                              <typ:CoverageTypeCd>Roadside Assistance</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Roadside Assistance Limit</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>75</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>75</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:OwnershipTypeCd>Owned</typ:OwnershipTypeCd>
+                           <typ:VehicleClassificationTypeCd>Private Passenger</typ:VehicleClassificationTypeCd>
+                        </typ:VehicleCoverageDetails>
+                        <typ:VehicleCoverageDetails id="110">
+                           <typ:Vehicle id="111">
+                              <typ:VehicleId>7</typ:VehicleId>
+                              <typ:ManufacturerVehicleIdentificationNr>BRI-MAR MANUFACTURING</typ:ManufacturerVehicleIdentificationNr>
+                              <typ:ModelYearNr>2005</typ:ModelYearNr>
+                              <typ:VehicleTradeNm>LEXUS</typ:VehicleTradeNm>
+                              <typ:ModelNm>Dump</typ:ModelNm>
+                           </typ:Vehicle>
+                           <typ:Coverages id="117">
+                              <typ:CoverageTypeCd>Comprehensive</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Comprehensive Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="122">
+                              <typ:CoverageTypeCd>Collision</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Collision Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:OwnershipTypeCd>Owned</typ:OwnershipTypeCd>
+                           <typ:VehicleClassificationTypeCd>Truck</typ:VehicleClassificationTypeCd>
+                        </typ:VehicleCoverageDetails>
+                        <typ:VehicleCoverageDetails id="129">
+                           <typ:Vehicle id="130">
+                              <typ:VehicleId>8</typ:VehicleId>
+                              <typ:ManufacturerVehicleIdentificationNr>43YDC12294C026630</typ:ManufacturerVehicleIdentificationNr>
+                              <typ:ModelYearNr>2004</typ:ModelYearNr>
+                              <typ:VehicleTradeNm>BRI-MAR MANUFACTURING</typ:VehicleTradeNm>
+                              <typ:ModelNm>Dump</typ:ModelNm>
+                           </typ:Vehicle>
+                           <typ:Coverages id="136">
+                              <typ:CoverageTypeCd>Comprehensive</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Comprehensive Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="141">
+                              <typ:CoverageTypeCd>Collision</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Collision Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:OwnershipTypeCd>Owned</typ:OwnershipTypeCd>
+                           <typ:VehicleClassificationTypeCd>Truck</typ:VehicleClassificationTypeCd>
+                        </typ:VehicleCoverageDetails>
+                        <typ:VehicleCoverageDetails id="148">
+                           <typ:Vehicle id="149">
+                              <typ:VehicleId>5</typ:VehicleId>
+                              <typ:ManufacturerVehicleIdentificationNr>43YDC12178C069487</typ:ManufacturerVehicleIdentificationNr>
+                              <typ:ModelYearNr>2008</typ:ModelYearNr>
+                              <typ:VehicleTradeNm>BRI-MAR MANUFACTURING</typ:VehicleTradeNm>
+                              <typ:ModelNm>F250</typ:ModelNm>
+                           </typ:Vehicle>
+                           <typ:Coverages id="155">
+                              <typ:CoverageTypeCd>Comprehensive</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Comprehensive Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="160">
+                              <typ:CoverageTypeCd>Collision</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Collision Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="165">
+                              <typ:CoverageTypeCd>Roadside Assistance</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Roadside Assistance Limit</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>75</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>75</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:OwnershipTypeCd>Owned</typ:OwnershipTypeCd>
+                           <typ:VehicleClassificationTypeCd>Truck</typ:VehicleClassificationTypeCd>
+                        </typ:VehicleCoverageDetails>
+                        <typ:VehicleCoverageDetails id="172">
+                           <typ:Vehicle id="173">
+                              <typ:VehicleId>6</typ:VehicleId>
+                              <typ:ManufacturerVehicleIdentificationNr>43YDC14268C068076</typ:ManufacturerVehicleIdentificationNr>
+                              <typ:ModelYearNr>2008</typ:ModelYearNr>
+                              <typ:VehicleTradeNm>BRI-MAR MANUFACTURING</typ:VehicleTradeNm>
+                              <typ:ModelNm>Dump Truck</typ:ModelNm>
+                           </typ:Vehicle>
+                           <typ:Coverages id="179">
+                              <typ:CoverageTypeCd>Comprehensive</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Comprehensive Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="184">
+                              <typ:CoverageTypeCd>Collision</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Collision Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="189">
+                              <typ:CoverageTypeCd>Roadside Assistance</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Roadside Assistance Limit</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>75</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>75</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:OwnershipTypeCd>Owned</typ:OwnershipTypeCd>
+                           <typ:VehicleClassificationTypeCd>Truck</typ:VehicleClassificationTypeCd>
+                        </typ:VehicleCoverageDetails>
+                        <typ:VehicleCoverageDetails id="196">
+                           <typ:Vehicle id="197">
+                              <typ:VehicleId>3</typ:VehicleId>
+                              <typ:ManufacturerVehicleIdentificationNr>43YDC26286C051358</typ:ManufacturerVehicleIdentificationNr>
+                              <typ:ModelYearNr>2006</typ:ModelYearNr>
+                              <typ:VehicleTradeNm>BRI-MAR MANUFACTURING</typ:VehicleTradeNm>
+                              <typ:ModelNm>Dump Truck</typ:ModelNm>
+                           </typ:Vehicle>
+                           <typ:Coverages id="203">
+                              <typ:CoverageTypeCd>Comprehensive</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Comprehensive Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="208">
+                              <typ:CoverageTypeCd>Collision</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Collision Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:OwnershipTypeCd>Owned</typ:OwnershipTypeCd>
+                           <typ:VehicleClassificationTypeCd>Truck</typ:VehicleClassificationTypeCd>
+                        </typ:VehicleCoverageDetails>
+                        <typ:VehicleCoverageDetails id="215">
+                           <typ:Vehicle id="216">
+                              <typ:VehicleId>4</typ:VehicleId>
+                              <typ:ManufacturerVehicleIdentificationNr>43YDC1421CC093069</typ:ManufacturerVehicleIdentificationNr>
+                              <typ:ModelYearNr>2012</typ:ModelYearNr>
+                              <typ:VehicleTradeNm>BRI-MAR MANUFACTURING</typ:VehicleTradeNm>
+                              <typ:ModelNm>F250</typ:ModelNm>
+                           </typ:Vehicle>
+                           <typ:Coverages id="222">
+                              <typ:CoverageTypeCd>Comprehensive</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Comprehensive Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="227">
+                              <typ:CoverageTypeCd>Collision</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Collision Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:OwnershipTypeCd>Owned</typ:OwnershipTypeCd>
+                           <typ:VehicleClassificationTypeCd>Truck</typ:VehicleClassificationTypeCd>
+                        </typ:VehicleCoverageDetails>
+                        <typ:VehicleCoverageDetails id="234">
+                           <typ:Vehicle id="235">
+                              <typ:VehicleId>9</typ:VehicleId>
+                              <typ:ManufacturerVehicleIdentificationNr>1GEEK90Y39U550171</typ:ManufacturerVehicleIdentificationNr>
+                              <typ:ModelYearNr>2009</typ:ModelYearNr>
+                              <typ:VehicleTradeNm>CADILLAC</typ:VehicleTradeNm>
+                              <typ:ModelNm>PROFESSIONAL CHASSIS</typ:ModelNm>
+                           </typ:Vehicle>
+                           <typ:Coverages id="241">
+                              <typ:CoverageTypeCd>Comprehensive</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Comprehensive Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:Coverages id="246">
+                              <typ:CoverageTypeCd>Collision</typ:CoverageTypeCd>
+                              <typ:CoverageParameterTypeCd>Collision Deductible</typ:CoverageParameterTypeCd>
+                              <typ:CoverageParameterValueTx>Not Applicable</typ:CoverageParameterValueTx>
+                              <typ:CoverageParameterUnformattedValueTx>NotApplicable</typ:CoverageParameterUnformattedValueTx>
+                           </typ:Coverages>
+                           <typ:OwnershipTypeCd>Owned</typ:OwnershipTypeCd>
+                           <typ:VehicleClassificationTypeCd>Public Transportation</typ:VehicleClassificationTypeCd>
+                        </typ:VehicleCoverageDetails>
+                        <typ:ListedDrivers id="253">
+                           <typ:PartyId>13</typ:PartyId>
+                           <typ:Person id="255">
+                              <typ:PersonName id="256">
+                                 <ebt:FirstGivenNm>Ripper</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Magoo</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1978-10-31</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="260">
+                                 <typ:LicenseId>68154111</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="263">
+                           <typ:PartyId>14</typ:PartyId>
+                           <typ:Person id="265">
+                              <typ:PersonName id="266">
+                                 <ebt:FirstGivenNm>Bobby</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Jones</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1929-08-12</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="270">
+                                 <typ:LicenseId>31415926</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="273">
+                           <typ:PartyId>15</typ:PartyId>
+                           <typ:Person id="275">
+                              <typ:PersonName id="276">
+                                 <ebt:FirstGivenNm>Arnold</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Palmer</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1937-08-20</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="280">
+                                 <typ:LicenseId>18871871</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="283">
+                           <typ:PartyId>16</typ:PartyId>
+                           <typ:Person id="285">
+                              <typ:PersonName id="286">
+                                 <ebt:FirstGivenNm>Joeseph</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Weil</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1983-09-20</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="290">
+                                 <typ:LicenseId>98718719871</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="293">
+                           <typ:PartyId>9</typ:PartyId>
+                           <typ:Person id="295">
+                              <typ:PersonName id="296">
+                                 <ebt:FirstGivenNm>Connor</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>MacManus</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1980-03-25</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="300">
+                                 <typ:LicenseId>756256</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="303">
+                           <typ:PartyId>10</typ:PartyId>
+                           <typ:Person id="305">
+                              <typ:PersonName id="306">
+                                 <ebt:FirstGivenNm>Murphy</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>MacManus</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1982-03-17</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="310">
+                                 <typ:LicenseId>68189718</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="313">
+                           <typ:PartyId>11</typ:PartyId>
+                           <typ:Person id="315">
+                              <typ:PersonName id="316">
+                                 <ebt:FirstGivenNm>R.P.</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>McMurphy</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1937-04-22</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="320">
+                                 <typ:LicenseId>928729871981</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="323">
+                           <typ:PartyId>12</typ:PartyId>
+                           <typ:Person id="325">
+                              <typ:PersonName id="326">
+                                 <ebt:FirstGivenNm>George</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Hanson</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1981-03-04</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="330">
+                                 <typ:LicenseId>456467675</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="333">
+                           <typ:PartyId>5</typ:PartyId>
+                           <typ:Person id="335">
+                              <typ:PersonName id="336">
+                                 <ebt:FirstGivenNm>Mickey</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>O'Neil</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1965-06-20</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="340">
+                                 <typ:LicenseId>123456789</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="343">
+                           <typ:PartyId>6</typ:PartyId>
+                           <typ:Person id="345">
+                              <typ:PersonName id="346">
+                                 <ebt:FirstGivenNm>Frankie</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Four-Fingers</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1964-03-05</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="350">
+                                 <typ:LicenseId>687189798</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="353">
+                           <typ:PartyId>7</typ:PartyId>
+                           <typ:Person id="355">
+                              <typ:PersonName id="356">
+                                 <ebt:FirstGivenNm>Cousin</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Avi</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1954-02-25</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="360">
+                                 <typ:LicenseId>687987181</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="363">
+                           <typ:PartyId>8</typ:PartyId>
+                           <typ:Person id="365">
+                              <typ:PersonName id="366">
+                                 <ebt:FirstGivenNm>Marla</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Singer</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1977-01-01</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="370">
+                                 <typ:LicenseId>5318971987</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="373">
+                           <typ:PartyId>1</typ:PartyId>
+                           <typ:Person id="375">
+                              <typ:PersonName id="376">
+                                 <ebt:FirstGivenNm>Tyler</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Durden</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1980-03-25</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="380">
+                                 <typ:LicenseId>D3216588754687</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="383">
+                           <typ:PartyId>2</typ:PartyId>
+                           <typ:Person id="385">
+                              <typ:PersonName id="386">
+                                 <ebt:FirstGivenNm>Cornelius</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Redherring</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1979-06-24</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="390">
+                                 <typ:LicenseId>65489754</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="393">
+                           <typ:PartyId>3</typ:PartyId>
+                           <typ:Person id="395">
+                              <typ:PersonName id="396">
+                                 <ebt:FirstGivenNm>Raymond</ebt:FirstGivenNm>
+                                 <ebt:SecondGivenNm>K</ebt:SecondGivenNm>
+                                 <ebt:FamilyNm>Essel</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1978-05-25</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="401">
+                                 <typ:LicenseId>E56498745632145</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="404">
+                           <typ:PartyId>4</typ:PartyId>
+                           <typ:Person id="406">
+                              <typ:PersonName id="407">
+                                 <ebt:FirstGivenNm>Kaiser</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Soze</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1976-02-29</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="411">
+                                 <typ:LicenseId>65489721</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="414">
+                           <typ:PartyId>17</typ:PartyId>
+                           <typ:Person id="416">
+                              <typ:PersonName id="417">
+                                 <ebt:FirstGivenNm>Count</ebt:FirstGivenNm>
+                                 <ebt:SecondGivenNm>Victor</ebt:SecondGivenNm>
+                                 <ebt:FamilyNm>Lustig</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1951-09-27</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="422">
+                                 <typ:LicenseId>6786871817</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="425">
+                           <typ:PartyId>18</typ:PartyId>
+                           <typ:Person id="427">
+                              <typ:PersonName id="428">
+                                 <ebt:FirstGivenNm>Alphonse</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Capone</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1980-02-17</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="432">
+                                 <typ:LicenseId>68718718181</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="435">
+                           <typ:PartyId>19</typ:PartyId>
+                           <typ:Person id="437">
+                              <typ:PersonName id="438">
+                                 <ebt:FirstGivenNm>Ben</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Siegel</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1999-01-01</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="442">
+                                 <typ:LicenseId>b6547896541233</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:ListedDrivers id="445">
+                           <typ:PartyId>20</typ:PartyId>
+                           <typ:Person id="447">
+                              <typ:PersonName id="448">
+                                 <ebt:FirstGivenNm>Charlie</ebt:FirstGivenNm>
+                                 <ebt:FamilyNm>Luciano</ebt:FamilyNm>
+                              </typ:PersonName>
+                              <typ:BirthDt>1931-08-12</typ:BirthDt>
+                              <typ:VehicleDriverLicense id="452">
+                                 <typ:LicenseId>897681871871</typ:LicenseId>
+                              </typ:VehicleDriverLicense>
+                           </typ:Person>
+                           <typ:PartyRoles>Policy Driver</typ:PartyRoles>
+                        </typ:ListedDrivers>
+                        <typ:FormTypeCd>Business Auto</typ:FormTypeCd>
+                     </typ:CommercialAutoLine>
+                  </typ:PolicyLines>
+                  <typ:ListedParties id="456">
+                     <typ:Party id="457">
+                        <typ:Organization id="458">
+                           <typ:OrganizationNm>TOYOTA LEASE TRUST</typ:OrganizationNm>
+                           <typ:Addresses id="460">
+                              <typ:Address id="461">
+                                 <ebt:Line1Tx>PO BOX 105386</ebt:Line1Tx>
+                                 <ebt:Municipality id="463">
+                                    <ebt:MunicipalityNm>ATLANTA</ebt:MunicipalityNm>
+                                    <ebt:MunicipalityTypeCd>City</ebt:MunicipalityTypeCd>
+                                 </ebt:Municipality>
+                                 <ebt:Municipality id="466">
+                                    <ebt:MunicipalityTypeCd>County</ebt:MunicipalityTypeCd>
+                                 </ebt:Municipality>
+                                 <ebt:CountrySubdivision id="468">
+                                    <ebt:CountrySubdivisionNm>GA</ebt:CountrySubdivisionNm>
+                                    <ebt:CountrySubdivisionTypeCd>State</ebt:CountrySubdivisionTypeCd>
+                                 </ebt:CountrySubdivision>
+                                 <ebt:PostalCd>30348</ebt:PostalCd>
+                              </typ:Address>
+                              <typ:AddressUseCd>Business</typ:AddressUseCd>
+                              <typ:PrimaryAddressIn>true</typ:PrimaryAddressIn>
+                           </typ:Addresses>
+                        </typ:Organization>
+                        <typ:PartyTypeCd>Organization</typ:PartyTypeCd>
+                        <typ:PartyRoles>Additional Interest</typ:PartyRoles>
+                     </typ:Party>
+                  </typ:ListedParties>
+                  <typ:ListedParties id="476">
+                     <typ:Party id="477">
+                        <typ:Organization id="478">
+                           <typ:OrganizationNm>Bass Pro Shops 2</typ:OrganizationNm>
+                           <typ:Addresses id="480">
+                              <typ:Address id="481">
+                                 <ebt:Line1Tx>2125 Main St</ebt:Line1Tx>
+                                 <ebt:Municipality id="483">
+                                    <ebt:MunicipalityNm>Trenton</ebt:MunicipalityNm>
+                                    <ebt:MunicipalityTypeCd>City</ebt:MunicipalityTypeCd>
+                                 </ebt:Municipality>
+                                 <ebt:Municipality id="486">
+                                    <ebt:MunicipalityTypeCd>County</ebt:MunicipalityTypeCd>
+                                 </ebt:Municipality>
+                                 <ebt:CountrySubdivision id="488">
+                                    <ebt:CountrySubdivisionNm>NJ</ebt:CountrySubdivisionNm>
+                                    <ebt:CountrySubdivisionTypeCd>State</ebt:CountrySubdivisionTypeCd>
+                                 </ebt:CountrySubdivision>
+                                 <ebt:PostalCd>08628</ebt:PostalCd>
+                              </typ:Address>
+                              <typ:AddressUseCd>Mailing</typ:AddressUseCd>
+                              <typ:PrimaryAddressIn>true</typ:PrimaryAddressIn>
+                           </typ:Addresses>
+                        </typ:Organization>
+                        <typ:PartyTypeCd>Organization</typ:PartyTypeCd>
+                        <typ:PartyRoles>Additional Named Insured</typ:PartyRoles>
+                     </typ:Party>
+                  </typ:ListedParties>
+                  <typ:ListedParties id="496">
+                     <typ:Party id="497">
+                        <typ:Organization id="498">
+                           <typ:OrganizationNm>Bass Pro Shops 1</typ:OrganizationNm>
+                           <typ:Addresses id="500">
+                              <typ:Address id="501">
+                                 <ebt:Line1Tx>1572 York St</ebt:Line1Tx>
+                                 <ebt:Municipality id="503">
+                                    <ebt:MunicipalityNm>New York</ebt:MunicipalityNm>
+                                    <ebt:MunicipalityTypeCd>City</ebt:MunicipalityTypeCd>
+                                 </ebt:Municipality>
+                                 <ebt:Municipality id="506">
+                                    <ebt:MunicipalityTypeCd>County</ebt:MunicipalityTypeCd>
+                                 </ebt:Municipality>
+                                 <ebt:CountrySubdivision id="508">
+                                    <ebt:CountrySubdivisionNm>NY</ebt:CountrySubdivisionNm>
+                                    <ebt:CountrySubdivisionTypeCd>State</ebt:CountrySubdivisionTypeCd>
+                                 </ebt:CountrySubdivision>
+                                 <ebt:PostalCd>10701</ebt:PostalCd>
+                              </typ:Address>
+                              <typ:AddressUseCd>Mailing</typ:AddressUseCd>
+                              <typ:PrimaryAddressIn>true</typ:PrimaryAddressIn>
+                           </typ:Addresses>
+                        </typ:Organization>
+                        <typ:PartyTypeCd>Organization</typ:PartyTypeCd>
+                        <typ:PartyRoles>Additional Named Insured</typ:PartyRoles>
+                     </typ:Party>
+                  </typ:ListedParties>
+                  <typ:ListedParties id="516">
+                     <typ:Party id="517">
+                        <typ:Organization id="518">
+                           <typ:OrganizationNm>BASS PRO SHOPS</typ:OrganizationNm>
+                           <typ:Addresses id="520">
+                              <typ:Address id="521">
+                                 <ebt:Line1Tx>3501 PAXTON ST</ebt:Line1Tx>
+                                 <ebt:Municipality id="523">
+                                    <ebt:MunicipalityNm>HARRISBURG</ebt:MunicipalityNm>
+                                    <ebt:MunicipalityTypeCd>City</ebt:MunicipalityTypeCd>
+                                 </ebt:Municipality>
+                                 <ebt:Municipality id="526">
+                                    <ebt:MunicipalityTypeCd>County</ebt:MunicipalityTypeCd>
+                                 </ebt:Municipality>
+                                 <ebt:CountrySubdivision id="528">
+                                    <ebt:CountrySubdivisionNm>PA</ebt:CountrySubdivisionNm>
+                                    <ebt:CountrySubdivisionTypeCd>State</ebt:CountrySubdivisionTypeCd>
+                                 </ebt:CountrySubdivision>
+                                 <ebt:PostalCd>17111</ebt:PostalCd>
+                              </typ:Address>
+                              <typ:AddressUseCd>Mailing</typ:AddressUseCd>
+                              <typ:PrimaryAddressIn>true</typ:PrimaryAddressIn>
+                           </typ:Addresses>
+                        </typ:Organization>
+                        <typ:PartyTypeCd>Organization</typ:PartyTypeCd>
+                        <typ:PartyRoles>Primary Named Insured</typ:PartyRoles>
+                     </typ:Party>
+                  </typ:ListedParties>
+               </typ:PolicyPeriod>
+            </typ:Policy>
+            <typ:CoverageStatus id="536">
+               <typ:StatusIn>true</typ:StatusIn>
+            </typ:CoverageStatus>
+         </typ:RetrievePolicyByPolicyNumberResponseMessage>
+      </capir:retrievePolicyByPolicyNumberResponse>
+   </soapenv:Body>
+</soapenv:Envelope>

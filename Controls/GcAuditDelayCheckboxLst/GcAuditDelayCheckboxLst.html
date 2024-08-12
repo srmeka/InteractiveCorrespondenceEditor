@@ -1,0 +1,26 @@
+﻿<div class="panel panel-primary" ng-controller="GcAuditDelayCheckboxLstController">
+    <div class="panel-heading">Requested Copies</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Checkbox list-->
+            <div class="col-md-12">
+                <div class="row" style="margin-top:5px" ng-repeat="item in displayData track by $index">
+                    <input type="checkbox" name="{{item.checkboxName}}" id="{{item.checkboxName}}Id" ng-model="item.onChecked" value="" />
+                    <label ng-bind="item.labelText"></label>
+                </div>
+            </div>
+
+            <!--Misc Explanation-->
+            <div class="row">
+                <div class="col-md-4"  style="margin-top:5px">
+                    <label>Misc Explanation:</label>
+                </div>
+                <div class="col-md-8"  style="margin-top:5px">
+                    <input type="text" class="form-control" name="MiscExplanation" id="MiscExplanationId" ng-model="miscExplanation" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

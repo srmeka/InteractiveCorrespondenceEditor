@@ -1,0 +1,31 @@
+﻿<div class="panel panel-primary" ng-controller="PcumbClaimsHomeRepeaterwCheckboxController">
+    <div class="panel-heading">Claims Home</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div style="margin-bottom:15px" ng-repeat="slector  in TotalCount track by $index">
+                <div class="row">
+                    <!--Checkbox to enable control-->
+                    <div class="col-md-3">
+                        <input type="checkbox" ng-click="clearAllData($index)" ng-model="selectClaims[$index]" id="CtrlEnableCheckboxId{{$index}}" name="CtrlEnableCheckbox{{$index}}" value="" />
+                        <label>Include Claims Home</label>
+                    </div>
+                    <!--Risk location address dropdown list and input-->
+                    <label class="col-md-3" style="margin-top:3px;" ng-class="(selectClaims[$index])?'':'disabled-class'">Risk Location Address:</label>
+                    <div class="col-md-3">
+                        <select ng-disabled="!selectClaims[$index]" ng-options="(item.Address.Line1Tx + ' ' + item.Address.Line2Tx + ' ' + item.Address.Line3Tx + ' ' + item.Address.city_value + ' ' + item.Address.CountrySubdivision.CountrySubdivisionNm + ' ' + item.Address.PostalCd )   for item in claimData track by item._id" name="claimSelection" ng-model="selectedValue[$index]" class="form-control" id="claimInfoId">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input ng-disabled="!selectClaims[$index] || selectedValue[$index]" ng-model="freeTextGroup[$index]" type="text" class="form-control" name="claimText" value="" />
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 10px; border-bottom: 2px solid lightgray"></div>
+            </div>
+            <div class="col-md-12 text-center">
+                <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+                <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+            </div>
+        </div>
+    </div>
+</div>

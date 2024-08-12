@@ -1,0 +1,49 @@
+﻿<div class="panel panel-primary" ng-controller="GcExpoNmAndTypewPrecertIdNoCntrlsController">
+    <div class="panel-heading">Exposure Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Exposure name dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>* Exposure Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-change="selectName()" ng-options="item.displayName for item in ExposureData | orderBy: 'displayName'" name="ExposureNameSelection" ng-model="selectedName" class="form-control" id="ExposureNameSelectionId" ng-required="true">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ExposureData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--Exposure type dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>* Exposure Type:</label></div>
+                <div class="col-md-4">
+                    <select ng-if="typeData != 'Information not provided from ClaimCenter'" ng-change="selectType(selectedType)" ng-options="item.ExposureType for item in typeData | orderBy: 'ExposureType'" name="ExposureTypeSelection" ng-model="selectedType" class="form-control" id="ExposureTypeSelectionId" ng-required="true">
+                        <option value="">--Select One--</option>
+                    </select>
+                    <span style="display:inline-block;margin-top:5px;margin-bottom:5px" ng-if="typeData == 'Information not provided from ClaimCenter'" class="alert-danger" ng-bind="typeData"></span>
+                </div>
+                <div class="col-md-4">
+                    <!--<span class="alert-danger" ng-show="selectedName && typeData.length == 0">Information not provided by source</span>-->
+                </div>
+            </div>
+
+            <!--Precert ID dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>Precert ID:</label></div>
+                <div class="col-md-4">
+                    <select ng-if="precertData != 'Information not provided from ClaimCenter'" ng-options="item.PrecertificationId for item in precertData" name="PrecertIdSelection" ng-model="selectedPrecertId" class="form-control" id="SelectionPrecertId">
+                        <option value="">--Select One--</option>
+                    </select>
+                    <span style="display:inline-block;margin-top:5px;margin-bottom:5px" ng-if="precertData == 'Information not provided from ClaimCenter'" class="alert-danger" ng-bind="precertData"></span>
+                </div>
+                <div class="col-md-4">
+                    <!--<span class="alert-danger" ng-show="v && typeData.length == 0">Information not provided by source</span>-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

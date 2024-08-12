@@ -1,0 +1,94 @@
+﻿<div class="panel panel-primary" ng-controller="WcuAddresseeRepeaterController">
+    <div class="panel-heading">CC Addressee Name / Address</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" ng-repeat="slector in TotalCount track by $index" style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray">
+                <div class="col-md-3">
+                    <!--Checkbox to enable control-->
+                    <input ng-click="clearAllData($index)" ng-model="SelectedAddressee[$index]" type="checkbox" id="CtrlEnableCheckbox{{$index}}Id" name="CtrlEnableCheckbox{{$index}}" value="" />
+                    <label>CC Addressee Name / Address</label>
+                </div>
+                <div class="col-md-9 row">
+
+                    <!--Addressee Name textbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <div class="col-md-4"><label ng-class="(SelectedAddressee[$index])?'':'disabled-class'">Addressee Name:</label></div>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedAddressee[$index]" maxlength="44" type="text" class="form-control" ng-model="addrName[$index]" name="{{'addrNameCheckbox'+ $index}}" id="{{'addrNameCheckboxId'+ $index}}" value="" />
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+
+                    <!--Company Name textbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedAddressee[$index])?'':'disabled-class'">* Company Name:</label>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedAddressee[$index]" ng-required="SelectedAddressee[$index]" maxlength="88" type="text" class="form-control" ng-model="companyName[$index]" name="{{'companyNameText'+ $index}}" id="{{'companyNameTextId'+ $index}}" value="" />
+                        </div>
+                    </div>
+
+                    <!--Address Line 1 checkbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedAddressee[$index])?'':'disabled-class'">* Address Line 1:</label>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedAddressee[$index]" type="text" maxlength="44" ng-required="SelectedAddressee[$index]" class="form-control" ng-model="addrLine1[$index]" name="{{'addrLine1Text'+ $index}}" id="{{'addrLine1TextId'+ $index}}" value="" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <!--Address Line 2-->
+                        <label class="col-md-4" ng-class="(SelectedAddressee[$index])?'':'disabled-class'">Address Line 2:</label>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedAddressee[$index]" type="text" maxlength="44" class="form-control" ng-model="addrLine2[$index]" name="{{'addrLine2Text'+ $index}}" id="{{'addrLine2TextId'+ $index}}" value="" />
+                        </div>
+                    </div>
+
+                    <!--Address line 3 textbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <label class="col-md-4" ng-class="(SelectedAddressee[$index])?'':'disabled-class'">Address Line 3: </label>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedAddressee[$index]" type="text" maxlength="44" class="form-control" ng-model="addrLine3[$index]" name="{{'addrLine3Text'+ $index}}" id="{{'addrLine3TextId'+ $index}}" value="" />
+                        </div>
+                        
+                    </div>
+
+                    <!--City textbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <div class="col-md-4"><label ng-class="(SelectedAddressee[$index])?'':'disabled-class'">* City:</label></div>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedAddressee[$index]" maxlength="34" type="text" ng-required="SelectedAddressee[$index]" class="form-control" ng-model="city[$index]" name="{{'cityCheckbox'+ $index}}" id="{{'cityCheckboxId'+ $index}}" value="" />
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+
+                    <!--State textbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <div class="col-md-4"><label ng-class="(SelectedAddressee[$index])?'':'disabled-class'">* State:</label></div>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedAddressee[$index]" maxlength="2" type="text" ng-required="SelectedAddressee[$index]" class="form-control" ng-model="state[$index]" name="{{'stateCheckbox'+ $index}}" id="{{'stateCheckboxId'+ $index}}" value="" />
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+
+                    <!--Zip textbox-->
+                    <div class="col-md-12 row" style="margin-top:5px">
+                        <div class="col-md-4"><label ng-class="(SelectedAddressee[$index])?'':'disabled-class'">* Zip:</label></div>
+                        <div class="col-md-4">
+                            <input ng-disabled="!SelectedAddressee[$index]" maxlength="5" type="text" ng-change="zip[$index]=validateNumber(zip[$index])" ng-required="SelectedAddressee[$index]" class="form-control" ng-model="zip[$index]" name="{{'zipCheckbox'+ $index}}" id="{{'zipCheckboxId'+ $index}}" value="" />
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 text-center">
+            <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+            <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+        </div>
+    </div>
+</div>

@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ICE.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="700" Nullable="false" />
+          <Property Name="CategoryFriendlyName" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="CategoryActive" Type="bit" Nullable="false" />
+          <Property Name="LOBId" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDateTime" Type="smalldatetime" Nullable="false" />
+          <Property Name="UpdatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UpdatedDateTime" Type="smalldatetime" Nullable="false" />
+          <Property Name="CategoryGroups" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="Control">
+          <Key>
+            <PropertyRef Name="ControlId" />
+          </Key>
+          <Property Name="ControlId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ControlDescription" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="ControlName" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDateTime" Type="smalldatetime" Nullable="false" />
+          <Property Name="UpdatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UpdatedDateTime" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="DocumentId" />
+          </Key>
+          <Property Name="DocumentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryId" Type="int" Nullable="false" />
+          <Property Name="DocumentName" Type="varchar" MaxLength="700" Nullable="false" />
+          <Property Name="DocumentFriendlyName" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="DocumentActive" Type="bit" Nullable="false" />
+          <Property Name="BaseState" Type="varchar" MaxLength="100" />
+          <Property Name="JldFilePath" Type="varchar" MaxLength="1000" Nullable="false" />
+          <Property Name="DocType" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDateTime" Type="smalldatetime" Nullable="false" />
+          <Property Name="UpdatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UpdatedDateTime" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DocumentControl">
+          <Key>
+            <PropertyRef Name="DocumentControlId" />
+          </Key>
+          <Property Name="DocumentControlId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DocumentId" Type="int" Nullable="false" />
+          <Property Name="ControlId" Type="int" Nullable="false" />
+          <Property Name="ControlOrder" Type="int" Nullable="false" />
+          <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedDateTime" Type="smalldatetime" Nullable="false" />
+          <Property Name="UpdatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UpdatedDateTime" Type="smalldatetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DocumentLog">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+          </Key>
+          <Property Name="TransactionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="varchar" MaxLength="500" />
+          <Property Name="CreateDateTime" Type="datetime" />
+          <Property Name="LOB" Type="varchar" MaxLength="50" />
+          <Property Name="LetterName" Type="varchar" MaxLength="500" />
+          <Property Name="Payload" Type="xml" />
+          <Property Name="PolicyNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Environment" Type="varchar" MaxLength="20" />
+          <Property Name="BaseState" Type="varchar" MaxLength="20" />
+          <Property Name="ClaimNumber" Type="varchar" MaxLength="50" />
+          <Property Name="QuoteNumber" Type="varchar" MaxLength="50" />
+          <Property Name="ProducerCode" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ErrorLog">
+          <Key>
+            <PropertyRef Name="ErrorLogId" />
+          </Key>
+          <Property Name="ErrorLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ErrorMessage" Type="varchar" MaxLength="1000" />
+          <Property Name="InputXML" Type="xml" />
+          <Property Name="OutputXML" Type="xml" />
+          <Property Name="PolicyNumber" Type="varchar" MaxLength="50" />
+          <Property Name="ClaimNumber" Type="varchar" MaxLength="50" />
+          <Property Name="QuoteNumber" Type="varchar" MaxLength="50" />
+          <Property Name="Lob" Type="varchar" MaxLength="50" />
+          <Property Name="ErrorCode" Type="varchar" MaxLength="50" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDateTime" Type="datetime" />
+          <Property Name="LetterName" Type="varchar" MaxLength="500" />
+          <Property Name="ProducerCode" Type="varchar" MaxLength="50" />
+          <Property Name="Environment" Type="varchar" MaxLength="50" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LOB">
+          <Key>
+            <PropertyRef Name="LOBId" />
+          </Key>
+          <Property Name="LOBId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LOBName" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="LookupItem">
+          <Key>
+            <PropertyRef Name="LookupItemID" />
+          </Key>
+          <Property Name="LookupItemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LookupItemCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LookupItemValue" Type="varchar" MaxLength="75" />
+          <Property Name="LookupTypeID" Type="int" Nullable="false" />
+          <Property Name="LookupItemOrder" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LookupType">
+          <Key>
+            <PropertyRef Name="LookupTypeID" />
+          </Key>
+          <Property Name="LookupTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LookupTypeValue" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="RegionId" />
+          </Key>
+          <Property Name="RegionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Region" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Environment" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsDefault" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WebServices">
+          <Key>
+            <PropertyRef Name="WebServicesId" />
+          </Key>
+          <Property Name="WebServicesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegionId" Type="int" />
+          <Property Name="LOB" Type="varchar" MaxLength="500" />
+          <Property Name="Environment" Type="varchar" MaxLength="500" />
+          <Property Name="URLType" Type="varchar" MaxLength="500" />
+          <Property Name="URLInfo" Type="varchar" MaxLength="500" />
+          <Property Name="URL" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <Association Name="FK_Category_LOB">
+          <End Role="LOB" Type="Self.LOB" Multiplicity="1" />
+          <End Role="Category" Type="Self.Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOB">
+              <PropertyRef Name="LOBId" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="LOBId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Document_Category">
+          <End Role="Category" Type="Self.Category" Multiplicity="1" />
+          <End Role="Document" Type="Self.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DocumentControl_Controls">
+          <End Role="Control" Type="Self.Control" Multiplicity="1" />
+          <End Role="DocumentControl" Type="Self.DocumentControl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Control">
+              <PropertyRef Name="ControlId" />
+            </Principal>
+            <Dependent Role="DocumentControl">
+              <PropertyRef Name="ControlId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DocumentControl_Document">
+          <End Role="Document" Type="Self.Document" Multiplicity="1" />
+          <End Role="DocumentControl" Type="Self.DocumentControl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="DocumentId" />
+            </Principal>
+            <Dependent Role="DocumentControl">
+              <PropertyRef Name="DocumentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LOB_LOB">
+          <End Role="LOB" Type="Self.LOB" Multiplicity="1" />
+          <End Role="LOB1" Type="Self.LOB" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="LOB">
+              <PropertyRef Name="LOBId" />
+            </Principal>
+            <Dependent Role="LOB1">
+              <PropertyRef Name="LOBId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T_LookupItem_T_LookupType">
+          <End Role="LookupType" Type="Self.LookupType" Multiplicity="1" />
+          <End Role="LookupItem" Type="Self.LookupItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupType">
+              <PropertyRef Name="LookupTypeID" />
+            </Principal>
+            <Dependent Role="LookupItem">
+              <PropertyRef Name="LookupTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WebServices_Region">
+          <End Role="Region" Type="Self.Region" Multiplicity="0..1" />
+          <End Role="WebServices" Type="Self.WebServices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Region">
+              <PropertyRef Name="RegionId" />
+            </Principal>
+            <Dependent Role="WebServices">
+              <PropertyRef Name="RegionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="GetCategories" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="LOB" Type="varchar" Mode="In" />
+          <Parameter Name="ADGroups" Type="varchar(max)" Mode="In" />
+        </Function>
+        <Function Name="GetControl" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetDefaultEnv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Env" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GetDistinctWebserviceValues" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetDocumentControl" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="docid" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetDocuments" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CategoryId" Type="int" Mode="In" />
+          <Parameter Name="State" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GetESBEnv" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetLOB" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetLookupItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LookupTypeValue" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GetWebService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="param" Type="varchar" Mode="In" />
+          <Parameter Name="env" Type="varchar" Mode="In" />
+          <Parameter Name="lob" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="UpdateCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CategoryActive" Type="bit" Mode="In" />
+          <Parameter Name="CategoryFriendlyName" Type="varchar" Mode="In" />
+          <Parameter Name="CategoryGroups" Type="varchar(max)" Mode="In" />
+          <Parameter Name="CategoryId" Type="int" Mode="In" />
+          <Parameter Name="CategoryName" Type="varchar" Mode="In" />
+          <Parameter Name="CreatedBy" Type="varchar" Mode="In" />
+          <Parameter Name="CreatedDateTime" Type="smalldatetime" Mode="In" />
+          <Parameter Name="LOBId" Type="int" Mode="In" />
+          <Parameter Name="UpdatedBy" Type="varchar" Mode="In" />
+          <Parameter Name="UpdatedDateTime" Type="smalldatetime" Mode="In" />
+        </Function>
+        <EntityContainer Name="ICEStoreContainer">
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Control" EntityType="Self.Control" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Document" EntityType="Self.Document" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DocumentControl" EntityType="Self.DocumentControl" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DocumentLog" EntityType="Self.DocumentLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ErrorLog" EntityType="Self.ErrorLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LOB" EntityType="Self.LOB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LookupItem" EntityType="Self.LookupItem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LookupType" EntityType="Self.LookupType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Region" EntityType="Self.Region" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WebServices" EntityType="Self.WebServices" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Category_LOB" Association="Self.FK_Category_LOB">
+            <End Role="LOB" EntitySet="LOB" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Document_Category" Association="Self.FK_Document_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Document" EntitySet="Document" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DocumentControl_Controls" Association="Self.FK_DocumentControl_Controls">
+            <End Role="Control" EntitySet="Control" />
+            <End Role="DocumentControl" EntitySet="DocumentControl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DocumentControl_Document" Association="Self.FK_DocumentControl_Document">
+            <End Role="Document" EntitySet="Document" />
+            <End Role="DocumentControl" EntitySet="DocumentControl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LOB_LOB" Association="Self.FK_LOB_LOB">
+            <End Role="LOB" EntitySet="LOB" />
+            <End Role="LOB1" EntitySet="LOB" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T_LookupItem_T_LookupType" Association="Self.FK_T_LookupItem_T_LookupType">
+            <End Role="LookupType" EntitySet="LookupType" />
+            <End Role="LookupItem" EntitySet="LookupItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WebServices_Region" Association="Self.FK_WebServices_Region">
+            <End Role="Region" EntitySet="Region" />
+            <End Role="WebServices" EntitySet="WebServices" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ICE" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ICEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DocumentLog" EntityType="ICE.DocumentLog" />
+          <EntitySet Name="LOB" EntityType="ICE.LOB" />
+          <AssociationSet Name="FK_LOB_LOB" Association="ICE.FK_LOB_LOB">
+            <End Role="LOB" EntitySet="LOB" />
+            <End Role="LOB1" EntitySet="LOB" />
+          </AssociationSet>
+          <EntitySet Name="LookupItem" EntityType="ICE.LookupItem" />
+          <EntitySet Name="LookupType" EntityType="ICE.LookupType" />
+          <AssociationSet Name="FK_T_LookupItem_T_LookupType" Association="ICE.FK_T_LookupItem_T_LookupType">
+            <End Role="LookupType" EntitySet="LookupType" />
+            <End Role="LookupItem" EntitySet="LookupItem" />
+          </AssociationSet>
+          <EntitySet Name="Control" EntityType="ICE.Control" />
+          <EntitySet Name="Document" EntityType="ICE.Document" />
+          <EntitySet Name="DocumentControl" EntityType="ICE.DocumentControl" />
+          <AssociationSet Name="FK_DocumentControl_Controls" Association="ICE.FK_DocumentControl_Controls">
+            <End Role="Control" EntitySet="Control" />
+            <End Role="DocumentControl" EntitySet="DocumentControl" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DocumentControl_Document" Association="ICE.FK_DocumentControl_Document">
+            <End Role="Document" EntitySet="Document" />
+            <End Role="DocumentControl" EntitySet="DocumentControl" />
+          </AssociationSet>
+          <FunctionImport Name="GetDocumentControl" ReturnType="Collection(ICE.GetDocumentControl_Result)">
+          <Parameter Name="docid" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetLOB" ReturnType="Collection(ICE.GetLOB_Result)" />
+          <FunctionImport Name="GetLookupItem" ReturnType="Collection(ICE.GetLookupItem_Result)">
+          <Parameter Name="LookupTypeValue" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetDocuments" ReturnType="Collection(ICE.GetDocuments_Result)">
+            <Parameter Name="CategoryId" Mode="In" Type="Int32" />
+            <Parameter Name="State" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Category" EntityType="ICE.Category" />
+          <AssociationSet Name="FK_Category_LOB" Association="ICE.FK_Category_LOB">
+            <End Role="LOB" EntitySet="LOB" />
+            <End Role="Category" EntitySet="Category" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Document_Category" Association="ICE.FK_Document_Category">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Document" EntitySet="Document" />
+          </AssociationSet>
+          <FunctionImport Name="GetCategories" ReturnType="Collection(ICE.GetCategories_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="LOB" Mode="In" Type="String" />
+            <Parameter Name="ADGroups" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetControl" ReturnType="Collection(ICE.GetControl_Result)" />
+          <FunctionImport Name="GetESBEnv" ReturnType="Collection(String)" />
+          <EntitySet Name="WebServices" EntityType="ICE.WebServices" />
+          <FunctionImport Name="GetDefaultEnv" ReturnType="Collection(ICE.GetDefaultEnv_Result)">
+          <Parameter Name="Env" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Region" EntityType="ICE.Region" />
+          <AssociationSet Name="FK_WebServices_Region" Association="ICE.FK_WebServices_Region">
+            <End Role="Region" EntitySet="Region" />
+            <End Role="WebServices" EntitySet="WebServices" />
+          </AssociationSet>
+          <FunctionImport Name="GetDistinctWebserviceValues" ReturnType="Collection(String)">
+          <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetWebService" ReturnType="Collection(ICE.GetWebService_Result)">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="param" Mode="In" Type="String" />
+            <Parameter Name="env" Mode="In" Type="String" />
+            <Parameter Name="lob" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="ErrorLog" EntityType="ICE.ErrorLog" />
+          <FunctionImport Name="UpdateCategory">
+            <Parameter Name="CategoryActive" Mode="In" Type="Boolean" />
+            <Parameter Name="CategoryFriendlyName" Mode="In" Type="String" />
+            <Parameter Name="CategoryGroups" Mode="In" Type="String" />
+            <Parameter Name="CategoryId" Mode="In" Type="Int32" />
+            <Parameter Name="CategoryName" Mode="In" Type="String" />
+            <Parameter Name="CreatedBy" Mode="In" Type="String" />
+            <Parameter Name="CreatedDateTime" Mode="In" Type="DateTime" />
+            <Parameter Name="LOBId" Mode="In" Type="Int32" />
+            <Parameter Name="UpdatedBy" Mode="In" Type="String" />
+            <Parameter Name="UpdatedDateTime" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          </EntityContainer>
+        <EntityType Name="DocumentLog">
+          <Key>
+            <PropertyRef Name="TransactionID" />
+          </Key>
+          <Property Name="TransactionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CreateDateTime" Type="DateTime" Precision="3" />
+          <Property Name="LOB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LetterName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Payload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Environment" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="BaseState" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ClaimNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QuoteNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProducerCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="LOB">
+          <Key>
+            <PropertyRef Name="LOBId" />
+          </Key>
+          <Property Name="LOBId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LOBName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="LOB1" Relationship="ICE.FK_LOB_LOB" FromRole="LOB" ToRole="LOB1" />
+          <NavigationProperty Name="LOB2" Relationship="ICE.FK_LOB_LOB" FromRole="LOB1" ToRole="LOB" />
+          <NavigationProperty Name="Category" Relationship="ICE.FK_Category_LOB" FromRole="LOB" ToRole="Category" />
+        </EntityType>
+        <Association Name="FK_LOB_LOB">
+          <End Type="ICE.LOB" Role="LOB" Multiplicity="1" />
+          <End Type="ICE.LOB" Role="LOB1" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="LOB">
+              <PropertyRef Name="LOBId" />
+            </Principal>
+            <Dependent Role="LOB1">
+              <PropertyRef Name="LOBId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="LookupItem">
+          <Key>
+            <PropertyRef Name="LookupItemID" />
+          </Key>
+          <Property Name="LookupItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LookupItemCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LookupItemValue" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="LookupTypeID" Type="Int32" Nullable="false" />
+          <Property Name="LookupItemOrder" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="LookupType" Relationship="ICE.FK_T_LookupItem_T_LookupType" FromRole="LookupItem" ToRole="LookupType" />
+        </EntityType>
+        <EntityType Name="LookupType">
+          <Key>
+            <PropertyRef Name="LookupTypeID" />
+          </Key>
+          <Property Name="LookupTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LookupTypeValue" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="LookupItem" Relationship="ICE.FK_T_LookupItem_T_LookupType" FromRole="LookupType" ToRole="LookupItem" />
+        </EntityType>
+        <Association Name="FK_T_LookupItem_T_LookupType">
+          <End Type="ICE.LookupType" Role="LookupType" Multiplicity="1" />
+          <End Type="ICE.LookupItem" Role="LookupItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupType">
+              <PropertyRef Name="LookupTypeID" />
+            </Principal>
+            <Dependent Role="LookupItem">
+              <PropertyRef Name="LookupTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Control">
+          <Key>
+            <PropertyRef Name="ControlId" />
+          </Key>
+          <Property Name="ControlId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ControlDescription" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ControlName" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UpdatedDateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="DocumentControl" Relationship="ICE.FK_DocumentControl_Controls" FromRole="Control" ToRole="DocumentControl" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="DocumentId" />
+          </Key>
+          <Property Name="DocumentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" />
+          <Property Name="DocumentName" Type="String" Nullable="false" MaxLength="700" FixedLength="false" Unicode="false" />
+          <Property Name="DocumentFriendlyName" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="DocumentActive" Type="Boolean" Nullable="false" />
+          <Property Name="BaseState" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="JldFilePath" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="DocType" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UpdatedDateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="DocumentControl" Relationship="ICE.FK_DocumentControl_Document" FromRole="Document" ToRole="DocumentControl" />
+          <NavigationProperty Name="Category" Relationship="ICE.FK_Document_Category" FromRole="Document" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="DocumentControl">
+          <Key>
+            <PropertyRef Name="DocumentControlId" />
+          </Key>
+          <Property Name="DocumentControlId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DocumentId" Type="Int32" Nullable="false" />
+          <Property Name="ControlId" Type="Int32" Nullable="false" />
+          <Property Name="ControlOrder" Type="Int32" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UpdatedDateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="Control" Relationship="ICE.FK_DocumentControl_Controls" FromRole="DocumentControl" ToRole="Control" />
+          <NavigationProperty Name="Document" Relationship="ICE.FK_DocumentControl_Document" FromRole="DocumentControl" ToRole="Document" />
+        </EntityType>
+        <Association Name="FK_DocumentControl_Controls">
+          <End Type="ICE.Control" Role="Control" Multiplicity="1" />
+          <End Type="ICE.DocumentControl" Role="DocumentControl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Control">
+              <PropertyRef Name="ControlId" />
+            </Principal>
+            <Dependent Role="DocumentControl">
+              <PropertyRef Name="ControlId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DocumentControl_Document">
+          <End Type="ICE.Document" Role="Document" Multiplicity="1" />
+          <End Type="ICE.DocumentControl" Role="DocumentControl" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Document">
+              <PropertyRef Name="DocumentId" />
+            </Principal>
+            <Dependent Role="DocumentControl">
+              <PropertyRef Name="DocumentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="GetDocumentControl_Result">
+          <Property Type="Int32" Name="ControlId" Nullable="false" />
+          <Property Type="String" Name="ControlDescription" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="ControlName" Nullable="true" MaxLength="1000" />
+          <Property Type="Int32" Name="DocumentControlId" Nullable="false" />
+          <Property Type="Int32" Name="DocumentId" Nullable="false" />
+          <Property Type="Int32" Name="ControlOrder" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetLOB_Result">
+          <Property Type="Int32" Name="LOBId" Nullable="false" />
+          <Property Type="String" Name="LOBName" Nullable="true" MaxLength="500" />
+        </ComplexType>
+        <ComplexType Name="GetLookupItem_Result">
+          <Property Type="Int32" Name="LookupItemID" Nullable="false" />
+          <Property Type="String" Name="LookupItemCode" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="LookupItemValue" Nullable="true" MaxLength="75" />
+          <Property Type="Int32" Name="LookupTypeID" Nullable="false" />
+          <Property Type="Int32" Name="LookupItemOrder" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetDocuments_Result">
+          <Property Type="Int32" Name="DocumentId" Nullable="false" />
+          <Property Type="Int32" Name="CategoryId" Nullable="false" />
+          <Property Type="String" Name="DocumentName" Nullable="false" MaxLength="700" />
+          <Property Type="String" Name="DocumentFriendlyName" Nullable="false" MaxLength="1000" />
+          <Property Type="Boolean" Name="DocumentActive" Nullable="false" />
+          <Property Type="String" Name="BaseState" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="JldFilePath" Nullable="false" MaxLength="1000" />
+          <Property Type="String" Name="DocType" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDateTime" Nullable="false" Precision="16" />
+          <Property Type="String" Name="UpdatedBy" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="UpdatedDateTime" Nullable="false" Precision="16" />
+        </ComplexType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="700" FixedLength="false" Unicode="false" />
+          <Property Name="CategoryFriendlyName" Type="String" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="CategoryActive" Type="Boolean" Nullable="false" />
+          <Property Name="LOBId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UpdatedBy" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UpdatedDateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CategoryGroups" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="LOB" Relationship="ICE.FK_Category_LOB" FromRole="Category" ToRole="LOB" />
+          <NavigationProperty Name="Document" Relationship="ICE.FK_Document_Category" FromRole="Category" ToRole="Document" />
+        </EntityType>
+        <Association Name="FK_Category_LOB">
+          <End Type="ICE.LOB" Role="LOB" Multiplicity="1" />
+          <End Type="ICE.Category" Role="Category" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LOB">
+              <PropertyRef Name="LOBId" />
+            </Principal>
+            <Dependent Role="Category">
+              <PropertyRef Name="LOBId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Document_Category">
+          <End Type="ICE.Category" Role="Category" Multiplicity="1" />
+          <End Type="ICE.Document" Role="Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Document">
+              <PropertyRef Name="CategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="GetCategories_Result">
+          <Property Type="Int32" Name="CategoryId" Nullable="false" />
+          <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="700" />
+          <Property Type="String" Name="CategoryFriendlyName" Nullable="false" MaxLength="1000" />
+          <Property Type="Boolean" Name="CategoryActive" Nullable="false" />
+          <Property Type="Int32" Name="LOBId" Nullable="false" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDateTime" Nullable="false" Precision="16" />
+          <Property Type="String" Name="UpdatedBy" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="UpdatedDateTime" Nullable="false" Precision="16" />
+          <Property Type="String" Name="CategoryGroups" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetControl_Result">
+          <Property Type="Int32" Name="ControlId" Nullable="false" />
+          <Property Type="String" Name="ControlDescription" Nullable="false" MaxLength="500" />
+          <Property Type="String" Name="ControlName" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="CreatedBy" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="CreatedDateTime" Nullable="false" Precision="16" />
+          <Property Type="String" Name="UpdatedBy" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="UpdatedDateTime" Nullable="false" Precision="16" />
+        </ComplexType>
+        <EntityType Name="WebServices">
+          <Key>
+            <PropertyRef Name="WebServicesId" />
+          </Key>
+          <Property Name="WebServicesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegionId" Type="Int32" />
+          <Property Name="LOB" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Environment" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="URLType" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="URLInfo" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="URL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Region" Relationship="ICE.FK_WebServices_Region" FromRole="WebServices" ToRole="Region" />
+        </EntityType>
+        <ComplexType Name="GetDefaultEnv_Result">
+          <Property Type="Int32" Name="RegionId" Nullable="false" />
+          <Property Type="String" Name="Region" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="Environment" Nullable="false" MaxLength="50" />
+          <Property Type="Boolean" Name="IsDefault" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="Region">
+          <Key>
+            <PropertyRef Name="RegionId" />
+          </Key>
+          <Property Name="RegionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Region1" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Environment" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsDefault" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="WebServices" Relationship="ICE.FK_WebServices_Region" FromRole="Region" ToRole="WebServices" />
+        </EntityType>
+        <Association Name="FK_WebServices_Region">
+          <End Type="ICE.Region" Role="Region" Multiplicity="0..1" />
+          <End Type="ICE.WebServices" Role="WebServices" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Region">
+              <PropertyRef Name="RegionId" />
+            </Principal>
+            <Dependent Role="WebServices">
+              <PropertyRef Name="RegionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="GetWebService_Result">
+          <Property Type="Int32" Name="WebServicesId" Nullable="false" />
+          <Property Type="Int32" Name="RegionId" Nullable="true" />
+          <Property Type="String" Name="LOB" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="Environment" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="URLType" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="URLInfo" Nullable="true" MaxLength="500" />
+          <Property Type="String" Name="URL" Nullable="true" MaxLength="500" />
+        </ComplexType>
+        <EntityType Name="ErrorLog">
+          <Key>
+            <PropertyRef Name="ErrorLogId" />
+          </Key>
+          <Property Name="ErrorLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ErrorMessage" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="InputXML" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OutputXML" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PolicyNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ClaimNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="QuoteNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lob" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ErrorCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDateTime" Type="DateTime" Precision="3" />
+          <Property Name="LetterName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="ProducerCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Environment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="ICE" />
+        <Alias Key="Target" Value="ICE.Store" />
+        <EntityContainerMapping CdmEntityContainer="ICEEntities" StorageEntityContainer="ICEStoreContainer">
+          <EntitySetMapping Name="DocumentLog">
+            <EntityTypeMapping TypeName="ICE.DocumentLog">
+              <MappingFragment StoreEntitySet="DocumentLog">
+                <ScalarProperty Name="ProducerCode" ColumnName="ProducerCode" />
+                <ScalarProperty Name="QuoteNumber" ColumnName="QuoteNumber" />
+                <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+                <ScalarProperty Name="BaseState" ColumnName="BaseState" />
+                <ScalarProperty Name="Environment" ColumnName="Environment" />
+                <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+                <ScalarProperty Name="Payload" ColumnName="Payload" />
+                <ScalarProperty Name="LetterName" ColumnName="LetterName" />
+                <ScalarProperty Name="LOB" ColumnName="LOB" />
+                <ScalarProperty Name="CreateDateTime" ColumnName="CreateDateTime" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LOB">
+            <EntityTypeMapping TypeName="ICE.LOB">
+              <MappingFragment StoreEntitySet="LOB">
+                <ScalarProperty Name="LOBName" ColumnName="LOBName" />
+                <ScalarProperty Name="LOBId" ColumnName="LOBId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LookupItem">
+            <EntityTypeMapping TypeName="ICE.LookupItem">
+              <MappingFragment StoreEntitySet="LookupItem">
+                <ScalarProperty Name="LookupItemOrder" ColumnName="LookupItemOrder" />
+                <ScalarProperty Name="LookupTypeID" ColumnName="LookupTypeID" />
+                <ScalarProperty Name="LookupItemValue" ColumnName="LookupItemValue" />
+                <ScalarProperty Name="LookupItemCode" ColumnName="LookupItemCode" />
+                <ScalarProperty Name="LookupItemID" ColumnName="LookupItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LookupType">
+            <EntityTypeMapping TypeName="ICE.LookupType">
+              <MappingFragment StoreEntitySet="LookupType">
+                <ScalarProperty Name="LookupTypeValue" ColumnName="LookupTypeValue" />
+                <ScalarProperty Name="LookupTypeID" ColumnName="LookupTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Control">
+            <EntityTypeMapping TypeName="ICE.Control">
+              <MappingFragment StoreEntitySet="Control">
+                <ScalarProperty Name="UpdatedDateTime" ColumnName="UpdatedDateTime" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ControlName" ColumnName="ControlName" />
+                <ScalarProperty Name="ControlDescription" ColumnName="ControlDescription" />
+                <ScalarProperty Name="ControlId" ColumnName="ControlId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Document">
+            <EntityTypeMapping TypeName="ICE.Document">
+              <MappingFragment StoreEntitySet="Document">
+                <ScalarProperty Name="UpdatedDateTime" ColumnName="UpdatedDateTime" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="DocType" ColumnName="DocType" />
+                <ScalarProperty Name="JldFilePath" ColumnName="JldFilePath" />
+                <ScalarProperty Name="BaseState" ColumnName="BaseState" />
+                <ScalarProperty Name="DocumentActive" ColumnName="DocumentActive" />
+                <ScalarProperty Name="DocumentFriendlyName" ColumnName="DocumentFriendlyName" />
+                <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DocumentControl">
+            <EntityTypeMapping TypeName="ICE.DocumentControl">
+              <MappingFragment StoreEntitySet="DocumentControl">
+                <ScalarProperty Name="UpdatedDateTime" ColumnName="UpdatedDateTime" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="ControlOrder" ColumnName="ControlOrder" />
+                <ScalarProperty Name="ControlId" ColumnName="ControlId" />
+                <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+                <ScalarProperty Name="DocumentControlId" ColumnName="DocumentControlId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetDocumentControl" FunctionName="ICE.Store.GetDocumentControl">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ICE.GetDocumentControl_Result">
+                <ScalarProperty Name="ControlId" ColumnName="ControlId" />
+                <ScalarProperty Name="ControlDescription" ColumnName="ControlDescription" />
+                <ScalarProperty Name="ControlName" ColumnName="ControlName" />
+                <ScalarProperty Name="DocumentControlId" ColumnName="DocumentControlId" />
+                <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+                <ScalarProperty Name="ControlOrder" ColumnName="ControlOrder" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetLOB" FunctionName="ICE.Store.GetLOB">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ICE.GetLOB_Result">
+                <ScalarProperty Name="LOBId" ColumnName="LOBId" />
+                <ScalarProperty Name="LOBName" ColumnName="LOBName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetLookupItem" FunctionName="ICE.Store.GetLookupItem">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ICE.GetLookupItem_Result">
+                <ScalarProperty Name="LookupItemID" ColumnName="LookupItemID" />
+                <ScalarProperty Name="LookupItemCode" ColumnName="LookupItemCode" />
+                <ScalarProperty Name="LookupItemValue" ColumnName="LookupItemValue" />
+                <ScalarProperty Name="LookupTypeID" ColumnName="LookupTypeID" />
+                <ScalarProperty Name="LookupItemOrder" ColumnName="LookupItemOrder" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetDocuments" FunctionName="ICE.Store.GetDocuments">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ICE.GetDocuments_Result">
+                <ScalarProperty Name="DocumentId" ColumnName="DocumentId" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="DocumentName" ColumnName="DocumentName" />
+                <ScalarProperty Name="DocumentFriendlyName" ColumnName="DocumentFriendlyName" />
+                <ScalarProperty Name="DocumentActive" ColumnName="DocumentActive" />
+                <ScalarProperty Name="BaseState" ColumnName="BaseState" />
+                <ScalarProperty Name="JldFilePath" ColumnName="JldFilePath" />
+                <ScalarProperty Name="DocType" ColumnName="DocType" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedDateTime" ColumnName="UpdatedDateTime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="ICE.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="CategoryGroups" ColumnName="CategoryGroups" />
+                <ScalarProperty Name="UpdatedDateTime" ColumnName="UpdatedDateTime" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="LOBId" ColumnName="LOBId" />
+                <ScalarProperty Name="CategoryActive" ColumnName="CategoryActive" />
+                <ScalarProperty Name="CategoryFriendlyName" ColumnName="CategoryFriendlyName" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetCategories" FunctionName="ICE.Store.GetCategories">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ICE.GetCategories_Result">
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryFriendlyName" ColumnName="CategoryFriendlyName" />
+                <ScalarProperty Name="CategoryActive" ColumnName="CategoryActive" />
+                <ScalarProperty Name="LOBId" ColumnName="LOBId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedDateTime" ColumnName="UpdatedDateTime" />
+                <ScalarProperty Name="CategoryGroups" ColumnName="CategoryGroups" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetControl" FunctionName="ICE.Store.GetControl">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ICE.GetControl_Result">
+                <ScalarProperty Name="ControlId" ColumnName="ControlId" />
+                <ScalarProperty Name="ControlDescription" ColumnName="ControlDescription" />
+                <ScalarProperty Name="ControlName" ColumnName="ControlName" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+                <ScalarProperty Name="UpdatedDateTime" ColumnName="UpdatedDateTime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetESBEnv" FunctionName="ICE.Store.GetESBEnv" />
+          <EntitySetMapping Name="WebServices">
+            <EntityTypeMapping TypeName="ICE.WebServices">
+              <MappingFragment StoreEntitySet="WebServices">
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="URLInfo" ColumnName="URLInfo" />
+                <ScalarProperty Name="URLType" ColumnName="URLType" />
+                <ScalarProperty Name="Environment" ColumnName="Environment" />
+                <ScalarProperty Name="LOB" ColumnName="LOB" />
+                <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+                <ScalarProperty Name="WebServicesId" ColumnName="WebServicesId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetDefaultEnv" FunctionName="ICE.Store.GetDefaultEnv">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ICE.GetDefaultEnv_Result">
+                <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="Environment" ColumnName="Environment" />
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Region">
+            <EntityTypeMapping TypeName="ICE.Region">
+              <MappingFragment StoreEntitySet="Region">
+                <ScalarProperty Name="IsDefault" ColumnName="IsDefault" />
+                <ScalarProperty Name="Environment" ColumnName="Environment" />
+                <ScalarProperty Name="Region1" ColumnName="Region" />
+                <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="GetDistinctWebserviceValues" FunctionName="ICE.Store.GetDistinctWebserviceValues" />
+          <FunctionImportMapping FunctionImportName="GetWebService" FunctionName="ICE.Store.GetWebService">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ICE.GetWebService_Result">
+                <ScalarProperty Name="WebServicesId" ColumnName="WebServicesId" />
+                <ScalarProperty Name="RegionId" ColumnName="RegionId" />
+                <ScalarProperty Name="LOB" ColumnName="LOB" />
+                <ScalarProperty Name="Environment" ColumnName="Environment" />
+                <ScalarProperty Name="URLType" ColumnName="URLType" />
+                <ScalarProperty Name="URLInfo" ColumnName="URLInfo" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="ErrorLog">
+            <EntityTypeMapping TypeName="ICE.ErrorLog">
+              <MappingFragment StoreEntitySet="ErrorLog">
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Environment" ColumnName="Environment" />
+                <ScalarProperty Name="ProducerCode" ColumnName="ProducerCode" />
+                <ScalarProperty Name="LetterName" ColumnName="LetterName" />
+                <ScalarProperty Name="CreatedDateTime" ColumnName="CreatedDateTime" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+                <ScalarProperty Name="Lob" ColumnName="Lob" />
+                <ScalarProperty Name="QuoteNumber" ColumnName="QuoteNumber" />
+                <ScalarProperty Name="ClaimNumber" ColumnName="ClaimNumber" />
+                <ScalarProperty Name="PolicyNumber" ColumnName="PolicyNumber" />
+                <ScalarProperty Name="OutputXML" ColumnName="OutputXML" />
+                <ScalarProperty Name="InputXML" ColumnName="InputXML" />
+                <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+                <ScalarProperty Name="ErrorLogId" ColumnName="ErrorLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="UpdateCategory" FunctionName="ICE.Store.UpdateCategory" />
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

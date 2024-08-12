@@ -1,0 +1,712 @@
+<CorrespondenceDataResponse xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m1="http://njm.com/esb/common/types" xmlns:m0="http://njm.com/esb/core/claim/1.0.0/types" xmlns:typ="http://njm.com/esb/common/1.0.0/types" xmlns:typ1="http://njm.com/ccutil/1.0.0/types" xmlns:int="http://njm.com/ccutil/1.0.0/interfaces">
+  <Claim>
+    <ClaimNumber>W2016-019343</ClaimNumber>
+    <Ex_Subrogation>
+      <NetSettlementAmount>0.0</NetSettlementAmount>
+      <GrossLienAmount>125.0</GrossLienAmount>
+      <NetLienAmount>-666.67</NetLienAmount>
+      <ActualConselFeesAmount>41.67</ActualConselFeesAmount>
+      <ActualSuitExpenseAmount>750.0</ActualSuitExpenseAmount>
+      <ActualMedicalPaidAmount>125.0</ActualMedicalPaidAmount>
+      <ActualTempPaidAmount>0.0</ActualTempPaidAmount>
+      <ActualPermPaidAmount>0.0</ActualPermPaidAmount>
+      <ActualFuneralPaidAmount>0.0</ActualFuneralPaidAmount>
+      <StatutoryPermPaidAmount>0.0</StatutoryPermPaidAmount>
+    </Ex_Subrogation>
+    <DateOfLoss>2016-02-01</DateOfLoss>
+    <TimeOfLoss>03:00:00.00</TimeOfLoss>
+    <LossLocationAddress1>2585 Rte 22</LossLocationAddress1>
+    <LossLocationCity>Union</LossLocationCity>
+    <LossLocationState>New Jersey</LossLocationState>
+    <LossLocationZipCode>07083-8502</LossLocationZipCode>
+    <ClaimPolicy>
+      <PolicyNumber>W18882-1</PolicyNumber>
+      <PolicyNumberWithOutCheckDigit>W18882</PolicyNumberWithOutCheckDigit>
+      <Type>Workers'Compensation</Type>
+      <NjmInsuranceCompanyName>NJM Insurance Company</NjmInsuranceCompanyName>
+      <EffectiveDate>2015-06-01</EffectiveDate>
+      <ExpirationDate>2016-06-01</ExpirationDate>
+      <NjmCompanyCd>NJM</NjmCompanyCd>
+      <PolicyCounty>Middlesex</PolicyCounty>
+    </ClaimPolicy>
+    <InvolvedParties>
+      <Party id="8352">
+        <Role>Reserves- Viewer</Role>
+        <Role>WCC CC Administrator</Role>
+        <Role>Time Tracker Viewer</Role>
+        <Role>MSP Gatekeeper</Role>
+        <Role>Reserves- Viewer</Role>
+        <Role>WCC CC Administrator</Role>
+        <Role>Time Tracker Viewer</Role>
+        <Role>MSP Gatekeeper</Role>
+        <Type>Person</Type>
+        <FirstName>Jonathan</FirstName>
+        <LastName>Enama</LastName>
+        <JobTitle>Business Technical Analyst, Principal</JobTitle>
+        <EmployeeUserName>JE8352</EmployeeUserName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>973</AreaCode>
+            <Exchange>455</Exchange>
+            <Number>7200</Number>
+            <Extension>6324</Extension>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+          <PhoneNumber id="2">
+            <Category>Business</Category>
+            <Type>Fax</Type>
+            <AreaCode>609</AreaCode>
+            <Exchange>493</Exchange>
+            <Number>1324</Number>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1">
+            <EmailAddressValue>Jenama@njm.com</EmailAddressValue>
+          </EmailAddress>
+        </EmailAddresses>
+      </Party>
+      <Party id="2207">
+        <Role>Reserves- Viewer</Role>
+        <Role>Adjuster</Role>
+        <Role>Supervisor</Role>
+        <Role>MSP Gatekeeper</Role>
+        <Role>Reserves- Viewer</Role>
+        <Role>Adjuster</Role>
+        <Role>Supervisor</Role>
+        <Role>MSP Gatekeeper</Role>
+        <Type>Person</Type>
+        <FirstName>Christina</FirstName>
+        <LastName>Lesperance</LastName>
+        <JobTitle>Territory Claims Supervisor</JobTitle>
+        <EmployeeUserName>CL2207</EmployeeUserName>
+        <EmployeeNumber>574</EmployeeNumber>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>609</AreaCode>
+            <Exchange>883</Exchange>
+            <Number>1300</Number>
+            <Extension>6032</Extension>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+          <PhoneNumber id="2">
+            <Category>Business</Category>
+            <Type>Fax</Type>
+            <AreaCode>609</AreaCode>
+            <Exchange>493</Exchange>
+            <Number>1303</Number>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1">
+            <EmailAddressValue>Clesperance@njm.com</EmailAddressValue>
+          </EmailAddress>
+        </EmailAddresses>
+      </Party>
+      <Party id="2331">
+        <Role>MSP Gatekeeper</Role>
+        <Role>Adjuster</Role>
+        <Role>Reserves- Viewer</Role>
+        <Type>Person</Type>
+        <FirstName>Theresa</FirstName>
+        <LastName>Roffman</LastName>
+        <JobTitle>Territory Claims Representative</JobTitle>
+        <EmployeeUserName>TR2331</EmployeeUserName>
+        <EmployeeNumber>575</EmployeeNumber>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>609</AreaCode>
+            <Exchange>883</Exchange>
+            <Number>1300</Number>
+            <Extension>6330</Extension>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+          <PhoneNumber id="2">
+            <Category>Business</Category>
+            <Type>Fax</Type>
+            <AreaCode>609</AreaCode>
+            <Exchange>493</Exchange>
+            <Number>1312</Number>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1">
+            <EmailAddressValue>TRoffman@NJM.com</EmailAddressValue>
+          </EmailAddress>
+        </EmailAddresses>
+      </Party>
+      <Party id="3445">
+        <Role>Supervisor</Role>
+        <Role>Time Tracker Administrator</Role>
+        <Role>Reserves- Viewer</Role>
+        <Role>Time Tracker User</Role>
+        <Role>Attorney of Record</Role>
+        <Role>Attorney</Role>
+        <Type>Person</Type>
+        <FirstName>Ann</FirstName>
+        <MiddleName>P.</MiddleName>
+        <MiddleInitial>P.</MiddleInitial>
+        <LastName>DeBellis</LastName>
+        <JobTitle>Attorney for Respondent</JobTitle>
+        <EmployeeUserName>AD3445</EmployeeUserName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>609</AreaCode>
+            <Exchange>883</Exchange>
+            <Number>1300</Number>
+            <Extension>6170</Extension>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+          <PhoneNumber id="2">
+            <Category>Business</Category>
+            <Type>Fax</Type>
+            <AreaCode>609</AreaCode>
+            <Exchange>493</Exchange>
+            <Number>1456</Number>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1">
+            <EmailAddressValue>Adebellis@njm.com</EmailAddressValue>
+          </EmailAddress>
+        </EmailAddresses>
+      </Party>
+      <Party id="7984">
+        <Role>Medical Services</Role>
+        <Type>Person</Type>
+        <FirstName>Melissa</FirstName>
+        <LastName>Ford</LastName>
+        <EmployeeUserName>MF7984</EmployeeUserName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>609</AreaCode>
+            <Exchange>883</Exchange>
+            <Number>1300</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1">
+          </EmailAddress>
+        </EmailAddresses>
+      </Party>
+      <Party id="2734">
+        <Role>RPO Editor</Role>
+        <Role>MSP Gatekeeper</Role>
+        <Role>Supervisor</Role>
+        <Role>Statistical Representative</Role>
+        <Role>Supervisor</Role>
+        <Type>Person</Type>
+        <FirstName>William</FirstName>
+        <MiddleName>C</MiddleName>
+        <MiddleInitial>C.</MiddleInitial>
+        <LastName>Hastie</LastName>
+        <Prefix>Mr.</Prefix>
+        <JobTitle>Administrator Claims Info Services</JobTitle>
+        <EmployeeUserName>WH2734</EmployeeUserName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>609</AreaCode>
+            <Exchange>883</Exchange>
+            <Number>1300</Number>
+            <Extension>6180</Extension>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1">
+            <EmailAddressValue>Whastie@njm.com</EmailAddressValue>
+          </EmailAddress>
+        </EmailAddresses>
+      </Party>
+      <Party id="7">
+        <Role>Industrial Medicine Facility</Role>
+        <Role>Medical Practice</Role>
+        <Type>Company</Type>
+        <Name>CARE STATION II</Name>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>973</AreaCode>
+            <Exchange>467</Exchange>
+            <Number>2273</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <Addresses>
+          <Address id="1">
+            <Category>Business</Category>
+            <Type>Primary</Type>
+            <StreetAddress1>90 ROUTE 22W</StreetAddress1>
+            <City>SPRINGFIELD</City>
+            <State>New Jersey</State>
+            <ZipCode>07081</ZipCode>
+            <County>UNION</County>
+          </Address>
+        </Addresses>
+      </Party>
+      <Party id="2">
+        <Role>Agent</Role>
+        <Type>Company</Type>
+        <Name>NONE</Name>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Type>Primary</Type>
+          </Address>
+        </Addresses>
+      </Party>
+      <Party id="3">
+        <Role>Underwriter</Role>
+        <Type>Person</Type>
+        <FirstName>Jeffrey</FirstName>
+        <LastName>Perelli</LastName>
+        <EmailAddresses>
+          <EmailAddress id="1">
+          </EmailAddress>
+        </EmailAddresses>
+      </Party>
+      <Party id="4">
+        <Role>Reporter</Role>
+        <Role>Contact At Firm</Role>
+        <Type>Person</Type>
+        <FirstName>Sue</FirstName>
+        <LastName>Hengstler</LastName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>908</AreaCode>
+            <Exchange>379</Exchange>
+            <Number>7200</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1">
+            <EmailAddressValue>Sue.hengstler@raycatenaunion.com</EmailAddressValue>
+          </EmailAddress>
+        </EmailAddresses>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Type>Primary</Type>
+          </Address>
+        </Addresses>
+        <OccupationDescription>Office Manager</OccupationDescription>
+      </Party>
+      <Party id="5">
+        <Role>Insured</Role>
+        <Type>Company</Type>
+        <Name>Ray Catena Of Union LLC</Name>
+        <Addresses>
+          <Address id="1">
+            <Category>Special Mailing Address</Category>
+            <Type>Primary</Type>
+            <StreetAddress1>910 US HIGHWAY 1</StreetAddress1>
+            <City>EDISON</City>
+            <State>New Jersey</State>
+            <ZipCode>08817</ZipCode>
+          </Address>
+          <Address id="2">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>125 Clearwater Rd</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817</ZipCode>
+          </Address>
+          <Address id="3">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>920 US Hwy 1</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817-4848</ZipCode>
+          </Address>
+          <Address id="4">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>95 Progress St</StreetAddress1>
+            <City>Union</City>
+            <State>New Jersey</State>
+            <ZipCode>07083</ZipCode>
+          </Address>
+          <Address id="5">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>123 S Main St</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817-2920</ZipCode>
+          </Address>
+          <Address id="6">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>2155 Rte 22 W</StreetAddress1>
+            <City>Union</City>
+            <State>New Jersey</State>
+            <ZipCode>07083-8403</ZipCode>
+          </Address>
+          <Address id="7">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>18 Cindy Ln</StreetAddress1>
+            <City>Oakhurst</City>
+            <State>New Jersey</State>
+            <ZipCode>07755</ZipCode>
+          </Address>
+          <Address id="8">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>910 US Hwy 1</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817-4848</ZipCode>
+          </Address>
+          <Address id="9">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>910 US Highway 1</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817-4848</ZipCode>
+          </Address>
+          <Address id="10">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>1350 Rte 22E</StreetAddress1>
+            <City>Bridgewater</City>
+            <State>New Jersey</State>
+            <ZipCode>08807-2974</ZipCode>
+          </Address>
+          <Address id="11">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>2133 Rte 35</StreetAddress1>
+            <City>Oakhurst</City>
+            <State>New Jersey</State>
+            <ZipCode>07755-7200</ZipCode>
+          </Address>
+          <Address id="12">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>2585 Rte 22</StreetAddress1>
+            <City>Union</City>
+            <State>New Jersey</State>
+            <ZipCode>07083-8502</ZipCode>
+          </Address>
+          <Address id="13">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>900 US Hwy 1</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817-4848</ZipCode>
+          </Address>
+        </Addresses>
+      </Party>
+      <Party id="8">
+        <Role>Check Payee</Role>
+        <Type>Company</Type>
+        <Name>CARE STATION MEDICAL GROUP</Name>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>908</AreaCode>
+            <Exchange>925</Exchange>
+            <Number>2273</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <Addresses>
+          <Address id="1">
+            <Category>Business</Category>
+            <Type>Primary</Type>
+            <StreetAddress1>PO BOX 352</StreetAddress1>
+            <City>LINDEN</City>
+            <State>New Jersey</State>
+            <ZipCode>07036</ZipCode>
+            <County>UNION</County>
+          </Address>
+        </Addresses>
+      </Party>
+      <Party id="1">
+        <Role>Policy holder</Role>
+        <Type>Company</Type>
+        <Name>Ray Catena Motor Car Corporation</Name>
+        <Addresses>
+          <Address id="1">
+            <Category>Special Mailing Address</Category>
+            <Type>Primary</Type>
+            <StreetAddress1>910 US HIGHWAY 1</StreetAddress1>
+            <City>EDISON</City>
+            <State>New Jersey</State>
+            <ZipCode>08817</ZipCode>
+          </Address>
+          <Address id="2">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>910 US Hwy 1</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817-4848</ZipCode>
+          </Address>
+          <Address id="3">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>900 US Hwy 1</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817-4848</ZipCode>
+          </Address>
+          <Address id="4">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>920 US Hwy 1</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817-4848</ZipCode>
+          </Address>
+          <Address id="5">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>125 Clearwater Rd</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817</ZipCode>
+          </Address>
+          <Address id="6">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>2155 Rte 22 W</StreetAddress1>
+            <City>Union</City>
+            <State>New Jersey</State>
+            <ZipCode>07083-8403</ZipCode>
+          </Address>
+          <Address id="7">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>2133 Rte 35</StreetAddress1>
+            <City>Oakhurst</City>
+            <State>New Jersey</State>
+            <ZipCode>07755-7200</ZipCode>
+          </Address>
+          <Address id="8">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>18 Cindy Ln</StreetAddress1>
+            <City>Oakhurst</City>
+            <State>New Jersey</State>
+            <ZipCode>07755</ZipCode>
+          </Address>
+          <Address id="9">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>123 S Main St</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817-2920</ZipCode>
+          </Address>
+          <Address id="10">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>1350 Rte 22E</StreetAddress1>
+            <City>Bridgewater</City>
+            <State>New Jersey</State>
+            <ZipCode>08807-2974</ZipCode>
+          </Address>
+          <Address id="11">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>2585 Rte 22</StreetAddress1>
+            <City>Union</City>
+            <State>New Jersey</State>
+            <ZipCode>07083-8502</ZipCode>
+          </Address>
+          <Address id="12">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>95 Progress St</StreetAddress1>
+            <City>Union</City>
+            <State>New Jersey</State>
+            <ZipCode>07083</ZipCode>
+          </Address>
+          <Address id="13">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <StreetAddress1>910 US Highway 1</StreetAddress1>
+            <City>Edison</City>
+            <State>New Jersey</State>
+            <ZipCode>08817-4848</ZipCode>
+          </Address>
+        </Addresses>
+      </Party>
+      <Party id="6">
+        <Role>Claimant</Role>
+        <Type>Person</Type>
+        <FirstName>Pedro</FirstName>
+        <LastName>Teixeira</LastName>
+        <EmployerName>Ray Catena Of Union LLC</EmployerName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Home</Category>
+            <Type>Number</Type>
+            <AreaCode>908</AreaCode>
+            <Exchange>477</Exchange>
+            <Number>7711</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1">
+          </EmailAddress>
+        </EmailAddresses>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Type>Primary</Type>
+            <StreetAddress1>1077 Dewey Pl</StreetAddress1>
+            <City>Elizabeth</City>
+            <State>New Jersey</State>
+            <ZipCode>07202-2425</ZipCode>
+            <County>Union</County>
+          </Address>
+        </Addresses>
+        <BirthDate>1980-10-27</BirthDate>
+        <TaxID>155-82-5759</TaxID>
+        <EmploymentRelationships>
+          <EmploymentRelationship>
+            <DaysWorkedPerWeekNumber>0</DaysWorkedPerWeekNumber>
+            <WageAmount>1000.0</WageAmount>
+            <ClassCode>83980</ClassCode>
+            <HireState>NJ</HireState>
+          </EmploymentRelationship>
+        </EmploymentRelationships>
+        <OccupationDescription>Technician</OccupationDescription>
+        <Gender>M</Gender>
+        <PartyRelationships>
+          <PartyRelationship>
+            <RelationshipPartyId>6</RelationshipPartyId>
+            <Relationship>Employee</Relationship>
+          </PartyRelationship>
+        </PartyRelationships>
+      </Party>
+    </InvolvedParties>
+    <NJMEmployeeClaimIndicator>false</NJMEmployeeClaimIndicator>
+    <ClaimDescription>Working underneath vehicle, small piece of metal fell into left eye.</ClaimDescription>
+    <AccidentTypeCode>87</AccidentTypeCode>
+    <ClaimantReportedDate>2016-02-01T05:01:00Z</ClaimantReportedDate>
+    <LossReportedDate>2016-02-02T05:01:00Z</LossReportedDate>
+    <ClaimJurisdictionState>NJ</ClaimJurisdictionState>
+    <MailToPayToDescription>Ex_firm_injured</MailToPayToDescription>
+    <InjuredOnEmployerPremisesIndicator>true</InjuredOnEmployerPremisesIndicator>
+    <StateClaimNumber>NJ2016011947</StateClaimNumber>
+    <ClaimType>NTL</ClaimType>
+    <CreateDate>2016-02-02T05:01:00Z</CreateDate>
+    <Incidents>
+      <Incident>
+        <DetailedInjuryTypeCode>25</DetailedInjuryTypeCode>
+        <DetailedInjuryType>Foreign Body</DetailedInjuryType>
+        <InjuredBodyParts>
+          <InjuredBodyPart id="1364564">
+            <DetailedBodyPartCode>14</DetailedBodyPartCode>
+            <DetailedBodyPart>Eye(s) - Includes: Optic Nerves, Vision, Eye Lids</DetailedBodyPart>
+            <PrimaryBodyPartIndicator>true</PrimaryBodyPartIndicator>
+            <GeneralAreaOfBody>head</GeneralAreaOfBody>
+          </InjuredBodyPart>
+        </InjuredBodyParts>
+      </Incident>
+    </Incidents>
+    <ClaimStatusCd>Closed</ClaimStatusCd>
+    <FinancialReports>
+      <ReportCd>Claim Summary</ReportCd>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Adjusted Paid</AccountTypeCd>
+        <ReportingCategoryCd>Medical</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>125.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Adjusted Paid</AccountTypeCd>
+        <ReportingCategoryCd>Temp</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Adjusted Paid</AccountTypeCd>
+        <ReportingCategoryCd>Perm</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Adjusted Paid</AccountTypeCd>
+        <ReportingCategoryCd>Indemnity</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Open Reserves</AccountTypeCd>
+        <ReportingCategoryCd>Medical</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Open Reserves</AccountTypeCd>
+        <ReportingCategoryCd>Temp</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Open Reserves</AccountTypeCd>
+        <ReportingCategoryCd>Perm</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Open Reserves</AccountTypeCd>
+        <ReportingCategoryCd>Indemnity</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Net Total Incurred</AccountTypeCd>
+        <ReportingCategoryCd>Medical</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>125.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Net Total Incurred</AccountTypeCd>
+        <ReportingCategoryCd>Temp</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Net Total Incurred</AccountTypeCd>
+        <ReportingCategoryCd>Perm</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Net Total Incurred</AccountTypeCd>
+        <ReportingCategoryCd>Indemnity</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+    </FinancialReports>
+  </Claim>
+</CorrespondenceDataResponse>

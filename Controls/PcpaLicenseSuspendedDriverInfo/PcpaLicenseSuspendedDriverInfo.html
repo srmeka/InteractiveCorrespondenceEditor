@@ -1,0 +1,28 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaLicenseSuspendedDriverInfoController">
+    <div class="panel-heading">
+        License Suspended Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <input ng-click="clearAllSelectedData()" ng-model="isSuspendedDriverSelected" type="checkbox" id="SuspendedDriverCheckboxId" name="SuspendedDriverCheckbox" />
+                    <label>Include License Suspended</label>
+                </div>
+                <div class="col-md-8">
+                    <div ng-repeat="SuspendedDriverInfo in SuspendedDriver">
+                        <input ng-model="SuspendedDriverInfo.SuspendedDriverChecked" ng-change="selectSuspendedDriver(SuspendedDriverInfo)" type="checkbox" ng-disabled="!isSuspendedDriverSelected" name="SuspendedDriverCheckboxLst" id="SuspendedDriverCheckboxLstId" />
+                        <span ng-bind="SuspendedDriverInfo.Person.PersonName.FirstGivenNm + ' ' + SuspendedDriverInfo.Person.SecondGivenNameInitial + ' ' + SuspendedDriverInfo.Person.PersonName.FamilyNm + ' ' + SuspendedDriverInfo.Person.PersonName.FamilyNameGenerationCd"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <span class="alert-danger" ng-if="SuspendedDriver.length === 0">Information not provided by source</span>
+                    <input class="form-control" type="text" ng-model="SuspendedDriverInput" ng-disabled="!isSuspendedDriverSelected" name="SuspendedDriverInput" id="SuspendedDriverInputId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

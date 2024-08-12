@@ -1,0 +1,92 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaDriverInfoRepeaterController">
+    <div class="panel-heading">Additional Driver Information</div>
+    <div class="panel-body">
+        <div class="form-group" ng-repeat="slector in populateData track by $index">
+            <div class="row">
+
+                <!-- enabler/disabler checkbox -->
+                <div class="col-md-4">
+                    <input ng-click="clearAllData($index)" 
+                           ng-model="isResidentSelected[$index]" 
+                           type="checkbox" 
+                           id="ResidentCheckboxId{{$index}}" 
+                           name="ResidentCheckbox{{$index}}" 
+                           value="" />
+                    <label>Include Driver:</label>
+                </div>
+
+                <!-- driver selection dropdown list / textbox -->
+                <div class="col-md-8 row" style="margin-bottom:5px">
+                    <div class="col-md-6">
+                        <select ng-disabled="!isResidentSelected[slector.selectorId]" ng-options="(item.Person.PersonName.FirstGivenNm + ' ' + item.Person.PersonName.SecendGivenNmInitial + ' ' + item.Person.PersonName.FamilyNm + ' ' + item.Person.PersonName.FamilyNameGenerationCd)  for item in residentInfo track by item._id" name="ResidentSelection[$index]" ng-model="slector.selectedValue" class="form-control" id="ResidentInfo[$index]Id">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <input ng-disabled="!isResidentSelected[slector.selectorId] || slector.selectedValue" ng-model="freeTextGroup[slector.selectorId]" type="text" class="form-control" name="userText[$index]" id="userText[$index]Id" value="" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 5px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div>
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="driverName[$index]" name="driverName[$index]" id="driverName[$index]Id" />
+                        Name
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div>
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="driverGender[$index]" name="driverGender[$index]" id="driverGender[$index]Id" />
+                        Gender
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div>
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="dateOfBirth[$index]" name="dateOfBirth[$index]" id="dateOfBirth[$index]Id" />
+                        Date Of Birth
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div>
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="licenseNumber[$index]" name="licenseNumber[$index]" id="licenseNumber[$index]Id" />
+                        License Number
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px;">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div>
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="licenseState[$index]" name="licenseState[$index]" id="licenseState[$index]Id" />
+                        License State
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 5px; padding-bottom: 10px; border-bottom: 2px solid lightgray">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div>
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="dateFirstLicensed[$index]" name="dateFirstLicensed[$index]" id="dateFirstLicensed[$index]Id" />
+                        Date First Licensed
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 text-center">
+            <input type="button" class="btn-primary" ng-disabled="!isResidentSelected" value="Add" ng-if="showAddBtn" ng-click="addSelector()">
+            <input type="button" class="btn-primary" value="Remove" ng-if="showRemoveBtn" ng-click="removeSelector()">
+        </div>
+    </div>
+</div>

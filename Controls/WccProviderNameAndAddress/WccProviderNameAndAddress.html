@@ -1,0 +1,38 @@
+﻿<div class="panel panel-primary" ng-controller="WccProviderNameAndAddressController">
+    <div class="panel-heading">Provider Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Provider dropdown list-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Provider Name:</label>
+                </div>
+                <div class="col-md-4">
+                    <select class="form-control" ng-change="selectedName()" ng-model="nameSelector" ng-options="item.displayName for item in ClaimantData">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--Provider address dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4">
+                    <label>Provider Address:</label>
+                </div>
+                <div class="col-md-4">
+                    <select ng-model="addressSelector" class="form-control" ng-options="('(' + address.Category + ') ' + address.StreetAddress1 + ' ' + address.StreetAddress2 + ' ' + address.StreetAddress3 + ' ' + address.City + ', '  + address.State + ' ' + address.ZipCode )  for address in addressData">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="nameSelector && addressData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

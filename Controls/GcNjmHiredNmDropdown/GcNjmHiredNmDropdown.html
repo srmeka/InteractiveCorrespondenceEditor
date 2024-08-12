@@ -1,0 +1,21 @@
+﻿<div class="panel panel-primary" ng-controller="GcNjmHiredNmDropdownController">
+    <div class="panel-heading">NJM Hired IA</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--NJM Hired IA Name dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>NJM Hired IA Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in hiredNameOneData" name="HiredNameSelection" ng-model="selectedName" class="form-control" id="HiredNameSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="hiredNameOneData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

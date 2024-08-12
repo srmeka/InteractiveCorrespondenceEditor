@@ -1,0 +1,70 @@
+﻿<div class="panel panel-primary" ng-controller="PcumbBusinessUseOnPropwCheckboxController">
+    <div class="panel-heading">Business Use on Property</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <!--Checkbox to enable control-->
+                    <input type="checkbox" ng-change="clearAllData()" ng-model="CtrlEnabledCheckbox" name="CtrlEnableCheckbox" id="CtrlEnableCheckboxId" value="" />
+                    <label>Include Risk Location Address</label>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="row">
+
+                        <!--Risk location address dropdown list and input-->
+                        <div class="col-md-6">
+                            <select ng-disabled="!CtrlEnabledCheckbox" ng-options="(item.Address.Line1Tx + ' ' + item.Address.Line2Tx + ' ' + item.Address.Line3Tx + ' ' + item.Address.city_value + ' ' + item.Address.CountrySubdivision.CountrySubdivisionNm + ' ' + item.Address.PostalCd )  for item in addressData track by item._id" name="WatercraftSelection" ng-model="selectedValue" class="form-control" id="WatercraftSelectionId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox || selectedValue" ng-model="freeText" type="text" class="form-control" name="addressText" value="" />
+                        </div>
+                    </div>
+
+                    <!--Type of Business/Farm checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox " ng-model="type" type="checkbox" name="type" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'">Type of Business/Farm</label>
+                        </div>
+                    </div>
+
+                    <!--Telecommuting checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox " ng-model="telecommuting" type="checkbox" name="telecommuting" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'">Telecommuting</label>
+                        </div>
+                    </div>
+
+                    <!--Number of Clients/Customers checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox " ng-model="customers" type="checkbox" name="customers" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'">Number of Clients/Customers</label>
+                        </div>
+                    </div>
+
+                    <!--Number of Employees checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox" ng-model="employees" type="checkbox" name="employees" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'">Number of Employees</label>
+                        </div>
+                    </div>
+
+                    <!--Advertising checkbox-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox" ng-model="advertising" type="checkbox" name="advertising" value="" />
+                            <label ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'">Advertising</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div> 

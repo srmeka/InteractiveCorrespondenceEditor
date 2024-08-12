@@ -1,0 +1,59 @@
+﻿<div class="panel panel-primary" ng-controller="WccProviderNameAndAddrRepeaterController">
+    <div class="panel-heading">Provider Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <div style="padding-top:5px;padding-bottom:5px;border-bottom: 2px solid lightgray"
+                 ng-repeat="slector in TotalCount track by $index">
+
+                <!--Provider name dropdown list-->
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>{{ProviderName}}:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control"
+                                name="provider"
+                                id="providerId"
+                                ng-change="selectedName($index)"
+                                ng-model="nameSelector[$index]"
+                                ng-options="item.displayName for item in ClaimantData"
+                                ng-required="{{Required}}">
+                            <option value="">--Select One--</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="alert-danger" ng-show="ClaimantData.length == 0">Information not provided by source</span>
+                    </div>
+                </div>
+
+                <!--Provider address dropdown list-->
+                <div class="row" style="margin-top:5px">
+                    <div class="col-md-4">
+                        <label>{{ProviderAddress}}:</label>
+                    </div>
+                    <div class="col-md-4">
+                        <select ng-model="addressSelector[$index]"
+                                id="providerAddress{{$index}}Id"
+                                name="providerAddress{{$index}}"
+                                class="form-control"
+                                ng-options="('(' + address.Category + ') ' + ' ' + address.StreetAddress1 + ' ' + address.StreetAddress2 + ', ' + address.City + ' ' + address.State + ' ' + address.ZipCode) for address in addressData[$index]"
+                                ng-required="{{Required}}">
+                            <option value="">--Select One--</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="alert-danger" ng-show="nameSelector[$index] && addressData.length == 0">Information not provided by source</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-row text-center" style="margin-top:10px;">
+                <input type="button" class="btn-primary" value="Add" ng-hide="TotalCount.length === MaxCtls" ng-click="addCtlRow()">
+                <input type="button" class="btn-primary" value="Remove" ng-hide="TotalCount.length === 1" ng-click="removeCtlRow()">
+            </div>
+        </div>
+
+    </div>
+</div>

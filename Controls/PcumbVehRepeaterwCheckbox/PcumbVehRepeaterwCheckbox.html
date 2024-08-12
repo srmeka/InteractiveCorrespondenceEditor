@@ -1,0 +1,86 @@
+﻿<div class="panel panel-primary" ng-controller="PcumbVehRepeaterwCheckboxController">
+    <div class="panel-heading">
+        Vehicles
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="padding-top:10px;padding-bottom: 10px; border-bottom: 2px solid lightgray" ng-repeat="VehInfoSection in TotalCount track by $index">
+
+                <!--Checkbox to enable control-->
+                <div class="col-md-4">
+                    <input type="checkbox" ng-model="CtrlEnabledCheckbox[$index]" ng-click="ClearData($index)" name="CtrlEnabledCheckbox{{$index}}" id="CtrlEnabledCheckbox{{$index}}Id" />
+                    <label>Include Vehicle</label>
+                </div>
+
+                <div class="col-md-8">
+                    <div class="row">
+                        <!--Vehicle dropdown list-->
+                        <div class="col-md-6">
+                            <select class="form-control" ng-model="SelectedVeh[$index]" ng-options="VehInfo.Vehicle.ModelYearNr + ' ' + VehInfo.Vehicle.VehicleTradeNm for VehInfo in Vehicle" ng-disabled="!CtrlEnabledCheckbox[$index]" name="SelectVehicle{{$index}}" id="SelectVehicle{{$index}}Id">
+                                <option value="">--Select--</option>
+                            </select>
+                            <span class="alert-danger" ng-show="Vehicle.length == 0">Information not provided by source</span>
+                        </div>
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox[$index] || SelectedVeh[$index]" ng-model="freeTextGroup[$index]" type="text" class="form-control" name="userText[$index]" id="userText[$index]Id" value="" />
+                        </div>
+                    </div>
+
+                    <!--Vehicle Type-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" ng-model="VTypeCheck[$index]" ng-disabled="!CtrlEnabledCheckbox[$index]" name="VType{{$index}}" id="VType{{$index}}Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Vehicle Type</label>
+                        </div>
+                    </div>
+
+                    <!--Vehicle Year-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" ng-model="VYearCheck[$index]" ng-disabled="!CtrlEnabledCheckbox[$index]" name="VYear{{$index}}" id="VYear{{$index}}Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Vehicle Year</label>
+                        </div>
+                    </div>
+
+                    <!--Vehicle Make-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" ng-model="VMakeCheck[$index]" ng-disabled="!CtrlEnabledCheckbox[$index]" name="VMake{{$index}}" id="VMake{{$index}}Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Vehicle Make</label>
+                        </div>
+                    </div>
+
+                    <!--Underlying Policy-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" ng-model="UndPolicy[$index]" ng-disabled="!CtrlEnabledCheckbox[$index]" name="UndPolicy{{$index}}" id="UndPolicy{{$index}}Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Underlying Policy</label>
+                        </div>
+                    </div>
+
+                    <!--Vehicle Ownership-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" ng-model="VOwner[$index]" ng-disabled="!CtrlEnabledCheckbox[$index]" name="VOwner{{$index}}" id="VOwner{{$index}}Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Vehicle Ownership</label>
+                        </div>
+                    </div>
+
+                    <!--Vehicle Registration-->
+                    <div class="row" style="margin-top:5px">
+                        <div class="col-md-6">
+                            <input type="checkbox" ng-model="VRegister[$index]" ng-disabled="!CtrlEnabledCheckbox[$index]" name="VRegister{{$index}}" id="VRegister{{$index}}Id" />
+                            <label ng-class="(CtrlEnabledCheckbox[$index])?'':'disabled-class'">Vehicle Registration</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-12 text-center" style="margin-top:10px;">
+                <input type="button" class="btn-primary" value="Add" ng-click="AddNewVehInfoSection()" ng-hide="TotalCount.length==7" />
+                <input type="button" class="btn-primary" value="Remove" ng-click="RemoveVehInfoSection()" ng-hide="TotalCount.length==1" />
+            </div>
+        </div>
+    </div>
+</div>

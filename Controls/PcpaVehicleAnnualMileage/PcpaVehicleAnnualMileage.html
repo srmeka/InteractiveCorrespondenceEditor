@@ -1,0 +1,43 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaVehicleAnnualMileageController">
+    <div class="panel-heading">Annual Mileage</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <!--<div class="col-md-4">
+                    <div>
+                        <input type="checkbox"
+                               ng-model="AnnualMileage"
+                               ng-true-value="true"
+                               ng-init="false"
+                               ng-false-value="false"
+                               id="AnnualMileageId" />
+                        <label>
+                            Include Annual Mileage?
+                        </label>
+                        
+                    </div>
+                </div>-->
+
+                <div class="col-md-8">
+                    <div ng-repeat="item in Vehicle track by item.Vehicle.VehicleId"
+                         ng-required="false">
+
+                        <div class="row">
+                            <!--Vehicle data checkbox list-->
+                            <div class="col-md-12">
+                                <input ng-model="CtrlEnabledCheckbox[$index]"
+                                       ng-click="UpdateInfo(item.Vehicle._id,$index);"
+                                       type="checkbox"
+                                       name="CtrlEnabledCheckbox{{$index}}"
+                                       id="CtrlEnabledCheckbox{{$index}}Id"
+                                       ng-required="false"
+                                       value="" />
+                                <span ng-bind="item.Vehicle.ModelYearNr + ' ' + item.Vehicle.VehicleTradeNm + ' ' + item.Vehicle.ModelNm + ' ' + item.Vehicle.ManufacturerVehicleIdentificationNr"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

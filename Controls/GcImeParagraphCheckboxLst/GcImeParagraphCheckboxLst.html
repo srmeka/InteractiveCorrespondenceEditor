@@ -1,0 +1,17 @@
+﻿<div class="panel panel-primary" ng-controller="GcImeParagraphCheckboxLstController">
+    <div class="panel-heading">Paragraphs</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Checkbox list-->
+            <div class="row" ng-repeat="item in displayData track by $index"  style="margin-top:5px" ng-style={"margin-left":item.subId?'15px':''}  ng-if="item.subId?selectedFlag.indexOf(item.subId)>-1:true">
+                <!--control with checkbox label-->
+                <div class="col-md-6">
+                    <input style="width:15px;vertical-align:top" type="checkbox" name="{{item.checkboxName}}" id="{{item.checkboxName}}Id" ng-change="selectedItem(item)" ng-model="item.ctrlSelected" value="" />
+                    <label style="width:calc(100% - 20px)" ng-bind="item.labelText"></label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

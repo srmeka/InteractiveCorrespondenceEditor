@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d77060706fd94faaa030b0758e9232b3" Name="Diagram1" >
+        <EntityTypeShape EntityType="ICE.DocumentLog" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ICE.LOB" Width="1.5" PointX="1" PointY="6" />
+        <AssociationConnector Association="ICE.FK_LOB_LOB" />
+        <EntityTypeShape EntityType="ICE.LookupItem" Width="1.5" PointX="9.625" PointY="0.875" />
+        <EntityTypeShape EntityType="ICE.LookupType" Width="1.5" PointX="7.375" PointY="1.25" />
+        <AssociationConnector Association="ICE.FK_T_LookupItem_T_LookupType" />
+        <EntityTypeShape EntityType="ICE.Control" Width="1.5" PointX="2.875" PointY="3.25" />
+        <EntityTypeShape EntityType="ICE.Document" Width="1.5" PointX="7.75" PointY="7.75" />
+        <EntityTypeShape EntityType="ICE.DocumentControl" Width="1.5" PointX="7.625" PointY="3.25" />
+        <AssociationConnector Association="ICE.FK_DocumentControl_Controls" />
+        <AssociationConnector Association="ICE.FK_DocumentControl_Document" />
+        <EntityTypeShape EntityType="ICE.Category" Width="1.5" PointX="2.625" PointY="9" />
+        <AssociationConnector Association="ICE.FK_Category_LOB" />
+        <AssociationConnector Association="ICE.FK_Document_Category" />
+        <EntityTypeShape EntityType="ICE.WebServices" Width="1.5" PointX="12.625" PointY="10" />
+        <EntityTypeShape EntityType="ICE.Region" Width="1.5" PointX="10.375" PointY="10.25" />
+        <AssociationConnector Association="ICE.FK_WebServices_Region" />
+        <EntityTypeShape EntityType="ICE.ErrorLog" Width="1.5" PointX="10.375" PointY="4.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

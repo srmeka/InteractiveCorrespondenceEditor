@@ -1,0 +1,108 @@
+﻿<div class="panel panel-primary" ng-controller="ClaimsFaxwCheckboxController">
+    <div class="panel-heading">Fax</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <!--Checkbox to enable control-->
+                <div class="col-md-4">
+                    <input ng-click="clearAllData()" 
+                           ng-model="CtrlEnabledCheckbox" 
+                           type="checkbox" 
+                           id="ClaimsFaxwCheckboxId" 
+                           name="ClaimsFaxwCheckbox" 
+                           value="" />
+                    <label>Send Output to Fax</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <label class="col-md-12" ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'">* Select and/or Enter Fax Numbers (up to 10)</label>
+                    </div>
+   
+                    <!--fax checkbox list-->
+                    <div class="row" style="margin-top:15px;margin-bottom:5px">
+                        <label class="col-md-6" ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'">Fax Number(s):</label>
+                        <label class="col-md-6" ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'">Attention: (First Last Name)</label>
+                    </div>
+                    
+                    <div class="table-bordered" style="padding: 5px">
+                        <div style="height:180px;overflow-y:auto;overflow-x:hidden"><!-- ;margin-right:-15px -->
+                            <div class="row" ng-repeat="item in faxData track by $index" style="margin-bottom:5px;">
+                                <div class="col-md-6">
+                                    <input type="checkbox" 
+                                           ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'" 
+                                           ng-click="selectItem(item)" 
+                                           ng-disabled="!CtrlEnabledCheckbox || (selectData.length >= 10 && !item.checked)" 
+                                           ng-model="item.checked" 
+                                           name="faxSelection{{item._id}}" 
+                                           id="faxSelectionId{{item._id}}" /> 
+                                    <span ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'" 
+                                          ng-bind="item.Name + ' ' + item.FirstName + ' ' +  item.MiddleInitial + ' ' + item.LastName + ' - (' + item.PhoneNumbers.AreaCode + ') ' + item.PhoneNumbers.Exchange + ' - ' +  item.PhoneNumbers.Number "></span>
+                                </div>
+                                <div class="col-md-6" style="">
+                                    <input type="text" 
+                                           ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'" 
+                                           ng-disabled="!CtrlEnabledCheckbox" 
+                                           class="form-control" 
+                                           ng-model="item.attn" 
+                                           name="faxAttention{{item._id}}" 
+                                           id="faxAttentionId{{item._id}}" 
+                                           ng-change="item.attn=removeSpecialChars(item.attn)" />
+                                </div>
+                            </div>
+                            <span class="alert-danger" ng-if="faxData.length === 0">Information not provided by source</span>
+                        </div>
+                    </div>
+
+                    <!--fax textbox repeater-->
+                    <div class="row" style="margin-top:15px;margin-bottom:5px">
+                        <div class="col-md-6" ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'"><label>Number(s): (i.e. 6095551212)</label> </div>
+                        <div class="col-md-6" ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'"><label>Attention: (First Last Name)</label> </div>
+                    </div>
+
+                    <div class="row" style="margin-bottom:5px" ng-repeat="slector in TotalCount track by $index">
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox || selectData.length >= (10 - $index)" 
+                                   ng-model="freeFaxGroup[$index]"
+                                   ng-required="(CtrlEnabledCheckbox && !haveChecked())"
+                                   type="text" 
+                                   class="form-control" 
+                                   id="freeFax{{$index}}Id" 
+                                   name="freeFax{{$index}}Id" 
+                                   value="" 
+                                   maxlength="10"
+                                   ng-change="freeFaxGroup[$index]=numbersOnly(freeFaxGroup[$index])" />
+                        </div>
+                        <div class="col-md-6">
+                            <input ng-disabled="!CtrlEnabledCheckbox || selectData.length >= (10 - $index)" 
+                                   ng-model="freeAttentionGroup[$index]" 
+                                   type="text" 
+                                   class="form-control" 
+                                   id="freeFaxAttention{{$index}}Id" 
+                                   name="freeFaxAttention{{$index}}Id"
+                                   value="" 
+                                   ng-change="freeAttentionGroup[$index]=removeSpecialChars(freeAttentionGroup[$index])" />
+                        </div>
+                    </div>
+                    <div class="col-md-12 text-center" style="padding-bottom: 5px; border-bottom: 1px solid lightgray">
+                        <input type="button" class="btn-primary" value="Add" ng-disabled="!CtrlEnabledCheckbox" ng-hide="TotalCount.length == MaxCtls" ng-click="addCtlRow()">
+                        <input type="button" class="btn-primary" value="Remove" ng-disabled="!CtrlEnabledCheckbox" ng-hide="TotalCount.length == 1" ng-click="removeCtlRow()">
+                    </div>
+
+                    <!--Comment free form-->
+                    <div class="row" style="margin-top:15px">
+                        <div class="col-md-6" style="margin-top:10px">
+                            <label ng-class="(CtrlEnabledCheckbox)?'':'disabled-class'">* Comment:</label>
+                        </div>
+                        <div class="col-md-6" style="margin-top:10px">
+                            <input type="text" class="form-control" 
+                                      ng-required="CtrlEnabledCheckbox" 
+                                      ng-disabled="!CtrlEnabledCheckbox" 
+                                      ng-model="faxComment" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

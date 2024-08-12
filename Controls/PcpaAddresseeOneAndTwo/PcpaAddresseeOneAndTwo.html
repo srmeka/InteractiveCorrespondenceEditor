@@ -1,0 +1,61 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaAddresseeOneAndTwoController">
+    <div class="panel-heading">
+        Addressee Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="margin-bottom: 5px;">
+                <div class="col-md-3" style="margin-top:5px;">
+                    <label>
+                        * Addressee Name 1
+                    </label>
+                </div>
+                <div class="col-md-3">
+                    <select ng-disabled="Addressee.length == 0"  
+                            ng-model="selectedAddressee" 
+                            ng-change="updateAddreesseeAddress(); buildAddresseeName1()" 
+                            ng-options="item.displayName for item in PrimaryAddress | orderBy:'displayName'"
+                            class="form-control" 
+                            name="AddresseeName" 
+                            id="AddresseeNameID" 
+                            ng-required="true">
+                        <option value="" disabled>--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="Addressee.length == 0">Information not provided by source</span>
+                </div>
+                <div class="col-md-3" style="margin-top:5px;">
+                    <label>
+                        * Addressee Address
+                    </label>
+                </div>
+                <div class="col-md-3">
+                    <select ng-disabled="AddresseeAddress.length == 0" 
+                            name="AddresseeAddress" 
+                            ng-options="item.Line1Tx + ' ' + item.Line2Tx + ' ' + item.Line3Tx + ', ' + item.MunicipalityNm + ' ' + item.CountrySubdivisionNm + ' ' + item.PostalCd + ' (' + item.AddressUseCd + ')' for item in addressData | orderBy: ['Line1Tx', 'Line2Tx', 'Line3Tx', 'MunicipalityNm', 'CountrySubdivisionNm', 'PostalCd', 'AddressUseCd']" 
+                            id="AddresseeAddressID" 
+                            ng-model="SelectedAddress" 
+                            class="form-control" 
+                            ng-required="true">
+                        <option value="" disabled>-- Select --</option>
+                    </select>
+                    <span class="alert-danger" ng-show="AddresseeAddress.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label>
+                        Addressee Name 2
+                    </label>
+                </div>
+                <div class="col-md-9">
+                    <input type="checkbox" 
+                           name="AddresseeName2" 
+                           ng-model="AddresseeName2Chk" 
+                           id="AddresseeName2ChkId" 
+                           ng-disabled="AddresseeName2 == 0" />
+                    <label ng-disabled="!AddresseeName2Chk">{{AddresseeName2}}</label> <span class="alert-danger" ng-show="AddresseeName2 == 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

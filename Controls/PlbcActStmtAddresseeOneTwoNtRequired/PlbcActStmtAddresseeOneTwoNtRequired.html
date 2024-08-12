@@ -1,0 +1,75 @@
+﻿<div class="panel panel-primary" ng-controller="PlbcActStmtAddresseeOneTwoNtRequiredController">
+    <div class="panel-heading">
+        Addressee Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <label>
+                        Addressee Name 1
+                    </label>
+                    <!--<select ng-disabled="Addressee.length == 0" name="AddresseeName" ng-model="SelectedAddressee" ng-change="updateAddreesseeAddress(SelectedAddressee)" ng-options="AddresseeInfo.DisplayName + AddresseeInfo.Contact.entityPerson.Prefix.DisplayName+' '+ AddresseeInfo.Contact.entityPerson.FirstName +' '+ AddresseeInfo.Contact.entityPerson.MiddleName+' '+ AddresseeInfo.Contact.entityPerson.LastName  for AddresseeInfo in Addressee track by AddresseeInfo._id" class="form-control"  id="AddresseeNameID" ng-required="true">-->
+                    <select ng-disabled="Addressee.length == 0"
+                            name="AddresseeName"
+                            ng-model="SelectedAddressee"
+                            ng-change="updateAddreesseeAddress(SelectedAddressee)"
+                            ng-options="AddresseeInfo.DisplayName for AddresseeInfo in Addressee  | orderBy: ['DisplayName']"
+                            class="form-control"
+                            id="AddresseeNameID"
+                            ng-required="false"
+                            style="width:auto">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger"
+                          ng-show="Addressee.length == 0">Information not provided by source</span>
+                </div>
+                <div class="col-md-6">
+                    <label>
+                        Addressee Address
+                    </label>
+                    <select ng-disabled="AddresseeAddress.length == 0"
+                            name="AddresseeAddress"
+                            ng-options="item.AddressLine1+' '+item.AddressLine2+' '+item.AddressLine3+' '+item.City+', '+item.State+' '+item.PostalCode for item in addressData"
+                            id="AddresseeAddressID"
+                            xml="Addressee_Address"
+                            ng-model="SelectedAddress"
+                            class="form-control"
+                            ng-required="false"
+                            style="width:auto">
+                        <option value="">-- Select --</option>
+                    </select>
+                    <span class="alert-danger"
+                          ng-show="AddresseeAddress.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+        <div></div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    <label>
+                        Addressee Name 2
+                    </label>
+                </div>
+                <div class="col-md-6">
+                    <label>
+                        <input type="checkbox"
+                               name="AddresseeName2"
+                               ng-model="addresseeName2Chk"
+                               ng-true-value="true"
+                               ng-init="addresseeName2Chk=false"
+                               ng-false-value="false"
+                               id="addresseeName2ChkId"
+                               ng-disabled="addresseeName2 == 0" />
+                    </label>
+
+                    <label ng-class="(addresseeName2Chk)?'':'disabled-class'"
+                           class="normal-label-class">{{addresseeName2}}</label>
+                    <span class="alert-danger"
+                          ng-show="addresseeName2 == 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

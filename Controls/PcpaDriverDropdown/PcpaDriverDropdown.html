@@ -1,0 +1,27 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaDriverDropdownController">
+    <div class="panel-heading">Driver Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label>* Driver Name:</label>
+                </div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <!--Driver name dropdown list-->
+                        <div class="col-md-6" style="margin-top:5px">
+                            <select ng-required="!freeText" ng-options="(item.Person.PersonName.FirstGivenNm + ' ' + item.Person.PersonName.SecendGivenNmInitial + ' ' + item.Person.PersonName.FamilyNm + ' ' + item.Person.PersonName.FamilyNameGenerationCd)  for item in driverInfo track by item._id" name="DriverSelection" ng-model="selectedDriver" class="form-control" id="DriverInfoId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <!--Driver name input-->
+                        <div class="col-md-6" style="margin-top:5px">
+                            <input ng-disabled="selectedDriver" ng-required="!selectedDriver" ng-model="freeText" type="text" class="form-control" name="DriverText" value="" />
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+             </div>
+       </div>
+</div> 

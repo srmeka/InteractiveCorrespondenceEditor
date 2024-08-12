@@ -1,0 +1,33 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaInvalidLicenseDriverInfoController">
+    <div class="panel-heading">
+        Invalid License Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <input ng-click="clearAllSelectedData()" ng-model="isInvalidDriverSelected" type="checkbox" id="InvalidDriverCheckboxId" name="InvalidDriverCheckbox" />
+                    <label>Include Invalid License</label>
+                </div>
+                <div class="col-md-8">
+                    <div ng-repeat="InvalidDriverInfo in InvalidDriver">
+                        <input ng-model="InvalidDriverInfo.InvalidDriverChecked" 
+                               ng-change="selectInvalidDriver(InvalidDriverInfo)" 
+                               type="checkbox" 
+                               ng-disabled="!isInvalidDriverSelected" 
+                               name="InvalidDriverCheckboxLst" 
+                               id="InvalidDriverCheckboxLstId" />
+                        <span ng-bind="InvalidDriverInfo.Person.PersonName.FirstGivenNm + ' ' + InvalidDriverInfo.Person.SecondGivenNameInitial + ' ' + InvalidDriverInfo.Person.PersonName.FamilyNm + ' ' + InvalidDriverInfo.Person.PersonName.FamilyNameGenerationCd"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <span class="alert-danger" ng-if="InvalidDriver.length === 0">Information not provided by source</span>
+                    <input class="form-control" type="text" ng-model="InvalidDriverInput" ng-disabled="!isInvalidDriverSelected" name="InvalidDriverInput" id="InvalidDriverInputId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

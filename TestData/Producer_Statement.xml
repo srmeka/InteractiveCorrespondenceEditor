@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <CorrespondenceDataResponse xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ProducerStatments id="2700">
+      <Producer xmlns="">
+        <Address_Ext id="2678" xmlns="">
+          <AddressLine1 xmlns="">172 MAIN ST</AddressLine1>
+          <AddressLine2/>
+          <AddressLine3/>
+          <City xmlns="">NANUET</City>
+          <PostalCode xmlns="">10954</PostalCode>
+          <State xmlns="">
+            <Code>NY</Code>
+          </State>
+        </Address_Ext>
+        <Name xmlns="">CARPEZZI-LIEBERT GRP INC T/A CLG FIN</Name>
+        <ProducerCodes xmlns="">
+          <Entry id="2679">
+            <Code>E4536</Code>
+          </Entry>
+        </ProducerCodes>
+      </Producer>
+      <ProducerActivity xmlns="">
+        <Entry id="2689">
+          <BalanceAmount>20.30</BalanceAmount>
+          <CommissionEarned>20.30</CommissionEarned>
+          <EventDate>2013-08-19T14:43:41.042Z</EventDate>
+          <RelatedPolicyPeriod>
+            <Account>
+              <AccountNumber>AA400060252</AccountNumber>
+            </Account>
+            <ActualPremiumAmount>7529.00</ActualPremiumAmount>
+            <BillingOptions_Ext>
+              <Code>documentoinsuredbroker_ext</Code>
+            </BillingOptions_Ext>
+            <BureauFileNumber_Ext>696684</BureauFileNumber_Ext>
+            <Cancellation>
+              <ModificationDate>2014-02-19T21:41:24.821Z</ModificationDate>
+            </Cancellation>
+            <Contacts>
+              <Entry id="2683">
+                <Contact id="2681">
+                  <EmailAddress1 xsi:nil="true" />
+                  <FaxPhone xsi:nil="true" />
+                  <PrimaryAddress id="2680">
+                    <AddressLine1>20 ORCHARD ST</AddressLine1>
+                    <AddressLine2 xsi:nil="true" />
+                    <AddressLine3 xsi:nil="true" />
+                    <City>RAMSEY</City>
+                    <PostalCode>07446</PostalCode>
+                    <State>
+                      <Code>NJ</Code>
+                    </State>
+                  </PrimaryAddress>
+                  <WorkPhone xsi:nil="true" />
+                </Contact>
+                <DisplayName>AARK INC</DisplayName>
+                <Roles>
+                  <Entry id="2682">
+                    <Role>primaryinsured</Role>
+                  </Entry>
+                </Roles>
+              </Entry>
+            </Contacts>
+            <DBA>XYZ_ABCD</DBA>
+            <DelinquentAmount>0.00</DelinquentAmount>
+            <DueAmount>0.00</DueAmount>
+            <EPAgreementPaymentAmount>0.00</EPAgreementPaymentAmount>
+            <EstimatedPremiumAmount>0</EstimatedPremiumAmount>
+            <IntentToCancelMailDate_Ext>2014-02-01T05:00:00Z</IntentToCancelMailDate_Ext>
+            <RecentPaymentOnDlnqPolicy_Ext>4061.35</RecentPaymentOnDlnqPolicy_Ext>
+            <IsLCF_Ext>false</IsLCF_Ext>
+            <LCFAddress_Ext xsi:nil="true" />
+            <LCFName_Ext xsi:nil="true" />
+            <NotHonoredPaymentAmount_Ext>329.75</NotHonoredPaymentAmount_Ext>
+            <NotHonoredPaymentReason_Ext>
+              <DisplayName>Customer Request</DisplayName>
+            </NotHonoredPaymentReason_Ext>
+            <OriginalDelinequentAmount>0</OriginalDelinequentAmount>
+            <PaymentPlan>
+              <Name>Monthly Schedule Residual</Name>
+            </PaymentPlan>
+            <PlannedInvoices />
+            <Policy>
+              <LOBCode>
+                <DisplayName>WC</DisplayName>
+              </LOBCode>
+              <ProducerCodeOfService_Ext>
+                <Code xmlns="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">E4536</Code>
+                <Producer xmlns="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+                  <Address_Ext id="2684">
+                    <AddressLine1 xmlns="">172 MAIN ST</AddressLine1>
+                    <AddressLine2 xsi:nil="true" xmlns="" />
+                    <AddressLine3 xsi:nil="true" xmlns="" />
+                    <City xmlns="">NANUET</City>
+                    <PostalCode xmlns="">10954</PostalCode>
+                    <State xmlns="">
+                      <Code>NY</Code>
+                    </State>
+                  </Address_Ext>
+                  <Name>CARPEZZI-LIEBERT GRP INC T/A CLG FIN</Name>
+                </Producer>
+              </ProducerCodeOfService_Ext>
+            </Policy>
+            <PolicyNumber>M650341</PolicyNumber>
+            <PolicyPerEffDate>2013-09-01T04:00:00Z</PolicyPerEffDate>
+            <PolicyPerExpirDate>2014-09-01T04:00:00Z</PolicyPerExpirDate>
+            <PrimaryInsured id="2688">
+              <Contact id="2686">
+                <EmailAddress1 xsi:nil="true" />
+                <FaxPhone xsi:nil="true" />
+                <PrimaryAddress id="2685">
+                  <AddressLine1>20 ORCHARD ST</AddressLine1>
+                  <AddressLine2 xsi:nil="true" />
+                  <AddressLine3 xsi:nil="true" />
+                  <City>RAMSEY</City>
+                  <PostalCode>07446</PostalCode>
+                  <State>
+                    <Code>NJ</Code>
+                  </State>
+                </PrimaryAddress>
+                <WorkPhone xsi:nil="true" />
+              </Contact>
+              <DisplayName>AARK INC</DisplayName>
+              <Roles>
+                <Entry id="2687">
+                  <Role>primaryinsured</Role>
+                </Entry>
+              </Roles>
+            </PrimaryInsured>
+            <ScheduledCancellationDate_Ext>2014-02-19T05:00:00Z</ScheduledCancellationDate_Ext>
+            <TotalDueForPolicyPeriod>0.00</TotalDueForPolicyPeriod>
+            <UWCompany>
+              <Code>njc_ext</Code>
+            </UWCompany>
+          </RelatedPolicyPeriod>
+          <TransactionName>Standard Premium</TransactionName>
+        </Entry>
+        <Entry id="2699">
+          <BalanceAmount>65.52</BalanceAmount>
+          <CommissionEarned>45.22</CommissionEarned>
+          <EventDate>2013-08-19T14:43:41.421Z</EventDate>
+          <RelatedPolicyPeriod>
+            <Account>
+              <AccountNumber>AA400060252</AccountNumber>
+            </Account>
+            <ActualPremiumAmount>7529.00</ActualPremiumAmount>
+            <BillingOptions_Ext>
+              <Code>documentoinsuredbroker_ext</Code>
+            </BillingOptions_Ext>
+            <BureauFileNumber_Ext>696684</BureauFileNumber_Ext>
+            <Cancellation>
+              <ModificationDate>2014-02-19T21:41:24.821Z</ModificationDate>
+            </Cancellation>
+            <Contacts>
+              <Entry id="2693">
+                <Contact id="2691">
+                  <EmailAddress1 xsi:nil="true" />
+                  <FaxPhone xsi:nil="true" />
+                  <PrimaryAddress id="2690">
+                    <AddressLine1>20 ORCHARD ST</AddressLine1>
+                    <AddressLine2 xsi:nil="true" />
+                    <AddressLine3 xsi:nil="true" />
+                    <City>RAMSEY</City>
+                    <PostalCode>07446</PostalCode>
+                    <State>
+                      <Code>NJ</Code>
+                    </State>
+                  </PrimaryAddress>
+                  <WorkPhone xsi:nil="true" />
+                </Contact>
+                <DisplayName>AARK INC</DisplayName>
+                <Roles>
+                  <Entry id="2692">
+                    <Role>primaryinsured</Role>
+                  </Entry>
+                </Roles>
+              </Entry>
+            </Contacts>           
+            <DelinquentAmount>0.00</DelinquentAmount>
+            <DueAmount>0.00</DueAmount>
+            <EPAgreementPaymentAmount>0.00</EPAgreementPaymentAmount>
+            <EstimatedPremiumAmount>0</EstimatedPremiumAmount>
+            <IntentToCancelMailDate_Ext>2014-02-01T05:00:00Z</IntentToCancelMailDate_Ext>
+            <RecentPaymentOnDlnqPolicy_Ext>4061.35</RecentPaymentOnDlnqPolicy_Ext>
+            <IsLCF_Ext>false</IsLCF_Ext>
+            <LCFAddress_Ext xsi:nil="true" />
+            <LCFName_Ext xsi:nil="true" />
+            <NotHonoredPaymentAmount_Ext>329.75</NotHonoredPaymentAmount_Ext>
+            <NotHonoredPaymentReason_Ext>
+              <DisplayName>Customer Request</DisplayName>
+            </NotHonoredPaymentReason_Ext>
+            <OriginalDelinequentAmount>0</OriginalDelinequentAmount>
+            <PaymentPlan>
+              <Name>Monthly Schedule Residual</Name>
+            </PaymentPlan>
+            <PlannedInvoices />
+            <Policy>
+              <LOBCode>
+                <DisplayName>WC</DisplayName>
+              </LOBCode>
+              <ProducerCodeOfService_Ext>
+                <Code xmlns="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">E4536</Code>
+                <Producer xmlns="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+                  <Address_Ext id="2694">
+                    <AddressLine1 xmlns="">172 MAIN ST</AddressLine1>
+                    <AddressLine2 xsi:nil="true" xmlns="" />
+                    <AddressLine3 xsi:nil="true" xmlns="" />
+                    <City xmlns="">NANUET</City>
+                    <PostalCode xmlns="">10954</PostalCode>
+                    <State xmlns="">
+                      <Code>NY</Code>
+                    </State>
+                  </Address_Ext>
+                  <Name>CARPEZZI-LIEBERT GRP INC T/A CLG FIN</Name>
+                </Producer>
+              </ProducerCodeOfService_Ext>
+            </Policy>
+            <PolicyNumber>M650341</PolicyNumber>
+            <PolicyPerEffDate>2013-09-01T04:00:00Z</PolicyPerEffDate>
+            <PolicyPerExpirDate>2014-09-01T04:00:00Z</PolicyPerExpirDate>
+            <PrimaryInsured id="2698">
+              <Contact id="2696">
+                <EmailAddress1 xsi:nil="true" />
+                <FaxPhone xsi:nil="true" />
+                <PrimaryAddress id="2695">
+                  <AddressLine1>20 ORCHARD ST</AddressLine1>
+                  <AddressLine2 xsi:nil="true" />
+                  <AddressLine3 xsi:nil="true" />
+                  <City>RAMSEY</City>
+                  <PostalCode>07446</PostalCode>
+                  <State>
+                    <Code>NJ</Code>
+                  </State>
+                </PrimaryAddress>
+                <WorkPhone xsi:nil="true" />
+              </Contact>
+              <DisplayName>AARK INC</DisplayName>
+              <Roles>
+                <Entry id="2697">
+                  <Role>primaryinsured</Role>
+                </Entry>
+              </Roles>
+            </PrimaryInsured>
+            <ScheduledCancellationDate_Ext>2014-02-19T05:00:00Z</ScheduledCancellationDate_Ext>
+            <TotalDueForPolicyPeriod>0.00</TotalDueForPolicyPeriod>
+            <UWCompany>
+              <Code>njc_ext</Code>
+            </UWCompany>
+          </RelatedPolicyPeriod>
+          <TransactionName>Standard Premium</TransactionName>
+        </Entry>
+      </ProducerActivity>
+      <TotalAmountDue xmlns="">65.52</TotalAmountDue>
+    </ProducerStatments>
+   
+    <Lookups>
+      <Lookup>
+        <LookupType>Greeting</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>None</Key>
+            <Value />
+          </LookupItem>
+          <LookupItem>
+            <Key>Mr.</Key>
+            <Value>Mr.</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Mrs.</Key>
+            <Value>Mrs.</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Ms.</Key>
+            <Value>Ms.</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Dr.</Key>
+            <Value>Dr.</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>Attention</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Attn:</Key>
+            <Value>Attn:</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>c/o</Key>
+            <Value>c/o</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>ReItem</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Your Claim No:</Key>
+            <Value>Your Claim No:</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Your Policy No:</Key>
+            <Value>Your Policy No:</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Your Insured:</Key>
+            <Value>Your Insured:</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Case Caption:</Key>
+            <Value>Case Caption:</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Your Client:</Key>
+            <Value>Your Client:</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Your File No:</Key>
+            <Value>Your File No:</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Date(s) of Service:</Key>
+            <Value>Date(s) of Service:</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>TransExpense</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>$15/$450</Key>
+            <Value>15/450</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>$20/$600</Key>
+            <Value>20/600</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>$30/$1200</Key>
+            <Value>30/1200</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>$50/$2000</Key>
+            <Value>50/2000</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>NJMCompany</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>NJM Insurance Company</Key>
+            <Value>Manufacturers Insurance</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJM</Key>
+            <Value>Manufacturers Insurance</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>njm_ext</Key>
+            <Value>Manufacturers Insurance</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>njc_ext</Key>
+            <Value>Casualty Insurance</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJC</Key>
+            <Value>Casualty Insurance</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJM Re-Insurance Company</Key>
+            <Value>Re-Insurance</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJM Indemnity Insurance Company</Key>
+            <Value>Indemnity Insurance</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJRE</Key>
+            <Value>Re-Insurance</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>njre_ext</Key>
+            <Value>Re-Insurance</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>nji_ext</Key>
+            <Value>Indemnity Insurance</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJI</Key>
+            <Value>Indemnity Insurance</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJM Casualty Insurance Company</Key>
+            <Value>Casualty Insurance</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>ReSection</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Claim Petition Number</Key>
+            <Value>Claim Petition Number</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>State ID Number</Key>
+            <Value>State ID Number</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Docket Number</Key>
+            <Value>Docket Number</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Listing Date</Key>
+            <Value>Listing Date</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NY WCB Number</Key>
+            <Value>NY WCB Number</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Reference Number</Key>
+            <Value>Reference Number</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>GenderPronoun</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>He</Key>
+            <Value>He</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>She</Key>
+            <Value>She</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>GenderPronounLow</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>he</Key>
+            <Value>he</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>she</Key>
+            <Value>she</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>child</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>child</Key>
+            <Value>child</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>children</Key>
+            <Value>children</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>widow</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>widow</Key>
+            <Value>widow</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>widower</Key>
+            <Value>widower</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>himher</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>him</Key>
+            <Value>him</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>her</Key>
+            <Value>her</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>hisher</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>his</Key>
+            <Value>his</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>her</Key>
+            <Value>her</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>ampm</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>AM</Key>
+            <Value>AM</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>PM</Key>
+            <Value>PM</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>attorneytype</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Plaintiff</Key>
+            <Value>Plaintiff</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Respondent</Key>
+            <Value>Respondent</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>contacttort</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Contact</Key>
+            <Value>Contact</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Tort</Key>
+            <Value>Tort</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>copies</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>copy</Key>
+            <Value>copy</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>copies</Key>
+            <Value>copies</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>MedTreatment</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>NO MEDICAL TREATMENT</Key>
+            <Value>0</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>MINOR BY EMPLOYER</Key>
+            <Value>1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>MINOR CLINIC/HOSP</Key>
+            <Value>2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>EMERGENCY CARE</Key>
+            <Value>3</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HOSPITALIZED > 24 HRS</Key>
+            <Value>4</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>FUTURE MAJOR MEDICAL/LOST TIME ANTICIPATED</Key>
+            <Value>5</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>InsCompany</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>NJM Insurance Company</Key>
+            <Value>NJM</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJM Re-Insurance Company</Key>
+            <Value>NJRe</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJM Indemnity Insurance Company</Key>
+            <Value>NJ Indemnity</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJM Casualty Insurance Company</Key>
+            <Value>NJ Casualty</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>NjmSite</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>West Trenton</Key>
+            <Value>West Trenton</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Hammonton</Key>
+            <Value>Hammonton</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Parsippany</Key>
+            <Value>Parsippany</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>LineOfBusiness</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Personal Lines Underwriting</Key>
+            <Value>Personal Lines Underwriting</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Commercial Lines Underwriting</Key>
+            <Value>Commercial Lines Underwriting</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>AttorneyOptions</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>You may wish</Key>
+            <Value>You may wish</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>You may have</Key>
+            <Value>You may have</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>DeductibleType</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Collision</Key>
+            <Value>Collision</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Comprehensive</Key>
+            <Value>Comprehensive</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>CommittalType</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Committal</Key>
+            <Value>Committal</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Non-Committal</Key>
+            <Value>Non-Committal</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>Drivable</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Yes</Key>
+            <Value>Yes</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>No</Key>
+            <Value>No</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>WorkStatus</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Modified Duty</Key>
+            <Value>Modified Duty</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Full Duty</Key>
+            <Value>Full Duty</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>TortOption</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Limited</Key>
+            <Value>Limited</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Full</Key>
+            <Value>Full</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>PurposeOfRequest</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>PIP IME</Key>
+            <Value>PIP IME</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>PIP RE-EXAM</Key>
+            <Value>PIP RE-EXAM</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Expedited IME</Key>
+            <Value>Expedited IME</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>PaymentProcess</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Contractural Agreement</Key>
+            <Value>Contractural Agreement</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJ Fee Sched Procura Magnacare</Key>
+            <Value>NJ Fee Sched Procura Magnacare</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Horizon Casualty Contract</Key>
+            <Value>Horizon Casualty Contract</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Pre Negotiated Rate Agreement</Key>
+            <Value>Pre Negotiated Rate Agreement</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>CoverageForm</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>HO-1</Key>
+            <Value>HO-1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HO-2</Key>
+            <Value>HO-2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HO-3</Key>
+            <Value>HO-3</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HO-4</Key>
+            <Value>HO-4</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HO-6</Key>
+            <Value>HO-6</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>YesNo</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Yes</Key>
+            <Value>Yes</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>No</Key>
+            <Value>No</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>Gender</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Male</Key>
+            <Value>Male</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Female</Key>
+            <Value>Female</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>CopyingServiceFee</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>$5.00</Key>
+            <Value>$5.00</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>$10.00</Key>
+            <Value>$10.00</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>AppraisalType</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Appraisal Req-Heavy Duty Vehicles</Key>
+            <Value>APPRAISAL REQUEST FOR HEAVY DUTY VEHICLES</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Appraisal Req-Passenger Vehicle</Key>
+            <Value>APPRAISAL REQUEST FOR PASSENGER VEHICLE</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Appraisal Req-Other</Key>
+            <Value>Appraisal Req-Other</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Photos Only</Key>
+            <Value>PHOTOS ONLY REQUEST</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>RequestResponse</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Authorized</Key>
+            <Value>Authorized</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Denied</Key>
+            <Value>Denied</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Modified</Key>
+            <Value>Modified</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>BreakdownOfClaimExpenses</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Hosp Med Temp Perm</Key>
+            <Value>Hosp Med Temp Perm</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Hosp Med Perm</Key>
+            <Value>Hosp Med Perm</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Hosp Med Temp</Key>
+            <Value>Hosp Med Temp</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Anticipated Total</Key>
+            <Value>Anticipated Total</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Anticipated Total Med and Perm</Key>
+            <Value>Anticipated Total Med and Perm</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>No Claim Payments</Key>
+            <Value>No Claim Payments</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Hosp and Med</Key>
+            <Value>Hosp and Med</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>DPRRecipient</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Provider</Key>
+            <Value>Provider</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Claimant</Key>
+            <Value>Claimant</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>NOYES</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>NO</Key>
+            <Value>NO</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>YES</Key>
+            <Value>YES</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>GCPrinters</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>HBIBC1</Key>
+            <Value>HBIBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HCLBC1</Key>
+            <Value>HCLBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HPDBC1</Key>
+            <Value>HPDBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HPDBC2</Key>
+            <Value>HPDBC2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HPDBC3</Key>
+            <Value>HPDBC3</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HPDBC4</Key>
+            <Value>HPDBC4</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HPIPBC1</Key>
+            <Value>HPIPBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HPIPBC2</Key>
+            <Value>HPIPBC2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HPIPTRN1</Key>
+            <Value>HPIPTRN1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>PHOBC1</Key>
+            <Value>PHOBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>PLEGBC1</Key>
+            <Value>PLEGBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>PPDBC1</Key>
+            <Value>PPDBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>PPDBC2</Key>
+            <Value>PPDBC2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>PPIPBC1</Key>
+            <Value>PPIPBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>PPIPBC2</Key>
+            <Value>PPIPBC2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TBIBC1</Key>
+            <Value>TBIBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TCLERBC1</Key>
+            <Value>TCLERBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TLEGBC1</Key>
+            <Value>TLEGBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TLEGBC2</Key>
+            <Value>TLEGBC2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TMSABPUBC1</Key>
+            <Value>TMSABPUBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TPDBC1</Key>
+            <Value>TPDBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TPDBC2</Key>
+            <Value>TPDBC2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TPDBC3</Key>
+            <Value>TPDBC3</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TPIPBC1</Key>
+            <Value>TPIPBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TPIPBC2</Key>
+            <Value>TPIPBC2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TSUBROBC1</Key>
+            <Value>TSUBROBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>TSUBROBC2</Key>
+            <Value>TSUBROBC2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>XPADMINBC1</Key>
+            <Value>XPADMINBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>XP4250</Key>
+            <Value>XP4250</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>XP4200</Key>
+            <Value>XP4200</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>GCSALVAG3</Key>
+            <Value>GCSALVAG3</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>TypeOfReport</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>New</Key>
+            <Value>New</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Addendum</Key>
+            <Value>Addendum</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>TransportationExpense</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>$15</Key>
+            <Value>$15</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>$20</Key>
+            <Value>$20</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>$30</Key>
+            <Value>$30</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>$50</Key>
+            <Value>$50</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>ReasonUnresolved</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>First Notice</Key>
+            <Value>First Notice</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Liability Issue</Key>
+            <Value>Liability Issue</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Negotiations at Impasse</Key>
+            <Value>Negotiations at Impasse</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Statute of Limitations</Key>
+            <Value>Statute of Limitations</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Threshold</Key>
+            <Value>Threshold</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Uncooperative Claimant/Attorney</Key>
+            <Value>Uncooperative Claimant/Attorney</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Value Dispute</Key>
+            <Value>Value Dispute</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Other</Key>
+            <Value>Other</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>LossType</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Comprehensive</Key>
+            <Value>Comprehensive</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Collision</Key>
+            <Value>Collision</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Homeowner</Key>
+            <Value>Homeowner</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>UMBI</Key>
+            <Value>UMBI</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>PIP</Key>
+            <Value>PIP</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Collision and PIP</Key>
+            <Value>Collision and PIP</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>PCPrinters</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>TCOMAUT1XP</Key>
+            <Value>TCOMAUT1XP</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Archive Only</Key>
+            <Value>Archive Only</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>WUWBC1</Key>
+            <Value>WUWBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>SALESHA1</Key>
+            <Value>SALESHA1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>WENGBC1</Key>
+            <Value>WENGBC1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>WPASCAN1</Key>
+            <Value>WPASCAN1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HCL_India2</Key>
+            <Value>HCL_India2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>ACLB10</Key>
+            <Value>ACLB10</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>ACLB9</Key>
+            <Value>ACLB9</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>BCPrinters</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>CASHPRT1</Key>
+            <Value>CASHPRT1</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>HCL_India2</Key>
+            <Value>HCL_India2</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>XP4250</Key>
+            <Value>XP4250</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>COLLECT3</Key>
+            <Value>COLLECT3</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>ACLB10</Key>
+            <Value>ACLB10</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>ACLB9</Key>
+            <Value>ACLB9</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>DISBURS2</Key>
+            <Value>DISBURS2</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>PCReItem</LookupType>
+        <LookupItems />
+      </Lookup>
+      <Lookup>
+        <LookupType>BCReItem</LookupType>
+        <LookupItems />
+      </Lookup>
+      <Lookup>
+        <LookupType>WCDocSource</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Incoming</Key>
+            <Value>Incoming</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Internal</Key>
+            <Value>Internal</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Outgoing</Key>
+            <Value>Outgoing</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>WCCorrType</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Cancel-reinstate</Key>
+            <Value>Cancel-reinstate</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Engineering</Key>
+            <Value>Engineering</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Finance Agreement</Key>
+            <Value>Finance Agreement</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Loss pick retro</Key>
+            <Value>Loss pick retro</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Ownership</Key>
+            <Value>Ownership</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Payroll Info</Key>
+            <Value>Payroll Info</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Rating Bureau</Key>
+            <Value>Rating Bureau</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Retro</Key>
+            <Value>Retro</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>WCUCSFType</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Mid-term</Key>
+            <Value>Mid-term</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Renewal</Key>
+            <Value>Renewal</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>QuoteType</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>New Bus</Key>
+            <Value>New Bus</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Renewal</Key>
+            <Value>Renewal</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>WCUAuditSuppDoc</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Audit documentation</Key>
+            <Value>Audit documentation</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Audit worksheet</Key>
+            <Value>Audit worksheet</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Final Audit</Key>
+            <Value>Final Audit</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Mail Audit</Key>
+            <Value>Mail Audit</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Payroll Report form</Key>
+            <Value>Payroll Report form</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Payroll Report Summary</Key>
+            <Value>Payroll Report Summary</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Retro Adjustment</Key>
+            <Value>Retro Adjustment</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Retro Promulgation</Key>
+            <Value>Retro Promulgation</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>CMCollType</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Agreement</Key>
+            <Value>Agreement</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Bankruptcy</Key>
+            <Value>Bankruptcy</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Miscellaneous</Key>
+            <Value>Miscellaneous</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>DocumentsReferenced</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>AMA</Key>
+            <Value>AMA</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>AAOS</Key>
+            <Value>AAOS</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>NJ Fee Schedule guidelines</Key>
+            <Value>NJ Fee Schedule guidelines</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Coding Companion</Key>
+            <Value>Coding Companion</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>Physician’s Fee Reference</Key>
+            <Value>Physician’s Fee Reference</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>RedBook PFR</Key>
+            <Value>RedBook PFR</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+      <Lookup>
+        <LookupType>DenialType</LookupType>
+        <LookupItems>
+          <LookupItem>
+            <Key>Previously Covered</Key>
+            <Value>Previously Covered</Value>
+          </LookupItem>
+          <LookupItem>
+            <Key>No Coverage</Key>
+            <Value>No Coverage</Value>
+          </LookupItem>
+        </LookupItems>
+      </Lookup>
+    </Lookups>
+    <InboundDocumentTypeCode>001727</InboundDocumentTypeCode>
+</CorrespondenceDataResponse>
+
+

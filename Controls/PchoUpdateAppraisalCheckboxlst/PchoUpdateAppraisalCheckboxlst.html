@@ -1,0 +1,16 @@
+﻿<div class="panel panel-primary" ng-controller="PchoUpdateAppraisalCheckboxlstController">
+    <div class="panel-heading">Update Appraisal Needed</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12 row">
+                    <div ng-repeat="item in ScheduledItems track by item.ScheduledItemDescriptionTx" class="col-md-12">
+                        <input ng-model="item.checked" ng-click="selectItem(item)" type="checkbox" name="SheduledItemsCheckboxLst" id="SheduledItemsCheckboxLstId{{item._id}}" value="" />
+                        <span ng-bind="item.ScheduledItemDescriptionTx"></span>
+                    </div>
+                    <span class="alert-danger" ng-if="ScheduledItems.length === 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

@@ -1,0 +1,40 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaCtMidtermCancelReasonDropdownController">
+    <div class="panel-heading">Midterm Cancel Reason</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row" style="margin-top:10px">
+                <div class="col-md-3">
+                    <input ng-click="clearAllData()" ng-model="SelectedDriver" type="checkbox" id="CtrlEnableCheckboxId" name="CtrlEnableCheckbox" value="" />
+                    <label>Include Reason</label>                    
+                </div>
+                
+                <div class="col-md-3" style="margin-top:5px">
+                    <label ng-class="(SelectedDriver)?'':'disabled-class'">Driver:</label>
+                </div>
+                    <!--Driver name dropdown list-->
+                    <div class="col-md-3" style="margin-top:5px">
+                       
+                        <select ng-disabled="!SelectedDriver" ng-required="!driverNameText" ng-options="(item.Person.PersonName.FirstGivenNm + ' ' + item.Person.PersonName.SecendGivenNmInitial + ' ' + item.Person.PersonName.FamilyNm + ' ' + item.Person.PersonName.FamilyNameGenerationCd)  for item in driverInfo track by item._id" name="DriverSelection" ng-model="selectedDriverName" class="form-control" id="DriverInfoId">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <!--Driver name input-->
+                    <div class="col-md-3" style="margin-top:5px">
+                        <input ng-disabled="!SelectedDriver || selectedDriverName" ng-required="!selectedDriverName" ng-model="driverNameText" type="text" class="form-control" name="DriverNameText" id="DriverNameTextId" value="" />
+                    </div>
+                </div>
+            <div class="row" style="margin-top:10px">
+                <div class="col-md-3"></div>
+                
+                <div class="col-md-3"> 
+                    <label id="DateLabelID" ng-class="(SelectedDriver)?'':'disabled-class'">{{LabelName}}:</label>
+                </div>
+                
+                <div class="col-md-3"> 
+                    <input ng-disabled="!SelectedDriver" class="form-control" id="DateId" name="Date" type="text" ng-model="SelectedDate" date-format="{{DateOutputFormat}}" ng-required="{{Required}}" datepicker />
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+</div> 

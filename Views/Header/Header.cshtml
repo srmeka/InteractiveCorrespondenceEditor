@@ -1,0 +1,12 @@
+﻿
+<form ng-controller="HeaderController">
+    <h2>Server Variables from Site Minder</h2>
+    <table cellspacing=1 cellpadding=2 border=1 align=center >
+        <tr>
+            <td>{{ServerVariables}}</td>
+        </tr>
+    </table>
+    <div class="form-group">
+        <div class="alert-danger" ng-hide="!errorDetail" id="DivAlert"> <h4> {{errorDetail}}</h4> </div>
+    </div>
+</form>

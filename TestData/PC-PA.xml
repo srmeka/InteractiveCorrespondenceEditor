@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Body>
+    <pir:retrievePolicyByQuoteNumberResponse xmlns:pir="http://njm.com/esb/pds/pa/1.0/interfaces/PolicyInfomationRetriever">
+      <retrievePolicyByQuoteNumberRespMsg>
+        <Header>
+          <CorrelationContext>
+            <CorrelationId>HUD Testing</CorrelationId>
+          </CorrelationContext>
+          <ErrorIn>false</ErrorIn>
+        </Header>
+        <Policy id="7">
+          <PolicyNumber>F191880</PolicyNumber>
+          <Account id="9">
+            <AccountNo>AA426115417</AccountNo>
+          </Account>
+          <PolicyPeriod id="11">
+            <QuoteNumber>QQ463869055</QuoteNumber>
+            <StartDt>2020-01-10T00:01:00-05:00</StartDt>
+            <EndDt>2021-01-10T00:01:00-05:00</EndDt>
+            <RenewedIn>false</RenewedIn>
+            <RenewalDt>2021-01-10T00:01:00-05:00</RenewalDt>
+            <CancellationReason>2020-01-10T00:01:00-05:00</CancellationReason>
+            <UnderwritingCompany id="18">
+              <OrganizationNm>New Jersey Manufacturers Insurance Co</OrganizationNm>
+              <OrganizationNameCd>NJM</OrganizationNameCd>
+            </UnderwritingCompany>
+            <StatusCd>Not Applicable</StatusCd>
+            <BaseStateCd>CT</BaseStateCd>
+            <DividendYr>2019</DividendYr>
+            <TotalDividendAm>0.0</TotalDividendAm>
+            <PolicyLines id="25">
+              <PersonalAutoLine id="26">
+                <VehicleCoverageDetails id="27">
+                  <Vehicle id="28">
+                    <VehicleId>1</VehicleId>
+                    <ManufacturerVehicleIdentificationNr>5TDKZRFH1KS551117</ManufacturerVehicleIdentificationNr>
+                    <ModelYearNr>2019</ModelYearNr>
+                    <VehicleTradeNm>TOYOTA</VehicleTradeNm>
+                    <ModelNm>HIGHLANDER XLE/HIGHLANDER SE</ModelNm>
+                    <BodyCategoryCd>SUV Or Utility</BodyCategoryCd>
+                    <VehicleTypeCd>Private Passenger</VehicleTypeCd>
+                    <CylinderNumberCd>6</CylinderNumberCd>
+                    <VehicleFeatures id="37">
+                      <FeatureTypeCd>Passive Restraint</FeatureTypeCd>
+                      <FeatureCd>0.3</FeatureCd>
+                    </VehicleFeatures>
+                    <VehicleFeatures id="40">
+                      <FeatureTypeCd>Anti Theft</FeatureTypeCd>
+                      <FeatureCd>0.15</FeatureCd>
+                    </VehicleFeatures>
+                    <VehicleFeatures id="43">
+                      <FeatureTypeCd>Anti Lock</FeatureTypeCd>
+                      <FeatureCd>0.05</FeatureCd>
+                    </VehicleFeatures>
+                  </Vehicle>
+                  <Coverages id="46">
+                    <CoverageTypeCd>Comprehensive</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Comprehensive Deductible</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>$500</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>500</CoverageParameterUnformattedValueTx>
+                    <CoverageParameterPremiumAm>343.00</CoverageParameterPremiumAm>
+                  </Coverages>
+                  <Coverages id="52">
+                    <CoverageTypeCd>Collision</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Collision Deductible</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>$500</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>500</CoverageParameterUnformattedValueTx>
+                    <CoverageParameterPremiumAm>883.00</CoverageParameterPremiumAm>
+                  </Coverages>
+                  <Coverages id="58">
+                    <CoverageTypeCd>Roadside Assistance</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Roadside Assistance Limit</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>No Coverage</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>No Coverage</CoverageParameterUnformattedValueTx>
+                    <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+                  </Coverages>
+                  <Coverages id="64">
+                    <CoverageTypeCd>Transportation Expense</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Transportation Expense Limit</CoverageParameterTypeCd>
+                    <CoverageParameterValueTx>$30/$1200</CoverageParameterValueTx>
+                    <CoverageParameterUnformattedValueTx>30/1200</CoverageParameterUnformattedValueTx>
+                    <CoverageParameterPremiumAm>7.00</CoverageParameterPremiumAm>
+                  </Coverages>
+                  <Coverages id="70">
+                    <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                    <CoverageParameterTypeCd>PIP Un Insured Under Insured Motorist Limit</CoverageParameterTypeCd>
+                    <CoverageParameterPremiumAm>943.00</CoverageParameterPremiumAm>
+                  </Coverages>
+                  <Coverages id="74">
+                    <CoverageTypeCd>Liability</CoverageTypeCd>
+                    <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+                    <CoverageParameterPremiumAm>1639.00</CoverageParameterPremiumAm>
+                  </Coverages>
+                  <Coverages id="78">
+                    <CoverageTypeCd>Additional Reparations</CoverageTypeCd>
+                    <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+                  </Coverages>
+                  <Coverages id="81">
+                    <CoverageTypeCd>Basic Reparations</CoverageTypeCd>
+                    <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+                  </Coverages>
+                  <Coverages id="84">
+                    <CoverageTypeCd>Medical Expense</CoverageTypeCd>
+                    <CoverageParameterPremiumAm>135.00</CoverageParameterPremiumAm>
+                  </Coverages>
+                  <VehicleUsage id="87">
+                    <VehicleUsageCd>Pleasure</VehicleUsageCd>
+                  </VehicleUsage>
+                  <GarageLocation id="89">
+                    <Line1Tx>65 Downey Dr D</Line1Tx>
+                    <Municipality id="91">
+                      <MunicipalityNm>Manchester</MunicipalityNm>
+                      <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                    </Municipality>
+                    <CountrySubdivision id="94">
+                      <CountrySubdivisionNm>CT</CountrySubdivisionNm>
+                      <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                    </CountrySubdivision>
+                    <PostalCd>06040</PostalCd>
+                  </GarageLocation>
+                  <JointOwnershipIn>false</JointOwnershipIn>
+                  <OwnershipTypeCd>Owned</OwnershipTypeCd>
+                  <VehicleDiscounts id="100">
+                    <DiscountReasonCd>AntiLockBrakeDiscount</DiscountReasonCd>
+                    <DiscountPc>0.05</DiscountPc>
+                  </VehicleDiscounts>
+                  <VehicleDiscounts id="103">
+                    <DiscountReasonCd>AntiTheftDiscount</DiscountReasonCd>
+                    <DiscountPc>0.15</DiscountPc>
+                  </VehicleDiscounts>
+                  <VehicleDiscounts id="106">
+                    <DiscountReasonCd>PassiveRestraintDiscount</DiscountReasonCd>
+                    <DiscountPc>0.3</DiscountPc>
+                  </VehicleDiscounts>
+                  <TotalPremiumAm>3950.00</TotalPremiumAm>
+                </VehicleCoverageDetails>
+                <AssociatedReports id="110">
+                  <ReportTypeCd>PrefilledReport</ReportTypeCd>
+                  <ReportReferenceId>1578681589600</ReportReferenceId>
+                </AssociatedReports>
+                <AssociatedReports id="113">
+                  <ReportTypeCd>VehicleHistoryReport</ReportTypeCd>
+                  <ReportReferenceId>1578682568797</ReportReferenceId>
+                </AssociatedReports>
+                <AssociatedReports id="116">
+                  <ReportTypeCd>CreditReport</ReportTypeCd>
+                  <ReportReferenceId>1578682568797</ReportReferenceId>
+                </AssociatedReports>
+                <AssociatedReports id="119">
+                  <ReportTypeCd>MVRReport</ReportTypeCd>
+                  <ReportReferenceId>1578682596670</ReportReferenceId>
+                </AssociatedReports>
+                <AssociatedReports id="122">
+                  <ReportTypeCd>CLUEReport</ReportTypeCd>
+                  <ReportReferenceId>1578682596678</ReportReferenceId>
+                </AssociatedReports>
+                <CoverageElectionParameters id="125">
+                  <CoverageTypeCd>Liability</CoverageTypeCd>
+                  <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>$300,000</CoverageParameterValueTx>
+                  <CoverageParameterUnformattedValueTx>300000</CoverageParameterUnformattedValueTx>
+                  <CoverageParameterPremiumAm>1639.00</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="131">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>PIP Un Insured Under Insured Motorist Limit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>$300,000</CoverageParameterValueTx>
+                  <CoverageParameterUnformattedValueTx>300000</CoverageParameterUnformattedValueTx>
+                  <CoverageParameterPremiumAm>943.00</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="137">
+                  <CoverageTypeCd>Medical Expense</CoverageTypeCd>
+                  <CoverageParameterTypeCd>Medical Expense Limit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>$10,000</CoverageParameterValueTx>
+                  <CoverageParameterUnformattedValueTx>10000</CoverageParameterUnformattedValueTx>
+                  <CoverageParameterPremiumAm>135.00</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="143">
+                  <CoverageTypeCd>Basic Reparations</CoverageTypeCd>
+                  <CoverageParameterTypeCd>Basic Reparations Limit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>No Coverage</CoverageParameterValueTx>
+                  <CoverageParameterUnformattedValueTx>Declined</CoverageParameterUnformattedValueTx>
+                  <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="149">
+                  <CoverageTypeCd>Additional Reparations</CoverageTypeCd>
+                  <CoverageParameterTypeCd>Additional Reparations Limit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>No Coverage</CoverageParameterValueTx>
+                  <CoverageParameterUnformattedValueTx>Declined</CoverageParameterUnformattedValueTx>
+                  <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="155">
+                  <CoverageTypeCd>Additional Reparations</CoverageTypeCd>
+                  <CoverageParameterTypeCd>Work Loss and Survivors Loss Limit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>No Coverage</CoverageParameterValueTx>
+                  <CoverageParameterUnformattedValueTx>Declined</CoverageParameterUnformattedValueTx>
+                  <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="161">
+                  <CoverageTypeCd>Extended NonOwned Liability</CoverageTypeCd>
+                  <CoverageParameterTypeCd>Extended NonOwned Liability</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>Single Named Individual</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>0.00</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="166">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMConversionLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>300000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>4014</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="171">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMStandardLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>300000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>943</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="176">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMConversionLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>600000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>5276</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="181">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMStandardLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>600000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>1383</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="186">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMConversionLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>50000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>1469</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="191">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMStandardLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>50000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>222</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="196">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMConversionLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>75000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>1627</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="201">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMStandardLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>75000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>265</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="206">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMConversionLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>100000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>2227</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="211">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMStandardLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>100000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>396</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="216">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMConversionLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>150000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>2673</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="221">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMStandardLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>150000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>533</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="226">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMConversionLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>200000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>3238</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="231">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMStandardLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>200000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>627</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="236">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMConversionLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>500000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>4936</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <CoverageElectionParameters id="241">
+                  <CoverageTypeCd>UnInsured UnderInsured Motorist</CoverageTypeCd>
+                  <CoverageParameterTypeCd>UMUIMStandardLimit</CoverageParameterTypeCd>
+                  <CoverageParameterValueTx>500000</CoverageParameterValueTx>
+                  <CoverageParameterPremiumAm>1269</CoverageParameterPremiumAm>
+                </CoverageElectionParameters>
+                <NonCoverageCharges id="246">
+                  <ChargeReasonCd>NJ PLIGA Charge</ChargeReasonCd>
+                  <ChargeAm>0</ChargeAm>
+                </NonCoverageCharges>
+                <SummaryAmounts id="249">
+                  <AmountTypeCd>Total Basic Premium Full Tort</AmountTypeCd>
+                  <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+                  <SummaryAm>0.00</SummaryAm>
+                </SummaryAmounts>
+                <SummaryAmounts id="253">
+                  <AmountTypeCd>Total Basic Premium</AmountTypeCd>
+                  <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+                  <SummaryAm>0.00</SummaryAm>
+                </SummaryAmounts>
+              </PersonalAutoLine>
+            </PolicyLines>
+            <ListedParties id="257">
+              <Party id="258">
+                <PartyId>1</PartyId>
+                <Person id="260">
+                  <PersonName id="261">
+                    <UnparsedNameTx>Naga Raja Cholan  MA MLA</UnparsedNameTx>
+                    <FirstGivenNm>Naga Raja Cholan</FirstGivenNm>
+                    <FamilyNm>MA MLA</FamilyNm>
+                  </PersonName>
+                  <BirthDt>1970-01-01</BirthDt>
+                  <GenderCd>M</GenderCd>
+                  <MaritalStatusCd>M</MaritalStatusCd>
+                  <FirstLicensedMonthAndYr>022001</FirstLicensedMonthAndYr>
+                  <VehicleDriverLicense id="269">
+                    <IssuingAdministrativeCountrySubdivisionCd>Connecticut</IssuingAdministrativeCountrySubdivisionCd>
+                    <LicenseId>253253362</LicenseId>
+                    <LicenseStatusCd>Active</LicenseStatusCd>
+                  </VehicleDriverLicense>
+                  <Addresses id="273">
+                    <Address id="274">
+                      <Line1Tx>65 Downey Dr D</Line1Tx>
+                      <Municipality id="276">
+                        <MunicipalityNm>Manchester</MunicipalityNm>
+                        <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="279">
+                        <CountrySubdivisionNm>CT</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>06040</PostalCd>
+                    </Address>
+                    <TerritoryCd>350</TerritoryCd>
+                    <AddressUseCd>Home</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <Telephones id="286">
+                    <PartyUseCd>Personal</PartyUseCd>
+                    <TransmissionContentCd>Voice</TransmissionContentCd>
+                    <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+                    <PhoneNumber id="290">
+                      <UnparsedPhoneNr>215-425-5859</UnparsedPhoneNr>
+                      <AreaCd>215</AreaCd>
+                      <ExchangeId>425</ExchangeId>
+                      <SubscriberLineId>5859</SubscriberLineId>
+                    </PhoneNumber>
+                    <PrimaryPhoneIn>true</PrimaryPhoneIn>
+                  </Telephones>
+                  <OfficialIdentifications id="296">
+                    <IdentificationTypeCd>NJBIA MemeberShip Number</IdentificationTypeCd>
+                    <IdentificationCd>58000</IdentificationCd>
+                    <IssuingCountrySubdivisionCd>NJ</IssuingCountrySubdivisionCd>
+                  </OfficialIdentifications>
+                  <OfficialIdentifications id="300">
+                    <IdentificationTypeCd>Driver License</IdentificationTypeCd>
+                    <IdentificationCd>253253362</IdentificationCd>
+                    <IssuingCountrySubdivisionCd>Connecticut</IssuingCountrySubdivisionCd>
+                  </OfficialIdentifications>
+                </Person>
+                <Organization id="29">
+                  <OrganizationNm>BANK OF AMERICA NA</OrganizationNm>
+                  <Addresses id="30">
+                    <Address id="31">
+                      <Line1Tx>PO BOX 961291</Line1Tx>
+                      <Municipality id="32">
+                        <MunicipalityNm>FORT WORTH</MunicipalityNm>
+                        <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="33">
+                        <CountrySubdivisionNm>TX</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>76161</PostalCd>
+                    </Address>
+                  </Addresses>
+                  <EmailAddresses id="43">
+                    <EmailAddress id="44">
+                      <UnparsedEmailAddress>DBADataMasking1@NJM.COM</UnparsedEmailAddress>
+                    </EmailAddress>
+                  </EmailAddresses>
+                </Organization>
+                <PartyTypeCd>Person</PartyTypeCd>
+                <PartyRoles>Policy Driver</PartyRoles>
+                <PartyRoles>Account Holder</PartyRoles>
+                <PartyRoles>Primary Named Insured</PartyRoles>
+              </Party>
+              <DriverStatusCd>Insured Driver</DriverStatusCd>
+            </ListedParties>
+            <ListedParties id="57">
+              <Party id="58">
+                <PartyId>pc:152616</PartyId>
+                <PartyOrderNr>34166110</PartyOrderNr>
+                <Organization id="59">
+                  <OrganizationNm>BANK OF AMERICA NA</OrganizationNm>
+                  <Addresses id="60">
+                    <Address id="61">
+                      <Line1Tx>PO BOX 961291</Line1Tx>
+                      <Municipality id="62">
+                        <MunicipalityNm>FORT WORTH</MunicipalityNm>
+                        <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                      </Municipality>
+                      <CountrySubdivision id="63">
+                        <CountrySubdivisionNm>TX</CountrySubdivisionNm>
+                        <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                      </CountrySubdivision>
+                      <PostalCd>76161</PostalCd>
+                    </Address>
+                    <AddressUseCd>Business</AddressUseCd>
+                    <PrimaryAddressIn>true</PrimaryAddressIn>
+                  </Addresses>
+                  <EmailAddresses id="43">
+                    <EmailAddress id="44">
+                      <UnparsedEmailAddress>DBADataMasking4@NJM.COM</UnparsedEmailAddress>
+                    </EmailAddress>
+                  </EmailAddresses>
+                </Organization>
+                <PartyTypeCd>Organization</PartyTypeCd>
+                <PartyRoles>Additional Interest</PartyRoles>
+              </Party>
+            </ListedParties>
+            <NotableEvents id="310">
+              <EventNumber>QQ463869055</EventNumber>
+              <EventCategoryCd>CurrentWorkOrder</EventCategoryCd>
+              <EventTypeCd>Submission</EventTypeCd>
+              <EventStatusCd>Quoted</EventStatusCd>
+              <EventCreationDt>2020-01-10T13:39:24.281-05:00</EventCreationDt>
+              <EventChangeEffectiveDt>2020-01-10T00:01:00-05:00</EventChangeEffectiveDt>
+            </NotableEvents>
+            <PolicyLocation id="317">
+              <Address id="318">
+                <Line1Tx>65 Downey Dr D</Line1Tx>
+                <Municipality id="320">
+                  <MunicipalityNm>Manchester</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="323">
+                  <CountrySubdivisionNm>CT</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>06040</PostalCd>
+              </Address>
+              <TerritoryCd>350</TerritoryCd>
+            </PolicyLocation>
+            <NJBIAMembershipMemberNumber>58000</NJBIAMembershipMemberNumber>
+          </PolicyPeriod>
+        </Policy>
+      </retrievePolicyByQuoteNumberRespMsg>
+    </pir:retrievePolicyByQuoteNumberResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

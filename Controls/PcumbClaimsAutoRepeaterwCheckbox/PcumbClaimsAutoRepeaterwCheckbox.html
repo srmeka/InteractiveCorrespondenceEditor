@@ -1,0 +1,36 @@
+﻿<div class="panel panel-primary" ng-controller="PcumbClaimsAutoRepeaterwCheckboxController">
+    <div class="panel-heading">Claims Auto</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div style="margin-bottom:15px" ng-repeat="slector in populateData track by $index">
+                <div class="row">
+                    <!--Checkbox to enable control-->
+                    <div class="col-md-3">
+                        <input type="checkbox" 
+                               ng-click="clearAllData($index)" 
+                               ng-model="isClaimCheckboxSelected[$index]" 
+                               name="completedAddressCheckbox{{$index}}" 
+                               id="completedAddressCheckbox{{$index}}"
+                               value="" />
+                        <label>Include Claims Auto</label>
+                    </div>
+                    <!--Driver dropdown list and input-->
+                    <div class="col-md-3" style="margin-top:3px;" ng-class="(isClaimCheckboxSelected[slector.selectorId])?'':'disabled-class'"><label>Driver Name:</label></div>
+                    <div class="col-md-3">
+                        <select ng-disabled="!isClaimCheckboxSelected[slector.selectorId]" ng-options="(item.Person.PersonName.FirstGivenNm+ ' ' + item.Person.PersonName.SecondGivenNm + ' ' + item.Person.PersonName.FamilyNm)  for item in addressData track by item._id" name="addressSelection" ng-model="slector.selectedValue" class="form-control" id="addressSelectionId">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input ng-disabled="!isClaimCheckboxSelected[slector.selectorId] || slector.selectedValue" ng-model="freeTextGroup[slector.selectorId]" type="text" class="form-control" name="addressText" value="" />
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 10px; border-bottom: 2px solid lightgray"></div>
+            </div>
+            <div class="col-md-12 text-center">
+                <input type="button" class="btn-primary" value="Add" ng-if="showAddBtn" ng-click="addSelector()">
+                <input type="button" class="btn-primary" value="Remove" ng-if="showRemoveBtn" ng-click="removeSelector()">
+            </div>
+        </div>
+    </div>
+</div>  

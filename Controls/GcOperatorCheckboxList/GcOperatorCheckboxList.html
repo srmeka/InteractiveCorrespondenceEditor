@@ -1,0 +1,16 @@
+﻿<div class="panel panel-primary" ng-controller="GcOperatorCheckboxListController">
+    <div class="panel-heading">Operator of The Insured Vehicle</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+
+                <!--Operator checkbox list-->
+                <div class="row" style="margin-top:5px" ng-repeat="item in displayData track by $index">
+                    <input type="checkbox" name="{{item.checkboxName}}" id="{{item.checkboxName}}Id" ng-model="item.onChecked" value="" />
+                    <label ng-bind="item.labelText"></label>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

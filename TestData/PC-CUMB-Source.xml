@@ -1,0 +1,227 @@
+﻿<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cumbpir="http://njm.com/esb/pds/cumb/1.0/interfaces/CUMBPolicyInfomationRetriever" xmlns:typ="http://njm.com/esb/pds/cumb/1.0/types" xmlns:esbcommon="http://njm.com/esb/common/types" xmlns:ebt="http://njm.com/esb/business/1.3.0/types">
+  <soapenv:Body>
+    <cumbpir:retrievePolicyByPolicyNumberResponse>
+      <typ:RetrievePolicyByPolicyNumberResponseMessage>
+        <esbcommon:Header>
+          <esbcommon:Version>1.0</esbcommon:Version>
+          <esbcommon:CorrelationContext>
+            <esbcommon:CorrelationId>2</esbcommon:CorrelationId>
+          </esbcommon:CorrelationContext>
+          <esbcommon:ErrorIn>false</esbcommon:ErrorIn>
+        </esbcommon:Header>
+        <typ:Policy id="1">
+          <typ:PolicyNumber>1501139596</typ:PolicyNumber>
+          <typ:UnderwritingCompany id="3">
+            <typ:OrganizationNm>New Jersey Manufacturers Insurance</typ:OrganizationNm>
+          </typ:UnderwritingCompany>
+          <typ:LineOfBusinessCd>Commercial Excess and Umbrella</typ:LineOfBusinessCd>
+          <typ:BaseStateCd>NJ</typ:BaseStateCd>
+          <typ:Account id="7">
+            <typ:AccountNo>AA625403048</typ:AccountNo>
+          </typ:Account>
+          <typ:PolicyProductCd>CUSV</typ:PolicyProductCd>
+          <typ:IndustryOfferingCd>SV</typ:IndustryOfferingCd>
+          <typ:PolicyPeriod id="11">
+            <typ:QuoteNumber>QQ652771042</typ:QuoteNumber>
+            <typ:StartDt>2020-01-30T00:01:00-05:00</typ:StartDt>
+            <typ:EndDt>2021-01-30T00:01:00-05:00</typ:EndDt>
+            <typ:StatusCd>In Force</typ:StatusCd>
+            <typ:ListedParties id="16">
+              <typ:Party id="17">
+                <typ:PartyId>pc:2423053</typ:PartyId>
+                <typ:Organization id="19">
+                  <typ:OrganizationNm>Shashank Dikay Company 1</typ:OrganizationNm>
+                  <typ:Addresses id="21">
+                    <typ:Address id="22">
+                      <ebt:Line1Tx>14 Witherspoon St Ste A</ebt:Line1Tx>
+                      <ebt:Municipality id="24">
+                        <ebt:MunicipalityNm>Princeton</ebt:MunicipalityNm>
+                        <ebt:MunicipalityTypeCd>City</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:Municipality id="27">
+                        <ebt:MunicipalityNm>Mercer</ebt:MunicipalityNm>
+                        <ebt:MunicipalityTypeCd>County</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:CountrySubdivision id="30">
+                        <ebt:CountrySubdivisionNm>NJ</ebt:CountrySubdivisionNm>
+                        <ebt:CountrySubdivisionTypeCd>State</ebt:CountrySubdivisionTypeCd>
+                      </ebt:CountrySubdivision>
+                      <ebt:PostalCd>08542</ebt:PostalCd>
+                    </typ:Address>
+                    <typ:AddressUseCd>Business</typ:AddressUseCd>
+                    <typ:PrimaryAddressIn>true</typ:PrimaryAddressIn>
+                  </typ:Addresses>
+                </typ:Organization>
+                <typ:PartyTypeCd>Organization</typ:PartyTypeCd>
+                <typ:PartyRoles>Primary Named Insured</typ:PartyRoles>
+              </typ:Party>
+            </typ:ListedParties>
+            <typ:ListedParties id="38">
+              <typ:Party id="39">
+                <typ:PartyId>pc:2423055</typ:PartyId>
+                <typ:Person id="41">
+                  <typ:PersonName id="42">
+                    <ebt:UnparsedNameTx>Shashank  Dikay</ebt:UnparsedNameTx>
+                    <ebt:FirstGivenNm>Shashank</ebt:FirstGivenNm>
+                    <ebt:FamilyNm>Dikay</ebt:FamilyNm>
+                  </typ:PersonName>
+                  <typ:Addresses id="46">
+                    <typ:Address id="47">
+                      <ebt:Line1Tx>14 Witherspoon St Ste A</ebt:Line1Tx>
+                      <ebt:Municipality id="49">
+                        <ebt:MunicipalityNm>Princeton</ebt:MunicipalityNm>
+                        <ebt:MunicipalityTypeCd>City</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:Municipality id="52">
+                        <ebt:MunicipalityNm>Mercer</ebt:MunicipalityNm>
+                        <ebt:MunicipalityTypeCd>County</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:CountrySubdivision id="55">
+                        <ebt:CountrySubdivisionNm>NJ</ebt:CountrySubdivisionNm>
+                        <ebt:CountrySubdivisionTypeCd>State</ebt:CountrySubdivisionTypeCd>
+                      </ebt:CountrySubdivision>
+                      <ebt:PostalCd>08542</ebt:PostalCd>
+                    </typ:Address>
+                    <typ:AddressUseCd>Business</typ:AddressUseCd>
+                    <typ:PrimaryAddressIn>true</typ:PrimaryAddressIn>
+                  </typ:Addresses>
+                </typ:Person>
+                <typ:PartyTypeCd>Person</typ:PartyTypeCd>
+                <typ:PartyRoles>Additional Named Insured</typ:PartyRoles>
+              </typ:Party>
+            </typ:ListedParties>
+            <typ:ListedParties id="63">
+              <typ:Party id="64">
+                <typ:PartyId>pc:2423056</typ:PartyId>
+                <typ:Person id="66">
+                  <typ:PersonName id="67">
+                    <ebt:UnparsedNameTx>Zamir  Dikay</ebt:UnparsedNameTx>
+                    <ebt:FirstGivenNm>Zamir</ebt:FirstGivenNm>
+                    <ebt:FamilyNm>Dikay</ebt:FamilyNm>
+                  </typ:PersonName>
+                  <typ:Addresses id="71">
+                    <typ:Address id="72">
+                      <ebt:Line1Tx>280 Nassau St</ebt:Line1Tx>
+                      <ebt:Municipality id="74">
+                        <ebt:MunicipalityNm>Princeton</ebt:MunicipalityNm>
+                        <ebt:MunicipalityTypeCd>City</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:Municipality id="77">
+                        <ebt:MunicipalityNm>Mercer</ebt:MunicipalityNm>
+                        <ebt:MunicipalityTypeCd>County</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:CountrySubdivision id="80">
+                        <ebt:CountrySubdivisionNm>NJ</ebt:CountrySubdivisionNm>
+                        <ebt:CountrySubdivisionTypeCd>State</ebt:CountrySubdivisionTypeCd>
+                      </ebt:CountrySubdivision>
+                      <ebt:PostalCd>08540</ebt:PostalCd>
+                      <ebt:PostalExtensionCd>4620</ebt:PostalExtensionCd>
+                    </typ:Address>
+                    <typ:AddressUseCd>Home</typ:AddressUseCd>
+                    <typ:PrimaryAddressIn>true</typ:PrimaryAddressIn>
+                  </typ:Addresses>
+                </typ:Person>
+                <typ:PartyTypeCd>Person</typ:PartyTypeCd>
+                <typ:PartyRoles>Additional Named Insured</typ:PartyRoles>
+              </typ:Party>
+            </typ:ListedParties>
+            <typ:ListedParties id="89">
+              <typ:Party id="90">
+                <typ:PartyId>pc:2423054</typ:PartyId>
+                <typ:Organization id="92">
+                  <typ:OrganizationNm>This is the Shashank Co 1 Doing Business As</typ:OrganizationNm>
+                  <typ:Addresses id="94">
+                    <typ:Address id="95">
+                      <ebt:Line1Tx>14 Witherspoon St Ste A</ebt:Line1Tx>
+                      <ebt:Municipality id="97">
+                        <ebt:MunicipalityNm>Princeton</ebt:MunicipalityNm>
+                        <ebt:MunicipalityTypeCd>City</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:Municipality id="100">
+                        <ebt:MunicipalityNm>Mercer</ebt:MunicipalityNm>
+                        <ebt:MunicipalityTypeCd>County</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:CountrySubdivision id="103">
+                        <ebt:CountrySubdivisionNm>NJ</ebt:CountrySubdivisionNm>
+                        <ebt:CountrySubdivisionTypeCd>State</ebt:CountrySubdivisionTypeCd>
+                      </ebt:CountrySubdivision>
+                      <ebt:PostalCd>08542</ebt:PostalCd>
+                    </typ:Address>
+                    <typ:AddressUseCd>Business</typ:AddressUseCd>
+                    <typ:PrimaryAddressIn>true</typ:PrimaryAddressIn>
+                  </typ:Addresses>
+                </typ:Organization>
+                <typ:PartyTypeCd>Organization</typ:PartyTypeCd>
+                <typ:PartyRoles>DBA</typ:PartyRoles>
+              </typ:Party>
+            </typ:ListedParties>
+            <typ:ListedParties id="111">
+              <typ:Party id="112">
+                <typ:PartyId>pc:2423057</typ:PartyId>
+                <typ:Organization id="114">
+                  <typ:OrganizationNm>Shashank Company 1 Addl Named Ins DBA</typ:OrganizationNm>
+                  <typ:Addresses id="116">
+                    <typ:Address id="117">
+                      <ebt:Line1Tx>14 Witherspoon St Ste A</ebt:Line1Tx>
+                      <ebt:Municipality id="119">
+                        <ebt:MunicipalityNm>Princeton</ebt:MunicipalityNm>
+                        <ebt:MunicipalityTypeCd>City</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:Municipality id="122">
+                        <ebt:MunicipalityNm>Mercer</ebt:MunicipalityNm>
+                        <ebt:MunicipalityTypeCd>County</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:CountrySubdivision id="125">
+                        <ebt:CountrySubdivisionNm>NJ</ebt:CountrySubdivisionNm>
+                        <ebt:CountrySubdivisionTypeCd>State</ebt:CountrySubdivisionTypeCd>
+                      </ebt:CountrySubdivision>
+                      <ebt:PostalCd>08542</ebt:PostalCd>
+                    </typ:Address>
+                    <typ:AddressUseCd>Business</typ:AddressUseCd>
+                    <typ:PrimaryAddressIn>true</typ:PrimaryAddressIn>
+                  </typ:Addresses>
+                </typ:Organization>
+                <typ:PartyTypeCd>Organization</typ:PartyTypeCd>
+                <typ:PartyRoles>DBA</typ:PartyRoles>
+              </typ:Party>
+            </typ:ListedParties>
+            <typ:ListedParties id="133">
+              <typ:Party id="134">
+                <typ:PartyId>pc:23281</typ:PartyId>
+                <typ:Organization id="136">
+                  <typ:OrganizationNm>JOHN BUCK KERLIN</typ:OrganizationNm>
+                  <typ:Addresses id="138">
+                    <typ:Address id="139">
+                      <ebt:Line1Tx>134 NASSAU ST</ebt:Line1Tx>
+                      <ebt:Municipality id="141">
+                        <ebt:MunicipalityNm>PRINCETON</ebt:MunicipalityNm>
+                        <ebt:MunicipalityTypeCd>City</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:Municipality id="144">
+                        <ebt:MunicipalityTypeCd>County</ebt:MunicipalityTypeCd>
+                      </ebt:Municipality>
+                      <ebt:CountrySubdivision id="146">
+                        <ebt:CountrySubdivisionNm>NJ</ebt:CountrySubdivisionNm>
+                        <ebt:CountrySubdivisionTypeCd>State</ebt:CountrySubdivisionTypeCd>
+                      </ebt:CountrySubdivision>
+                      <ebt:PostalCd>08542</ebt:PostalCd>
+                    </typ:Address>
+                    <typ:AddressUseCd>Business</typ:AddressUseCd>
+                    <typ:PrimaryAddressIn>true</typ:PrimaryAddressIn>
+                  </typ:Addresses>
+                </typ:Organization>
+                <typ:PartyTypeCd>Organization</typ:PartyTypeCd>
+                <typ:PartyRoles>Producer of Record</typ:PartyRoles>
+                <typ:PartyRoles>Producer of Service</typ:PartyRoles>
+              </typ:Party>
+            </typ:ListedParties>
+          </typ:PolicyPeriod>
+        </typ:Policy>
+        <typ:CoverageStatus id="155">
+          <typ:AsOfDt>2019-12-27T11:01:39.41-05:00</typ:AsOfDt>
+          <typ:StatusIn>false</typ:StatusIn>
+        </typ:CoverageStatus>
+      </typ:RetrievePolicyByPolicyNumberResponseMessage>
+    </cumbpir:retrievePolicyByPolicyNumberResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

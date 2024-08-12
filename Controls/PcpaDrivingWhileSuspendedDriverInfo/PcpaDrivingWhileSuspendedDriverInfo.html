@@ -1,0 +1,33 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaDrivingWhileSuspendedDriverInfoController">
+    <div class="panel-heading">
+        Driving While Suspended Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <input ng-click="clearAllSelectedData()" ng-model="isDrivingSusDriverSelected" type="checkbox" id="DrivingSusDriverCheckboxId" name="DrivingSusDriverCheckbox" />
+                    <label>Include Driving While Suspended</label>
+                </div>
+                <div class="col-md-8">
+                    <div ng-repeat="DrivingSusDriverInfo in DrivingSusDriver">
+                        <input ng-model="DrivingSusDriverInfo.DrivingSusDriverChecked" 
+                               ng-change="selectDrivingSusDriver(DrivingSusDriverInfo)" 
+                               type="checkbox" 
+                               ng-disabled="!isDrivingSusDriverSelected" 
+                               name="DrivingSusDriverCheckboxLst" 
+                               id="DrivingSusDriverCheckboxLstId" />
+                        <span ng-bind="DrivingSusDriverInfo.Person.PersonName.FirstGivenNm + ' ' + DrivingSusDriverInfo.Person.SecondGivenNameInitial + ' ' + DrivingSusDriverInfo.Person.PersonName.FamilyNm + ' ' + DrivingSusDriverInfo.Person.PersonName.FamilyNameGenerationCd"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <span class="alert-danger" ng-if="DrivingSusDriver.length === 0">Information not provided by source</span>
+                    <input class="form-control" type="text" ng-model="DrivingSusDriverInput" ng-disabled="!isDrivingSusDriverSelected" name="DrivingSusDriverInput" id="DrivingSusDriverInputId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

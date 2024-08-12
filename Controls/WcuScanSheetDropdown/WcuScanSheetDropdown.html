@@ -1,0 +1,61 @@
+﻿<div class="panel panel-primary" ng-controller="WcuScanSheetDropdownController">
+
+    <div class="panel-body">
+        <div class="form-group">
+
+            <div class="row">
+                <div class="col-md-3">
+                    <label>* Year:</label>
+                </div>
+                <div class="col-md-9">
+                    <select class="form-control" 
+                            name="ScansheetYearDropdown" 
+                            ng-model="SelectedYearDropdownValue" 
+                            ng-options="PopulateYearDropdownInfo for PopulateYearDropdownInfo in PopulateYearDropdown" 
+                            id="ScansheetYearDropdownID" 
+                            ng-required="true">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger" 
+                          ng-show="PopulateYearDropdownInfo == 0">Information not provided</span>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:5px" ng-hide="!LabelName1">
+                <div class="col-md-3">
+                    <label>{{LabelName1}}:</label>
+                </div>
+                <div class="col-md-9">
+                    <select class="form-control" 
+                            name="ScansheetDropdown1" 
+                            ng-model="SelectedDropdownValue1" 
+                            ng-options="PopulateDropdownInfo1 for PopulateDropdownInfo1 in PopulateDropdown1" 
+                            id="ScansheetDropdownID1">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger" 
+                          ng-show="PopulateDropdownInfo1 == 0">Information not provided</span>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:5px" ng-hide="!LabelName2">
+                <div class="col-md-3">
+                    <label>{{LabelName2}}:</label>
+                </div>
+                <div class="col-md-9">
+                    <select class="form-control" 
+                            name="ScansheetDropdown2" 
+                            ng-model="SelectedDropdownValue2" 
+                            ng-options="PopulateDropdownInfo2 for PopulateDropdownInfo2 in PopulateDropdown2" 
+                            id="ScansheetDropdownID2">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger" 
+                          ng-show="PopulateDropdownInfo2 == 0">Information not provided</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

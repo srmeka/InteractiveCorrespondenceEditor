@@ -1,0 +1,24 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaCsfEffectiveDropdownController">
+    <div class="panel-heading">
+        CSF Effective
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    <label>
+                        * CSF Effective
+                    </label>
+                </div>
+                <div class="col-md-8">
+                    <!--CSF effective data dropdown list-->
+                    <select class="form-control" name="EffectiveId" ng-model="SelectedEffective"  ng-required="true" ng-options="item.lookupItemCode for item in Effective" id="SelectedEffectiveID">
+                        <option value="" disabled selected>--Select--</option>
+                    </select>
+
+                    <span class="alert-danger" ng-if="Effective.length === 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,115 @@
+﻿<div class="panel panel-primary" ng-controller="WccReSectionDropdownwControlsController">
+    <div class="panel-heading">Re: Section</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--RE table header-->
+            <div class="row" style="border-bottom: 2px solid lightgray">
+                <div class="col-md-4"><label>Label</label></div>
+                <div class="col-md-8"><label>Reference</label></div>
+            </div>
+
+            <!--Policy Number-->
+            <div class="row" style="margin-top:15px" ng-show="{{ShowPolicyNum}}">
+                <div class="col-md-4">
+                    <input type="checkbox" name="CtrlEnableRe1" ng-model="CtrlEnableRe1" id="CtrlEnableRe1Id" value="" />
+                    <label>Policy Number:</label>
+                </div>
+                <div class="col-md-8">
+                    <span ng-class="(CtrlEnableRe1)?'':'disabled-class'" ng-init="PolicyNum = ClaimData[0]" ng-bind="ClaimData[0]" ng-model="PolicyNum"></span>
+                </div>
+            </div>
+
+            <!--MPC Applicant -->
+            <div class="row" style="margin-top:5px" ng-show="{{ShowMPCapplicant}}">
+                <div class="col-md-4" style="margin-top:5px">
+                    <input type="checkbox" name="CtrlEnableRe2" ng-model="CtrlEnableRe2" id="CtrlEnableRe2Id" value="" />
+                    <label>MPC Applicant:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" ng-disabled="!CtrlEnableRe2" ng-required="CtrlEnableRe2" ng-model="txtMPCapplicant" class="form-control" name="txtInput2" id="txtInput2Id" maxlength="60" />
+                </div>
+            </div>
+
+            <!--Claim Petition Number -->
+            <div class="row" style="margin-top:5px" ng-show="{{ShowClaimPetNum}}">
+                <div class="col-md-4" style="margin-top:5px">
+                    <input type="checkbox" name="CtrlEnableRe3" ng-model="CtrlEnableRe3" id="CtrlEnableRe3Id" value="" />
+                    <label>Claim Petition Number:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" ng-disabled="!CtrlEnableRe3" ng-required="CtrlEnableRe3" ng-model="txtClaimPetNum" class="form-control" name="txtInput3" id="txtInput3Id"  />
+                </div>
+            </div>
+
+            <!--State ID Number -->
+            <div class="row" style="margin-top:5px" ng-show="{{ShowStateNum}}">
+                <div class="col-md-4" style="margin-top:5px">
+                    <input type="checkbox" name="CtrlEnableRe4" ng-model="CtrlEnableRe4" id="CtrlEnableRe4Id" value="" />
+                    <label>State ID Number:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" ng-disabled="!CtrlEnableRe4" ng-required="CtrlEnableRe4" ng-model="txtStateNum" class="form-control" name="txtInput4" id="txtInput4Id" maxlength="30" />
+                </div>
+            </div>
+
+            <!--Docket Number -->
+            <div class="row" style="margin-top:5px" ng-show="{{ShowDocketNum}}">
+                <div class="col-md-4" style="margin-top:5px">
+                    <input type="checkbox" name="CtrlEnableRe5" ng-model="CtrlEnableRe5" id="CtrlEnableRe52Id" value="" ng-show="!HideCtrlEnableRe5" />
+                    <label ng-show="HideCtrlEnableRe5">* </label>
+                    <label>Docket Number:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" ng-disabled="!CtrlEnableRe5" ng-required="CtrlEnableRe5" ng-model="txtDocketNum" class="form-control" name="txtInput5" id="txtInput5Id" maxlength="30" />
+                </div>
+            </div>
+
+            <!--Listing Date -->
+            <div class="row" style="margin-top:5px" ng-show="{{ShowListDate}}">
+                <div class="col-md-4" style="margin-top:5px">
+                    <input type="checkbox" name="CtrlEnableRe6" ng-model="CtrlEnableRe6" id="CtrlEnableRe62Id" value="" />
+                    <label>Listing Date:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" ng-disabled="!CtrlEnableRe6" ng-required="CtrlEnableRe6" ng-model="txtListDate" class="form-control" name="txtInput6" id="txtInput6Id" maxlength="30" />
+                </div>
+            </div>
+
+            <!--NY WCB Number -->
+            <div class="row" style="margin-top:5px" ng-show="{{ShowNYWCBnum}}">
+                <div class="col-md-4" style="margin-top:5px">
+                    <input type="checkbox" name="CtrlEnableRe7" ng-model="CtrlEnableRe7" id="CtrlEnableRe7Id" value="" ng-show="!HideCtrlEnableRe7" />
+                    <label ng-show="HideCtrlEnableRe7">* </label>
+                    <label>NY WCB Number:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" ng-disabled="!CtrlEnableRe7" ng-required="CtrlEnableRe7" ng-model="txtNYWCBnum" class="form-control" name="txtInput7" id="txtInput7Id" maxlength="30" />
+                </div>
+            </div>
+
+            <!--Reference Number -->
+            <div class="row" style="margin-top:5px" ng-show="{{ShowRefNum}}">
+                <div class="col-md-4" style="margin-top:5px">
+                    <input type="checkbox" name="CtrlEnableRe8" ng-model="CtrlEnableRe8" id="CtrlEnableRe8Id" value="" />
+                    <label>Reference Number:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" ng-disabled="!CtrlEnableRe8" ng-required="CtrlEnableRe8" ng-model="txtRefNum" class="form-control" name="txtInput8" id="txtInput8Id" maxlength="30" />
+                </div>
+            </div>
+
+            <!--CMS Case Control #-->
+            <div class="row" style="margin-top:5px" ng-show="{{ShowCMSCaseCtrl}}">
+                <div class="col-md-4" style="margin-top:5px">
+                    <input type="checkbox" name="CtrlEnableRe9" ng-model="CtrlEnableRe9" id="CtrlEnableRe9Id" value="" ng-show="false"/>
+                    <label>* CMS Case Control Number:</label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" ng-disabled="!CtrlEnableRe9" ng-required="CtrlEnableRe9" ng-model="txtCMSCaseCtrl" class="form-control" name="txtInput9" id="txtInput9Id" maxlength="30" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

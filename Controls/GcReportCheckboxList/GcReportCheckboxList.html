@@ -1,0 +1,28 @@
+﻿<div class="panel panel-primary" ng-controller="GcReportCheckboxListController">
+    <div class="panel-heading">Information Obtained in the Course of Investigation</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--LOB dropdown list-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Line of Business:</label>
+                </div>
+                <div class="col-md-8">
+                    <select class="form-control" ng-model="selectedLOB" ng-options="item.lookupItemCode for item in LOBData" name="LOBSelection" id="LOBSelectionId">
+                        <option value="">-Select-</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--Report checkbox list-->
+            <div class="col-md-12">
+                <div class="row" style="margin-top:5px" ng-repeat="item in displayData track by $index">
+                    <input type="checkbox" name="{{item.checkboxName}}" id="{{item.checkboxName}}Id" ng-model="item.onChecked" value="" />
+                    <label ng-bind="item.labelText"></label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

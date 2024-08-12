@@ -1,0 +1,92 @@
+﻿<div class="panel panel-primary" ng-controller="OutputProfileSectionController">
+    <div class="panel-heading">
+        Output Profile Section
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"  ng-model="USMail" ng-true-value="true" ng-init = "USMail=false" ng-false-value="false" id="USMailId" xml="mail" />US Mail
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"  ng-model="PrinterCheckbox" ng-true-value="true" ng-false-value="false" id="PrinterCheckboxId" />Print
+                        </label>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <select class="form-control" ng-disabled="!PrinterCheckbox" ng-required="PrinterCheckbox" name="OpPrinterDropdownId" ng-model="SelectedOpPrinter" ng-options="OpPrinterDropdownInfo.lookupItemValue for OpPrinterDropdownInfo in OpPrinterDropdown"  id="OpPrinterDropdownID">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="Email" ng-true-value="true" ng-false-value="false" />Email: (Select and/or enter up to 3 email addresses)
+                        </label>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <input type="text" ng-disabled="!Email" />
+                        <small class="form-text text-muted">
+                            (username@companyname.com)
+                        </small>
+                    </div>
+                    <div class="row">
+                        <input type="text" ng-disabled="!Email" />
+                    </div>
+                    <div class="row">
+                        <input type="text" ng-disabled="!Email" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-6">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="1" ng-model="Fax" ng-true-value="true" ng-false-value="false" />Fax Number / Recipient Name
+                        </label>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <input type="text" ng-disabled="!Fax" />
+                        <input type="text" ng-disabled="!Fax" />
+                        <small class="form-text text-muted">
+                            (Fax: 1xxxxxxxxxx/Name: Jane Doe Jr)
+                        </small>
+                    </div>
+                    <div class="row">
+                        <input type="text" ng-disabled="!Fax" />
+                        <input type="text" ng-disabled="!Fax" />
+                    </div>
+                    <div class="row">
+                        <input type="text" ng-disabled="!Fax" />
+                        <input type="text" ng-disabled="!Fax" />
+                    </div>
+                    <div class="row">
+                        <label>Fax Subject</label>
+                        <textarea class="form-control" rows="5" ng-model="FaxSubject" ng-disabled="!Fax" ng-init="text = 'Hello, this is my default text.'"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,121 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaNoticeNonrenewDropdownwControlsController">
+    <div class="panel-heading">
+        Notice of Nonrenewal
+    </div>
+    <div class="panel-body">
+        <div class="row" style="margin-bottom: 5px">
+            <div class="col-md-4">
+                <input type="checkbox" ng-model="NonrenewCheck" ng-click="ClearAllData()" name="NonrenewCheckbox" id="NonrenewCheckboxId" />
+                <label>Include Notice of Nonrenewal</label>
+            </div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 5px;">
+                        <label>Notice Type</label>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-control" ng-model="NonrenewReason" ng-options="item for item in Reasons" ng-change="ClearCurrentData()" ng-disabled="!NonrenewCheck" name="NonrenewReasons" id="NonrenewReasonsId">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Vehicle Select-->
+        <div class="row" ng-show="ShouldShowVehSelect()" style="margin-bottom: 5px">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 5px;">
+                        <label>* Vehicle Select</label>
+                    </div>
+                    <div class="col-md-6">
+                        <select class="form-control" ng-model="SelectedVehicle" ng-options="item.Vehicle.ModelYearNr + ' ' + item.Vehicle.VehicleTradeNm + ' ' + item.Vehicle.ModelNm + ' ' + item.Vehicle.ManufacturerVehicleIdentificationNr for item in Vehicle track by item._id" ng-disabled="Vehicle.length == 0" ng-required="ShouldShowVehSelect()" name="SelectVehicle" id="SelectVehicleId">
+                            <option value="" disabled>--Select--</option>
+                        </select>
+                        <span class="alert-danger" ng-show="Vehicle.length == 0">Information not provided by source</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Driver Name-->
+        <div class="row" ng-show="ShouldShowDriver()" style="margin-bottom: 5px">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 5px;">
+                        <label>* Driver Name</label>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-control" ng-model="SelectedDriver" ng-options="item.Person.PersonName.FirstGivenNm + ' ' + item.Person.SecondGivenNameInitial + ' ' + item.Person.PersonName.FamilyNm + ' ' + item.Person.PersonName.FamilyNameGenerationCd for item in Driver track by item._id" ng-change="ClearDriverNm()" name="SelectDriverNm" id="SelectDriverNmId" ng-disabled="Driver.length == 0" ng-required="ShouldShowDriver() && ManualDriverNm == ''">
+                            <option value="">--Select--</option>
+                        </select>
+                        <span class="alert-danger" ng-show="Driver.length == 0">Information not provided by source</span>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" ng-model="ManualDriverNm" ng-disabled="SelectedDriver!=undefined" name="SelectManualDriverNm" id="SelectManualDriverNmId" ng-required="ShouldShowDriver() && NonrenewReason!='II.A.2-Residency' && SelectedDriver == ''" />
+                    </div>
+
+                    <!--<div class="col-md-3" ng-hide="NonrenewReason=='II.A.2-Residency'">
+                        <input type="text" class="form-control" ng-model="ManualDriverNm" ng-disabled="SelectedDriver!=undefined" name="SelectManualDriverNm" id="SelectManualDriverNmId" ng-required="ShouldShowDriver() && NonrenewReason!='II.A.2-Residency' && SelectedDriver == ''" />
+                    </div>
+                    <div class="col-md-3" ng-show="NonrenewReason=='II.A.2-Residency'">
+                        <textarea class="form-control" rows="3" ng-model="ManualDriverNm" ng-disabled="SelectedDriver!=undefined" name="SelectManualDriverNmLst" id="SelectManualDriverNmLstId" ng-required="ShouldShowDriver() && NonrenewReason=='II.A.2-Residency' && SelectedDriver == ''"></textarea>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+
+        <!--Date Control-->
+        <div class="row" ng-show="ShouldShowDateCtrl()" style="margin-bottom: 5px">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 5px;">
+                        <label ng-show="NonrenewReason=='II.D.2-Cooperation-Duties after Acc'">
+                            * Claim Date
+                        </label>
+                        <label ng-show="NonrenewReason=='II.D.3-Cooperation-Claim Reimb' || NonrenewReason=='II.H.3-Additional DNR-Evidence Exists'">
+                            * Event Date
+                        </label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" ng-model="SelectedDate" ng-required="ShouldShowDateCtrl()" name="SelectDate" id="SelectDateId" datepicker />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Clue Ref Num-->
+        <div class="row" ng-show="ShouldShowClueRefNum()" style="margin-bottom: 5px">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 5px;">
+                        <label>Clue Reference Number</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" ng-model="ClueRefNum" name="ClueReferenceNumber" id="ClueReferenceNumberId" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Policy Year-->
+        <div class="row" ng-show="ShouldShowPolYr()" style="margin-bottom: 5px">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 5px;">
+                        <label>* Policy Year</label>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" date-format="yyyy" min-view="years" start-view="years" class="form-control" ng-model="SelectedPolYr" ng-required="ShouldShowPolYr()" name="SelectPolicyYear" id="SelectPolicyYearId" datepicker />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

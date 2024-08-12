@@ -1,0 +1,15 @@
+﻿<div class="panel panel-primary" ng-controller="GcPipDeductibileValueController">
+    <div class="panel-heading">PIP Deductible</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <!--PIP Deductible-->
+                <div class="col-md-4"><label>PIP Deductible:</label></div>
+                <div class="col-md-8">
+                    <span class="disabled-class" ng-bind="PIPData | currency" ng-show="PIPData"></span>
+                    <span class="alert-danger" ng-show="!PIPData">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

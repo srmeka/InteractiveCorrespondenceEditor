@@ -1,0 +1,32 @@
+﻿<div class="panel panel-primary" ng-controller="WccCheckPayableNmAddrDropdownController">
+    <div class="panel-heading">Check Payable To</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Check Payable To dropdown list-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Payable To Name:</label>
+                </div>
+                <div class="col-md-8">
+                    <select class="form-control" ng-change="selectedName()" ng-model="nameSelector" ng-options="item.displayName for item in ClaimantData">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--Payable To address dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4">
+                    <label>Payable To Address:</label>
+                </div>
+                <div class="col-md-8">
+                    <select ng-model="addressSelector" class="form-control" ng-options="('(' + address.Category + ') ' + address.StreetAddress1 + ' ' + address.StreetAddress2 +  ' ' + address.City + ', '  + address.State + ' ' + address.ZipCode )  for address in addressData">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CorrespondenceDataResponse xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:umcd="http://njm.com/esb/pds/um/correditor/1.0/interfaces/UMCorrespondenceData">
+  <Policy id="4">
+    <PolicyNumber>U0483057</PolicyNumber>
+    <LineOfBusinessCd>Personal Lines</LineOfBusinessCd>
+    <PolicyTypeCd>PersonalUmbrella</PolicyTypeCd>
+    <InceptionDt>2017-07-28T00:01:00-04:00</InceptionDt>
+    <ConvertedIn>N</ConvertedIn>
+    <BaseStateCd>NJ</BaseStateCd>
+    <UnderwritingCompany id="11">
+      <OrganizationNm>New Jersey Manufacturers Insurance</OrganizationNm>
+      <OrganizationNameCd>NJM</OrganizationNameCd>
+    </UnderwritingCompany>
+    <PolicyPeriod id="14">
+      <QuoteNumber>QQ178580191</QuoteNumber>
+      <StartDt>2019-07-28T00:01:00-04:00</StartDt>
+      <EndDt>2020-07-28T00:01:00-04:00</EndDt>
+      <RenewedIn>Y</RenewedIn>
+      <RenewalDt>2020-07-28T00:01:00-04:00</RenewalDt>
+      <StatusCd>In Force</StatusCd>
+      <DividendYr>2018</DividendYr>
+      <TotalDividendAm>0.00</TotalDividendAm>
+      <TotalAdjustDividendAm>0.00</TotalAdjustDividendAm>
+      <EndorsementEffectiveDt>2019-07-28T00:01:00-04:00</EndorsementEffectiveDt>
+      <PolicyLines id="25">
+        <UmbrellaLine id="26">
+          <HouseholdMembers id="27">
+            <Person id="28">
+              <PersonName id="29">
+                <FirstGivenNm>LAUREN</FirstGivenNm>
+                <SecondGivenNm>J</SecondGivenNm>
+                <FamilyNm>BRIGHTON</FamilyNm>
+              </PersonName>
+              <FirstLicensedMonthAndYr>1965</FirstLicensedMonthAndYr>
+              <VehicalDriverLicense id="34">
+                <LicenseId>B74144437127485</LicenseId>
+                <LicenseStatusCd>Active DL</LicenseStatusCd>
+              </VehicalDriverLicense>
+            </Person>
+            <HouseholdMemeberStatusCd>Insured Driver</HouseholdMemeberStatusCd>
+          </HouseholdMembers>
+          <CoverageElectionParameters id="38">
+            <CoverageTypeCd>Personal Liability</CoverageTypeCd>
+            <CoverageParameterTypeCd>Liability Limit</CoverageParameterTypeCd>
+            <CoverageParameterValueTx>1000000</CoverageParameterValueTx>
+            <CoverageParameterUnformattedValueTx>1000000</CoverageParameterUnformattedValueTx>
+          </CoverageElectionParameters>
+          <UnderlyingPolicies id="43">
+            <PolicyNumber>F7946817</PolicyNumber>
+            <PolicyTypeCd>Personal Auto</PolicyTypeCd>
+          </UnderlyingPolicies>
+          <UnderlyingPolicies id="46">
+            <PolicyNumber>H1957018</PolicyNumber>
+            <PolicyTypeCd>Property</PolicyTypeCd>
+          </UnderlyingPolicies>
+          <SummaryAmounts id="49">
+            <AmountTypeCd>Subtotal Policy Premium</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>147.00</SummaryAm>
+          </SummaryAmounts>
+          <SummaryAmounts id="53">
+            <AmountTypeCd>Total Additional Premium</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>147.00</SummaryAm>
+          </SummaryAmounts>
+          <SummaryAmounts id="57">
+            <AmountTypeCd>Total Policy Premium</AmountTypeCd>
+            <AmountTypeCategoryCd>Premium</AmountTypeCategoryCd>
+            <SummaryAm>148.00</SummaryAm>
+          </SummaryAmounts>
+          <NonCoverageCharges id="61">
+            <ChargeReasonCd>PLIGA</ChargeReasonCd>
+            <ChargeAm>1.00</ChargeAm>
+          </NonCoverageCharges>
+          <VehicleExposures id="64">
+            <Vehicle id="65">
+              <ModelYearNr>2010</ModelYearNr>
+              <VehicleTradeNm>HONDA</VehicleTradeNm>
+              <VehicleTypeCd>Private Passenger</VehicleTypeCd>
+            </Vehicle>
+          </VehicleExposures>
+          <LocationExposures id="69">
+            <LocationTypeCd>Property</LocationTypeCd>
+            <OccupancyTypeCd>Owner Occupied</OccupancyTypeCd>
+            <Address id="72">
+              <Line1Tx>8 CINDY CT</Line1Tx>
+              <Municipality id="74">
+                <MunicipalityNm>LEBANON</MunicipalityNm>
+                <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+              </Municipality>
+              <Municipality id="77">
+                <MunicipalityNm>HUNTERDON</MunicipalityNm>
+                <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+              </Municipality>
+              <CountrySubdivision id="80">
+                <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+              </CountrySubdivision>
+              <PostalCd>08833</PostalCd>
+              <PostalExtensionCd>2103</PostalExtensionCd>
+            </Address>
+          </LocationExposures>
+          <ExposureIndicators id="85">
+            <FamilyMemberIn>Y</FamilyMemberIn>
+            <LicensedFamilyMembersIn>Y</LicensedFamilyMembersIn>
+            <AutoMobileIndicators id="88">
+              <AutoMobileIn>Y</AutoMobileIn>
+              <CompanyPersonalAutoCountNr>0</CompanyPersonalAutoCountNr>
+              <PrivatePassengerCountNr>1</PrivatePassengerCountNr>
+              <MotorHomesCountNr>0</MotorHomesCountNr>
+              <AntiquesRUCExoticCountNr>0</AntiquesRUCExoticCountNr>
+            </AutoMobileIndicators>
+          </ExposureIndicators>
+        </UmbrellaLine>
+      </PolicyLines>
+      <ListedParties id="94">
+        <Party id="95">
+          <PartyId>pc:512283</PartyId>
+          <Person id="97">
+            <PersonName id="98">
+              <UnparsedNameTx>LAUREN BRIGHTON</UnparsedNameTx>
+              <FirstGivenNm>LAUREN</FirstGivenNm>
+              <SecondGivenNm>J</SecondGivenNm>
+              <FamilyNm>BRIGHTON</FamilyNm>
+            </PersonName>
+            <SecondGivenNameInitial>J</SecondGivenNameInitial>
+            <BirthDt>1947-08-30</BirthDt>
+            <MaritalStatusCd>Widowed</MaritalStatusCd>
+            <Addresses id="106">
+              <Address id="107">
+                <Line1Tx>8 CINDY CT</Line1Tx>
+                <Municipality id="109">
+                  <MunicipalityNm>LEBANON</MunicipalityNm>
+                  <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+                </Municipality>
+                <Municipality id="112">
+                  <MunicipalityNm>HUNTERDON</MunicipalityNm>
+                  <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+                </Municipality>
+                <CountrySubdivision id="115">
+                  <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+                  <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+                </CountrySubdivision>
+                <PostalCd>08833</PostalCd>
+              </Address>
+              <AddressUseCd>Home</AddressUseCd>
+              <PrimaryAddressIn>Y</PrimaryAddressIn>
+            </Addresses>
+            <EmailAddresses id="121">
+              <EmailAddress id="122">
+                <UnparsedEmailAddress>DBADataMasking@NJM.COM</UnparsedEmailAddress>
+              </EmailAddress>
+            </EmailAddresses>
+            <Telephones id="124">
+              <PartyUseCd>Personal</PartyUseCd>
+              <TransmissionContentCd>Voice</TransmissionContentCd>
+              <TransmissionTechnologyCd>Landline</TransmissionTechnologyCd>
+              <PhoneNumber id="128">
+                <UnparsedPhoneNr>908-638-6592</UnparsedPhoneNr>
+                <AreaCd>908</AreaCd>
+                <ExchangeId>638</ExchangeId>
+                <SubscriberLineId>6592</SubscriberLineId>
+              </PhoneNumber>
+              <PrimaryPhoneIn>Y</PrimaryPhoneIn>
+            </Telephones>
+          </Person>
+          <PartyTypeCd>Person</PartyTypeCd>
+          <PartyRoles>Primary Named Insured</PartyRoles>
+          <PartyRoles>Account Holder</PartyRoles>
+          <PartyRoles>Driver</PartyRoles>
+          <PartyRoles>Household Member</PartyRoles>
+        </Party>
+      </ListedParties>
+      <PolicyLocation id="139">
+        <Address id="140">
+          <Line1Tx>8 CINDY CT</Line1Tx>
+          <Municipality id="142">
+            <MunicipalityNm>LEBANON</MunicipalityNm>
+            <MunicipalityTypeCd>CITY</MunicipalityTypeCd>
+          </Municipality>
+          <Municipality id="145">
+            <MunicipalityNm>HUNTERDON</MunicipalityNm>
+            <MunicipalityTypeCd>COUNTY</MunicipalityTypeCd>
+          </Municipality>
+          <CountrySubdivision id="148">
+            <CountrySubdivisionNm>NJ</CountrySubdivisionNm>
+            <CountrySubdivisionTypeCd>State</CountrySubdivisionTypeCd>
+          </CountrySubdivision>
+          <PostalCd>08833</PostalCd>
+        </Address>
+      </PolicyLocation>
+      <NotableEvents id="152">
+        <EventNumber>QQ178580191</EventNumber>
+        <EventTypeCd>Renewal</EventTypeCd>
+        <EventStatusCd>Bound</EventStatusCd>
+        <EventCreationDt>2019-05-14T01:43:38.646-04:00</EventCreationDt>
+        <EventChangeEffectiveDt>2019-07-28T00:01:00-04:00</EventChangeEffectiveDt>
+        <EventCloseDt>2019-07-06T00:30:57.852-04:00</EventCloseDt>
+      </NotableEvents>
+      <NotableEvents id="159">
+        <EventNumber>QQ178580191</EventNumber>
+        <EventCategoryCd>CurrentWorkOrder</EventCategoryCd>
+        <EventTypeCd>Renewal</EventTypeCd>
+        <EventStatusCd>Bound</EventStatusCd>
+        <EventCreationDt>2019-05-14T01:43:38.646-04:00</EventCreationDt>
+        <EventChangeEffectiveDt>2019-07-28T00:01:00-04:00</EventChangeEffectiveDt>
+        <EventCloseDt>2019-07-06T00:30:57.852-04:00</EventCloseDt>
+      </NotableEvents>
+      <RelatedPolicies id="167">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="169">
+          <PolicyNumber>F7946817</PolicyNumber>
+          <PolicyTypeCd>PersonalAuto</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <RelatedPolicies id="172">
+        <RelationshipReasonCd>Other</RelationshipReasonCd>
+        <Policy id="174">
+          <PolicyNumber>H1957018</PolicyNumber>
+          <PolicyTypeCd>Homeowners</PolicyTypeCd>
+        </Policy>
+      </RelatedPolicies>
+      <PolicyMailingAddressIn>N</PolicyMailingAddressIn>
+    </PolicyPeriod>
+  </Policy>
+  <CoverageStatus id="178">
+    <AsOfDt>2019-09-20T12:01:39.41-04:00</AsOfDt>
+    <StatusIn>Y</StatusIn>
+  </CoverageStatus>
+</CorrespondenceDataResponse>

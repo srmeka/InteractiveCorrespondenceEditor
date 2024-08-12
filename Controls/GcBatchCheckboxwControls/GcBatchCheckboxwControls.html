@@ -1,0 +1,32 @@
+﻿<div class="panel panel-primary" ng-controller="GcBatchCheckboxwControlsController">
+    
+        <div class="panel-heading">{{labelName}}</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <!--Batch checkbox-->
+            <div class="row" ng-show="!justCert">
+                <div class="col-md-3">
+                    <input type="checkbox"
+                           ng-click="setBatchService()"
+                           name="GCBatchwCtrlsCheckbox"
+                           id="BatchServiceId"
+                           ng-model="enableBatchService"
+                           value="" />
+                    <label>Print Services Batch</label>
+                </div>
+                <div class="col-md-9">
+                    <span class="alert-danger">The Print Services Batch option should NOT be selected if the letter's attachments require manual processing.</span>
+                </div>
+            </div>
+
+            <!-- Certified Mail indicator Checkbox-->
+            <div class="row" style="margin-top:5px" ng-show="showEmail || justCert">
+                <div class="col-md-3">
+                    <input type="checkbox" name="CertifiedMailIndicator" id="CertifiedMailIndicatorId" ng-model="certifiedMailIndicator" value="" />
+                    <label>Certified Mail Indicator</label>
+                </div>
+            </div>
+
+        </div>
+    </div>     
+</div>

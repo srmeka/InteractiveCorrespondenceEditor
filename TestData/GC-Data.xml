@@ -1,0 +1,626 @@
+﻿<CorrespondenceDataResponse
+ xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:m1="http://njm.com/esb/common/types"
+ xmlns:m0="http://njm.com/esb/core/claim/1.0.0/types"
+ xmlns:typ="http://njm.com/ccutil/1.0.0/types"
+ xmlns:int="http://njm.com/ccutil/1.0.0/interfaces">
+ <Claim>
+  <ClaimNumber>2019-109184</ClaimNumber>
+  <DateOfLoss>2019-11-27T02:30:00.000Z</DateOfLoss>
+  <LossCause>Injury by Vehicle</LossCause>
+  <LossLocation>
+   <Address id="1">
+    <Category>None</Category>
+    <Type>None</Type>
+    <StreetAddress1>Rt 46 West</StreetAddress1>
+    <StreetAddress2>East Ruby Ave</StreetAddress2>
+    <City>Palisades Park</City>
+    <State>NJ</State>
+   </Address>
+  </LossLocation>
+  <LossLocationCity>Palisades Park</LossLocationCity>
+  <LossLocationState>NJ</LossLocationState>
+  <ClaimPolicy>
+   <PolicyNumber>F571820</PolicyNumber>
+   <EffectiveDate>2018-10-13T04:01:00.000Z</EffectiveDate>
+   <ExpirationDate>2019-10-13T04:01:00.000Z</ExpirationDate>
+   <PolicyState>NJ</PolicyState>
+   <PIPDeductible>500.00</PIPDeductible>
+   <Type>PersonalAuto</Type>
+   <NjmInsuranceCompanyName>NJM Insurance Company</NjmInsuranceCompanyName>
+   <Coverages id="1">
+    <Type>Ex_umuim_bipd</Type>
+    <IncidentLimit>35000.00</IncidentLimit>
+   </Coverages>
+   <Coverages id="2">
+    <Type>Ex_pip</Type>
+    <Deductible>500.00</Deductible>
+    <IncidentLimit>50000.00</IncidentLimit>
+   </Coverages>
+   <Coverages id="3">
+    <Type>Ex_comp</Type>
+    <Deductible>500.00</Deductible>
+   </Coverages>
+   <Coverages id="4">
+    <Type>Ex_aliab_bipd</Type>
+    <IncidentLimit>100000.00</IncidentLimit>
+   </Coverages>
+   <Coverages id="5">
+    <Type>Ex_coll</Type>
+    <Deductible>500.00</Deductible>
+   </Coverages>
+   <Coverages id="6">
+    <Type>Ex_amedpay</Type>
+    <IncidentLimit>10000.00</IncidentLimit>
+   </Coverages>
+  </ClaimPolicy>
+  <InvolvedParties>
+   <Party id="117438169">
+    <Role>MainContact</Role>
+    <Role>Other</Role>
+    <Role>Other</Role>
+    <Role>Other</Role>
+    <Role>Claimant</Role>
+    <Role>Claimant</Role>
+    <Role>FirstInsured</Role>
+    <Role>Other</Role>
+    <Role>Other</Role>
+    <Type>Person</Type>
+    <FirstName>Lucy</FirstName>
+    <LastName>Rivera</LastName>
+    <Prefix>Ms.</Prefix>
+    <DateOfBirth>1969-03-27</DateOfBirth>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>201</AreaCode>
+      <Exchange>915</Exchange>
+      <Number>6666</Number>
+     </PhoneNumber>
+     <PhoneNumber id="2">
+      <Category>Home</Category>
+      <Type>Number</Type>
+      <AreaCode>201</AreaCode>
+      <Exchange>593</Exchange>
+      <Number>6364</Number>
+     </PhoneNumber>
+     <PhoneNumber id="3">
+      <Category>Mobile</Category>
+      <Type>Number</Type>
+      <AreaCode>201</AreaCode>
+      <Exchange>539</Exchange>
+      <Number>6364</Number>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <EmailAddresses>
+     <EmailAddress id="1">
+      <EmailAddressValue>TAINAS23@YAHOO.COM</EmailAddressValue>
+     </EmailAddress>
+    </EmailAddresses>
+    <Addresses>
+     <Address id="1">
+      <Category>Policy</Category>
+      <Type>Primary</Type>
+      <StreetAddress1>305 Pearsall Ave</StreetAddress1>
+      <City>Jersey City</City>
+      <State>NJ</State>
+      <ZipCode>07305</ZipCode>
+     </Address>
+    </Addresses>
+    <Exposures>
+     <Exposure id="1">
+      <ExposureType>Bodily Injury</ExposureType>
+      <ExposureNumber>2</ExposureNumber>
+     </Exposure>
+     <Exposure id="2">
+      <ExposureType>PIP</ExposureType>
+      <ExposureNumber>1</ExposureNumber>
+      <Deductible>500.00</Deductible>
+      <Precertifications>
+       <Precertification id="1">
+        <PrecertificationId>233406</PrecertificationId>
+        <StartDate>2019-06-12T05:00:00Z</StartDate>
+        <EndDate>2019-09-11T05:00:00Z</EndDate>
+        <Provider refId="117732648"></Provider>
+        <Determinations>
+         <Determination id="1">
+          <DeterminationId>316074</DeterminationId>
+          <IsAppealPresent>false</IsAppealPresent>
+          <TreatmentReason>Other</TreatmentReason>
+          <TreatmentStatus>Approved</TreatmentStatus>
+          <TotalTreatmentsApproved>3</TotalTreatmentsApproved>
+          <Procedures>
+           <Procedure id="1">
+            <StartCode>E1805</StartCode>
+           </Procedure>
+           <Procedure id="2">
+            <StartCode>E1805</StartCode>
+           </Procedure>
+          </Procedures>
+         </Determination>
+        </Determinations>
+       </Precertification>
+      </Precertifications>
+     </Exposure>
+    </Exposures>
+   </Party>
+   <Party id="118580203">
+    <Role>Other</Role>
+    <Type>Company</Type>
+    <Name>Jersey Premier Pain</Name>
+    <Addresses>
+     <Address id="1">
+      <Category>None</Category>
+      <Type>Primary</Type>
+      <City>Jersey City</City>
+      <State>NJ</State>
+      <ZipCode>07305</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="118580683">
+    <Role>Other</Role>
+    <Type>Person</Type>
+    <FirstName>John</FirstName>
+    <MiddleName>R</MiddleName>
+    <MiddleInitial>R</MiddleInitial>
+    <LastName>McGee</LastName>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>201</AreaCode>
+      <Exchange>443</Exchange>
+      <Number>8988</Number>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <Addresses>
+     <Address id="1">
+      <Category>None</Category>
+      <Type>Primary</Type>
+      <StreetAddress1>1160 John F Kennedy Blvd</StreetAddress1>
+      <City>Bayonne</City>
+      <State>NJ</State>
+      <ZipCode>07002</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="118580629">
+    <Role>Other</Role>
+    <Type>Company</Type>
+    <Name>Urquhart Orthopedic Associates</Name>
+    <Addresses>
+     <Address id="1">
+      <Category>None</Category>
+      <Type>Primary</Type>
+      <City>Bayonne</City>
+      <State>NJ</State>
+      <ZipCode>07002</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="118411011">
+    <Role>Other</Role>
+    <Type>Person</Type>
+    <FirstName>Nicole</FirstName>
+    <LastName>Manzo</LastName>
+    <Addresses>
+     <Address id="1">
+      <Category>None</Category>
+      <Type>Primary</Type>
+      <StreetAddress1>11 College Drive</StreetAddress1>
+      <City>Jersey City</City>
+      <State>NJ</State>
+      <ZipCode>07305</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="117732648">
+    <Role>Other</Role>
+    <Role>Other</Role>
+    <Role>Other</Role>
+    <Type>Company</Type>
+    <Name>DYNASPLINT SYSTEMS INC</Name>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>800</AreaCode>
+      <Exchange>638</Exchange>
+      <Number>6771</Number>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <Addresses>
+     <Address id="1">
+      <Category>Business</Category>
+      <Type>Primary</Type>
+      <StreetAddress1>770 RITCHIE HWY</StreetAddress1>
+      <City>SEVERNA PARK</City>
+      <State>MD</State>
+      <ZipCode>21146</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="118411012">
+    <Role>Other</Role>
+    <Type>Company</Type>
+    <Name>Allstate</Name>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>800</AreaCode>
+      <Exchange>300</Exchange>
+      <Number>2259</Number>
+     </PhoneNumber>
+    </PhoneNumbers>
+   </Party>
+   <Party id="118580202">
+    <Role>Other</Role>
+    <Type>Company</Type>
+    <Name>Emergency Room</Name>
+    <Addresses>
+     <Address id="1">
+      <Category>None</Category>
+      <Type>Primary</Type>
+      <City>Jersey City</City>
+      <State>NJ</State>
+      <ZipCode>07305</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="4201">
+    <Role>User</Role>
+    <Type>Person</Type>
+    <FirstName>Linda</FirstName>
+    <LastName>Jobst</LastName>
+    <JobTitle>General Claims</JobTitle>
+    <JobTitle>General Claims</JobTitle>
+    <EmployeeUserName>LJ4201</EmployeeUserName>
+    <IsOfficerOrManager>false</IsOfficerOrManager>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>800</AreaCode>
+      <Exchange>367</Exchange>
+      <Number>6564</Number>
+      <Extension>5073</Extension>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <EmailAddresses>
+     <EmailAddress id="1">
+      <EmailAddressValue>Ljobst@njm.com</EmailAddressValue>
+     </EmailAddress>
+    </EmailAddresses>
+   </Party>
+   <Party id="8826">
+    <Role>User</Role>
+    <Type>Person</Type>
+    <FirstName>Sherry</FirstName>
+    <LastName>Fletcher-Stone</LastName>
+    <JobTitle>Senior Bodily Injury Representative</JobTitle>
+    <JobTitle>Senior Bodily Injury Representative</JobTitle>
+    <EmployeeUserName>SF8826</EmployeeUserName>
+    <Credentials>AIC, AIS</Credentials>
+    <IsOfficerOrManager>false</IsOfficerOrManager>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Fax</Type>
+      <AreaCode>609</AreaCode>
+      <Exchange>671</Exchange>
+      <Number>3371</Number>
+     </PhoneNumber>
+     <PhoneNumber id="2">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>800</AreaCode>
+      <Exchange>367</Exchange>
+      <Number>6564</Number>
+      <Extension>2694</Extension>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <EmailAddresses>
+     <EmailAddress id="1">
+      <EmailAddressValue>SFletcher@njm.com</EmailAddressValue>
+     </EmailAddress>
+    </EmailAddresses>
+   </Party>
+   <Party id="8978">
+    <Role>User</Role>
+    <Type>Person</Type>
+    <FirstName>Diann</FirstName>
+    <LastName>Krause</LastName>
+    <JobTitle>PIP Supervisor</JobTitle>
+    <JobTitle>PIP Supervisor</JobTitle>
+    <EmployeeUserName>DK8978</EmployeeUserName>
+    <IsOfficerOrManager>false</IsOfficerOrManager>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Fax</Type>
+      <AreaCode>609</AreaCode>
+      <Exchange>671</Exchange>
+      <Number>3396</Number>
+     </PhoneNumber>
+     <PhoneNumber id="2">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>800</AreaCode>
+      <Exchange>367</Exchange>
+      <Number>6564</Number>
+      <Extension>8544</Extension>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <EmailAddresses>
+     <EmailAddress id="1">
+      <EmailAddressValue>Dkrause@njm.com</EmailAddressValue>
+     </EmailAddress>
+    </EmailAddresses>
+   </Party>
+   <Party id="8790">
+    <Role>User</Role>
+    <Type>Person</Type>
+    <FirstName>Karlene</FirstName>
+    <LastName>Goodwater</LastName>
+    <JobTitle>PIP Claims Representative</JobTitle>
+    <JobTitle>PIP Claims Representative</JobTitle>
+    <EmployeeUserName>KG8790</EmployeeUserName>
+    <IsOfficerOrManager>false</IsOfficerOrManager>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Fax</Type>
+      <AreaCode>609</AreaCode>
+      <Exchange>671</Exchange>
+      <Number>3367</Number>
+     </PhoneNumber>
+     <PhoneNumber id="2">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>800</AreaCode>
+      <Exchange>367</Exchange>
+      <Number>6564</Number>
+      <Extension>8537</Extension>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <EmailAddresses>
+     <EmailAddress id="1">
+      <EmailAddressValue>Kgoodwater@njm.com</EmailAddressValue>
+     </EmailAddress>
+    </EmailAddresses>
+   </Party>
+   <Party id="3245">
+    <Role>User</Role>
+    <Type>Person</Type>
+    <FirstName>Edward</FirstName>
+    <LastName>Esposito</LastName>
+    <JobTitle>Property Damage Supervisor</JobTitle>
+    <JobTitle>Property Damage Supervisor</JobTitle>
+    <EmployeeUserName>EE3245</EmployeeUserName>
+    <Credentials>AIC</Credentials>
+    <IsOfficerOrManager>false</IsOfficerOrManager>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Fax</Type>
+      <AreaCode>609</AreaCode>
+      <Exchange>493</Exchange>
+      <Number>1888</Number>
+     </PhoneNumber>
+     <PhoneNumber id="2">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>800</AreaCode>
+      <Exchange>367</Exchange>
+      <Number>6564</Number>
+      <Extension>2611</Extension>
+     </PhoneNumber>
+     <PhoneNumber id="3">
+      <Category>Mobile</Category>
+      <Type>Number</Type>
+      <AreaCode>609</AreaCode>
+      <Exchange>903</Exchange>
+      <Number>4534</Number>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <EmailAddresses>
+     <EmailAddress id="1">
+      <EmailAddressValue>Eesposito@NJM.com</EmailAddressValue>
+     </EmailAddress>
+    </EmailAddresses>
+   </Party>
+   <Party id="117585072">
+    <Role>Other</Role>
+    <Type>Company</Type>
+    <Name>CALLAGY LAW PC</Name>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>201</AreaCode>
+      <Exchange>261</Exchange>
+      <Number>1700</Number>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <Addresses>
+     <Address id="1">
+      <Category>Business</Category>
+      <Type>Primary</Type>
+      <StreetAddress1>MACK CALI CENTRE II STE 565</StreetAddress1>
+      <StreetAddress2>650 FROM RD</StreetAddress2>
+      <City>PARAMUS</City>
+      <State>NJ</State>
+      <ZipCode>07652</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="118580680">
+    <Role>Other</Role>
+    <Type>Person</Type>
+    <FirstName>James</FirstName>
+    <MiddleName>A</MiddleName>
+    <MiddleInitial>A</MiddleInitial>
+    <LastName>Charles</LastName>
+    <Addresses>
+     <Address id="1">
+      <Category>None</Category>
+      <Type>Primary</Type>
+      <City>North Bergen</City>
+      <State>NJ</State>
+      <ZipCode>07047</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="118394419">
+    <Role>Other</Role>
+    <Role>Other</Role>
+    <Type>Company</Type>
+    <Name>JERSEY CITY MEDICAL CENT</Name>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>201</AreaCode>
+      <Exchange>915</Exchange>
+      <Number>2000</Number>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <Addresses>
+     <Address id="1">
+      <Category>Business</Category>
+      <Type>Primary</Type>
+      <StreetAddress1>PO BOX 28937</StreetAddress1>
+      <City>NEW YORK</City>
+      <State>NY</State>
+      <ZipCode>10087</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="117897151">
+    <Role>Other</Role>
+    <Type>Company</Type>
+    <Name>Hackensack Meridan Health</Name>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>551</AreaCode>
+      <Exchange>336</Exchange>
+      <Number>3355</Number>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <Addresses>
+     <Address id="1">
+      <Category>None</Category>
+      <Type>Primary</Type>
+      <StreetAddress1>P.O. Box 8505</StreetAddress1>
+      <City>Coral Springs</City>
+      <State>FL</State>
+      <ZipCode>33075</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="118163432">
+    <Role>Other</Role>
+    <Type>Company</Type>
+    <Name>JERSEY CITY MEDICAL CENT</Name>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>201</AreaCode>
+      <Exchange>915</Exchange>
+      <Number>2000</Number>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <Addresses>
+     <Address id="1">
+      <Category>Business</Category>
+      <Type>Primary</Type>
+      <StreetAddress1>PO BOX 25937</StreetAddress1>
+      <City>NEW YORK</City>
+      <State>NY</State>
+      <ZipCode>10087</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="118496598">
+    <Role>Other</Role>
+    <Type>Company</Type>
+    <Name>HORIZON CASUALTY SERVICES INC</Name>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>800</AreaCode>
+      <Exchange>985</Exchange>
+      <Number>7777</Number>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <Addresses>
+     <Address id="1">
+      <Category>Business</Category>
+      <Type>Primary</Type>
+      <StreetAddress1>PP-14W</StreetAddress1>
+      <StreetAddress2>3 PENN PLAZA EAST</StreetAddress2>
+      <City>NEWARK</City>
+      <State>NJ</State>
+      <ZipCode>07105</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="118494118">
+    <Role>Lienholder</Role>
+    <Type>Company</Type>
+    <Name>CONDUENT</Name>
+    <PhoneNumbers>
+     <PhoneNumber id="1">
+      <Category>Business</Category>
+      <Type>Number</Type>
+      <AreaCode>801</AreaCode>
+      <Exchange>561</Exchange>
+      <Number>6819</Number>
+     </PhoneNumber>
+    </PhoneNumbers>
+    <Addresses>
+     <Address id="1">
+      <Category>Business</Category>
+      <Type>Primary</Type>
+      <StreetAddress1>PO BOX 30114</StreetAddress1>
+      <City>SALT LAKE CITY</City>
+      <State>UT</State>
+      <ZipCode>84130</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+   <Party id="117438170">
+    <Role>Lienholder</Role>
+    <Type>Company</Type>
+    <Name>Capital One Express</Name>
+    <Addresses>
+     <Address id="1">
+      <Category>Business</Category>
+      <Type>Primary</Type>
+      <StreetAddress1>Po Box 255605</StreetAddress1>
+      <City>Sacramento</City>
+      <State>CA</State>
+      <ZipCode>95865</ZipCode>
+     </Address>
+    </Addresses>
+   </Party>
+  </InvolvedParties>
+  <InvolvedVehicles>
+   <Vehicle id="103959498">
+    <Year>2011</Year>
+    <Make>Hyundai</Make>
+    <Model>Sonata Gls</Model>
+    <Vin>5NPEB4AC5BH010285</Vin>
+    <LossParty>First Party</LossParty>
+   </Vehicle>
+  </InvolvedVehicles>
+  <AccidentReportDate>2019-04-08T13:34:28.593Z</AccidentReportDate>
+ </Claim>
+</CorrespondenceDataResponse>

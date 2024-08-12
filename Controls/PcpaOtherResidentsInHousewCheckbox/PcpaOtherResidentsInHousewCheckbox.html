@@ -1,0 +1,98 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaOtherResidentsInHousewCheckboxController">
+    <div class="panel-heading">Other Residents in Household</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div style="margin-bottom:15px" ng-repeat="slector in populateData track by $index">
+                <div class="row">
+                    <div class="col-md-3">
+                        <input ng-click="clearAllData($index)" 
+                               ng-model="isResidentSelected[$index]" 
+                               type="checkbox" 
+                               id="ResidentCheckboxId{{$index}}" 
+                               name="ResidentCheckbox{{$index}}" 
+                               value="" />
+                        <label>Include Other Resident</label>
+                    </div>
+                    <label class="col-md-3" ng-class="(isResidentSelected[slector.selectorId])?'':'disabled-class'">Driver Name:</label>
+                    <div class="col-md-3" style="margin-bottom:5px;">
+                        <select ng-disabled="!isResidentSelected[slector.selectorId]" ng-options="(item.Person.PersonName.FirstGivenNm + ' ' + item.Person.PersonName.SecendGivenNmInitial + ' ' + item.Person.PersonName.FamilyNm + ' ' + item.Person.PersonName.FamilyNameGenerationCd)  for item in residentInfo track by item._id" name="ResidentSelection[$index]" ng-model="slector.selectedValue" class="form-control" id="ResidentInfo[$index]Id">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3" style="margin-bottom:5px;">
+                        <input ng-disabled="!isResidentSelected[slector.selectorId] || slector.selectedValue" ng-model="freeTextGroup[slector.selectorId]" type="text" class="form-control" name="userText[$index]" id="userText[$index]Id" value="" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="driverName[$index]" name="driverName[$index]" id="driverName[$index]Id" />
+                        <span ng-class="(isResidentSelected[slector.selectorId])?'':'disabled-class'">Driver Name</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="dateOfBirth[$index]" name="dateOfBirth[$index]" id="dateOfBirth[$index]Id" />
+                        <span ng-class="(isResidentSelected[slector.selectorId])?'':'disabled-class'">Date Of Birth</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="maritalStatus[$index]" name="maritalStatus[$index]" id="maritalStatus[$index]Id" />
+                        <span ng-class="(isResidentSelected[slector.selectorId])?'':'disabled-class'">Marital Status</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="relationToApplicant[$index]" name="relationToApplicant[$index]" id="relationToApplicant[$index]Id" />
+                        <span ng-class="(isResidentSelected[slector.selectorId])?'':'disabled-class'">Relation to Applicant</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="insuranceInfo[$index]" name="insuranceInfo[$index]" id="insuranceInfo[$index]Id" />
+                        <span ng-class="(isResidentSelected[slector.selectorId])?'':'disabled-class'">Insurance Info</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="licenseInfo[$index]" name="licenseInfo[$index]" id="licenseInfo[$index]Id" />
+                        <span ng-class="(isResidentSelected[slector.selectorId])?'':'disabled-class'">License Info</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="validLicenseInfo[$index]" name="validLicenseInfo[$index]" id="validLicenseInfo[$index]Id" />
+                        <span ng-class="(isResidentSelected[slector.selectorId])?'':'disabled-class'">Valid Licence Info</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="priorLicenseInfo[$index]" name="priorLicenseInfo[$index]" id="priorLicenseInfo[$index]Id" />
+                        <span ng-class="(isResidentSelected[slector.selectorId])?'':'disabled-class'">Prior License Info</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3">
+                        <input type="checkbox" ng-disabled="!isResidentSelected[slector.selectorId]" ng-model="proofOfResidency[$index]" name="proofOfResidency[$index]" id="proofOfResidency[$index]Id" />
+                        <span ng-class="(isResidentSelected[slector.selectorId])?'':'disabled-class'">Proof of Residency</span>
+                    </div>
+                </div>
+                <div class="row" style="padding-bottom: 10px; border-bottom: 2px solid lightgray"></div>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <input type="button" class="btn-primary" ng-disabled="!isResidentSelected" value="Add" ng-if="showAddBtn" ng-click="addSelector()">
+                <input type="button" class="btn-primary" value="Remove" ng-if="showRemoveBtn" ng-click="removeSelector()">
+            </div>
+        </div>
+    </div>
+</div> 

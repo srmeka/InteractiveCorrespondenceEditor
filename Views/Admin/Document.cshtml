@@ -1,0 +1,323 @@
+﻿
+@{
+    ViewBag.Title = "Document";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Admin/DocumentController.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/MyScripts/Home/HomeService.js")"></script>
+<form ng-controller="DocumentController">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-xs-6">
+                <label class="radio-inline">
+                    <input type="radio" class="insert" name="optradio" value="0" ng-click="InsertUpdate(insert)" id="OptradioInsertId" checked />Insert
+                </label>
+            </div>
+            <div class="col-xs-6">
+                <label class="radio-inline">
+                    <input type="radio" class="update" name="optradio" value="1" ng-click="InsertUpdate(update)" id="OptradioUpdateId" />Update
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse insert" style="display:block">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Insert Document- Dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>
+                                LOB
+                            </label>
+                            <select class="form-control" name="LOB" ng-model="SelectedDevLOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown | orderBy : 'lobName'" id="LOBDevId" ng-change="GetDevCategory()">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="form-group">
+                            <label>
+                                Category
+                            </label>
+                            <select class="form-control" name="Category" ng-model="SelectedDevCategory" ng-options="CategoryDevInfo.categoryFriendlyName for CategoryDevInfo in CategoryDevDropdown | orderBy : 'categoryFriendlyName'" id="CategoryDevId">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label>
+                                Document Friendly Name
+                            </label>
+                            <input type="text" ng-model="DocumentFrndlyName" class="form-control" id="DocumentFrndlyNameId" />
+                        </div>
+                        <div class="col-xs-4">
+                            <label>
+                                Document Name
+                            </label>
+                            <input type="text" ng-model="DocumentName" class="form-control" id="DocumentNmId" />
+                        </div>
+                        <div class="col-xs-4">
+                            <label>
+                                Document Active
+                            </label>
+                            <select ng-model="SelectedDocumentActive" class="form-control" id="DocumentActiveId">
+                                <option value="True" selected>True</option>
+                                <option value="False">False</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label>
+                                Base state
+                            </label>
+                            <input type="text" ng-model="BaseState" class="form-control" id="BaseStateId" />
+                        </div>
+                        <div class="col-xs-4">
+                            <label>
+                                JLD File Path
+                            </label>
+                            <input type="text" ng-model="JLDFilePath" class="form-control" id="JLDFilePathId" />
+                        </div>
+                        <div class="col-xs-4">
+                            <label>
+                                Doc Type
+                            </label>
+                            <input type="text" ng-model="DocType" class="form-control" id="DocTypeId" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="InsertDocument()">Insert Document</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Migrate Document- Non dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="form-group">
+                            <label>
+                                LOB
+                            </label>
+                            <select class="form-control" name="LOB" ng-model="SelectedNonDevLOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown | orderBy : 'lobName'" id="LOBNonDevId" ng-change="GetNonDevCategory()">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>
+                            Category
+                        </label>
+                        <select class="form-control" name="Category" ng-model="SelectedNonDevCategory" ng-options="CategoryNonDevInfo.categoryFriendlyName for CategoryNonDevInfo in CategoryNonDevDropdown | orderBy : 'categoryFriendlyName'" id="CategoryNonDevId" ng-change="GetNonDevDocument()">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>
+                            Document
+                        </label>
+                        <select size="{{NumberOfDocument}}" multiple ng-multiple="true" id="DocumentNonDevId" ng-options="Document as Document.documentFriendlyName for Document in DocumentList | orderBy : 'documentFriendlyName'"
+                                ng-model="ListOfDocument" class="form-control"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="GenerateNonDevInsertQuery()">Generate Migration Query</button>
+                        </div>
+                    </div>
+                </div>
+                <table st-table="rowCollection" class="table" ng-show="ListOfDocument > '0'">
+                    <tr>
+                        <th>Document Id</th>
+                        <th>Category Id</th>
+                        <th>Document Name</th>
+                        <th>Document Friendly Name</th>
+                        <th>Document Active</th>
+                        <th>Base State</th>
+                        <th>JLD Path</th>
+                        <th>Doc Type</th>
+                    </tr>
+                    <tbody>
+                        <tr class="info" ng-repeat="SelectedDocument in ListOfDocument">
+                            <td>{{SelectedDocument.documentId}}</td>
+                            <td>{{SelectedDocument.categoryId}}</td>
+                            <td>{{SelectedDocument.documentName}}</td>
+                            <td>{{SelectedDocument.documentFriendlyName}}</td>
+                            <td>{{SelectedDocument.documentActive}}</td>
+                            <td>{{SelectedDocument.baseState}}</td>
+                            <td>{{SelectedDocument.jldFilePath}}</td>
+                            <td>{{SelectedDocument.docType}}</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="collapse update">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Update Document - Dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="form-group">
+                            <label>
+                                LOB
+                            </label>
+                            <select class="form-control" name="LOB" ng-model="SelectedUpdateLOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown | orderBy : 'lobName'" id="LOBUpdateId" ng-change="GetUpdateCategory()">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>
+                            Category
+                        </label>
+                        <select class="form-control" name="Category" ng-model="SelectedUpdateCategory" ng-options="CategoryUpdateInfo.categoryFriendlyName for CategoryUpdateInfo in CategoryUpdateDropdown | orderBy : 'categoryFriendlyName'" id="CategoryUpdateId" ng-change="GetUpdateDocument()">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>
+                            Document
+                        </label>
+                        <select size="{{NumberOfUpdateDocument}}" multiple ng-multiple="true" id="DocumentUpdateId" ng-options="DocumentUpdate as DocumentUpdate.documentFriendlyName for DocumentUpdate in DocumentUpdateList | orderBy : 'documentFriendlyName'"
+                                ng-model="ListOfUpdateDocument" class="form-control"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="UpdateInDev()">Update in DEV</button>
+                        </div>
+ 
+                    </div>
+                </div>
+                <table st-table="rowCollection" class="table" ng-show="ListOfUpdateDocument > '0'">
+                    <tr>
+                        <th>Docmnt Id</th>
+                        <th>Category Nm</th>
+                        <th>Dcmt Name</th>
+                        <th>Document Frndly Name</th>
+                        <th>Active?</th>
+                        <th>Base State</th>
+                        <th>JLD Path</th>
+                        <th>Doc Type</th>
+                    </tr>
+                    <tbody>
+                        <tr class="info" ng-repeat="$index in ListOfUpdateDocument">
+                            <td>{{ListOfUpdateDocument[$index].documentId}}</td>
+                            <td><select ng-model="ListOfUpdateDocument[$index].categoryId">
+                                    <option value="">--Select--</option>
+                                <option ng-repeat="Category in CategoryUpdateDropdown" value="{{Category.categoryId}}" ng-selected="{{ListOfUpdateDocument[$index].categoryId == Category.categoryId}}">
+                                   {{Category.categoryFriendlyName}}
+                                </option>
+                                </select></td>
+                            @*<td><input type="text" ng-model="ListOfUpdateDocument[$index].categoryId" size="02"/></td>*@
+                            <td><input type="text" ng-model="ListOfUpdateDocument[$index].documentName" size="15"/></td>
+                            <td><input type="text" ng-model="ListOfUpdateDocument[$index].documentFriendlyName" size="25"/></td>
+                            <td><input type="text" ng-model="ListOfUpdateDocument[$index].documentActive" size="01"/></td>
+                            <td><input type="text" ng-model="ListOfUpdateDocument[$index].baseState" size="01"/></td>
+                            <td><input type="text" ng-model="ListOfUpdateDocument[$index].jldFilePath" size="25"/></td>
+                            <td><input type="text" ng-model="ListOfUpdateDocument[$index].docType" size="10"/></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <label>Migrate Document - Non Dev</label>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <div class="form-group">
+                            <label>
+                                LOB
+                            </label>
+                            <select class="form-control" name="LOB" ng-model="SelectedUpdateNonDevLOB" ng-options="LOBDropdownInfo.lobName for LOBDropdownInfo in LOBDropdown | orderBy : 'lobName'" id="LOBUpdateId" ng-change="GetUpdateNonDevCategory()">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>
+                            Category
+                        </label>
+                        <select class="form-control" name="Category" ng-model="SelectedNonDevUpdateCategory" ng-options="CategoryNonDevUpdateInfo.categoryFriendlyName for CategoryNonDevUpdateInfo in CategoryUpdateNonDevDropdown | orderBy : 'categoryFriendlyName'" id="CategoryNonDevUpdateId" ng-change="GetNonDevUpdateDocument()">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-4">
+                        <label>
+                            Document
+                        </label>
+                        <select size="{{NumberOfNonDevUpdateDocument}}" multiple ng-multiple="true" id="DocumentNonDevUpdateId" ng-options="DocumentNonDevUpdate.documentFriendlyName for DocumentNonDevUpdate in DocumentNonDevUpdateList | orderBy : 'documentFriendlyName'"
+                                ng-model="ListOfNonDevUpdateDocument" class="form-control"></select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button class="btn btn-primary" ng-click="GenerateUpdateQuery()">Generate Migration Query</button>
+                        </div>
+
+                    </div>
+                </div>
+                <table st-table="rowCollection" class="table" ng-show="ListOfNonDevUpdateDocument > '0'">
+                    <tr>
+                        <th>Document Id</th>
+                        <th>Document Name</th>
+                        <th>Document Friendly Name</th>
+                        <th>Document Active</th>
+                        <th>Base State</th>
+                        <th>JLD Path</th>
+                        <th>Doc Type</th>
+                    </tr>
+                    <tbody>
+                        <tr class="info" ng-repeat="SelectedNonDevUpdateDocument in ListOfNonDevUpdateDocument">
+                            <td>{{SelectedNonDevUpdateDocument.documentId}}</td>
+                            <td>{{SelectedNonDevUpdateDocument.documentName}}</td>
+                            <td>{{SelectedNonDevUpdateDocument.documentFriendlyName}}</td>
+                            <td>{{SelectedNonDevUpdateDocument.documentActive}}</td>
+                            <td>{{SelectedNonDevUpdateDocument.baseState}}</td>
+                            <td>{{SelectedNonDevUpdateDocument.jldFilePath}}</td>
+                            <td>{{SelectedNonDevUpdateDocument.docType}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="alert-danger" ng-hide="!errorDetail" id="DivAlert"> <h4> {{errorDetail}}</h4> </div>
+    </div>
+</form>

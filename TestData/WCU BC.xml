@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CorrespondenceDataResponse
+ xmlns:esb="http://njm.com/esb/wcu/bc/1.0/WCUBillingDataService"
+ xmlns:tns="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types"
+ xmlns:typesProdStmt="http://njm.com/esb/wcu/bc/bds/producerstatments/1.0/types"
+ xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types"
+ xmlns:typ1="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+  <IsPolicyEscrow
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    false
+  </IsPolicyEscrow>
+  <IsPolicyPrecisionPay
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    false
+  </IsPolicyPrecisionPay>
+  <PolicyInstAmtDue
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    177488.00
+  </PolicyInstAmtDue>
+  <PolicyTotBalDue
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    177488.00
+  </PolicyTotBalDue>
+  <AccountInvoices LatestPolicyPeriod="true" id="100">
+    <PolicyPeriodForThisInvoice>
+      <Account>
+        <AccountNumber>AA426247246</AccountNumber>
+      </Account>
+      <ActualPremiumAmount>0</ActualPremiumAmount>
+      <BillingMethod>
+        <Code>DirectBill</Code>
+      </BillingMethod>
+      <BillingOptions_Ext>
+        <Code>documentoinsuredbroker_ext</Code>
+      </BillingOptions_Ext>
+      <BureauFileNumber_Ext>789456</BureauFileNumber_Ext>
+      <Cancellation>
+        <ModificationDate>2020-01-02T00:01:00-05:00</ModificationDate>
+      </Cancellation>
+      <CancelStatus>
+        <Code>canceled</Code>
+      </CancelStatus>
+      <Contacts>
+        <Entry id="1">
+          <Contact id="1">
+            <AllValidAddresses>
+              <Entry id="1">
+                <AddressLine1>301 Sullivan Way</AddressLine1>
+                <AddressType>
+                  <Code>business</Code>
+                </AddressType>
+                <City>Ewing</City>
+                <PostalCode>08628</PostalCode>
+                <State>
+                  <Code>NJ</Code>
+                </State>
+              </Entry>
+            </AllValidAddresses>
+            <PrimaryAddress id="1">
+              <AddressLine1>301 Sullivan Way</AddressLine1>
+              <AddressType>
+                <Code>business</Code>
+              </AddressType>
+              <City>Ewing</City>
+              <PostalCode>08628</PostalCode>
+              <State>
+                <Code>NJ</Code>
+              </State>
+            </PrimaryAddress>
+            <Subtype>
+              <Code>Company</Code>
+            </Subtype>
+          </Contact>
+          <DisplayName>PDMS_NJRe</DisplayName>
+          <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+          <Roles>
+            <Entry id="1">
+              <Role>
+                <Code>primaryinsured</Code>
+              </Role>
+            </Entry>
+          </Roles>
+        </Entry>
+      </Contacts>
+      <CurrentOpenBalanceDue>0.00</CurrentOpenBalanceDue>
+      <DelinquentAmount>0</DelinquentAmount>
+      <DueAmount>0.00</DueAmount>
+      <EPAgreementPaymentAmount>17748.80</EPAgreementPaymentAmount>
+      <EstimatedPremiumAmount>0</EstimatedPremiumAmount>
+      <InvoiceDeliveryType_Ext>mail</InvoiceDeliveryType_Ext>
+      <IsDirectDebit>false</IsDirectDebit>
+      <IsLCF_Ext>false</IsLCF_Ext>
+      <LastPaymentAmountPosted>205551.00</LastPaymentAmountPosted>
+      <LastPaymentAmountPostedDate>2020-04-07T09:03:12.936-04:00</LastPaymentAmountPostedDate>
+      <NextInstallmentAmountDue>177488.00</NextInstallmentAmountDue>
+      <NextInstallmentAmountDueDate>2020-05-26T00:00:00-04:00</NextInstallmentAmountDueDate>
+      <NotHonoredPaymentAmount_Ext>0.00</NotHonoredPaymentAmount_Ext>
+      <OriginalDelinequentAmount>0</OriginalDelinequentAmount>
+      <PaidInFullDiscount_Ext>
+        <Code>NA</Code>
+      </PaidInFullDiscount_Ext>
+      <PaymentPlan>
+        <Name>Annual</Name>
+      </PaymentPlan>
+      <Policy>
+        <LOBCode>
+          <DisplayName>WC</DisplayName>
+        </LOBCode>
+        <ProducerCodeOfService_Ext>
+          <Code>110906</Code>
+          <Producer>
+            <Address_Ext id="1">
+              <AddressLine1>904 Scenic Dr</AddressLine1>
+              <City>Ewing</City>
+              <PostalCode>086282209</PostalCode>
+              <State>
+                <Code>NJ</Code>
+              </State>
+            </Address_Ext>
+            <Name>NJM_QA-110906</Name>
+            <ParentProducerName_Ext>NJM_QA</ParentProducerName_Ext>
+          </Producer>
+        </ProducerCodeOfService_Ext>
+      </Policy>
+      <PolicyNumber>W731984</PolicyNumber>
+      <PolicyPerEffDate>2020-01-02T00:00:00-05:00</PolicyPerEffDate>
+      <PolicyPerExpirDate>2021-01-02T00:00:00-05:00</PolicyPerExpirDate>
+      <PrimaryInsured id="1">
+        <Contact id="2">
+          <AllValidAddresses>
+            <Entry id="2">
+              <AddressLine1>301 Sullivan Way</AddressLine1>
+              <AddressType>
+                <Code>business</Code>
+              </AddressType>
+              <City>Ewing</City>
+              <PostalCode>08628</PostalCode>
+              <State>
+                <Code>NJ</Code>
+              </State>
+            </Entry>
+          </AllValidAddresses>
+          <PrimaryAddress id="2">
+            <AddressLine1>301 Sullivan Way</AddressLine1>
+            <AddressType>
+              <Code>business</Code>
+            </AddressType>
+            <City>Ewing</City>
+            <PostalCode>08628</PostalCode>
+            <State>
+              <Code>NJ</Code>
+            </State>
+          </PrimaryAddress>
+          <Subtype>
+            <Code>Company</Code>
+          </Subtype>
+        </Contact>
+        <DisplayName>PDMS_NJRe</DisplayName>
+        <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+        <Roles>
+          <Entry id="2">
+            <Role>
+              <Code>primaryinsured</Code>
+            </Role>
+          </Entry>
+        </Roles>
+      </PrimaryInsured>
+      <RecentPaymentOnDlnqPolicy_Ext>0.00</RecentPaymentOnDlnqPolicy_Ext>
+      <RiskState>NJ</RiskState>
+      <ScheduledCancellationDate_Ext>2020-01-02T00:00:00-05:00</ScheduledCancellationDate_Ext>
+      <Status>
+        <Code>inforce</Code>
+      </Status>
+      <TotalAdjustedOutstandingAmount>-235114.00</TotalAdjustedOutstandingAmount>
+      <TotalDueForPolicyPeriod>177488.00</TotalDueForPolicyPeriod>
+      <UWCompany>
+        <Code>njm_ext</Code>
+      </UWCompany>
+    </PolicyPeriodForThisInvoice>
+  </AccountInvoices>
+  <AccountInvoices id="1"
+   xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <AmountDue>177488.00</AmountDue>
+    <CurrentInstallmentAmount>177488.00</CurrentInstallmentAmount>
+    <EarnedPremiumIndicatorOne>Y</EarnedPremiumIndicatorOne>
+    <EarnedPremiumIndicatorTwo>N</EarnedPremiumIndicatorTwo>
+    <EventDate>2020-05-02T00:00:00-04:00</EventDate>
+    <FirstInstallmentIndicator>N</FirstInstallmentIndicator>
+    <InvoiceNumber>1000188391</InvoiceNumber>
+    <InvoiceLineItemsFrom360>
+      <Entry>
+        <Description>Full Year Audit</Description>
+        <DueAmount>1977504</DueAmount>
+        <InvoiceItemAmtDue>177488</InvoiceItemAmtDue>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2019</PolicyYear>
+        <TransactionDate>2020-05-02T00:00:00-04:00</TransactionDate>
+        <TransactionEffectiveDate>2019-01-02T00:01:00-05:00</TransactionEffectiveDate>
+      </Entry>
+      <Entry>
+        <Description>Balance</Description>
+        <InvoiceItemAmtDue>177488</InvoiceItemAmtDue>
+      </Entry>
+      <Entry>
+        <BalanceDue>0</BalanceDue>
+        <Description>Payment Thank You</Description>
+        <PaidAmount>-205551.00</PaidAmount>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2020</PolicyYear>
+        <TransactionDate>2020-04-03T16:47:41.091-04:00</TransactionDate>
+        <TransactionEffectiveDate>2020-04-03T16:47:41.091-04:00</TransactionEffectiveDate>
+      </Entry>
+      <Entry>
+        <BalanceDue>0</BalanceDue>
+        <Description>Payment Thank You</Description>
+        <PaidAmount>-177488.00</PaidAmount>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2020</PolicyYear>
+        <TransactionDate>2020-04-03T16:47:41.092-04:00</TransactionDate>
+        <TransactionEffectiveDate>2020-04-03T16:47:41.092-04:00</TransactionEffectiveDate>
+      </Entry>
+      <Entry>
+        <BalanceDue>0</BalanceDue>
+        <Description>Payment Thank You</Description>
+        <PaidAmount>-1855723.92</PaidAmount>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2020</PolicyYear>
+        <TransactionDate>2020-04-07T09:03:11.931-04:00</TransactionDate>
+        <TransactionEffectiveDate>2020-04-07T09:03:11.931-04:00</TransactionEffectiveDate>
+      </Entry>
+      <Entry>
+        <BalanceDue>0</BalanceDue>
+        <Description>Payment Thank You</Description>
+        <PaidAmount>-205551.00</PaidAmount>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2020</PolicyYear>
+        <TransactionDate>2020-04-07T09:03:12.95-04:00</TransactionDate>
+        <TransactionEffectiveDate>2020-04-07T09:03:12.95-04:00</TransactionEffectiveDate>
+      </Entry>
+      <Entry>
+        <BalanceDue>0</BalanceDue>
+        <Description>Payment Returned</Description>
+        <DueAmount>177488.00</DueAmount>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2020</PolicyYear>
+        <TransactionDate>2020-05-14T16:10:28.732-04:00</TransactionDate>
+        <TransactionEffectiveDate>2020-04-03T16:47:41.092-04:00</TransactionEffectiveDate>
+      </Entry>
+      <Entry>
+        <BalanceDue>0</BalanceDue>
+        <Description>Account Goodwill</Description>
+        <PaidAmount>-1500.00</PaidAmount>
+        <PastDueIndicator>N</PastDueIndicator>
+        <PolicyYear>2019</PolicyYear>
+        <TransactionDate>2020-05-14T16:17:26.272-04:00</TransactionDate>
+        <TransactionEffectiveDate>2020-05-14T16:17:26.272-04:00</TransactionEffectiveDate>
+      </Entry>
+    </InvoiceLineItemsFrom360>
+    <LegalDunningLetterIndicator>N</LegalDunningLetterIndicator>
+    <PaymentDueDate>2020-05-26T00:00:00-04:00</PaymentDueDate>
+    <PolicyPeriodForThisInvoice>
+      <Account>
+        <AccountNumber>AA426247246</AccountNumber>
+      </Account>
+      <ActualPremiumAmount>177488.00</ActualPremiumAmount>
+      <BillingMethod>
+        <Code>DirectBill</Code>
+      </BillingMethod>
+      <BillingOptions_Ext>
+        <Code>documentoinsuredbroker_ext</Code>
+      </BillingOptions_Ext>
+      <BureauFileNumber_Ext>789456</BureauFileNumber_Ext>
+      <CancelStatus>
+        <Code>open</Code>
+      </CancelStatus>
+      <Contacts>
+        <Entry id="2">
+          <Contact id="3">
+            <AllValidAddresses>
+              <Entry id="3">
+                <AddressLine1>301 Sullivan Way</AddressLine1>
+                <AddressType>
+                  <Code>business</Code>
+                </AddressType>
+                <City>Ewing</City>
+                <PostalCode>08628</PostalCode>
+                <State>
+                  <Code>NJ</Code>
+                </State>
+              </Entry>
+            </AllValidAddresses>
+            <PrimaryAddress id="3">
+              <AddressLine1>301 Sullivan Way</AddressLine1>
+              <AddressType>
+                <Code>business</Code>
+              </AddressType>
+              <City>Ewing</City>
+              <PostalCode>08628</PostalCode>
+              <State>
+                <Code>NJ</Code>
+              </State>
+            </PrimaryAddress>
+            <Subtype>
+              <Code>Company</Code>
+            </Subtype>
+          </Contact>
+          <DisplayName>PDMS_NJRe</DisplayName>
+          <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+          <Roles>
+            <Entry id="3">
+              <Role>
+                <Code>primaryinsured</Code>
+              </Role>
+            </Entry>
+          </Roles>
+        </Entry>
+      </Contacts>
+      <CurrentOpenBalanceDue>177488.00</CurrentOpenBalanceDue>
+      <DelinquentAmount>0</DelinquentAmount>
+      <DueAmount>-1855723.92</DueAmount>
+      <EPAgreementPaymentAmount>17748.80</EPAgreementPaymentAmount>
+      <EstimatedPremiumAmount>0</EstimatedPremiumAmount>
+      <InvoiceDeliveryType_Ext>mail</InvoiceDeliveryType_Ext>
+      <IsDirectDebit>false</IsDirectDebit>
+      <IsLCF_Ext>false</IsLCF_Ext>
+      <LastPaymentAmountPosted>205551.00</LastPaymentAmountPosted>
+      <LastPaymentAmountPostedDate>2020-04-07T09:03:12.936-04:00</LastPaymentAmountPostedDate>
+      <NextInstallmentAmountDue>177488.00</NextInstallmentAmountDue>
+      <NextInstallmentAmountDueDate>2020-05-26T00:00:00-04:00</NextInstallmentAmountDueDate>
+      <NotHonoredPaymentAmount_Ext>177488.00</NotHonoredPaymentAmount_Ext>
+      <NotHonoredPaymentReason_Ext>
+        <DisplayName>Customer Request</DisplayName>
+      </NotHonoredPaymentReason_Ext>
+      <OriginalDelinequentAmount>0</OriginalDelinequentAmount>
+      <PaidInFullDiscount_Ext>
+        <Code>NA</Code>
+      </PaidInFullDiscount_Ext>
+      <PaymentPlan>
+        <Name>Annual</Name>
+      </PaymentPlan>
+      <Policy>
+        <LOBCode>
+          <DisplayName>WC</DisplayName>
+        </LOBCode>
+        <ProducerCodeOfService_Ext>
+          <Code>110906</Code>
+          <Producer>
+            <Address_Ext id="2">
+              <AddressLine1>904 Scenic Dr</AddressLine1>
+              <City>Ewing</City>
+              <PostalCode>086282209</PostalCode>
+              <State>
+                <Code>NJ</Code>
+              </State>
+            </Address_Ext>
+            <Name>NJM_QA-110906</Name>
+            <ParentProducerName_Ext>NJM_QA</ParentProducerName_Ext>
+          </Producer>
+        </ProducerCodeOfService_Ext>
+      </Policy>
+      <PolicyNumber>W731984</PolicyNumber>
+      <PolicyPerEffDate>2019-01-02T00:00:00-05:00</PolicyPerEffDate>
+      <PolicyPerExpirDate>2020-01-02T00:00:00-05:00</PolicyPerExpirDate>
+      <PrimaryInsured id="2">
+        <Contact id="4">
+          <AllValidAddresses>
+            <Entry id="4">
+              <AddressLine1>301 Sullivan Way</AddressLine1>
+              <AddressType>
+                <Code>business</Code>
+              </AddressType>
+              <City>Ewing</City>
+              <PostalCode>08628</PostalCode>
+              <State>
+                <Code>NJ</Code>
+              </State>
+            </Entry>
+          </AllValidAddresses>
+          <PrimaryAddress id="4">
+            <AddressLine1>301 Sullivan Way</AddressLine1>
+            <AddressType>
+              <Code>business</Code>
+            </AddressType>
+            <City>Ewing</City>
+            <PostalCode>08628</PostalCode>
+            <State>
+              <Code>NJ</Code>
+            </State>
+          </PrimaryAddress>
+          <Subtype>
+            <Code>Company</Code>
+          </Subtype>
+        </Contact>
+        <DisplayName>PDMS_NJRe</DisplayName>
+        <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+        <Roles>
+          <Entry id="4">
+            <Role>
+              <Code>primaryinsured</Code>
+            </Role>
+          </Entry>
+        </Roles>
+      </PrimaryInsured>
+      <RecentPaymentOnDlnqPolicy_Ext>0.00</RecentPaymentOnDlnqPolicy_Ext>
+      <RiskState>NJ</RiskState>
+      <Status>
+        <Code>expired</Code>
+      </Status>
+      <TotalAdjustedOutstandingAmount>-235114.00</TotalAdjustedOutstandingAmount>
+      <TotalDueForPolicyPeriod>177488.00</TotalDueForPolicyPeriod>
+      <UWCompany>
+        <Code>njm_ext</Code>
+      </UWCompany>
+    </PolicyPeriodForThisInvoice>
+    <ReminderNoticeLetterIndicator>N</ReminderNoticeLetterIndicator>
+  </AccountInvoices>
+  <UniqueContacts>
+    <Entry id="1">
+      <Contact id="1">
+        <AllValidAddresses>
+          <Entry id="1">
+            <AddressLine1>301 Sullivan Way</AddressLine1>
+            <AddressType>
+              <Code>business</Code>
+            </AddressType>
+            <City>Ewing</City>
+            <PostalCode>08628</PostalCode>
+            <State>
+              <Code>NJ</Code>
+            </State>
+          </Entry>
+        </AllValidAddresses>
+        <PrimaryAddress id="1">
+          <AddressLine1>301 Sullivan Way</AddressLine1>
+          <AddressType>
+            <Code>business</Code>
+          </AddressType>
+          <City>Ewing</City>
+          <PostalCode>08628</PostalCode>
+          <State>
+            <Code>NJ</Code>
+          </State>
+        </PrimaryAddress>
+        <Subtype>
+          <Code>Company</Code>
+        </Subtype>
+      </Contact>
+      <DisplayName>PDMS_NJRe</DisplayName>
+      <IsCorrespondenceReceiver_Ext>false</IsCorrespondenceReceiver_Ext>
+      <Roles>
+        <Entry id="1">
+          <Role>
+            <Code>primaryinsured</Code>
+          </Role>
+        </Entry>
+      </Roles>
+    </Entry>
+  </UniqueContacts>
+</CorrespondenceDataResponse>

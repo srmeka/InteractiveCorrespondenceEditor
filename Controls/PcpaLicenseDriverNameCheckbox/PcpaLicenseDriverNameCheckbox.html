@@ -1,0 +1,14 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaLicenseDriverNameCheckboxController">
+    <div class="panel-heading"> *Licensed Driver(s)</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <div ng-repeat="item in Driver" class="row" style="margin-bottom:5px;" ng-required="true">
+                    <input ng-model="item.checked" ng-click="selectDriver(item)" type="checkbox" ng-required="SelectedDriver.length == 0" name="DriverCheckboxLst" id="DriverCheckboxLstId{{item._id}}" />
+                        <span ng-bind="item.Party.Person.PersonName.FirstGivenNm + ' ' + item.Party.Person.PersonName.FamilyNm + ' ' + item.Party.Person.FamilyNameGenerationCd+ ', ' +item.Party.Person.BirthDt"></span>
+                    </div>
+                    <span class="alert-danger" ng-if="Driver.length === 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=301879
+  -->
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+
+
+    <sectionGroup name="CustomAppSettings">
+      <section name="SmtpMail" type="InteractiveCorrespondenceEditor.Controllers.Common.MailConfig,InteractiveCorrespondenceEditor" />
+      <section name="ErrorCodes" type="InteractiveCorrespondenceEditor.Controllers.Commons.ErrorCode,InteractiveCorrespondenceEditor" />
+    </sectionGroup>
+  </configSections>
+  
+  <connectionStrings>      
+    <add name="ICEEntities" connectionString="metadata=res://*/Models.ICE.csdl|res://*/Models.ICE.ssdl|res://*/Models.ICE.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source={{DataSource_ICE}};initial catalog={{Database_Catalog_Name_ICE}};integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+  </connectionStrings>
+  
+  <appSettings>
+    <add key="webpages:Version" value="3.0.0.0" />
+    <add key="webpages:Enabled" value="false" />
+    <add key="ClientValidationEnabled" value="true" />
+    <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+
+    <add key="debug" value="{{debug_flag}}"/>
+    <add key="trace" value="{{trace_flag}}"/>
+    <add key="showdebugbuttons" value="{{showdebugbuttons_flag}}" />
+    <add key="version" value="{{version_flag}}"/>
+    <!-- 1 - true serach policy with check digit-->
+    <!-- 0 - false serach policy without check digit -->
+    <add key="policycheckdigit" value="{{policycheckdigit_flag}}"/>
+    <!-- show and hide xResponse Button -->
+    <add key="showInteractiveButton" value="{{showInteractiveButton_flag}}" />
+    
+  </appSettings>
+  <system.web>
+    <authentication mode="None" />
+    <compilation debug="true" targetFramework="4.5.2" />
+    <httpRuntime targetFramework="4.5.2" maxUrlLength="2000"/>
+  </system.web>
+  <system.webServer>
+    <rewrite>
+      <rules>
+        <rule name="OnBase" stopProcessing="true">
+          <match url="/DocumentDataESBWeb/(.*)" />
+          <action type="Rewrite" url="http://172.25.7.17:3043/DocumentDataESBWeb/sca/DocumentData" />
+        </rule>        
+      </rules>
+    </rewrite>
+    <modules>
+      <remove name="FormsAuthentication" />
+    </modules>
+    <handlers>
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="TRACEVerbHandler" />
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    </handlers>
+    <httpProtocol>
+      <customHeaders>
+        <add name="Access-Control-Allow-Origin" value="*" />
+        <add name="Access-Control-Allow-Methods" value="GET,POST,PUT,DELETE,OPTIONS" />
+        <add name="Access-Control-Allow-Headers" value="X-Requested-With,Content-Type,Accept" />
+        <add name="Access-Control-Allow-Credentials" value="true" />
+      </customHeaders>
+    </httpProtocol>    
+  </system.webServer>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+
+      <dependentAssembly>
+        <assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="0.0.0.0-1.5.2.14234" newVersion="1.5.2.14234" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" culture="neutral" publicKeyToken="30ad4fe6b2a6aeed" />
+        <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.LocalDbConnectionFactory, EntityFramework">
+      <parameters>
+        <parameter value="mssqllocaldb" />
+      </parameters>
+    </defaultConnectionFactory>
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>
+
+  <CustomAppSettings>
+
+    <SmtpMail host="smtp.njmgroup.com" from="{{FromAddresseePC}}" subject="ICE ({{Env}})" default="{{MailServiceAddressee}}">
+      <clients>
+        
+        <!-- PL PDS / BDS -->
+        
+        <add name="PC-WCU" addressee="{{FromAddresseePC}}" subject="WCU PC ICE ({{Env}})"/>
+        <add name="BC" addressee="{{FromAddresseeBC}}" subject="WCU BC ICE ({{Env}})"/>
+
+        <add name="PC-PA" addressee="{{FromAddresseePC}}" subject="PL Auto PC ICE ({{Env}})"/>
+        <add name="PC-HO" addressee="{{FromAddresseePC}}" subject="Homeowner PC ICE ({{Env}})"/>
+        <add name="PC-DW" addressee="{{FromAddresseePC}}" subject="Dwelling PC ICE ({{Env}})"/>
+        <add name="PC-UMB" addressee="{{FromAddresseePC}}" subject="Umbrella PC ICE ({{Env}})"/>
+
+        <add name="BC-PA" addressee="{{FromAddresseeBC}}" subject="PL BC ICE ({{Env}})"/>
+
+        <add name="ESB" addressee="{{FromAddresseeBC}}" subject="Underwriting ESB/Datapower service error ({{Env}})" />
+        
+        <!-- CL PDS -->
+        
+        <add name="PC-CA" addressee="{{FromAddresseePC}}" subject="Commerical Auto PC ICE ({{Env}})"/>
+        <add name="PC-CGL" addressee="{{FromAddresseePC}}" subject="CGL PC ICE ({{Env}})"/>
+        
+        <!-- CLAIMS -->
+        <add name="GC" addressee="{{FromAddresseePC}}" subject="GC ICE ({{Env}})"/>
+        <add name="WCC" addressee="{{FromAddresseePC}}" subject="WCC ICE ({{Env}})"/>
+
+        <!-- BOP-CUMB -->
+        <add name="PC-BOP" addressee="{{FromAddresseePC}}" subject="BOP ICE ({{Env}})"/>
+        <add name="PC-CUMB" addressee="{{FromAddresseePC}}" subject="CUMB ICE ({{Env}})"/>
+
+      </clients>
+    </SmtpMail>
+
+
+    <!-- ESB error codes and its description mapping DEV -->
+    <ErrorCodes>
+      <codes>
+        <add name="ErrorCodePC-HO1" errorcode="HCE001" description="Schema validation error." />
+        <add name="ErrorCodePC-HO2" errorcode="HCE002" description="Invalid Quote number received." />
+        <add name="ErrorCodePC-HO3" errorcode="HCE003" description="Invalid Policy number received." />
+        <add name="ErrorCodePC-HO4" errorcode="HCE004" description="AsOfDate is Empty." />
+        <add name="ErrorCodePC-HO5" errorcode="HCE005" description="Unknown Error occurred in DataPower ESB while processing the request. " />
+        <add name="ErrorCodePC-HO6" errorcode="HCE006" description="BackEnd Server Connection Error Occurred." />
+
+        <add name="ErrorCodePC-DW1" errorcode="PDS001" description="BackEnd Server connection error" />
+        <add name="ErrorCodePC-DW2" errorcode="PDS015" description="Schema validation error." />
+        <add name="ErrorCodePC-DW3" errorcode="PDS005" description="Quote Number is null or empty or Invalid." />
+        <add name="ErrorCodePC-DW4" errorcode="PDS006" description="Policy Number is null or empty or Invalid." />
+        <add name="ErrorCodePC-DW5" errorcode="PDS008" description="AsOfDate is Empty." />
+        <add name="ErrorCodePC-DW6" errorcode="PDS014" description="Unknown Error occurred in DataPower ESB while processing the request/response." />
+      </codes>
+    </ErrorCodes>
+
+  </CustomAppSettings>
+  
+  
+  <!--<system.codedom>
+    <compilers>
+      <compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:6 /nowarn:1659;1699;1701" />
+      <compiler language="vb;vbs;visualbasic;vbscript" extension=".vb" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:14 /nowarn:41008 /define:_MYTYPE=\&quot;Web\&quot; /optionInfer+" />
+    </compilers>
+  </system.codedom>-->
+  <system.serviceModel>
+    <bindings />
+    <client />
+  </system.serviceModel>
+</configuration>

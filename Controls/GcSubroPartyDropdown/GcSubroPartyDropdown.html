@@ -1,0 +1,17 @@
+﻿<div class="panel panel-primary" ng-controller="GcSubroPartyDropdownController">
+    <div class="panel-heading">Adverse Subro Party</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <!--Adverse Subro Party dropdown list-->
+                <div class="col-md-4"><label>Adverse Subro Party:</label></div>
+                <div class="col-md-8">
+                    <select ng-options="item.displayName for item in SubroPartyData" name="SubroPartySelection" ng-model="selectedName" class="form-control" id="SubroPartySelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="SubroPartyData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

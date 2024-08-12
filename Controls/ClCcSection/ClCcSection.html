@@ -1,0 +1,47 @@
+﻿<div class="panel panel-primary" ng-controller="ClCcSectionController">
+    <div class="panel-heading">
+        CC section
+    </div>
+    <div class="col-md-6" style="border:solid; border-width:thin">
+        CC
+    </div>
+    <div class="col-md-6" style="border:solid; border-width:thin">
+        CC Name / Address
+    </div>
+    <div class="panel-body">
+        <div>
+            <div class="form-group" ng-repeat="CcSection in TotalCount track by $index">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>
+                            <input type="checkbox" name="CcCheckbox{{$index}}" ng-model="CcCheckbox[$index]" ng-true-value="true" ng-init="CcCheckbox[$index]=false" ng-false-value="false" id="CCCheckBoxId1" />
+                        </label>
+                    </div>
+                    <div class="col-md-6">
+                        <!--<select ng-disabled="!CcCheckbox[$index]" name="CcName{{$index}}" ng-model="CcName[$index]" ng-change="updateCCAddress{{$index}}(CcName[$index])" ng-init="CcName[$index]=undefined" ng-options="CCNameInfo.DisplayName + CCNameInfo.Contact.entityPerson.Prefix.DisplayName+' '+ CCNameInfo.Contact.entityPerson.FirstName +' '+ CCNameInfo.Contact.entityPerson.MiddleName+' '+ CCNameInfo.Contact.entityPerson.LastName  for CCNameInfo in CCNameData track by CCNameInfo._id" class="form-control" id="CCNameId{{$index}}" ng-required="CcCheckbox[$index]">-->
+                        <div>
+                            <input type="text" ng-disabled="!CcCheckbox[$index]" name="AddresseeName{{$index}}" id="AddresseeNameID{{$index}}" ng-model="AddresseeName[$index]" class="form-control" />
+                        </div>
+                        <div>
+                            <select ng-disabled="!CcCheckbox[$index]" name="CcName{{$index}}" ng-model="CcName[$index]" ng-change="updateCCAddress{{$index}}(CcName[$index])" ng-init="CcName[$index]=undefined" ng-options="CCNameInfo.DisplayName for CCNameInfo in CCNameData track by CCNameInfo._id" class="form-control" id="CCNameId{{$index}}" ng-required="CcCheckbox[$index]">
+                                <option value="">--Select--</option>
+                            </select>
+                        </div>
+                        <span class="alert-danger" ng-show="CCName.length == 0">Information not provided by source</span>
+                        <div>
+                            <select ng-disabled="!CcCheckbox[$index]" name="CcAddress{{$index}}" ng-model="CcAddress[$index]" ng-init="CcAddress[$index]=undefined" ng-options="CCAddressInfo.Address.Line1Tx+ ' '+CCAddressInfo.Address.Line2Tx+' '+CCAddressInfo.Address.Line3Tx+', '+ CCAddressInfo.Address.Municipality[0].MunicipalityNm+ ' '+ CCAddressInfo.Address.CountrySubdivision.CountrySubdivisionNm+ ' '+ CCAddressInfo.Address.PostalCd for CCAddressInfo in CCAddressData{{$index}} track by CCAddressInfo._id" id="CCAddressId{{$index}}" class="form-control" ng-required="CcCheckbox[$index]">
+                                <option value="">--Select--</option>
+                            </select>
+                            <span class="alert-danger" ng-show="CCAddress.length == 0">Information not provided by source</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <input type="button" class="btn-primary" value="Add New" ng-click="AddNewCCSection()" />
+                <input type="button" class="btn-primary" value="Remove" ng-click="RemoveCCSection()" />
+            </div>
+        </div>
+    </div>
+</div>

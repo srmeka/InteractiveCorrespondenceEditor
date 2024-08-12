@@ -1,0 +1,39 @@
+﻿<div class="panel panel-primary" ng-controller="GcVehicleDropdownController">
+    <div class="panel-heading">Vehicle Section</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <!--Insured's Vehicle dropdown list-->
+            <div class="row" ng-show="{{ShowIns}}">
+                <div class="col-md-4"><label>{{VehLabel}}</label></div>
+                <div class="col-md-8">
+                    <select ng-options="(item.Year + ' ' + item.Make + ' ' + item.Model + ' ' + item.Vin) for item in VehicleData | orderBy:['Year','Make','Model']" name="VehicleSelection" ng-model="selectedVehicle" class="form-control" id="VehicleSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row" ng-show="{{vehStorage}}">
+                <div class="col-md-4"><label>{{VehLabel}}</label></div>
+                <div class="col-md-8">
+                    <select ng-options="(item.Year + ' ' + item.Make + ' ' + item.Model) for item in VehicleData | orderBy:['Year','Make','Model']" name="VehicleSelection" ng-model="selectedVehicle" class="form-control" id="VehicleSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--seperator space-->
+            <div class="row" ng-show="{{ShowClm && ShowIns}}" style="margin-top:10px"></div>
+
+            <!--Claimant's Vehicle dropdown list-->
+            <div class="row" ng-show="{{ShowClm}}">
+                <div class="col-md-4"><label>Claimant's Vehicle:</label></div>
+                <div class="col-md-8">
+                    <select ng-options="(item.Year + ' ' + item.Make + ' ' + item.Model + ' ' + item.Vin) for item in VehicleClmData | orderBy:['Year','Make','Model']" name="VehicleClmSelection" ng-model="selectedVehicleClm" class="form-control" id="VehicleClmSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+</div> 

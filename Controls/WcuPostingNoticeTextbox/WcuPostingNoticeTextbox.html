@@ -1,0 +1,27 @@
+﻿<div class="panel panel-primary" ng-controller="WcuPostingNoticeTextboxController">
+    <div class="panel-body">
+        <div class="form-group">
+
+            <div class="row" style="margin-top: 5px">
+                <div class="col-md-4">
+                    <label>
+                        * Number of Notices:
+                    </label>
+                </div>
+                <div class='col-md-4'>
+                    <input class='form-control'
+                           name='PostingNotice'
+                           type='text'
+                           ng-model='PostingNoticeValue'
+                           ng-change='PostingNoticeValue=validateNumber(PostingNoticeValue)'
+                           maxlength='2'
+                           ng-required='true'
+                           id='PostingNoticeId'/>
+                 </div>
+                <div class='col-md-4'>
+                    <span>(1 to 99)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

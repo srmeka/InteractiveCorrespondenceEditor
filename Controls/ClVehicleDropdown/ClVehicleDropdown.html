@@ -1,0 +1,21 @@
+﻿<div class="panel panel-primary" ng-controller="ClVehicleDropdownController">
+    <div class="panel-heading">
+        Vehicle Information
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-12">
+                    <label>
+                       Vehicle
+                    </label>
+
+                    <select ng-disabled="Vehicle.length == 0" name="VehicleDetails" ng-model="SelectedVehicle" ng-options="VehicleInfo.Vehicle.ModelYearNr+' '+VehicleInfo.Vehicle.VehicleTradeNm+' '+ ' ' +VehicleInfo.Vehicle.ModelNm+' '+VehicleInfo.Vehicle.ManufacturerVehicleIdentificationNr for VehicleInfo in Vehicle track by VehicleInfo._id" class="form-control" id="VehicleDetailsID">
+                        <option value="">--Select--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="Vehicle.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

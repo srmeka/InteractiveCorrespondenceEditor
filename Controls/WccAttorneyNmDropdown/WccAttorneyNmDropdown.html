@@ -1,0 +1,21 @@
+﻿<div class="panel panel-primary" ng-controller="WccAttorneyNmDropdownController">
+    <div class="panel-heading">NJM Attorney Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4"><label>NJM Attorney</label></div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <!--NJM Attorney dropdown list-->
+                        <div class="col-md-6">
+                            <select ng-options="item.displayName for item in ClaimantNameData" name="AttorneySelection" ng-model="selectedAttorney" class="form-control" id="AttorneySelectionId">
+                                <option value="">--Select One--</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6"></div>
+                    </div>
+                    </div>
+                </div>
+             </div>
+       </div>
+</div> 

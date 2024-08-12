@@ -1,0 +1,260 @@
+﻿<tns:Envelope xmlns:tns="http://schemas.xmlsoap.org/soap/envelope/">
+  <tns:Body>
+    <esb:retrievePolicyInvoiceDetailsResponse xmlns:esb="http://njm.com/esb/wcu/bc/1.0/WCUBillingDataService">
+      <retrievePolicyInvoiceDetailsOut>
+        <Header>
+          <CorrelationContext>
+            <CorrelationId>?</CorrelationId>
+          </CorrelationContext>
+        </Header>
+        <IsPolicyEscrow>false</IsPolicyEscrow>
+        <AccountInvoices id="1">
+          <types:AmountDue xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types">477900.00</types:AmountDue>
+          <types:CurrentInstallmentAmount xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types">477900.00</types:CurrentInstallmentAmount>
+          <types:EarnedPremiumIndicatorOne xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types">N</types:EarnedPremiumIndicatorOne>
+          <types:EarnedPremiumIndicatorTwo xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types">N</types:EarnedPremiumIndicatorTwo>
+          <types:EventDate xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types">2019-09-01T00:00:00-04:00</types:EventDate>
+          <types:FirstInstallmentIndicator xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types">N</types:FirstInstallmentIndicator>
+          <types:LegalDunningLetterIndicator xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types">N</types:LegalDunningLetterIndicator>
+          <types:PaymentDueDate xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types">2019-09-25T00:00:00-04:00</types:PaymentDueDate>
+          <types:PolicyPeriodForThisInvoice xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types">
+            <types:Account>
+              <types:AccountNumber>AA100373576</types:AccountNumber>
+            </types:Account>
+            <types:ActualPremiumAmount>0</types:ActualPremiumAmount>
+            <types:BillingMethod>
+              <types:Code>DirectBill</types:Code>
+            </types:BillingMethod>
+            <types:BillingOptions_Ext>
+              <types:Code>documenttoinsured_ext</types:Code>
+            </types:BillingOptions_Ext>
+            <types:BureauFileNumber_Ext>094881</types:BureauFileNumber_Ext>
+            <types:CancelStatus>
+              <types:Code>open</types:Code>
+            </types:CancelStatus>
+            <types:Contacts>
+              <types:Entry id="1">
+                <types:Contact id="1">
+                  <types:AllValidAddresses>
+                    <types:Entry id="1">
+                      <types:AddressLine1>Attn: Mr Thomas Flynn</types:AddressLine1>
+                      <types:AddressLine2>10 Centerville Rd</types:AddressLine2>
+                      <types:AddressType>
+                        <types:Code>mailing_ext</types:Code>
+                      </types:AddressType>
+                      <types:City>Holmdel</types:City>
+                      <types:PostalCode>07733</types:PostalCode>
+                      <types:State>
+                        <types:Code>NJ</types:Code>
+                      </types:State>
+                    </types:Entry>
+                    <types:Entry id="2">
+                      <types:AddressLine1>922 Highway 33, Bldg 6 Ste1</types:AddressLine1>
+                      <types:AddressType>
+                        <types:Code>business</types:Code>
+                      </types:AddressType>
+                      <types:City>Freehold</types:City>
+                      <types:PostalCode>07728</types:PostalCode>
+                      <types:State>
+                        <types:Code>NJ</types:Code>
+                      </types:State>
+                    </types:Entry>
+                    <types:Entry id="3">
+                      <types:AddressLine1>Attn: Mr Thomas Flynn</types:AddressLine1>
+                      <types:AddressLine2>Bldg 6 Ste 1</types:AddressLine2>
+                      <types:AddressLine3>922 Highway 33</types:AddressLine3>
+                      <types:AddressType>
+                        <types:Code>mailing_ext</types:Code>
+                      </types:AddressType>
+                      <types:City>Freehold</types:City>
+                      <types:PostalCode>07728</types:PostalCode>
+                      <types:State>
+                        <types:Code>NJ</types:Code>
+                      </types:State>
+                    </types:Entry>
+                  </types:AllValidAddresses>
+                  <types:PrimaryAddress id="1">
+                    <types:AddressLine1>Attn: Mr Thomas Flynn</types:AddressLine1>
+                    <types:AddressLine2>10 Centerville Rd</types:AddressLine2>
+                    <types:AddressType>
+                      <types:Code>mailing_ext</types:Code>
+                    </types:AddressType>
+                    <types:City>Holmdel</types:City>
+                    <types:PostalCode>07733</types:PostalCode>
+                    <types:State>
+                      <types:Code>NJ</types:Code>
+                    </types:State>
+                  </types:PrimaryAddress>
+                  <types:Subtype>
+                    <types:Code>Company</types:Code>
+                  </types:Subtype>
+                </types:Contact>
+                <types:DisplayName>Saker ShopRites Inc</types:DisplayName>
+                <types:IsCorrespondenceReceiver_Ext>false</types:IsCorrespondenceReceiver_Ext>
+                <types:Roles>
+                  <types:Entry id="1">
+                    <types:Role>
+                      <types:Code>primaryinsured</types:Code>
+                    </types:Role>
+                  </types:Entry>
+                </types:Roles>
+              </types:Entry>
+            </types:Contacts>
+            <types:CurrentOpenBalanceDue>955800.00</types:CurrentOpenBalanceDue>
+            <types:DelinquentAmount>477900.00</types:DelinquentAmount>
+            <types:DueAmount>477900.00</types:DueAmount>
+            <types:EPAgreementPaymentAmount>382320.00</types:EPAgreementPaymentAmount>
+            <types:EstimatedPremiumAmount>0</types:EstimatedPremiumAmount>
+            <types:InvoiceDeliveryType_Ext>mail</types:InvoiceDeliveryType_Ext>
+            <types:IsDirectDebit>false</types:IsDirectDebit>
+            <types:IsLCF_Ext>false</types:IsLCF_Ext>
+            <types:LastPaymentAmountPosted>477900.00</types:LastPaymentAmountPosted>
+            <types:LastPaymentAmountPostedDate>2019-09-04T00:00:00-04:00</types:LastPaymentAmountPostedDate>
+            <types:NextInstallmentAmountDue>477900.00</types:NextInstallmentAmountDue>
+            <types:NextInstallmentAmountDueDate>2019-10-25T00:00:00-04:00</types:NextInstallmentAmountDueDate>
+            <types:NotHonoredPaymentAmount_Ext>0.00</types:NotHonoredPaymentAmount_Ext>
+            <types:NotHonoredPaymentReason_Ext/>
+            <types:OriginalDelinequentAmount>477900.00</types:OriginalDelinequentAmount>
+            <types:PaidInFullDiscount_Ext>
+              <types:Code>NA</types:Code>
+            </types:PaidInFullDiscount_Ext>
+            <types:PaymentPlan>
+              <types:Name>Eleven Equal Payments</types:Name>
+            </types:PaymentPlan>
+            <types:PlannedInvoices>
+              <types:Entry id="2">
+                <types:AmountDue>477900.00</types:AmountDue>
+                <types:PaymentDueDate>2019-11-25T00:00:00-05:00</types:PaymentDueDate>
+              </types:Entry>
+              <types:Entry id="3">
+                <types:AmountDue>477900.00</types:AmountDue>
+                <types:PaymentDueDate>2019-12-25T00:00:00-05:00</types:PaymentDueDate>
+              </types:Entry>
+              <types:Entry id="4">
+                <types:AmountDue>477900.00</types:AmountDue>
+                <types:PaymentDueDate>2020-01-25T00:00:00-05:00</types:PaymentDueDate>
+              </types:Entry>
+              <types:Entry id="5">
+                <types:AmountDue>477900.00</types:AmountDue>
+                <types:PaymentDueDate>2020-02-25T00:00:00-05:00</types:PaymentDueDate>
+              </types:Entry>
+              <types:Entry id="6">
+                <types:AmountDue>477900.00</types:AmountDue>
+                <types:PaymentDueDate>2020-03-25T00:00:00-04:00</types:PaymentDueDate>
+              </types:Entry>
+              <types:Entry id="7">
+                <types:AmountDue>477900.00</types:AmountDue>
+                <types:PaymentDueDate>2020-04-25T00:00:00-04:00</types:PaymentDueDate>
+              </types:Entry>
+            </types:PlannedInvoices>
+            <types:Policy>
+              <types:LOBCode>
+                <types:DisplayName>WC</types:DisplayName>
+              </types:LOBCode>
+              <types:ProducerCodeOfService_Ext>
+                <typespp:Code xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">K7128</typespp:Code>
+                <typespp:Producer xmlns:typespp="http://njm.com/esb/wcu/bc/bds/policyperoid/1.0/types">
+                  <typespp:Address_Ext id="1">
+                    <types:AddressLine1>STE 605</types:AddressLine1>
+                    <types:AddressLine2>1 INTERNATIONAL BLVD</types:AddressLine2>
+                    <types:AddressType/>
+                    <types:City>MAHWAH</types:City>
+                    <types:PostalCode>07495</types:PostalCode>
+                    <types:State>
+                      <types:Code>NJ</types:Code>
+                    </types:State>
+                  </typespp:Address_Ext>
+                  <typespp:Name>ICA RISK MGMT CONSULTANTS-K7128</typespp:Name>
+                  <typespp:ParentProducerName_Ext>ICA RISK MGMT CONSULTANTS</typespp:ParentProducerName_Ext>
+                </typespp:Producer>
+              </types:ProducerCodeOfService_Ext>
+            </types:Policy>
+            <types:PolicyNumber>W193961</types:PolicyNumber>
+            <types:PolicyPerEffDate>2019-06-01T00:00:00-04:00</types:PolicyPerEffDate>
+            <types:PolicyPerExpirDate>2020-06-01T00:00:00-04:00</types:PolicyPerExpirDate>
+            <types:PrimaryInsured id="1">
+              <types:Contact id="2">
+                <types:AllValidAddresses>
+                  <types:Entry id="4">
+                    <types:AddressLine1>Attn: Mr Thomas Flynn</types:AddressLine1>
+                    <types:AddressLine2>10 Centerville Rd</types:AddressLine2>
+                    <types:AddressType>
+                      <types:Code>mailing_ext</types:Code>
+                    </types:AddressType>
+                    <types:City>Holmdel</types:City>
+                    <types:PostalCode>07733</types:PostalCode>
+                    <types:State>
+                      <types:Code>NJ</types:Code>
+                    </types:State>
+                  </types:Entry>
+                  <types:Entry id="5">
+                    <types:AddressLine1>922 Highway 33, Bldg 6 Ste1</types:AddressLine1>
+                    <types:AddressType>
+                      <types:Code>business</types:Code>
+                    </types:AddressType>
+                    <types:City>Freehold</types:City>
+                    <types:PostalCode>07728</types:PostalCode>
+                    <types:State>
+                      <types:Code>NJ</types:Code>
+                    </types:State>
+                  </types:Entry>
+                  <types:Entry id="6">
+                    <types:AddressLine1>Attn: Mr Thomas Flynn</types:AddressLine1>
+                    <types:AddressLine2>Bldg 6 Ste 1</types:AddressLine2>
+                    <types:AddressLine3>922 Highway 33</types:AddressLine3>
+                    <types:AddressType>
+                      <types:Code>mailing_ext</types:Code>
+                    </types:AddressType>
+                    <types:City>Freehold</types:City>
+                    <types:PostalCode>07728</types:PostalCode>
+                    <types:State>
+                      <types:Code>NJ</types:Code>
+                    </types:State>
+                  </types:Entry>
+                </types:AllValidAddresses>
+                <types:PrimaryAddress id="2">
+                  <types:AddressLine1>Attn: Mr Thomas Flynn</types:AddressLine1>
+                  <types:AddressLine2>10 Centerville Rd</types:AddressLine2>
+                  <types:AddressType>
+                    <types:Code>mailing_ext</types:Code>
+                  </types:AddressType>
+                  <types:City>Holmdel</types:City>
+                  <types:PostalCode>07733</types:PostalCode>
+                  <types:State>
+                    <types:Code>NJ</types:Code>
+                  </types:State>
+                </types:PrimaryAddress>
+                <types:Subtype>
+                  <types:Code>Company</types:Code>
+                </types:Subtype>
+              </types:Contact>
+              <types:DisplayName>Saker ShopRites Inc</types:DisplayName>
+              <types:IsCorrespondenceReceiver_Ext>false</types:IsCorrespondenceReceiver_Ext>
+              <types:Roles>
+                <types:Entry id="2">
+                  <types:Role>
+                    <types:Code>primaryinsured</types:Code>
+                  </types:Role>
+                </types:Entry>
+              </types:Roles>
+            </types:PrimaryInsured>
+            <types:RecentPaymentOnDlnqPolicy_Ext>0.00</types:RecentPaymentOnDlnqPolicy_Ext>
+            <types:RiskState>
+              <types:Code>NJ</types:Code>
+            </types:RiskState>
+            <types:Status>
+              <types:Code>inforce</types:Code>
+            </types:Status>
+            <types:TotalAdjustedOutstandingAmount>3823200.00</types:TotalAdjustedOutstandingAmount>
+            <types:TotalDueForPolicyPeriod>3823200.00</types:TotalDueForPolicyPeriod>
+            <types:UWCompany>
+              <types:Code>njm_ext</types:Code>
+            </types:UWCompany>
+          </types:PolicyPeriodForThisInvoice>
+          <types:ReminderNoticeLetterIndicator xmlns:types="http://njm.com/esb/wcu/bc/bds/1.0/types">Y</types:ReminderNoticeLetterIndicator>
+        </AccountInvoices>
+        <IsPolicyPrecisionPay>false</IsPolicyPrecisionPay>
+      </retrievePolicyInvoiceDetailsOut>
+    </esb:retrievePolicyInvoiceDetailsResponse>
+  </tns:Body>
+</tns:Envelope>

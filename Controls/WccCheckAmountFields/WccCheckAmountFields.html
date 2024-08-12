@@ -1,0 +1,24 @@
+﻿<div class="panel panel-primary" ng-controller="WccCheckAmountFieldsController">
+    <div class="panel-heading">Check Amount(s)</div>
+    <div class="panel-body">
+        <div class="form-group">
+            
+            <!--Check Amount textboxes -->
+            <div class="row" style="margin-top:5px" ng-repeat="item in displayData track by $index">
+                <div class="col-md-4"><label ng-bind="item.fieldLabel"></label></div>
+                <div class="col-md-8">
+                    <span>$</span>
+                    <input type="text"
+                           placeholder="####.##"
+                           class="form-control"
+                           ng-model="item.bindValue"
+                           ng-required="!haveValue() && {{$index}} == 0"
+                           style="display:inline-block;margin-right:5px"
+                           name="CheckAmount{{$index}}"
+                           id="CheckAmount{{$index}}Id" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

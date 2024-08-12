@@ -1,0 +1,29 @@
+﻿<form>
+    <div class="panel panel-primary" ng-controller="LineOfBusinessController">
+        <div class="panel-heading">Line Of Business</div>
+        <div class="panel-body">
+            <div class="form-group">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>* Line(s) Of Business:</label>
+
+                        <div style="margin-left:10px" ng-repeat="LOBInfo in LOB" ng-required="true" id="LOBId">
+                            <input type="checkbox" 
+                                   ng-model="LOBInfo.checked" 
+                                   ng-change="updateSelectedLOB(LOBInfo)" 
+                                   ng-required="SelectedLOB.length==0" 
+                                   id="LOBID{{LOBInfo.lookupItemID}}">
+                            <span ng-bind="LOBInfo.lookupItemValue.trim()"></span>
+                        </div>
+                        <span class="alert-danger" ng-show="SelectedLOB.length==0">Please select at least one LOB</span>
+                        <span class="alert-danger" ng-show="LOBInfo.lookupItemValue == 0" id="ErrorId">Information not provided by source</span>
+                    </div>
+                    <div class="col-md-8">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>

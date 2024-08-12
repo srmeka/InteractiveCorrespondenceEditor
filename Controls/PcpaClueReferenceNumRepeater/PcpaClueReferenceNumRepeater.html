@@ -1,0 +1,36 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaClueReferenceNumRepeaterController">
+    <div class="panel-heading">
+        CLUE Reference Number
+    </div>
+    <div class="panel-body">
+        <div class="form-group" ng-repeat="ClueNumSection in TotalCount track by $index">
+
+            <div class="row" style="padding-bottom: 10px">
+                <div class="col-md-4">
+                    <input type="checkbox" name="ClueNumCheckbox{{$index}}" ng-model="ClueNumCheckbox[$index]" ng-change="ClueNumName[$index] = ClueNumCheckbox[$index] ? ClueNumName[$index] : ''" ng-true-value="true" ng-init="ClueNumCheckbox[$index]=false" ng-false-value="false" id="ClueNumCheckBox{{$index}}Id" />
+                    <label>
+                        Include CLUE Reference Number
+                    </label>
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" ng-model="ClueNumName[$index]" ng-disabled="!ClueNumCheckbox[$index]" name="ClueNumName{{$index}}" id="ClueNumName{{$index}}Id" />
+                </div>
+            </div>
+            <div class="row" style="border-bottom: 2px solid lightgray" ng-show="{{showAddBtn}}==true">
+            </div>
+        </div>
+
+        <div class="col-md-12 text-center" ng-show="{{showAddBtn}}==true">
+            <input type="button" 
+                   class="btn-primary" 
+                   value="Add" 
+                   ng-click="AddNewClueNumSection()" 
+                   ng-hide="TotalCount.length=={{MaxCtls}}"/> 
+            <input type="button" 
+                   class="btn-primary" 
+                   value="Remove" 
+                   ng-click="RemoveClueNumSection()" 
+                   ng-hide="TotalCount.length==1"/>
+        </div>
+    </div>
+</div>

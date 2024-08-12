@@ -1,0 +1,55 @@
+﻿<div class="panel panel-primary" ng-controller="PcpaReconsiderationDropdownwControlsController">
+    <div class="panel-heading">Reconsideration</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row"  style="margin-bottom:15px">
+                <div class="col-md-4">
+                    <!--Checkbox to enable control-->
+                    <input ng-click="clearAllData()" ng-model="SelectedReconsideration" type="checkbox" id="CtrlEnableCheckboxId" name="CtrlEnableCheckbox" value="" /> <label>Reconsideration</label>
+                    
+                </div>
+                <div class="col-md-8">
+                   <div class="row">
+                       <div class="col-md-6"></div>
+                       <div class="col-md-6">
+                           <!-- Reconsideration dropdown list-->
+                           <select ng-disabled="!SelectedReconsideration" ng-options="item.optionValue  for item in reconsiderationData" name="policySelection" ng-model="selectedValue" class="form-control" id="policySelectionId">
+                               <option value="">--Select--</option>
+                           </select>
+                       </div>  
+                     
+                   </div>
+                    <div ng-show="selectedValue.output === 'Driving Record' " class="row" style="margin-top:15px">
+                            <label class="col-md-6">Driver Name</label> 
+                            <div class="col-md-6">
+                                <!--Driver name dropdown list-->
+                                <div class="col-md-12 row">
+                                    <select ng-options="(item.Person.PersonName.FirstGivenNm + ' ' + item.Person.SecondGivenNameInitial + ' ' + item.Person.PersonName.FamilyNm + ' ' + item.Person.PersonName.FamilyNameGenerationCd)  for item in driverInfo track by item._id" name="policySelection" ng-model="selectedDriver" class="form-control" id="policySelectionId">
+                                        <option value="">--Select--</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 row" style="margin-top:5px">
+                                    <input type="text"  class="form-control" ng-disabled="selectedDriver" ng-model="freeTextName" name="driverName" id="driverNameID" value="" />
+                                </div>
+                            </div>
+                    </div>
+                    <div  ng-show="selectedValue.output === 'Prior Balance' " class="row" style="margin-top:15px">
+                            <label class="col-md-6">* Prior Policy Number</label>
+                        <!--Policy number input-->
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" ng-required="selectedValue.output === 'Prior Balance'" ng-model="policyNumber" name="policyNumber" id="policyNumberID" value="" />
+                            </div>
+                    </div>
+                    <div  ng-show="selectedValue.output === 'Prior Balance' " class="row" style="margin-top:15px">
+                            <label class="col-md-6">* Prior Balance ($)</label>
+                        <!--Balance input-->
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" ng-required="selectedValue.output === 'Prior Balance'" ng-model="piiorBalance" name="balanceInput" id="balanceInputID" value="" />
+                            </div>
+                    </div>
+                </div>
+           
+              </div>
+           </div>
+      </div>
+</div> 

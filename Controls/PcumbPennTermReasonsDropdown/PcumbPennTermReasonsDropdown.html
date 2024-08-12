@@ -1,0 +1,117 @@
+﻿<div class="panel panel-primary" ng-controller="PcumbPennTermReasonsDropdownController">
+    <div class="panel-heading">Pennsylvania Termination Reasons</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-3">
+                    <label>Termination Reason</label>
+                </div>
+                <div class="col-md-9">
+                    <!--Termination reason dropdown list-->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <select class="form-control" ng-model="PennTermReason" ng-options="item for item in Reasons" ng-change="ClearAllData()" ng-required="false" name="PennTermReasons" id="PennTermReasonsId">
+                                <option value="" selected>--Select--</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!--Licensed Family Member-->
+                    <div class="row" style="margin-top:10px" ng-show="ShowLicFamilyMember()">
+                        <label class="col-md-4">* Licensed Family Member:</label>
+                        <div class="col-md-4">
+                            <select class="form-control" 
+                                    ng-model="SelectedLicFamilyMember" 
+                                    ng-options="item.Person.PersonName.FirstGivenNm + ' ' + item.Person.PersonName.SecondGivenNm + ' ' + item.Person.PersonName.FamilyNm for item in LicFamilyMember track by item._id" 
+                                    ng-disabled="LicFamilyMember.length == 0" 
+                                    ng-required="ShowLicFamilyMember() && ManualLicFamilyMember==''" 
+                                    name="SelectLicFamilyMember" 
+                                    id="SelectLicFamilyMemberId">
+                                <option value="" selected>--Select--</option>
+                            </select>
+                            <span class="alert-danger" ng-show="LicFamilyMember.length == 0">Information not provided by source</span>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" 
+                                   class="form-control" 
+                                   ng-model="ManualLicFamilyMember"
+                                   ng-disabled="SelectedLicFamilyMember"
+                                   name="ManualLicFamilyMember" 
+                                   id="ManualLicFamilyMemberId" />
+                        </div>
+                    </div>
+                    
+                    <!--Underlying Policy-->
+                    <div class="row" style="margin-top:10px" ng-show="ShowUnderlyingPolicy()">
+                        <div class="col-md-4"><label>* Underlying Policy:</label></div>
+                        <div class="col-md-8">
+                            <select class="form-control" ng-model="SelectedUnderlyingPolicy" ng-options="item for item in UnderlyingPolicy" ng-disabled="UnderlyingPolicy.length == 0" ng-required="ShowUnderlyingPolicy()" name="SelectUnderlyingPolicy" id="SelectUnderlyingPolicyId">
+                                <option value="" selected>--Select--</option>
+                            </select>
+                            <span class="alert-danger" 
+                                  ng-show="UnderlyingPolicy.length == 0">Information not provided by source</span>
+                        </div>
+                    </div>
+
+                    <!--Risk Location-->
+                    <div class="row" style="margin-top:10px" ng-show="ShowRiskLocation()">
+                        <div class="col-md-4">
+                            <label>* Risk Location Address:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" 
+                                    ng-model="SelectedRiskLocation" 
+                                    ng-options="item.Address.Line1Tx + ' ' + item.Address.Line2Tx + ' ' + item.Address.Line3Tx + ' ' + item.Address.city_value + ' ' + item.Address.CountrySubdivision.CountrySubdivisionNm + ' ' + item.Address.PostalCd for item in RiskLocation track by item._id" 
+                                    ng-disabled="RiskLocation.length == 0" 
+                                    ng-required="ShowRiskLocation() && ManualRiskLocation==''" 
+                                    name="SelectRiskLocation" 
+                                    id="SelectRiskLocationId">
+                                <option value="" selected>--Select--</option>
+                            </select>
+                            <span class="alert-danger" ng-show="RiskLocation.length == 0">Information not provided by source</span>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" 
+							       class="form-control" 
+								   ng-model="ManualRiskLocation" 
+								   ng-disabled="SelectedRiskLocation"
+								   name="SelectManualDriverNm" 
+								   id="SelectManualDriverNmId" 
+								   ng-required="ShowRiskLocation() && isUndefined(SelectedRiskLocation)" />
+                            
+                        </div>
+                    </div>
+
+                    <!--Lot and Block-->
+                    <div class="row" style="margin-top:10px" ng-show="ShowVacantLot()">
+                        <div class="col-md-4">
+                            <label>* Lot and Block:</label>
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" 
+                                    ng-model="SelectedVacantLot" 
+                                    ng-options="item.Address.Line1Tx + ' ' + item.Address.Line2Tx + ' ' + item.Address.Line3Tx + ' ' + item.Address.city_value + ' ' + item.Address.CountrySubdivision.CountrySubdivisionNm + ' ' + item.Address.PostalCd for item in VacantLot track by item._id" 
+                                    ng-disabled="VacantLot.length == 0" 
+                                    ng-required="ShowVacantLot() && ManualVacantLot==''" 
+                                    name="SelectVacantLot" 
+                                    id="SelectVacantLotId">
+                                <option value="" selected>--Select--</option>
+                            </select>
+                            <span class="alert-danger" ng-show="VacantLot.length == 0">Information not provided by source</span>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" 
+                                   class="form-control" 
+                                   ng-model="ManualVacantLot"
+                                   ng-disabled="SelectedVacantLot" 
+                                   name="SelectManualDriverNm" 
+                                   id="SelectManualDriverNmId" 
+                                   ng-required="ShowVacantLot() && IsUndefined(SelectedVacantLot)" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

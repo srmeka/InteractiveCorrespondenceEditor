@@ -1,0 +1,33 @@
+﻿<div class="panel panel-primary" ng-controller="WccAttnyNameAndAddressController">
+    <div class="panel-heading">Outside Attorney</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Outside Attorney Name dropdown list-->
+            <div class="row">
+                <div class="col-md-4">
+                    <label>Outside Attorney Name:</label>
+                </div>
+                <div class="col-md-8">
+                    <select class="form-control" ng-change="selectedName()" ng-model="nameSelector" ng-options="item.displayName for item in ClaimantData | orderBy:'displayName'">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--Outside Attorney address dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4">
+                    <label>Outside Attorney Address:</label>
+                </div>
+                <div class="col-md-8">
+                    <select ng-show="!showError" ng-model="addressSelector" class="form-control" ng-options="('(' + address.Category + ') ' + address.StreetAddress1 + ' ' + address.StreetAddress2 + ' ' + address.StreetAddress3 + ' ' + address.City + ', '  + address.State + ' ' + address.ZipCode )  for address in addressData">
+                        <option value="">--Select One--</option>
+                    </select>
+                    <span style="display:inline-block;margin-top:5px;margin-bottom:5px" ng-if="showError" class="alert-danger" ng-bind="'Information not provided from ClaimCenter'"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

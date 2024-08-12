@@ -1,0 +1,28 @@
+﻿
+    <div class="panel panel-primary" ng-controller="WiredDropdownController">
+        <div class="panel-heading">
+            Addressee Information
+        </div>
+        <div class="panel-body">
+            <div class="form-group" show-errors>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>
+                            * Addessee Name 1
+                        </label>
+                        <select ng-model="SelectedAddressee" name="AddreseeName" ng-change="updateAddreesseeAddress(SelectedAddressee)" ng-options="AddresseeInfo.Contact.entityPerson.Prefix.DisplayName+' '+ AddresseeInfo.Contact.entityPerson.FirstName +' '+ AddresseeInfo.Contact.entityPerson.MiddleName+' '+ AddresseeInfo.Contact.entityPerson.LastName  for AddresseeInfo in Addressee track by AddresseeInfo._id" class="form-control" xml="ADDRESSEE_NAME_1" id="AddresseeNameID" ng-required="true">
+                            <option value="">--Select--</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label>
+                            * Addessee Address
+                        </label><select ng-options="Address.PrimaryAddress.AddressLine1+ ' '+Address.PrimaryAddress.AddressLine2+' '+Address.PrimaryAddress.AddressLine3+', '+ Address.PrimaryAddress.City+ ' '+ Address.PrimaryAddress.State.Code+ ' '+ Address.PrimaryAddress.PostalCode for Address in AddresseeAddress" id="AddresseeAddressID" xml="Addressee_Address"
+                                        ng-model="SelectedAddress" class="form-control" ng-required="true">
+                            <option value="">-- Select --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

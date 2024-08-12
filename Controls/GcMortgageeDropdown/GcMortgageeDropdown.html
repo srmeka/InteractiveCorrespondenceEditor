@@ -1,0 +1,19 @@
+﻿<div class="panel panel-primary" ng-controller="GcMortgageeDropdownController">
+    <div class="panel-heading">GcMortgagee Information</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="row">
+                <!--Mortgagee dropdown list-->
+                <div class="col-md-4"><label>Mortgagee:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in mortgageeData" name="MortgageeNameSelection" ng-model="selectedName" class="form-control" id="MortgageeNameSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="mortgageeData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

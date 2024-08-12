@@ -1,0 +1,19 @@
+﻿<div class="panel panel-primary" ng-controller="WccClaimantDependentDropdownController">
+    <div class="panel-heading">Claimant Dependent</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Claimant Dependent dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>Claimant Dependent Name:</label></div>
+                <div class="col-md-8">
+                    <select ng-show="ClaimantNameData && ClaimantNameData.length > 0" ng-options="item.displayName for item in ClaimantNameData" name="ClaimantDependentSelection" ng-model="selectedClaimantDependent" class="form-control" id="ClaimantDependentId">
+                        <option value="">--Select One--</option>
+                    </select>
+                    <span class="alert-danger" ng-show="ClaimantNameData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

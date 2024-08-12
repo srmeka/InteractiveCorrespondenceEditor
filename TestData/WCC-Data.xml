@@ -1,0 +1,990 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CorrespondenceDataResponse xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:m1="http://njm.com/esb/common/types" xmlns:m0="http://njm.com/esb/core/claim/1.0.0/types" xmlns:typ="http://njm.com/esb/common/1.0.0/types" xmlns:typ1="http://njm.com/ccutil/1.0.0/types" xmlns:int="http://njm.com/ccutil/1.0.0/interfaces">
+  <Claim>
+    <ClaimNumber>W2012-004713</ClaimNumber>
+    <Ex_Subrogation>
+      <NetSettlementAmount>0.0</NetSettlementAmount>
+      <GrossLienAmount>0.0</GrossLienAmount>
+      <NetLienAmount>0.0</NetLienAmount>
+      <ActualConselFeesAmount>0.0</ActualConselFeesAmount>
+      <ActualSuitExpenseAmount>750.0</ActualSuitExpenseAmount>
+      <ActualMedicalPaidAmount>0.0</ActualMedicalPaidAmount>
+      <ActualTempPaidAmount>0.0</ActualTempPaidAmount>
+      <ActualPermPaidAmount>0.0</ActualPermPaidAmount>
+      <ActualFuneralPaidAmount>0.0</ActualFuneralPaidAmount>
+      <StatutoryPermPaidAmount>0.0</StatutoryPermPaidAmount>
+    </Ex_Subrogation>
+    <DateOfLoss>2012-03-23</DateOfLoss>
+    <TimeOfLoss>12:00:00.00</TimeOfLoss>
+    <LossLocationAddress1>70 MAIN ST</LossLocationAddress1>
+    <LossLocationCity>EMERSON</LossLocationCity>
+    <LossLocationState>New Jersey</LossLocationState>
+    <LossLocationZipCode>07630</LossLocationZipCode>
+    <ClaimPolicy>
+      <PolicyNumber>W23356</PolicyNumber>
+      <PolicyNumberWithOutCheckDigit>W23356</PolicyNumberWithOutCheckDigit>
+      <Type>Workers'Compensation</Type>
+      <NjmInsuranceCompanyName>NJM Insurance Company</NjmInsuranceCompanyName>
+      <EffectiveDate>2011-03-31</EffectiveDate>
+      <ExpirationDate>2012-03-31</ExpirationDate>
+      <NjmCompanyCd>NJM</NjmCompanyCd>
+      <PolicyCounty>Bergen</PolicyCounty>
+    </ClaimPolicy>
+    <InvolvedParties>
+      <Party id="3445">
+        <Role>Attorney of Record</Role>
+        <Role>Supervisor- Legal</Role>
+        <Role>Attorney</Role>
+        <Role>Reserves- Viewer</Role>
+        <Role>Time Tracker Administrator</Role>
+        <Role>Time Tracker User</Role>
+        <Role>Award Rep</Role>
+        <Type>Person</Type>
+        <FirstName>Ann</FirstName>
+        <MiddleName>P.</MiddleName>
+        <MiddleInitial>P.</MiddleInitial>
+        <LastName>DeBellis</LastName>
+        <JobTitle>Attorney for Respondent</JobTitle>
+        <EmployeeUserName>AD3445</EmployeeUserName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>609</AreaCode>
+            <Exchange>883</Exchange>
+            <Number>1300</Number>
+            <Extension>6170</Extension>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+          <PhoneNumber id="2">
+            <Category>Business</Category>
+            <Type>Fax</Type>
+            <AreaCode>609</AreaCode>
+            <Exchange>493</Exchange>
+            <Number>1456</Number>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1">
+            <EmailAddressValue>Adebe>llis@njm.com</EmailAddressValue>
+          </EmailAddress>
+        </EmailAddresses>
+      </Party>
+      <Party id="7">
+        <Role>Policy Contact</Role>
+        <Role>Adjuster</Role>
+        <Type>Person</Type>
+        <FirstName>ANDY</FirstName>
+        <LastName>TORIGAN</LastName>
+        <EmailAddresses>
+          <EmailAddress id="1">
+            <EmailAddressValue>ATorigan@n..jm.com</EmailAddressValue>
+          </EmailAddress>
+        </EmailAddresses>
+      </Party>
+      <Party id="8">
+        <Role>Policy Contact</Role>
+        <Role>Coder</Role>
+        <Type>Person</Type>
+        <FirstName>BEN</FirstName>
+        <LastName>ZAGARIAN</LastName>
+        <EmailAddresses>
+          <EmailAddress id="1">
+            <EmailAddressValue>BZAGARIAN@n.*jm.com</EmailAddressValue>
+          </EmailAddress>
+        </EmailAddresses>
+      </Party>
+      <Party id="9">
+        <Role>Policy Contact</Role>
+        <Type>Person</Type>
+        <FirstName>MATT</FirstName>
+        <LastName>RUSSO</LastName>
+        <EmailAddresses>
+          <EmailAddress id="1">
+            <EmailAddressValue>MRus^so@njm.com</EmailAddressValue>
+          </EmailAddress>
+        </EmailAddresses>
+      </Party>
+      <Party id="3">
+        <Role>Underwriter</Role>
+        <Type>Person</Type>
+        <FirstName>TOM</FirstName>
+        <LastName>EGAN</LastName>
+        <EmailAddresses>
+          <EmailAddressValue>TEg^an@njm.com</EmailAddressValue>
+        </EmailAddresses>
+      </Party>
+      <Party id="4">
+        <Role>Policy Contact</Role>
+        <Type>Person</Type>
+        <FirstName>THOMAS</FirstName>
+        <LastName>MILLER</LastName>
+        <EmailAddresses>
+          <EmailAddressValue>TMil$ler@njm.com</EmailAddressValue>
+        </EmailAddresses>
+      </Party>
+      <Party id="5">
+        <Role>Policy Contact</Role>
+        <Type>Person</Type>
+        <FirstName>TOM</FirstName>
+        <LastName>MILLER</LastName>
+        <EmailAddresses>
+          <EmailAddress id="1" />
+        </EmailAddresses>
+      </Party>
+      <Party id="6">
+        <Role>Policy Contact</Role>
+        <Type>Person</Type>
+        <FirstName>K.</FirstName>
+        <LastName>KHACHATURIAN</LastName>
+        <EmailAddresses>
+          <EmailAddressValue>KKhach#turian@njm.com</EmailAddressValue>
+        </EmailAddresses>
+      </Party>
+      <Party id="1">
+        <Role>Policy holder</Role>
+        <Role>Insured</Role>
+        <Type>Company</Type>
+        <Name>HOME FOR THE ARMENIAN AGED INC</Name>
+        <Addresses>
+          <Address id="1">
+            <Category>Mailing</Category>
+            <Type>Primary</Type>
+            <Attention>Resident Counselor</Attention>
+            <StreetAddress1>70 MAIN ST</StreetAddress1>
+            <City>EMERSON</City>
+            <State>New Jersey</State>
+            <ZipCode>07630</ZipCode>
+            <County>Bergen</County>
+          </Address>
+          <Address id="2">
+            <Category>Policy</Category>
+            <Type>None</Type>
+            <Attention>Program Counselor</Attention>
+            <StreetAddress1>70 MAIN ST</StreetAddress1>
+            <City>EMERSON</City>
+            <State>New Jersey</State>
+            <ZipCode>07630</ZipCode>
+          </Address>
+          <Address id="3">
+            <Category>Other</Category>
+            <Type>None</Type>
+            <Attention>ATT: MATTHEW RUSSO</Attention>
+            <StreetAddress1>70 MAIN ST</StreetAddress1>
+            <StreetAddress2></StreetAddress2>
+            <City>EMERSON</City>
+            <State>New Jersey</State>
+            <ZipCode>07630</ZipCode>
+          </Address>
+        </Addresses>
+      </Party>
+      <Party id="10">
+        <Role>Reporter</Role>
+        <Role>Contact At Firm</Role>
+        <Type>Person</Type>
+        <FirstName>Rosana</FirstName>
+        <LastName>Pellegrino</LastName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>201</AreaCode>
+            <Exchange>261</Exchange>
+            <Number>6662</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1" />
+        </EmailAddresses>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Type>Primary</Type>
+            <Attention>Legal Advisor</Attention>
+            <StreetAddress1>STE 30</StreetAddress1>
+            <StreetAddress2>ONE LETHBRIDGE PLZ</StreetAddress2>
+            <City>MAHWAH</City>
+            <State>New Jersey</State>
+            <ZipCode>07430</ZipCode>
+          </Address>
+        </Addresses>
+        <OccupationDescription>HR</OccupationDescription>
+      </Party>
+      <Party id="2">
+        <Role>Agent</Role>
+        <Type>Company</Type>
+        <Attention>General Council</Attention>
+        <Name>FIRM INC</Name>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Business</Category>
+            <Type>Number</Type>
+            <AreaCode>201</AreaCode>
+            <Exchange>831</Exchange>
+            <Number>0505</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Type>Primary</Type>
+            <Attention>Legal Advisor</Attention>
+            <StreetAddress1>STE 30</StreetAddress1>
+            <StreetAddress2>ONE LETHBRIDGE PLZ</StreetAddress2>
+            <City>MAHWAH</City>
+            <State>New Jersey</State>
+            <ZipCode>07430</ZipCode>
+          </Address>
+        </Addresses>
+      </Party>
+      <Party id="11">
+        <Role>Claimant</Role>
+        <Type>Person</Type>
+        <FirstName>Digna</FirstName>
+        <LastName>Lazala</LastName>
+        <EmployerName>HOME FOR THE ARMENIAN AGED INC</EmployerName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Home</Category>
+            <Type>Number</Type>
+            <AreaCode>973</AreaCode>
+            <Exchange>390</Exchange>
+            <Number>0322</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1" />
+        </EmailAddresses>
+        <Exposures>
+          <Exposure id="0">
+            <ExposureType>Homeowner</ExposureType>
+            <ExposureNumber>2</ExposureNumber>
+            <Precertifications>
+              <Precertification id="1">
+                <PrecertificationId>97391</PrecertificationId>
+                <StartDate>2014-08-02T05:00:00Z</StartDate>
+                <EndDate>2017-08-05T05:00:00Z</EndDate>
+                <Provider id="0" refId="113535515" />
+                <Determinations>
+                  <Determination id="1">
+                    <DeterminationId>125262</DeterminationId>
+                    <IsAppealPresent>false</IsAppealPresent>
+                    <TreatmentReason>Per Award/Settlement</TreatmentReason>
+                    <TreatmentStatus>Approved</TreatmentStatus>
+                    <TreatmentStatus>Approved</TreatmentStatus>
+                    <TotalTreatmentsApproved>2</TotalTreatmentsApproved>
+                    <Procedures>
+                      <Procedure id="1">
+                        <StartCode>00320</StartCode>
+                        <EndCode>00330</EndCode>
+                      </Procedure>
+                      <Procedure id="2">
+                        <UserDefinedGroup>Dental</UserDefinedGroup>
+                      </Procedure>
+                      <Procedure id="3">
+                        <StartCode>003333</StartCode>
+                        <EndCode></EndCode>
+                      </Procedure>
+                      <Procedure id="3">
+                        <StartCode></StartCode>
+                        <EndCode>00444</EndCode>
+                      </Procedure>
+                    </Procedures>
+                  </Determination>
+                </Determinations>
+              </Precertification>
+              <Precertification id="2">
+                <PrecertificationId>1234</PrecertificationId>
+                <StartDate>2014-08-02T05:00:00Z</StartDate>
+                <EndDate>2017-08-05T05:00:00Z</EndDate>
+                <Provider id="0" refId="113535515" />
+                <Determinations>
+                  <Determination id="1">
+                    <DeterminationId>6785</DeterminationId>
+                    <IsAppealPresent>false</IsAppealPresent>
+                    <TreatmentReason>Per Award/Settlement</TreatmentReason>
+                    <TreatmentStatus>Approved</TreatmentStatus>
+                    <TotalTreatmentsApproved>2</TotalTreatmentsApproved>
+                    <Procedures>
+                      <Procedure id="1">
+                        <StartCode>00320</StartCode>
+                        <EndCode>00330</EndCode>
+                      </Procedure>
+                      <Procedure id="2">
+                        <UserDefinedGroup>Dental</UserDefinedGroup>
+                      </Procedure>
+                    </Procedures>
+                  </Determination>
+                  <Determination id="2">
+                    <DeterminationId>6786</DeterminationId>
+                    <IsAppealPresent>false</IsAppealPresent>
+                    <TreatmentReason>Per Award/Settlement</TreatmentReason>
+                    <TreatmentStatus>Approved</TreatmentStatus>
+                    <TotalTreatmentsApproved>2</TotalTreatmentsApproved>
+                    <Procedures>
+                      <Procedure id="1">
+                        <StartCode>00340</StartCode>
+                        <EndCode>00350</EndCode>
+                      </Procedure>
+                    </Procedures>
+                  </Determination>
+                </Determinations>
+              </Precertification>
+            </Precertifications>
+          </Exposure>
+          <Exposure id="1">
+            <ExposureType>Vehicle</ExposureType>
+            <ExposureNumber>2</ExposureNumber>
+            <Precertifications>
+              <Precertification id="1">
+                <PrecertificationId>97391</PrecertificationId>
+                <StartDate>2014-08-02T05:00:00Z</StartDate>
+                <EndDate>2017-08-05T05:00:00Z</EndDate>
+                <Provider id="0" refId="113535515" />
+                <Determinations>
+                  <Determination id="1">
+                    <DeterminationId>125262</DeterminationId>
+                    <IsAppealPresent>false</IsAppealPresent>
+                    <TreatmentReason>Per Award/Settlement</TreatmentReason>
+                    <TreatmentStatus>Approved</TreatmentStatus>
+                    <TreatmentStatus>Approved</TreatmentStatus>
+                    <TotalTreatmentsApproved>2</TotalTreatmentsApproved>
+                    <Procedures>
+                      <Procedure id="1">
+                        <StartCode>00320</StartCode>
+                        <EndCode>00330</EndCode>
+                      </Procedure>
+                      <Procedure id="2">
+                        <UserDefinedGroup>Dental</UserDefinedGroup>
+                      </Procedure>
+                      <Procedure id="3">
+                        <StartCode>003333</StartCode>
+                        <EndCode></EndCode>
+                      </Procedure>
+                      <Procedure id="3">
+                        <StartCode></StartCode>
+                        <EndCode>00444</EndCode>
+                      </Procedure>
+                    </Procedures>
+                  </Determination>
+                </Determinations>
+              </Precertification>
+              <Precertification id="2">
+                <PrecertificationId>1234</PrecertificationId>
+                <StartDate>2014-08-02T05:00:00Z</StartDate>
+                <EndDate>2017-08-05T05:00:00Z</EndDate>
+                <Provider id="0" refId="113535515" />
+                <Determinations>
+                  <Determination id="1">
+                    <DeterminationId>6785</DeterminationId>
+                    <IsAppealPresent>false</IsAppealPresent>
+                    <TreatmentReason>Per Award/Settlement</TreatmentReason>
+                    <TreatmentStatus>Approved</TreatmentStatus>
+                    <TotalTreatmentsApproved>2</TotalTreatmentsApproved>
+                    <Procedures>
+                      <Procedure id="1">
+                        <StartCode>00320</StartCode>
+                        <EndCode>00330</EndCode>
+                      </Procedure>
+                      <Procedure id="2">
+                        <UserDefinedGroup>Dental</UserDefinedGroup>
+                      </Procedure>
+                    </Procedures>
+                  </Determination>
+                  <Determination id="2">
+                    <DeterminationId>6786</DeterminationId>
+                    <IsAppealPresent>false</IsAppealPresent>
+                    <TreatmentReason>Per Award/Settlement</TreatmentReason>
+                    <TreatmentStatus>Approved</TreatmentStatus>
+                    <TotalTreatmentsApproved>2</TotalTreatmentsApproved>
+                    <Procedures>
+                      <Procedure id="1">
+                        <StartCode>00340</StartCode>
+                        <EndCode>00350</EndCode>
+                      </Procedure>
+                    </Procedures>
+                  </Determination>
+                </Determinations>
+              </Precertification>
+            </Precertifications>
+          </Exposure>
+          <Exposure id="2">
+            <ExposureType>PIP</ExposureType>
+            <ExposureNumber>1</ExposureNumber>
+            <Precertifications>
+              <Precertification id="1">
+                <PrecertificationId>666</PrecertificationId>
+                <StartDate>2014-08-02T05:00:00Z</StartDate>
+                <EndDate>2017-08-05T05:00:00Z</EndDate>
+                <Provider id="0" refId="113535515" />
+                <Determinations>
+                  <Determination id="1">
+                    <DeterminationId>1666</DeterminationId>
+                  </Determination>
+                </Determinations>
+              </Precertification>
+            </Precertifications>
+          </Exposure>
+        </Exposures>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Type>Primary</Type>
+            <Attention>Program Counselor</Attention>
+            <StreetAddress1>236 Van Blarcom St</StreetAddress1>
+            <City>Paterson</City>
+            <State>New Jersey</State>
+            <ZipCode>07524-1915</ZipCode>
+            <County>Passaic</County>
+          </Address>
+        </Addresses>
+        <BirthDate>1957-10-13</BirthDate>
+        <TaxID>146-70-3109</TaxID>
+        <EmploymentRelationships>
+          <EmploymentRelationship>
+            <DaysWorkedPerWeekNumber>0</DaysWorkedPerWeekNumber>
+            <WageAmount>448.8</WageAmount>
+            <ClassCode>88290</ClassCode>
+            <HireState>NJ</HireState>
+          </EmploymentRelationship>
+        </EmploymentRelationships>
+        <OccupationDescription>CNA</OccupationDescription>
+        <Gender>F</Gender>
+        <PartyRelationships>
+          <PartyRelationship>
+            <RelationshipPartyId>11</RelationshipPartyId>
+            <Relationship>Primary Contact</Relationship>
+          </PartyRelationship>
+        </PartyRelationships>
+      </Party>
+      <Party id="12">
+        <Role>Hospital</Role>
+        <Type>Person</Type>
+        <FirstName>Hank</FirstName>
+        <Name>Test Hospital Nm</Name>
+        <LastName>Lazala</LastName>
+        <EmployerName>HOME FOR THE ARMENIAN AGED INC</EmployerName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Home</Category>
+            <Type>Number</Type>
+            <AreaCode>973</AreaCode>
+            <Exchange>390</Exchange>
+            <Number>0322</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1" />
+        </EmailAddresses>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Type>Primary</Type>
+            <Attention>Program Counselor</Attention>
+            <StreetAddress1>10 Main St</StreetAddress1>
+            <City>Paterson</City>
+            <State>New Jersey</State>
+            <ZipCode>07524-1915</ZipCode>
+            <County>Passaic</County>
+          </Address>
+        </Addresses>
+        <BirthDate>1957-10-13</BirthDate>
+        <TaxID>146-70-3109</TaxID>
+        <EmploymentRelationships>
+          <EmploymentRelationship>
+            <DaysWorkedPerWeekNumber>0</DaysWorkedPerWeekNumber>
+            <WageAmount>448.8</WageAmount>
+            <ClassCode>88290</ClassCode>
+            <HireState>NJ</HireState>
+          </EmploymentRelationship>
+        </EmploymentRelationships>
+        <OccupationDescription>CNA</OccupationDescription>
+        <Gender>F</Gender>
+        <PartyRelationships>
+          <PartyRelationship>
+            <RelationshipPartyId>11</RelationshipPartyId>
+            <Relationship>Primary Contact</Relationship>
+          </PartyRelationship>
+        </PartyRelationships>
+      </Party>
+      <Party id="13">
+        <Role>Witness</Role>
+        <Type>Person</Type>
+        <FirstName>Digna</FirstName>
+        <Name>Test Witness Nm</Name>
+        <LastName>Lazala</LastName>
+        <EmployerName>HOME FOR THE ARMENIAN AGED INC</EmployerName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Home</Category>
+            <Type>Number</Type>
+            <AreaCode>973</AreaCode>
+            <Exchange>390</Exchange>
+            <Number>0322</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1" />
+        </EmailAddresses>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Attention>Resident Counselor</Attention>
+            <Type>Primary</Type>
+            <StreetAddress1>236 Van Blarcom St</StreetAddress1>
+            <City>Paterson</City>
+            <State>New Jersey</State>
+            <ZipCode>07524-1915</ZipCode>
+            <County>Passaic</County>
+          </Address>
+        </Addresses>
+        <BirthDate>1957-10-13</BirthDate>
+        <TaxID>146-70-3109</TaxID>
+        <EmploymentRelationships>
+          <EmploymentRelationship>
+            <DaysWorkedPerWeekNumber>0</DaysWorkedPerWeekNumber>
+            <WageAmount>448.8</WageAmount>
+            <ClassCode>88290</ClassCode>
+            <HireState>NJ</HireState>
+          </EmploymentRelationship>
+        </EmploymentRelationships>
+        <OccupationDescription>CNA</OccupationDescription>
+        <Gender>F</Gender>
+        <PartyRelationships>
+          <PartyRelationship>
+            <RelationshipPartyId>11</RelationshipPartyId>
+            <Relationship>Primary Contact</Relationship>
+          </PartyRelationship>
+        </PartyRelationships>
+      </Party>
+      <Party id="14">
+        <Role>Petitioners Law Firm</Role>
+        <Type>Person</Type>
+        <FirstName>Digna</FirstName>
+        <Name>Test Law Firm Nm</Name>
+        <LastName>Lazala</LastName>
+        <EmployerName>HOME FOR THE ARMENIAN AGED INC</EmployerName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Home</Category>
+            <Type>Number</Type>
+            <AreaCode>973</AreaCode>
+            <Exchange>390</Exchange>
+            <Number>0322</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1" />
+        </EmailAddresses>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Attention>General Counselor</Attention>
+            <Type>Primary</Type>
+            <StreetAddress1>236 Van Blarcom St</StreetAddress1>
+            <City>Paterson</City>
+            <State>New Jersey</State>
+            <ZipCode>07524-1915</ZipCode>
+            <County>Passaic</County>
+          </Address>
+        </Addresses>
+        <BirthDate>1957-10-13</BirthDate>
+        <TaxID>146-70-3109</TaxID>
+        <EmploymentRelationships>
+          <EmploymentRelationship>
+            <DaysWorkedPerWeekNumber>0</DaysWorkedPerWeekNumber>
+            <WageAmount>448.8</WageAmount>
+            <ClassCode>88290</ClassCode>
+            <HireState>NJ</HireState>
+          </EmploymentRelationship>
+        </EmploymentRelationships>
+        <OccupationDescription>CNA</OccupationDescription>
+        <Gender>F</Gender>
+        <PartyRelationships>
+          <PartyRelationship>
+            <RelationshipPartyId>11</RelationshipPartyId>
+            <Relationship>Primary Contact</Relationship>
+          </PartyRelationship>
+        </PartyRelationships>
+      </Party>
+      <Party id="15">
+        <Role>Doctor</Role>
+        <Type>Person</Type>
+        <FirstName>Digna</FirstName>
+        <Name>Test Witness Nm</Name>
+        <LastName>Lazala</LastName>
+        <EmployerName>HOME FOR THE ARMENIAN AGED INC</EmployerName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Home</Category>
+            <Type>Number</Type>
+            <AreaCode>973</AreaCode>
+            <Exchange>390</Exchange>
+            <Number>0322</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1" />
+        </EmailAddresses>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Attention>Another Counselor</Attention>
+            <Type>Primary</Type>
+            <StreetAddress1>236 Van Blarcom St</StreetAddress1>
+            <City>Paterson</City>
+            <State>New Jersey</State>
+            <ZipCode>07524-1915</ZipCode>
+            <County>Passaic</County>
+          </Address>
+        </Addresses>
+        <BirthDate>1957-10-13</BirthDate>
+        <TaxID>146-70-3109</TaxID>
+        <EmploymentRelationships>
+          <EmploymentRelationship>
+            <DaysWorkedPerWeekNumber>0</DaysWorkedPerWeekNumber>
+            <WageAmount>448.8</WageAmount>
+            <ClassCode>88290</ClassCode>
+            <HireState>NJ</HireState>
+          </EmploymentRelationship>
+        </EmploymentRelationships>
+        <OccupationDescription>CNA</OccupationDescription>
+        <Gender>F</Gender>
+        <PartyRelationships>
+          <PartyRelationship>
+            <RelationshipPartyId>11</RelationshipPartyId>
+            <Relationship>Primary Contact</Relationship>
+          </PartyRelationship>
+        </PartyRelationships>
+      </Party>
+      <Party id="16">
+        <Role>Claimant Dependent</Role>
+        <Type>Person</Type>
+        <FirstName>Digna</FirstName>
+        <Name>Test Claimant Dependent Nm</Name>
+        <LastName>Jay</LastName>
+        <EmployerName>HOME FOR THE ARMENIAN AGED INC</EmployerName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Home</Category>
+            <Type>Number</Type>
+            <AreaCode>973</AreaCode>
+            <Exchange>390</Exchange>
+            <Number>0322</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1" />
+        </EmailAddresses>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Attention>Attention Person</Attention>
+            <Type>Primary</Type>
+            <StreetAddress1>236 Van Blarcom St</StreetAddress1>
+            <City>Paterson</City>
+            <State>New Jersey</State>
+            <ZipCode>07524-1915</ZipCode>
+            <County>Passaic</County>
+          </Address>
+        </Addresses>
+        <BirthDate>1957-10-13</BirthDate>
+        <TaxID>146-70-3109</TaxID>
+        <EmploymentRelationships>
+          <EmploymentRelationship>
+            <DaysWorkedPerWeekNumber>0</DaysWorkedPerWeekNumber>
+            <WageAmount>448.8</WageAmount>
+            <ClassCode>88290</ClassCode>
+            <HireState>NJ</HireState>
+          </EmploymentRelationship>
+        </EmploymentRelationships>
+        <OccupationDescription>CNA</OccupationDescription>
+        <Gender>F</Gender>
+        <PartyRelationships>
+          <PartyRelationship>
+            <RelationshipPartyId>11</RelationshipPartyId>
+            <Relationship>Primary Contact</Relationship>
+          </PartyRelationship>
+        </PartyRelationships>
+      </Party>
+      <Party id="17">
+        <Role>Guardian</Role>
+        <Type>Person</Type>
+        <FirstName>Digna</FirstName>
+        <Name>Test Guardian Nm</Name>
+        <LastName>Jay</LastName>
+        <EmployerName>HOME FOR THE ARMENIAN AGED INC</EmployerName>
+        <PhoneNumbers>
+          <PhoneNumber id="1">
+            <Category>Home</Category>
+            <Type>Number</Type>
+            <AreaCode>973</AreaCode>
+            <Exchange>390</Exchange>
+            <Number>0322</Number>
+            <IsPrimary>true</IsPrimary>
+          </PhoneNumber>
+        </PhoneNumbers>
+        <EmailAddresses>
+          <EmailAddress id="1" />
+        </EmailAddresses>
+        <Addresses>
+          <Address id="1">
+            <Category>Other</Category>
+            <Type>Primary</Type>
+            <Attention>Any Counselor</Attention>
+            <StreetAddress1>236 Van Blarcom St</StreetAddress1>
+            <City>Paterson</City>
+            <State>New Jersey</State>
+            <ZipCode>07524-1915</ZipCode>
+            <County>Passaic</County>
+          </Address>
+        </Addresses>
+        <BirthDate>1957-10-13</BirthDate>
+        <TaxID>146-70-3109</TaxID>
+        <EmploymentRelationships>
+          <EmploymentRelationship>
+            <DaysWorkedPerWeekNumber>0</DaysWorkedPerWeekNumber>
+            <WageAmount>448.8</WageAmount>
+            <ClassCode>88290</ClassCode>
+            <HireState>NJ</HireState>
+          </EmploymentRelationship>
+        </EmploymentRelationships>
+        <OccupationDescription>CNA</OccupationDescription>
+        <Gender>F</Gender>
+        <PartyRelationships>
+          <PartyRelationship>
+            <RelationshipPartyId>11</RelationshipPartyId>
+            <Relationship>Primary Contact</Relationship>
+          </PartyRelationship>
+        </PartyRelationships>
+      </Party>
+    </InvolvedParties>
+    <Matters>
+      <Matter id="0">
+        <CaseNumber>2008-027588</CaseNumber>
+        <CPReceivedDate>2008-10-13</CPReceivedDate>
+        <MatterStatuses>
+          <MatterStatus id="0">
+            <ListingDate>2010-03-30T04:00:00Z</ListingDate>
+          </MatterStatus>
+        </MatterStatuses>
+      </Matter>
+      <Matter id="1">
+        <CaseNumber>2008-027599</CaseNumber>
+        <CPReceivedDate>2012-10-13</CPReceivedDate>
+        <MatterStatuses>
+          <MatterStatus id="1">
+            <ListingDate>2012-03-30T04:00:00Z</ListingDate>
+          </MatterStatus>
+        </MatterStatuses>
+      </Matter>
+      <Matter id="0">
+        <CaseNumber>2008-027588</CaseNumber>
+        <CPReceivedDate>2008-10-15</CPReceivedDate>
+        <MatterStatuses>
+          <MatterStatus id="0">
+            <ListingDate>2010-04-30T04:00:00Z</ListingDate>
+          </MatterStatus>
+        </MatterStatuses>
+      </Matter>
+    </Matters>
+    <NJMEmployeeClaimIndicator>false</NJMEmployeeClaimIndicator>
+    <ClaimDescription>Giving care to patient, patient hit and scratched right arm</ClaimDescription>
+    <AccidentTypeCode>74</AccidentTypeCode>
+    <ClaimantReportedDate>2012-03-26T05:01:00Z</ClaimantReportedDate>
+    <LossReportedDate>2012-03-26T05:01:00Z</LossReportedDate>
+    <ClaimJurisdictionState>NJ</ClaimJurisdictionState>
+    <MailToPayToDescription>Ex_firm_injured</MailToPayToDescription>
+    <InjuredOnEmployerPremisesIndicator>true</InjuredOnEmployerPremisesIndicator>
+    <StateClaimNumber>NJ2012329075</StateClaimNumber>
+    <ClaimType>NTL</ClaimType>
+    <CreateDate>2012-03-26T05:01:00Z</CreateDate>
+    <Incidents>
+      <Incident>
+        <DetailedInjuryTypeCode>10</DetailedInjuryTypeCode>
+        <DetailedInjuryType>Contusion - Bruise With Intact Skin Surface, Hematoma</DetailedInjuryType>
+        <InjuredBodyParts>
+          <InjuredBodyPart id="1215314">
+            <DetailedBodyPartCode>33</DetailedBodyPartCode>
+            <DetailedBodyPart>Lower Arm - Forearm: Radius, Ulna, And Corresponding Muscle</DetailedBodyPart>
+            <PrimaryBodyPartIndicator>true</PrimaryBodyPartIndicator>
+            <GeneralAreaOfBody>upper</GeneralAreaOfBody>
+          </InjuredBodyPart>
+        </InjuredBodyParts>
+      </Incident>
+    </Incidents>
+    <ClaimStatusCd>Closed</ClaimStatusCd>
+    <FinancialReports>
+      <ReportCd>Claim Summary</ReportCd>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Adjusted Paid</AccountTypeCd>
+        <ReportingCategoryCd>Medical</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Adjusted Paid</AccountTypeCd>
+        <ReportingCategoryCd>Temp</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Adjusted Paid</AccountTypeCd>
+        <ReportingCategoryCd>Perm</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Adjusted Paid</AccountTypeCd>
+        <ReportingCategoryCd>Indemnity</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Open Reserves</AccountTypeCd>
+        <ReportingCategoryCd>Medical</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Open Reserves</AccountTypeCd>
+        <ReportingCategoryCd>Temp</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Open Reserves</AccountTypeCd>
+        <ReportingCategoryCd>Perm</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Open Reserves</AccountTypeCd>
+        <ReportingCategoryCd>Indemnity</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Net Total Incurred</AccountTypeCd>
+        <ReportingCategoryCd>Medical</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Net Total Incurred</AccountTypeCd>
+        <ReportingCategoryCd>Temp</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Net Total Incurred</AccountTypeCd>
+        <ReportingCategoryCd>Perm</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Indemnity</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+      <FinancialReportLineItems>
+        <AccountTypeCd>Net Total Incurred</AccountTypeCd>
+        <ReportingCategoryCd>Indemnity</ReportingCategoryCd>
+        <ParentReportingCategoryCd>Claim</ParentReportingCategoryCd>
+        <Amount>0.0</Amount>
+      </FinancialReportLineItems>
+    </FinancialReports>
+    <DMEDetails>
+        <DMEDetail id="5">
+          <Notes>DME NOTES 1234567891011121314151617181920212324252627</Notes>       
+        </DMEDetail>
+        <DMEDetail id="6">        
+          <EquipmentDetails>Equipment details</EquipmentDetails>
+          <Notes/>
+        </DMEDetail>
+        <DMEDetail id="7">
+          <Notes>DME NOTES 1</Notes>
+          <EquipmentDetails>Home1</EquipmentDetails>
+        </DMEDetail>
+      </DMEDetails>
+       <Precertifications>
+         <Precertification id="0">
+          <ReviewType>Precert</ReviewType>
+          <ProvidertaxNumber>263-99-8996</ProvidertaxNumber>
+          <ProviderName>GEORGE NASEEF</ProviderName>
+          <FacilityName>MORRISTOWN MEMORIAL HOSPITAL</FacilityName>
+          <PreAuthorizedStatus>Authorized</PreAuthorizedStatus>
+          <AdmissionStatus>In-Patient</AdmissionStatus>
+          <PreSurgeryDate>2017-10-13</PreSurgeryDate>
+          <PreCertificationNumber>66002</PreCertificationNumber>
+           <Procedures>
+             <Procedure id="1">
+              <ProcedureCode>88888</ProcedureCode>
+              <ProviderStatus>Authorized</ProviderStatus>
+              <CoSurgeonStatus>Authorized</CoSurgeonStatus>
+              <AssistantType>Physician Assistant</AssistantType>
+              <AssistantStatus>Authorized</AssistantStatus>
+            </Procedure>
+             <Procedure id="2">
+              <ProcedureCode>12345</ProcedureCode>
+              <ProviderStatus>Authorized</ProviderStatus>
+              <AssistantStatus>Authorized</AssistantStatus>
+            </Procedure>
+          </Procedures>
+        </Precertification>
+         <Precertification id="1">
+          <ReviewType>Precert</ReviewType>
+          <ProvidertaxNumber>52-1958352</ProvidertaxNumber>
+          <ProviderName>MORRISTOWN MEMORIAL HOSPITAL</ProviderName>
+          <FacilityName>MORRISTOWN MEMORIAL HOSPITAL</FacilityName>
+          <PreAuthorizedStatus>Pending</PreAuthorizedStatus>
+          <AdmissionStatus>Same Day Surgery</AdmissionStatus>
+          <PreCertificationNumber>65902</PreCertificationNumber>
+           <Procedures>
+             <Procedure id="0">
+             
+              <ProviderStatus>Denied</ProviderStatus>
+              <CoSurgeonStatus>Modified</CoSurgeonStatus>
+              <AssistantStatus>Denied</AssistantStatus>
+            </Procedure>
+             <Procedure id="1">
+              <ProcedureCode>55511</ProcedureCode>
+              <ProviderStatus>Authorized</ProviderStatus>
+              <CoSurgeonStatus>Denied</CoSurgeonStatus>
+               <AssistantType>Assistant Surgeon</AssistantType>
+              <AssistantStatus>Authorized</AssistantStatus>
+            </Procedure>
+          </Procedures>
+        </Precertification>
+         <Precertification id="2">
+          <ReviewType>Precert</ReviewType>
+          <ProvidertaxNumber>263-99-8996</ProvidertaxNumber>
+          <ProviderName>GEORGE NASEEF</ProviderName>
+          <FacilityName>MORRISTOWN MEMORIAL HOSPITAL</FacilityName>
+          <PreAuthorizedStatus>Authorized</PreAuthorizedStatus>
+          <AdmissionStatus>In-Patient</AdmissionStatus>
+          <PreSurgeryDate>2017-10-23</PreSurgeryDate>
+          <PreCertificationNumber>65901</PreCertificationNumber>
+           <Procedures>
+             <Procedure id="2">
+              <ProcedureCode>78978</ProcedureCode>
+              <ProviderStatus>Denied</ProviderStatus>
+          
+              <AssistantType>Assistant Surgeon</AssistantType>
+              <AssistantStatus>Modified</AssistantStatus>
+            </Procedure>
+             <Procedure id="1">
+              <ProcedureCode>12345</ProcedureCode>
+              <ProviderStatus>Authorized</ProviderStatus>
+              <CoSurgeonStatus>Denied</CoSurgeonStatus>
+              <AssistantType>Physician Assistant</AssistantType>
+              <AssistantStatus>Authorized</AssistantStatus>
+            </Procedure>
+          </Procedures>
+        </Precertification>
+      </Precertifications>
+  </Claim>
+</CorrespondenceDataResponse>

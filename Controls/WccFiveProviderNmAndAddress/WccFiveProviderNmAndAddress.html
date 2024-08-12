@@ -1,0 +1,27 @@
+﻿<div class="panel panel-primary" ng-controller="WccFiveProviderNmAndAddressController">
+    <div class="panel-heading">Provider(s)</div>
+    <div class="panel-body">
+        <div class="form-group" ng-repeat="item in displayDataObj track by $index" >
+
+            <div class="row">
+                <!--Provider Name dropdown list-->
+                <div class="col-md-2"><label>Provider {{$index + 1}}:</label></div>
+                <div class="col-md-4">
+                    <select class="form-control" ng-change="selectedName($index)" ng-model="nameSelected[$index]" ng-options="Nameitem.displayName for Nameitem in ClaimantData | orderBy:'displayName'">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+
+                <!--Provider address dropdown list-->
+                <div class="col-md-2"><label>Address:</label></div>
+                <div class="col-md-4">
+                    <select ng-show="showAddress" ng-model="addressSelected[$index]" class="form-control" ng-options="('(' + address.Category + ') ' + address.StreetAddress1 + ' '  + address.StreetAddress2 + ' ' + address.City + ', '  + address.State + ' ' + address.ZipCode )  for address in addressData[$index]">
+                        <option value="">--Select One--</option>
+                    </select>
+                    <span ng-show="!showAddress" style="display:inline-block;margin-top:5px;margin-bottom:5px" class="alert-danger">Information not provided from ClaimCenter</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

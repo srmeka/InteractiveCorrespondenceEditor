@@ -1,0 +1,47 @@
+﻿<div class="panel panel-primary" ng-controller="GcClaimantOneTwoAndThreeController">
+    <div class="panel-heading">Claimant Names</div>
+    <div class="panel-body">
+        <div class="form-group">
+            
+            <!--Claimant Name 1 dropdown list-->
+            <div class="row">
+                <div class="col-md-4"><label>Claimant Name 1:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ClaimantNameData" name="ClaimantName1Selection" ng-model="selectedName1" class="form-control" id="ClaimantName1SelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantNameData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--Claimant Name 2 dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>Claimant Name 2:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ClaimantNameData" name="ClaimantName2Selection" ng-model="selectedName2" class="form-control" id="ClaimantName2SelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantNameData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--Claimant Name 3 dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>Claimant Name 3:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ClaimantNameData" name="ClaimantName3Selection" ng-model="selectedName3" class="form-control" id="ClaimantName3SelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantNameData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

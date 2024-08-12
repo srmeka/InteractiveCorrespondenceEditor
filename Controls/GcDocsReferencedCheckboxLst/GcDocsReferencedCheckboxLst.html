@@ -1,0 +1,14 @@
+﻿<div class="panel panel-primary" ng-controller="GcDocsReferencedCheckboxLstController">
+    <div class="panel-heading">Documents Referenced</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <div class="col-md-12">
+                <!--Docs Referenced checkbox list-->
+                <div class="row" ng-repeat="item in DocsData track by $index">
+                    <input type="checkbox" ng-change="selectItem(item)" name="DocsReference{{$index}}" id="DocsReference{{$index}}Id" ng-model="item.checked" value="" />
+                    <label ng-bind="item.lookupItemCode"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

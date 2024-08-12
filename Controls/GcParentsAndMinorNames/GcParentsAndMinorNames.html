@@ -1,0 +1,47 @@
+﻿<div class="panel panel-primary" ng-controller="GcParentsAndMinorNamesController">
+    <div class="panel-heading">Parents and Minor</div>
+    <div class="panel-body">
+        <div class="form-group">
+
+            <!--Parent Name 1 dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>Parent 1 Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ClaimantNameData" name="ClaimantName1Selection" ng-model="selectedName1" class="form-control" id="ClaimantName1SelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantNameData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--Parent Name 2 dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>Parent 2 Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ClaimantNameData" name="ClaimantName2Selection" ng-model="selectedName2" class="form-control" id="ClaimantName2SelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantNameData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+            <!--Minor's name dropdown list-->
+            <div class="row" style="margin-top:5px">
+                <div class="col-md-4"><label>Minor's Name:</label></div>
+                <div class="col-md-4">
+                    <select ng-options="item.displayName for item in ClaimantNameData" name="MinorNameSelection" ng-model="selectedMinor" class="form-control" id="MinorNameSelectionId">
+                        <option value="">--Select One--</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <span class="alert-danger" ng-show="ClaimantNameData.length == 0">Information not provided by source</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 

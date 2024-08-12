@@ -1,0 +1,24 @@
+﻿<div class="panel panel-primary" ng-controller="GcDeleteCoverageCheckboxLstController">
+    <div class="panel-heading">Delete HO-61 Coverage</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <!--Checkbox list-->
+            <div class="row" ng-repeat="item in displayData track by $index"  style="margin-top:6px">
+                
+                <!--control with checkbox label-->
+                <div class="col-md-4" ng-if="item.controlType === '1'">
+                    <input style="width:15px;vertical-align:top;margin-top:5px" type="checkbox" name="{{item.checkboxName}}" id="{{item.checkboxName}}Id"  ng-model="item.ctrlSelected" value="" />
+                    <label style="width:calc(100% - 20px);margin-top:3px" ng-bind="item.labelText"></label>
+                </div>
+       
+                <!--textbox-->
+                <div class="col-md-4" ng-if="item.controlType === '2'">
+                    <label style="margin-top:5px" ng-bind="item.labelText"></label>
+                </div>
+                <div class="col-md-8" ng-if="item.controlType === '2'">
+                    <input type="text" class="form-control" ng-model="item.bindValue" name="{{item.controlName}}Value" id="{{item.controlName}}ValueId" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
